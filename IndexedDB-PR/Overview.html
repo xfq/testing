@@ -1924,7 +1924,7 @@ There may be multiple <a data-link-type="dfn" href="#connection" id="ref-for-con
 any given time.</p>
    <p>A <a data-link-type="dfn" href="#connection" id="ref-for-connection⑤">connection</a> can only access <a data-link-type="dfn" href="#database" id="ref-for-database①①">databases</a> associated with the <a data-link-type="dfn" href="https://www.w3.org/TR/css-cascade-4/#origin" id="ref-for-origin②">origin</a> of the global scope from which the <a data-link-type="dfn" href="#connection" id="ref-for-connection⑥">connection</a> is
 opened.</p>
-   <aside class="note"> This is not affected by changes to the <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/dom.html#document" id="ref-for-document">Document</a></code>'s <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/origin.html#dom-document-domain" id="ref-for-dom-document-domain">domain</a></code>. </aside>
+   <aside class="note"> This is not affected by changes to the <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/html52/single-page.html#the-document-object" id="ref-for-document">Document</a></code>'s <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/html52/single-page.html#dom-document-domain" id="ref-for-dom-document-domain">domain</a></code>. </aside>
    <div>
     <p>A <a data-link-type="dfn" href="#connection" id="ref-for-connection⑦">connection</a> has a <dfn class="dfn-paneled" data-dfn-for="connection" data-dfn-type="dfn" data-noexport="" id="connection-version">version</dfn>, which is set when
 the <a data-link-type="dfn" href="#connection" id="ref-for-connection⑧">connection</a> is created. It remains constant for the
@@ -1953,7 +1953,7 @@ connection</a> with the <a data-link-type="dfn" href="#connection" id="ref-for-c
 initialized to the set of <a data-link-type="dfn" href="#object-store" id="ref-for-object-store①">object stores</a> in the associated <a data-link-type="dfn" href="#database" id="ref-for-database①③">database</a> when the <a data-link-type="dfn" href="#connection" id="ref-for-connection①⑥">connection</a> is created. The contents of the
 set will remain constant except when an <a data-link-type="dfn" href="#upgrade-transaction" id="ref-for-upgrade-transaction②">upgrade transaction</a> is
 running.</p>
-    <p>A <a data-link-type="dfn" href="#connection" id="ref-for-connection①⑦">connection</a>'s <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#get-the-parent" id="ref-for-get-the-parent">get the parent</a> algorithm returns
+    <p>A <a data-link-type="dfn" href="#connection" id="ref-for-connection①⑦">connection</a>'s <a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#get-the-parent" id="ref-for-get-the-parent">get the parent</a> algorithm returns
 null.</p>
     <p>A <dfn class="dfn-paneled" data-dfn-for="connection" data-dfn-type="dfn" data-noexport="" id="connection-version-change-event">version change event</dfn> will be fired at an open <a data-link-type="dfn" href="#connection" id="ref-for-connection①⑧">connection</a> if an attempt is made to upgrade or delete the <a data-link-type="dfn" href="#database" id="ref-for-database①④">database</a>. This gives the <a data-link-type="dfn" href="#connection" id="ref-for-connection①⑨">connection</a> the opportunity to close
 to allow the upgrade or delete to proceed.</p>
@@ -2004,11 +2004,11 @@ transaction</a> is running.</p>
    </div>
    <h3 class="heading settled" data-level="2.3" id="value-construct"><span class="secno">2.3. </span><span class="content">Values</span><a class="self-link" href="#value-construct"></a></h3>
    <p>Each record is associated with a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="value">value</dfn>. User agents must
-support any <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/structured-data.html#serializable-objects" id="ref-for-serializable-objects">serializable object</a>. This includes simple types
-such as <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-terms-and-definitions-string-type" id="ref-for-sec-terms-and-definitions-string-type①">String</a> primitive values and <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-date-objects" id="ref-for-sec-date-objects">Date</a> objects as well as <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-object-objects" id="ref-for-sec-object-objects">Object</a> and <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-array-objects" id="ref-for-sec-array-objects①">Array</a> instances, <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/FileAPI/#dfn-file" id="ref-for-dfn-file">File</a></code> objects, <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/FileAPI/#dfn-Blob" id="ref-for-dfn-Blob">Blob</a></code> objects, <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/canvas.html#imagedata" id="ref-for-imagedata">ImageData</a></code> objects, and so on. Record <a data-link-type="dfn" href="#value" id="ref-for-value②">values</a> are
+support any <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#serializable-objects" id="ref-for-serializable-objects">serializable object</a>. This includes simple types
+such as <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-terms-and-definitions-string-type" id="ref-for-sec-terms-and-definitions-string-type①">String</a> primitive values and <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-date-objects" id="ref-for-sec-date-objects">Date</a> objects as well as <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-object-objects" id="ref-for-sec-object-objects">Object</a> and <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-array-objects" id="ref-for-sec-array-objects①">Array</a> instances, <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/FileAPI/#dfn-file" id="ref-for-dfn-file">File</a></code> objects, <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/FileAPI/#dfn-Blob" id="ref-for-dfn-Blob">Blob</a></code> objects, <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/2dcontext/#imagedata" id="ref-for-imagedata">ImageData</a></code> objects, and so on. Record <a data-link-type="dfn" href="#value" id="ref-for-value②">values</a> are
 stored and retrieved by value rather than by reference; later changes
 to a value have no effect on the record stored in the database.</p>
-   <p>Record <a data-link-type="dfn" href="#value" id="ref-for-value③">values</a> are <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type" id="ref-for-sec-list-and-record-specification-type">Records</a> output by the <a data-link-type="abstract-op" href="https://html.spec.whatwg.org/multipage/structured-data.html#structuredserializeforstorage" id="ref-for-structuredserializeforstorage">StructuredSerializeForStorage</a> operation.</p>
+   <p>Record <a data-link-type="dfn" href="#value" id="ref-for-value③">values</a> are <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type" id="ref-for-sec-list-and-record-specification-type">Records</a> output by the <a data-link-type="abstract-op" href="https://www.w3.org/TR/html52/single-page.html#structuredserializeforstorage" id="ref-for-structuredserializeforstorage">StructuredSerializeForStorage</a> operation.</p>
    <h3 class="heading settled" data-level="2.4" id="key-construct"><span class="secno">2.4. </span><span class="content">Keys</span><a class="self-link" href="#key-construct"></a></h3>
    <p>In order to efficiently retrieve <a data-link-type="dfn" href="#object-store-record" id="ref-for-object-store-record①">records</a> stored in an indexed
 database, each <a data-link-type="dfn" href="#object-store-record" id="ref-for-object-store-record②">record</a> is organized according to its <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="key">key</dfn>.</p>
@@ -2212,7 +2212,7 @@ conforming to the above requirements.</p>
    </ul>
    <aside class="note"> Spaces are not allowed within a key path. </aside>
    <p><a data-link-type="dfn" href="#key-path" id="ref-for-key-path">Key path</a> values can only be accessed from properties explicitly
-copied by <a data-link-type="abstract-op" href="https://html.spec.whatwg.org/multipage/structured-data.html#structuredserializeforstorage" id="ref-for-structuredserializeforstorage①">StructuredSerializeForStorage</a>, as well as the
+copied by <a data-link-type="abstract-op" href="https://www.w3.org/TR/html52/single-page.html#structuredserializeforstorage" id="ref-for-structuredserializeforstorage①">StructuredSerializeForStorage</a>, as well as the
 following type-specific properties:</p>
    <table class="props">
     <tbody>
@@ -2339,10 +2339,10 @@ following:</p>
     <p>A <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept①④">transaction</a> has an <dfn class="dfn-paneled" data-dfn-for="transaction" data-dfn-type="dfn" data-noexport="" id="transaction-active-flag">active flag</dfn>, which determines
 if new <a data-link-type="dfn" href="#request" id="ref-for-request">requests</a> can be made against the transaction. A
 transaction is said to be <dfn class="dfn-paneled" data-dfn-for="transaction" data-dfn-type="dfn" data-noexport="" id="transaction-active">active</dfn> if its <a data-link-type="dfn" href="#transaction-active-flag" id="ref-for-transaction-active-flag">active flag</a> is set.</p>
-    <p>A <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept①⑤">transaction</a> optionally has a <dfn class="dfn-paneled" data-dfn-for="transaction" data-dfn-type="dfn" data-noexport="" id="transaction-cleanup-event-loop">cleanup event loop</dfn> which is an <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loop" id="ref-for-event-loop">event loop</a>.</p>
+    <p>A <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept①⑤">transaction</a> optionally has a <dfn class="dfn-paneled" data-dfn-for="transaction" data-dfn-type="dfn" data-noexport="" id="transaction-cleanup-event-loop">cleanup event loop</dfn> which is an <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#event-loop" id="ref-for-event-loop">event loop</a>.</p>
     <p>A <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept①⑥">transaction</a> has a <dfn class="dfn-paneled" data-dfn-for="transaction" data-dfn-type="dfn" data-noexport="" id="transaction-request-list">request list</dfn> of <a data-link-type="dfn" href="#request" id="ref-for-request①">requests</a> which have been made against the transaction.</p>
     <p>A <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept①⑦">transaction</a> has a <dfn class="dfn-paneled" data-dfn-for="transaction" data-dfn-type="dfn" data-noexport="" id="transaction-error">error</dfn> which is set if the <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept①⑧">transaction</a> is <a data-link-type="dfn" href="#transaction-abort" id="ref-for-transaction-abort">aborted</a>.</p>
-    <p>A <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept①⑨">transaction</a>'s <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#get-the-parent" id="ref-for-get-the-parent①">get the parent</a> algorithm returns the
+    <p>A <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept①⑨">transaction</a>'s <a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#get-the-parent" id="ref-for-get-the-parent①">get the parent</a> algorithm returns the
 transaction’s <a data-link-type="dfn" href="#transaction-connection" id="ref-for-transaction-connection">connection</a>.</p>
     <p>A <dfn class="dfn-paneled" data-dfn-for="transaction" data-dfn-type="dfn" data-noexport="" id="transaction-read-only-transaction">read-only transaction</dfn> is
 a <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept②⓪">transaction</a> with <a data-link-type="dfn" href="#transaction-mode" id="ref-for-transaction-mode②">mode</a> <code class="idl"><a data-link-type="idl" href="#dom-idbtransactionmode-readonly" id="ref-for-dom-idbtransactionmode-readonly①">"readonly"</a></code>.</p>
@@ -2371,7 +2371,7 @@ reject the attempt by throwing a "<code class="idl"><a data-link-type="idl" href
      <li data-md="">
       <p>Once an implementation is able to enforce the constraints defined
 for the transaction <a data-link-type="dfn" href="#transaction-scope" id="ref-for-transaction-scope③">scope</a> and <a data-link-type="dfn" href="#transaction-mode" id="ref-for-transaction-mode⑤">mode</a>, defined below, the
-implementation must <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task" id="ref-for-queue-a-task">queue a task</a> to <dfn class="dfn-paneled" data-dfn-for="transaction" data-dfn-type="dfn" data-lt="start|started" data-noexport="" id="transaction-start">start</dfn> the transaction asynchronously.</p>
+implementation must <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#queuing" id="ref-for-queue-a-task">queue a task</a> to <dfn class="dfn-paneled" data-dfn-for="transaction" data-dfn-type="dfn" data-lt="start|started" data-noexport="" id="transaction-start">start</dfn> the transaction asynchronously.</p>
      <li data-md="">
       <p>Once the transaction has been <a data-link-type="dfn" href="#transaction-start" id="ref-for-transaction-start②">started</a> the implementation can
 start executing the <a data-link-type="dfn" href="#request" id="ref-for-request④">requests</a> placed against the transaction.
@@ -2472,7 +2472,7 @@ implementation must not indefinitely prevent a pending <a data-link-type="dfn" h
     </ul>
    </div>
    <p>To <dfn class="dfn-paneled" data-dfn-type="dfn" data-export="" id="cleanup-indexed-database-transactions">cleanup Indexed Database transactions</dfn>,
-run these steps for each <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept②④">transaction</a> with <a data-link-type="dfn" href="#transaction-cleanup-event-loop" id="ref-for-transaction-cleanup-event-loop">cleanup event loop</a> matching the current <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loop" id="ref-for-event-loop①">event loop</a>.</p>
+run these steps for each <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept②④">transaction</a> with <a data-link-type="dfn" href="#transaction-cleanup-event-loop" id="ref-for-transaction-cleanup-event-loop">cleanup event loop</a> matching the current <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#event-loop" id="ref-for-event-loop①">event loop</a>.</p>
    <div class="algorithm">
     <ol>
      <li data-md="">
@@ -2481,7 +2481,7 @@ run these steps for each <a data-link-type="dfn" href="#transaction-concept" id=
       <p>Clear the <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept②⑥">transaction</a>'s <a data-link-type="dfn" href="#transaction-cleanup-event-loop" id="ref-for-transaction-cleanup-event-loop①">cleanup event loop</a>.</p>
     </ol>
    </div>
-   <aside class="note"> This behavior is invoked by <a data-link-type="biblio" href="#biblio-html">[HTML]</a>. It ensures that <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept②⑦">transactions</a> created by a script call
+   <aside class="note"> This behavior is invoked by <a data-link-type="biblio" href="#biblio-html">[HTML52]</a>. It ensures that <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept②⑦">transactions</a> created by a script call
   to <code class="idl"><a data-link-type="idl" href="#dom-idbdatabase-transaction" id="ref-for-dom-idbdatabase-transaction">transaction()</a></code> are deactivated once the task that
   invoked the script has completed. The steps are run at most once for
   each <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept②⑧">transaction</a>. </aside>
@@ -2526,7 +2526,7 @@ flag</a> unset. If a request completes successfully, the <a data-link-type="dfn"
 and an event with type <code>success</code> is fired at the <a data-link-type="dfn" href="#request" id="ref-for-request①②">request</a>.</p>
     <p>If an error occurs while performing the operation, the <a data-link-type="dfn" href="#request-done-flag" id="ref-for-request-done-flag③">done flag</a> is set, the <a data-link-type="dfn" href="#request-error" id="ref-for-request-error">error</a> is set to the error, and an event with
 type <code>error</code> is fired at the request.</p>
-    <p>A <a data-link-type="dfn" href="#request" id="ref-for-request①③">request</a>'s <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#get-the-parent" id="ref-for-get-the-parent②">get the parent</a> algorithm returns the request’s <a data-link-type="dfn" href="#request-transaction" id="ref-for-request-transaction">transaction</a>.</p>
+    <p>A <a data-link-type="dfn" href="#request" id="ref-for-request①③">request</a>'s <a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#get-the-parent" id="ref-for-get-the-parent②">get the parent</a> algorithm returns the request’s <a data-link-type="dfn" href="#request-transaction" id="ref-for-request-transaction">transaction</a>.</p>
     <aside class="note"> Requests are not typically re-used, but there are exceptions. When a <a data-link-type="dfn" href="#cursor" id="ref-for-cursor">cursor</a> is iterated, the success of the iteration is reported
   on the same <a data-link-type="dfn" href="#request" id="ref-for-request①④">request</a> object used to open the cursor. And when
   an <a data-link-type="dfn" href="#upgrade-transaction" id="ref-for-upgrade-transaction①⑤">upgrade transaction</a> is necessary, the same <a data-link-type="dfn" href="#request-open-request" id="ref-for-request-open-request">open
@@ -2540,17 +2540,17 @@ request</a> to indicate progress.</p>
     <p>The <a data-link-type="dfn" href="#request-source" id="ref-for-request-source">source</a> of an <a data-link-type="dfn" href="#request-open-request" id="ref-for-request-open-request②">open request</a> is always null.</p>
     <p>The <a data-link-type="dfn" href="#request-transaction" id="ref-for-request-transaction①">transaction</a> of an <a data-link-type="dfn" href="#request-open-request" id="ref-for-request-open-request③">open request</a> is null
 unless an <code><a data-link-type="dfn" href="#request-upgradeneeded" id="ref-for-request-upgradeneeded⑥">upgradeneeded</a></code> event has been fired.</p>
-    <p>An <a data-link-type="dfn" href="#request-open-request" id="ref-for-request-open-request④">open request</a>'s <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#get-the-parent" id="ref-for-get-the-parent③">get the parent</a> algorithm returns null.</p>
+    <p>An <a data-link-type="dfn" href="#request-open-request" id="ref-for-request-open-request④">open request</a>'s <a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#get-the-parent" id="ref-for-get-the-parent③">get the parent</a> algorithm returns null.</p>
     <p><a data-link-type="dfn" href="#request-open-request" id="ref-for-request-open-request⑤">Open requests</a> are processed in a <dfn class="dfn-paneled" data-dfn-for="request" data-dfn-type="dfn" data-noexport="" id="request-connection-queue">connection queue</dfn>.
 The queue contains all <a data-link-type="dfn" href="#request-open-request" id="ref-for-request-open-request⑥">open requests</a> associated with an <a data-link-type="dfn" href="https://www.w3.org/TR/css-cascade-4/#origin" id="ref-for-origin③">origin</a> and a <a data-link-type="dfn" href="#database-name" id="ref-for-database-name">name</a>. Requests added to the <a data-link-type="dfn" href="#request-connection-queue" id="ref-for-request-connection-queue">connection queue</a> processed in order and each request must run
 to completion before the next request is processed. An open request
 may be blocked on other <a data-link-type="dfn" href="#connection" id="ref-for-connection②⑧">connections</a>, requiring those
 connections to <a data-link-type="dfn" href="#connection-closed" id="ref-for-connection-closed">close</a> before the request can complete and allow
 further requests to be processed.</p>
-    <aside class="note"> A <a data-link-type="dfn" href="#request-connection-queue" id="ref-for-request-connection-queue①">connection queue</a> is not a <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#task-queue" id="ref-for-task-queue">task queue</a> associated with
-  an <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loop" id="ref-for-event-loop②">event loop</a>, as the requests are processed outside any
-  specific <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#browsing-context" id="ref-for-browsing-context">browsing context</a>. The delivery of events to
-  completed <a data-link-type="dfn" href="#request-open-request" id="ref-for-request-open-request⑦">open request</a> still goes through a <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#task-queue" id="ref-for-task-queue①">task queue</a> associated with the <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loop" id="ref-for-event-loop③">event loop</a> of the context where the
+    <aside class="note"> A <a data-link-type="dfn" href="#request-connection-queue" id="ref-for-request-connection-queue①">connection queue</a> is not a <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#task-queues" id="ref-for-task-queue">task queue</a> associated with
+  an <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#event-loop" id="ref-for-event-loop②">event loop</a>, as the requests are processed outside any
+  specific <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#browsing-context" id="ref-for-browsing-context">browsing context</a>. The delivery of events to
+  completed <a data-link-type="dfn" href="#request-open-request" id="ref-for-request-open-request⑦">open request</a> still goes through a <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#task-queues" id="ref-for-task-queue①">task queue</a> associated with the <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#event-loop" id="ref-for-event-loop③">event loop</a> of the context where the
   request was made. </aside>
    </div>
    <h3 class="heading settled" data-level="2.9" id="range-construct"><span class="secno">2.9. </span><span class="content">Key Range</span><a class="self-link" href="#range-construct"></a></h3>
@@ -3003,7 +3003,7 @@ through the properties of the <code class="idl"><a data-link-type="idl" href="#i
 access task source<a class="self-link" href="#database-access-task-source"></a></dfn>.</p>
    <h3 class="heading settled" data-level="4.1" id="request-api"><span class="secno">4.1. </span><span class="content">The <code class="idl"><a data-link-type="idl" href="#idbrequest" id="ref-for-idbrequest②">IDBRequest</a></code> interface</span><a class="self-link" href="#request-api"></a></h3>
    <p>The <code class="idl"><a data-link-type="idl" href="#idbrequest" id="ref-for-idbrequest③">IDBRequest</a></code> interface provides the means to access results of
-asynchronous requests to <a data-link-type="dfn" href="#database" id="ref-for-database②⑨">databases</a> and <a data-link-type="dfn" href="#database" id="ref-for-database③⓪">database</a> objects using <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#event-handler-idl-attributes" id="ref-for-event-handler-idl-attributes">event handler IDL attributes</a> <a data-link-type="biblio" href="#biblio-html">[HTML]</a>.</p>
+asynchronous requests to <a data-link-type="dfn" href="#database" id="ref-for-database②⑨">databases</a> and <a data-link-type="dfn" href="#database" id="ref-for-database③⓪">database</a> objects using <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#event-handler-idl-event-handler-idl-attribute" id="ref-for-event-handler-idl-attributes">event handler IDL attributes</a> <a data-link-type="biblio" href="#biblio-html">[HTML52]</a>.</p>
    <p>Every method for making asynchronous requests returns an <code class="idl"><a data-link-type="idl" href="#idbrequest" id="ref-for-idbrequest④">IDBRequest</a></code> object that communicates back to the requesting
 application through events. This design means that any number of
 requests can be active on any <a data-link-type="dfn" href="#database" id="ref-for-database③①">database</a> at a time.</p>
@@ -3018,7 +3018,7 @@ request<span class="p">.</span>onerror <span class="o">=</span> <span class="kd"
 </pre>
    </aside>
 <pre class="idl highlight def">[<a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#Exposed" id="ref-for-Exposed">Exposed</a>=(<span class="n">Window</span>,<span class="n">Worker</span>)]
-<span class="kt">interface</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="interface" data-export="" id="idbrequest"><code>IDBRequest</code></dfn> : <a class="n" data-link-type="idl-name" href="https://dom.spec.whatwg.org/#eventtarget" id="ref-for-eventtarget">EventTarget</a> {
+<span class="kt">interface</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="interface" data-export="" id="idbrequest"><code>IDBRequest</code></dfn> : <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/dom41/#eventtarget" id="ref-for-eventtarget">EventTarget</a> {
   <span class="kt">readonly</span> <span class="kt">attribute</span> <span class="kt">any</span> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="any" href="#dom-idbrequest-result" id="ref-for-dom-idbrequest-result">result</a>;
   <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://heycam.github.io/webidl/#idl-DOMException" id="ref-for-idl-DOMException⑧">DOMException</a>? <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="DOMException?" href="#dom-idbrequest-error" id="ref-for-dom-idbrequest-error">error</a>;
   <span class="kt">readonly</span> <span class="kt">attribute</span> (<a class="n" data-link-type="idl-name" href="#idbobjectstore" id="ref-for-idbobjectstore">IDBObjectStore</a> <span class="kt">or</span> <a class="n" data-link-type="idl-name" href="#idbindex" id="ref-for-idbindex">IDBIndex</a> <span class="kt">or</span> <a class="n" data-link-type="idl-name" href="#idbcursor" id="ref-for-idbcursor">IDBCursor</a>)? <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="(IDBObjectStore or IDBIndex or IDBCursor)?" href="#dom-idbrequest-source" id="ref-for-dom-idbrequest-source">source</a>;
@@ -3026,8 +3026,8 @@ request<span class="p">.</span>onerror <span class="o">=</span> <span class="kd"
   <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="#enumdef-idbrequestreadystate" id="ref-for-enumdef-idbrequestreadystate">IDBRequestReadyState</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="IDBRequestReadyState" href="#dom-idbrequest-readystate" id="ref-for-dom-idbrequest-readystate">readyState</a>;
 
   // Event handlers:
-  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler" id="ref-for-eventhandler">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbrequest-onsuccess" id="ref-for-dom-idbrequest-onsuccess">onsuccess</a>;
-  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler" id="ref-for-eventhandler①">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbrequest-onerror" id="ref-for-dom-idbrequest-onerror">onerror</a>;
+  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler" id="ref-for-eventhandler">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbrequest-onsuccess" id="ref-for-dom-idbrequest-onsuccess">onsuccess</a>;
+  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler" id="ref-for-eventhandler①">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbrequest-onerror" id="ref-for-dom-idbrequest-onerror">onerror</a>;
 };
 
 <span class="kt">enum</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="enum" data-export="" id="enumdef-idbrequestreadystate"><code>IDBRequestReadyState</code></dfn> {
@@ -3077,8 +3077,8 @@ extended interface to allow listening to the <code><a data-link-type="dfn" href=
 <pre class="idl highlight def">[<a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#Exposed" id="ref-for-Exposed①">Exposed</a>=(<span class="n">Window</span>,<span class="n">Worker</span>)]
 <span class="kt">interface</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="interface" data-export="" id="idbopendbrequest"><code>IDBOpenDBRequest</code></dfn> : <a class="n" data-link-type="idl-name" href="#idbrequest" id="ref-for-idbrequest⑤">IDBRequest</a> {
   // Event handlers:
-  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler" id="ref-for-eventhandler②">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbopendbrequest-onblocked" id="ref-for-dom-idbopendbrequest-onblocked">onblocked</a>;
-  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler" id="ref-for-eventhandler③">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbopendbrequest-onupgradeneeded" id="ref-for-dom-idbopendbrequest-onupgradeneeded">onupgradeneeded</a>;
+  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler" id="ref-for-eventhandler②">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbopendbrequest-onblocked" id="ref-for-dom-idbopendbrequest-onblocked">onblocked</a>;
+  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler" id="ref-for-eventhandler③">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbopendbrequest-onupgradeneeded" id="ref-for-dom-idbopendbrequest-onupgradeneeded">onupgradeneeded</a>;
 };
 </pre>
    <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="IDBOpenDBRequest" data-dfn-type="attribute" data-export="" id="dom-idbopendbrequest-onblocked"><code>onblocked</code></dfn> attribute is
@@ -3088,12 +3088,12 @@ the event handler for the <code><a data-link-type="dfn" href="#request-blocked" 
    <p>This specification fires events with the following custom interfaces:</p>
 <pre class="idl highlight def">[<a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#Exposed" id="ref-for-Exposed②">Exposed</a>=(<span class="n">Window</span>,<span class="n">Worker</span>),
  <dfn class="nv idl-code" data-dfn-for="IDBVersionChangeEvent" data-dfn-type="constructor" data-export="" data-lt="IDBVersionChangeEvent(type, eventInitDict)|IDBVersionChangeEvent(type)" id="dom-idbversionchangeevent-idbversionchangeevent"><code>Constructor</code><a class="self-link" href="#dom-idbversionchangeevent-idbversionchangeevent"></a></dfn>(<a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-DOMString" id="ref-for-idl-DOMString②"><span class="kt">DOMString</span></a> <dfn class="nv idl-code" data-dfn-for="IDBVersionChangeEvent/IDBVersionChangeEvent(type, eventInitDict)" data-dfn-type="argument" data-export="" id="dom-idbversionchangeevent-idbversionchangeevent-type-eventinitdict-type"><code>type</code><a class="self-link" href="#dom-idbversionchangeevent-idbversionchangeevent-type-eventinitdict-type"></a></dfn>, <span class="kt">optional</span> <a class="n" data-link-type="idl-name" href="#dictdef-idbversionchangeeventinit" id="ref-for-dictdef-idbversionchangeeventinit">IDBVersionChangeEventInit</a> <dfn class="nv idl-code" data-dfn-for="IDBVersionChangeEvent/IDBVersionChangeEvent(type, eventInitDict)" data-dfn-type="argument" data-export="" id="dom-idbversionchangeevent-idbversionchangeevent-type-eventinitdict-eventinitdict"><code>eventInitDict</code><a class="self-link" href="#dom-idbversionchangeevent-idbversionchangeevent-type-eventinitdict-eventinitdict"></a></dfn>)]
-<span class="kt">interface</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="interface" data-export="" id="idbversionchangeevent"><code>IDBVersionChangeEvent</code></dfn> : <a class="n" data-link-type="idl-name" href="https://dom.spec.whatwg.org/#event" id="ref-for-event">Event</a> {
+<span class="kt">interface</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="interface" data-export="" id="idbversionchangeevent"><code>IDBVersionChangeEvent</code></dfn> : <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/dom41/#event" id="ref-for-event">Event</a> {
   <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-unsigned-long-long" id="ref-for-idl-unsigned-long-long"><span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span></a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="unsigned long long" href="#dom-idbversionchangeevent-oldversion" id="ref-for-dom-idbversionchangeevent-oldversion">oldVersion</a>;
   <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-unsigned-long-long" id="ref-for-idl-unsigned-long-long①"><span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span></a>? <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="unsigned long long?" href="#dom-idbversionchangeevent-newversion" id="ref-for-dom-idbversionchangeevent-newversion">newVersion</a>;
 };
 
-<span class="kt">dictionary</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="dictionary" data-export="" id="dictdef-idbversionchangeeventinit"><code>IDBVersionChangeEventInit</code></dfn> : <a class="n" data-link-type="idl-name" href="https://dom.spec.whatwg.org/#dictdef-eventinit" id="ref-for-dictdef-eventinit">EventInit</a> {
+<span class="kt">dictionary</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="dictionary" data-export="" id="dictdef-idbversionchangeeventinit"><code>IDBVersionChangeEventInit</code></dfn> : <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/dom41/#dictdef-eventinit" id="ref-for-dictdef-eventinit">EventInit</a> {
   <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-unsigned-long-long" id="ref-for-idl-unsigned-long-long②"><span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span></a> <dfn class="nv idl-code" data-default="0" data-dfn-for="IDBVersionChangeEventInit" data-dfn-type="dict-member" data-export="" data-type="unsigned long long " id="dom-idbversionchangeeventinit-oldversion"><code>oldVersion</code><a class="self-link" href="#dom-idbversionchangeeventinit-oldversion"></a></dfn> = 0;
   <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-unsigned-long-long" id="ref-for-idl-unsigned-long-long③"><span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span></a>? <dfn class="nv idl-code" data-default="null" data-dfn-for="IDBVersionChangeEventInit" data-dfn-type="dict-member" data-export="" data-type="unsigned long long? " id="dom-idbversionchangeeventinit-newversion"><code>newVersion</code><a class="self-link" href="#dom-idbversionchangeeventinit-newversion"></a></dfn> = <span class="kt">null</span>;
 };
@@ -3103,16 +3103,16 @@ the event handler for the <code><a data-link-type="dfn" href="#request-blocked" 
 the database is being deleted. See the steps to <a data-link-type="dfn" href="#run-an-upgrade-transaction" id="ref-for-run-an-upgrade-transaction①">run an upgrade
 transaction</a>.</p>
    <p>Events are constructed as defined in <a href="https://www.w3.org/TR/domcore/#constructing-events">Constructing
-events</a>, in <a data-link-type="biblio" href="#biblio-dom">[DOM]</a>.</p>
+events</a>, in <a data-link-type="biblio" href="#biblio-dom">[DOM41]</a>.</p>
    <div class="algorithm">
     <p>To <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="fire-a-version-change-event">fire a version change event</dfn> named <var>e</var> at <var>target</var> given <var>oldVersion</var> and <var>newVersion</var>, run these steps:</p>
     <ol>
      <li data-md="">
-      <p>Let <var>event</var> be the result of <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-event-create" id="ref-for-concept-event-create">creating an event</a> using <code class="idl"><a data-link-type="idl" href="#idbversionchangeevent" id="ref-for-idbversionchangeevent">IDBVersionChangeEvent</a></code>.</p>
+      <p>Let <var>event</var> be the result of <a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-create" id="ref-for-concept-event-create">creating an event</a> using <code class="idl"><a data-link-type="idl" href="#idbversionchangeevent" id="ref-for-idbversionchangeevent">IDBVersionChangeEvent</a></code>.</p>
      <li data-md="">
-      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-type" id="ref-for-dom-event-type">type</a></code> attribute to <var>e</var>.</p>
+      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-type" id="ref-for-dom-event-type">type</a></code> attribute to <var>e</var>.</p>
      <li data-md="">
-      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-bubbles" id="ref-for-dom-event-bubbles">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-cancelable" id="ref-for-dom-event-cancelable">cancelable</a></code> attributes to false.</p>
+      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-bubble" id="ref-for-dom-event-bubbles">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-cancelable" id="ref-for-dom-event-cancelable">cancelable</a></code> attributes to false.</p>
      <li data-md="">
       <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="#dom-idbversionchangeevent-oldversion" id="ref-for-dom-idbversionchangeevent-oldversion①">oldVersion</a></code> attribute to <var>oldVersion</var>.</p>
      <li data-md="">
@@ -3120,7 +3120,7 @@ events</a>, in <a data-link-type="biblio" href="#biblio-dom">[DOM]</a>.</p>
      <li data-md="">
       <p>Let <var>legacyOutputDidListenersThrowFlag</var> be unset.</p>
      <li data-md="">
-      <p><a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-event-dispatch" id="ref-for-concept-event-dispatch">Dispatch</a> <var>event</var> at <var>target</var> with <var>legacyOutputDidListenersThrowFlag</var>.</p>
+      <p><a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#dispatch" id="ref-for-concept-event-dispatch">Dispatch</a> <var>event</var> at <var>target</var> with <var>legacyOutputDidListenersThrowFlag</var>.</p>
      <li data-md="">
       <p>Return <var>legacyOutputDidListenersThrowFlag</var>.</p>
       <aside class="note"> The return value of this algorithm is not always used. </aside>
@@ -3130,7 +3130,7 @@ events</a>, in <a data-link-type="biblio" href="#biblio-dom">[DOM]</a>.</p>
    <p><a data-link-type="dfn" href="#database" id="ref-for-database③③">Database</a> objects are accessed through methods on the <code class="idl"><a data-link-type="idl" href="#idbfactory" id="ref-for-idbfactory①">IDBFactory</a></code> interface. A single object implementing this
 interface is present in the global scope of environments that support
 Indexed DB operations.</p>
-<pre class="idl highlight def"><span class="kt">partial</span> <span class="kt">interface</span> <a class="nv idl-code" data-link-type="interface" href="https://html.spec.whatwg.org/multipage/webappapis.html#windoworworkerglobalscope" id="ref-for-windoworworkerglobalscope">WindowOrWorkerGlobalScope</a> {
+<pre class="idl highlight def"><span class="kt">partial</span> <span class="kt">interface</span> <a class="nv idl-code" data-link-type="interface" href="https://www.w3.org/TR/html52/single-page.html#windoworworkerglobalscope" id="ref-for-windoworworkerglobalscope">WindowOrWorkerGlobalScope</a> {
   [<a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#SameObject" id="ref-for-SameObject">SameObject</a>] <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="#idbfactory" id="ref-for-idbfactory②">IDBFactory</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="IDBFactory" href="#dom-windoworworkerglobalscope-indexeddb" id="ref-for-dom-windoworworkerglobalscope-indexeddb">indexedDB</a>;
 };
 </pre>
@@ -3173,12 +3173,12 @@ when invoked, must run these steps:</p>
       <p>Let <var>origin</var> be the <a data-link-type="dfn" href="https://www.w3.org/TR/css-cascade-4/#origin" id="ref-for-origin④">origin</a> of the global scope used
 to access this <code class="idl"><a data-link-type="idl" href="#idbfactory" id="ref-for-idbfactory③">IDBFactory</a></code>.</p>
      <li data-md="">
-      <p>If <var>origin</var> is an <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/origin.html#concept-origin-opaque" id="ref-for-concept-origin-opaque">opaque origin</a>, <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-throw" id="ref-for-dfn-throw⑤">throw</a> a
+      <p>If <var>origin</var> is an <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#opaque-origin" id="ref-for-concept-origin-opaque">opaque origin</a>, <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-throw" id="ref-for-dfn-throw⑤">throw</a> a
 "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#securityerror" id="ref-for-securityerror">SecurityError</a></code>" <code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#idl-DOMException" id="ref-for-idl-DOMException①④">DOMException</a></code> and abort these steps.</p>
      <li data-md="">
       <p>Let <var>request</var> be a new <a data-link-type="dfn" href="#request-open-request" id="ref-for-request-open-request①①">open request</a>.</p>
      <li data-md="">
-      <p>Run these steps <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel" id="ref-for-in-parallel">in parallel</a>:</p>
+      <p>Run these steps <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#in-parallel" id="ref-for-in-parallel">in parallel</a>:</p>
       <ol>
        <li data-md="">
         <p>Let <var>result</var> be the result of running the steps to <a data-link-type="dfn" href="#open-a-database" id="ref-for-open-a-database①">open a database</a>, with <var>origin</var>, <var>name</var>, <var>version</var> if given and undefined
@@ -3190,19 +3190,19 @@ otherwise, and <var>request</var>.</p>
   that name exists, a new <a data-link-type="dfn" href="#database" id="ref-for-database③⑨">database</a> will be created with <a data-link-type="dfn" href="#database-version" id="ref-for-database-version④">version</a> equal to 1. 
         </details>
        <li data-md="">
-        <p><a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task" id="ref-for-queue-a-task①">Queue a task</a> to run these steps:</p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#queuing" id="ref-for-queue-a-task①">Queue a task</a> to run these steps:</p>
         <ol>
          <li data-md="">
           <p>If <var>result</var> is an error,
 set <var>request</var>’s <a data-link-type="dfn" href="#request-result" id="ref-for-request-result④">result</a> to undefined,
 set <var>request</var>’s <a data-link-type="dfn" href="#request-error" id="ref-for-request-error④">error</a> to <var>result</var>,
 set <var>request</var>’s <a data-link-type="dfn" href="#request-done-flag" id="ref-for-request-done-flag⑧">done flag</a>,
-and <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-event-fire" id="ref-for-concept-event-fire">fire an event</a> named <code>error</code> at <var>request</var> with its <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-bubbles" id="ref-for-dom-event-bubbles①">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-cancelable" id="ref-for-dom-event-cancelable①">cancelable</a></code> attributes initialized to true.</p>
+and <a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-fire" id="ref-for-concept-event-fire">fire an event</a> named <code>error</code> at <var>request</var> with its <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-bubble" id="ref-for-dom-event-bubbles①">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-cancelable" id="ref-for-dom-event-cancelable①">cancelable</a></code> attributes initialized to true.</p>
          <li data-md="">
           <p>Otherwise,
 set <var>request</var>’s <a data-link-type="dfn" href="#request-result" id="ref-for-request-result⑤">result</a> to <var>result</var>,
 set <var>request</var>’s <a data-link-type="dfn" href="#request-done-flag" id="ref-for-request-done-flag⑨">done flag</a>,
-and <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-event-fire" id="ref-for-concept-event-fire①">fire an event</a> named <code>success</code> at <var>request</var>. If the steps
+and <a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-fire" id="ref-for-concept-event-fire①">fire an event</a> named <code>success</code> at <var>request</var>. If the steps
 above resulted in an <a data-link-type="dfn" href="#upgrade-transaction" id="ref-for-upgrade-transaction①⑦">upgrade transaction</a> being run,
 then firing the "<code>success</code>" event must be done
 after the <a data-link-type="dfn" href="#upgrade-transaction" id="ref-for-upgrade-transaction①⑧">upgrade transaction</a> completes.</p>
@@ -3231,24 +3231,24 @@ when invoked, must run these steps:</p>
       <p>Let <var>origin</var> be the <a data-link-type="dfn" href="https://www.w3.org/TR/css-cascade-4/#origin" id="ref-for-origin⑤">origin</a> of the global scope used
 to access this <code class="idl"><a data-link-type="idl" href="#idbfactory" id="ref-for-idbfactory④">IDBFactory</a></code>.</p>
      <li data-md="">
-      <p>If <var>origin</var> is an <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/origin.html#concept-origin-opaque" id="ref-for-concept-origin-opaque①">opaque origin</a>, <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-throw" id="ref-for-dfn-throw⑥">throw</a> a
+      <p>If <var>origin</var> is an <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#opaque-origin" id="ref-for-concept-origin-opaque①">opaque origin</a>, <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-throw" id="ref-for-dfn-throw⑥">throw</a> a
 "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#securityerror" id="ref-for-securityerror①">SecurityError</a></code>" <code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#idl-DOMException" id="ref-for-idl-DOMException①⑤">DOMException</a></code> and abort these steps.</p>
      <li data-md="">
       <p>Let <var>request</var> be a new <a data-link-type="dfn" href="#request-open-request" id="ref-for-request-open-request①②">open request</a>.</p>
      <li data-md="">
-      <p>Run these steps <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel" id="ref-for-in-parallel①">in parallel</a>:</p>
+      <p>Run these steps <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#in-parallel" id="ref-for-in-parallel①">in parallel</a>:</p>
       <ol>
        <li data-md="">
         <p>Let <var>result</var> be the result of running the steps to <a data-link-type="dfn" href="#delete-a-database" id="ref-for-delete-a-database">delete a database</a>, with <var>origin</var>, <var>name</var>, and <var>request</var>.</p>
        <li data-md="">
-        <p><a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task" id="ref-for-queue-a-task②">Queue a task</a> to run these steps:</p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#queuing" id="ref-for-queue-a-task②">Queue a task</a> to run these steps:</p>
         <ol>
          <li data-md="">
           <p>If <var>result</var> is an error,
 set <var>request</var>’s <a data-link-type="dfn" href="#request-error" id="ref-for-request-error⑤">error</a> to <var>result</var>,
 set <var>request</var>’s <a data-link-type="dfn" href="#request-done-flag" id="ref-for-request-done-flag①⓪">done flag</a>,
-and <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-event-fire" id="ref-for-concept-event-fire②">fire an event</a> named <code>error</code> at <var>request</var> with
-its <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-bubbles" id="ref-for-dom-event-bubbles②">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-cancelable" id="ref-for-dom-event-cancelable②">cancelable</a></code> attributes initialized to true.</p>
+and <a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-fire" id="ref-for-concept-event-fire②">fire an event</a> named <code>error</code> at <var>request</var> with
+its <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-bubble" id="ref-for-dom-event-bubbles②">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-cancelable" id="ref-for-dom-event-cancelable②">cancelable</a></code> attributes initialized to true.</p>
          <li data-md="">
           <p>Otherwise,
 set <var>request</var>’s <a data-link-type="dfn" href="#request-result" id="ref-for-request-result⑥">result</a> to undefined,
@@ -3303,10 +3303,10 @@ associated <a data-link-type="dfn" href="#connection" id="ref-for-connection③�
 has one or more event listeners registers whose type is one of <code>abort</code>, <code>error</code>, or <code>versionchange</code>.
 If an <code class="idl"><a data-link-type="idl" href="#idbdatabase" id="ref-for-idbdatabase④">IDBDatabase</a></code> object is garbage collected, the associated <a data-link-type="dfn" href="#connection" id="ref-for-connection③⑦">connection</a> must be <a data-link-type="dfn" href="#connection-closed" id="ref-for-connection-closed①">closed</a>.</p>
 <pre class="idl highlight def">[<a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#Exposed" id="ref-for-Exposed④">Exposed</a>=(<span class="n">Window</span>,<span class="n">Worker</span>)]
-<span class="kt">interface</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="interface" data-export="" id="idbdatabase"><code>IDBDatabase</code></dfn> : <a class="n" data-link-type="idl-name" href="https://dom.spec.whatwg.org/#eventtarget" id="ref-for-eventtarget①">EventTarget</a> {
+<span class="kt">interface</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="interface" data-export="" id="idbdatabase"><code>IDBDatabase</code></dfn> : <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/dom41/#eventtarget" id="ref-for-eventtarget①">EventTarget</a> {
   <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-DOMString" id="ref-for-idl-DOMString⑤"><span class="kt">DOMString</span></a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="DOMString" href="#dom-idbdatabase-name" id="ref-for-dom-idbdatabase-name">name</a>;
   <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-unsigned-long-long" id="ref-for-idl-unsigned-long-long⑤"><span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span></a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="unsigned long long" href="#dom-idbdatabase-version" id="ref-for-dom-idbdatabase-version">version</a>;
-  <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#domstringlist" id="ref-for-domstringlist">DOMStringList</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="DOMStringList" href="#dom-idbdatabase-objectstorenames" id="ref-for-dom-idbdatabase-objectstorenames">objectStoreNames</a>;
+  <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#domstringlist" id="ref-for-domstringlist">DOMStringList</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="DOMStringList" href="#dom-idbdatabase-objectstorenames" id="ref-for-dom-idbdatabase-objectstorenames">objectStoreNames</a>;
 
   [<a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#NewObject" id="ref-for-NewObject②">NewObject</a>] <a class="n" data-link-type="idl-name" href="#idbtransaction" id="ref-for-idbtransaction②">IDBTransaction</a> <a class="nv idl-code" data-link-type="method" href="#dom-idbdatabase-transaction" id="ref-for-dom-idbdatabase-transaction②">transaction</a>((<a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-DOMString" id="ref-for-idl-DOMString⑥"><span class="kt">DOMString</span></a> <span class="kt">or</span> <span class="kt">sequence</span>&lt;<a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-DOMString" id="ref-for-idl-DOMString⑦"><span class="kt">DOMString</span></a>>) <dfn class="nv idl-code" data-dfn-for="IDBDatabase/transaction(storeNames, mode), IDBDatabase/transaction(storeNames)" data-dfn-type="argument" data-export="" id="dom-idbdatabase-transaction-storenames-mode-storenames"><code>storeNames</code><a class="self-link" href="#dom-idbdatabase-transaction-storenames-mode-storenames"></a></dfn>,
                                          <span class="kt">optional</span> <a class="n" data-link-type="idl-name" href="#enumdef-idbtransactionmode" id="ref-for-enumdef-idbtransactionmode">IDBTransactionMode</a> <dfn class="nv idl-code" data-dfn-for="IDBDatabase/transaction(storeNames, mode), IDBDatabase/transaction(storeNames)" data-dfn-type="argument" data-export="" id="dom-idbdatabase-transaction-storenames-mode-mode"><code>mode</code><a class="self-link" href="#dom-idbdatabase-transaction-storenames-mode-mode"></a></dfn> = "readonly");
@@ -3317,10 +3317,10 @@ If an <code class="idl"><a data-link-type="idl" href="#idbdatabase" id="ref-for-
   <span class="kt">void</span> <a class="nv idl-code" data-link-type="method" href="#dom-idbdatabase-deleteobjectstore" id="ref-for-dom-idbdatabase-deleteobjectstore">deleteObjectStore</a>(<a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-DOMString" id="ref-for-idl-DOMString⑨"><span class="kt">DOMString</span></a> <dfn class="nv idl-code" data-dfn-for="IDBDatabase/deleteObjectStore(name)" data-dfn-type="argument" data-export="" id="dom-idbdatabase-deleteobjectstore-name-name"><code>name</code><a class="self-link" href="#dom-idbdatabase-deleteobjectstore-name-name"></a></dfn>);
 
   // Event handlers:
-  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler" id="ref-for-eventhandler④">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbdatabase-onabort" id="ref-for-dom-idbdatabase-onabort">onabort</a>;
-  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler" id="ref-for-eventhandler⑤">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbdatabase-onclose" id="ref-for-dom-idbdatabase-onclose">onclose</a>;
-  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler" id="ref-for-eventhandler⑥">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbdatabase-onerror" id="ref-for-dom-idbdatabase-onerror">onerror</a>;
-  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler" id="ref-for-eventhandler⑦">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbdatabase-onversionchange" id="ref-for-dom-idbdatabase-onversionchange">onversionchange</a>;
+  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler" id="ref-for-eventhandler④">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbdatabase-onabort" id="ref-for-dom-idbdatabase-onabort">onabort</a>;
+  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler" id="ref-for-eventhandler⑤">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbdatabase-onclose" id="ref-for-dom-idbdatabase-onclose">onclose</a>;
+  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler" id="ref-for-eventhandler⑥">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbdatabase-onerror" id="ref-for-dom-idbdatabase-onerror">onerror</a>;
+  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler" id="ref-for-eventhandler⑦">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbdatabase-onversionchange" id="ref-for-dom-idbdatabase-onversionchange">onversionchange</a>;
 };
 
 <span class="kt">dictionary</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="dictionary" data-export="" id="dictdef-idbobjectstoreparameters"><code>IDBObjectStoreParameters</code></dfn> {
@@ -3363,7 +3363,7 @@ must return this <a data-link-type="dfn" href="#connection" id="ref-for-connecti
     </dl>
    </div>
    <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="IDBDatabase" data-dfn-type="attribute" data-export="" id="dom-idbdatabase-objectstorenames"><code>objectStoreNames</code></dfn> attribute’s
-getter must return a <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#domstringlist" id="ref-for-domstringlist①">DOMStringList</a></code> associated with a <a data-link-type="dfn" href="#sorted-name-list" id="ref-for-sorted-name-list">sorted name list</a> of the <a data-link-type="dfn" href="#object-store-name" id="ref-for-object-store-name①">names</a> of
+getter must return a <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/html52/single-page.html#domstringlist" id="ref-for-domstringlist①">DOMStringList</a></code> associated with a <a data-link-type="dfn" href="#sorted-name-list" id="ref-for-sorted-name-list">sorted name list</a> of the <a data-link-type="dfn" href="#object-store-name" id="ref-for-object-store-name①">names</a> of
 the <a data-link-type="dfn" href="#object-store" id="ref-for-object-store⑤⑤">object stores</a> in this <a data-link-type="dfn" href="#connection" id="ref-for-connection④③">connection</a>'s <a data-link-type="dfn" href="#connection-object-store-set" id="ref-for-connection-object-store-set">object store set</a>.</p>
    <details class="note">
     <summary> Is this the same as the <a data-link-type="dfn" href="#database" id="ref-for-database④④">database</a>'s <a data-link-type="dfn" href="#object-store" id="ref-for-object-store⑤⑥">object store</a> <a data-link-type="dfn" href="#object-store-name" id="ref-for-object-store-name②">names</a>? </summary>
@@ -3476,7 +3476,7 @@ store</a> in the <a data-link-type="dfn" href="#connection" id="ref-for-connecti
       <p>Let <var>transaction</var> be a newly <a data-link-type="dfn" href="#transaction-created" id="ref-for-transaction-created②">created</a> <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept③⑧">transaction</a> with <var>connection</var>, <var>mode</var> and the set of <a data-link-type="dfn" href="#object-store" id="ref-for-object-store⑦②">object stores</a> named in <var>scope</var>.</p>
      <li data-md="">
       <p>Set <var>transaction</var>’s <a data-link-type="dfn" href="#transaction-cleanup-event-loop" id="ref-for-transaction-cleanup-event-loop②">cleanup event loop</a> to the
-current <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loop" id="ref-for-event-loop④">event loop</a>.</p>
+current <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#event-loop" id="ref-for-event-loop④">event loop</a>.</p>
      <li data-md="">
       <p>Return an <code class="idl"><a data-link-type="idl" href="#idbtransaction" id="ref-for-idbtransaction③">IDBTransaction</a></code> object representing <var>transaction</var>.</p>
     </ol>
@@ -3508,7 +3508,7 @@ the event handler for the <code>versionchange</code> event.</p>
 <span class="kt">interface</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="interface" data-export="" id="idbobjectstore"><code>IDBObjectStore</code></dfn> {
   <span class="kt">attribute</span> <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-DOMString" id="ref-for-idl-DOMString①②"><span class="kt">DOMString</span></a> <a class="nv idl-code" data-link-type="attribute" data-type="DOMString" href="#dom-idbobjectstore-name" id="ref-for-dom-idbobjectstore-name">name</a>;
   <span class="kt">readonly</span> <span class="kt">attribute</span> <span class="kt">any</span> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="any" href="#dom-idbobjectstore-keypath" id="ref-for-dom-idbobjectstore-keypath">keyPath</a>;
-  <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#domstringlist" id="ref-for-domstringlist②">DOMStringList</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="DOMStringList" href="#dom-idbobjectstore-indexnames" id="ref-for-dom-idbobjectstore-indexnames">indexNames</a>;
+  <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#domstringlist" id="ref-for-domstringlist②">DOMStringList</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="DOMStringList" href="#dom-idbobjectstore-indexnames" id="ref-for-dom-idbobjectstore-indexnames">indexNames</a>;
   [<a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#SameObject" id="ref-for-SameObject①">SameObject</a>] <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="#idbtransaction" id="ref-for-idbtransaction④">IDBTransaction</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="IDBTransaction" href="#dom-idbobjectstore-transaction" id="ref-for-dom-idbobjectstore-transaction">transaction</a>;
   <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-boolean" id="ref-for-idl-boolean①"><span class="kt">boolean</span></a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="boolean" href="#dom-idbobjectstore-autoincrement" id="ref-for-dom-idbobjectstore-autoincrement">autoIncrement</a>;
 
@@ -3609,7 +3609,7 @@ an object (specifically an <a data-link-type="dfn" href="https://tc39.github.io/
 instance every time it is inspected. Changing the properties of the
 object has no effect on the <a data-link-type="dfn" href="#object-store" id="ref-for-object-store⑦⑦">object store</a>.</p>
    <p>The <dfn class="dfn-paneled idl-code" data-dfn-for="IDBObjectStore" data-dfn-type="attribute" data-export="" id="dom-idbobjectstore-indexnames"><code>indexNames</code></dfn> attribute’s
-getter must return a <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#domstringlist" id="ref-for-domstringlist③">DOMStringList</a></code> associated with a <a data-link-type="dfn" href="#sorted-name-list" id="ref-for-sorted-name-list①">sorted name list</a> of the <a data-link-type="dfn" href="#index-name" id="ref-for-index-name①">names</a> of <a data-link-type="dfn" href="#index-concept" id="ref-for-index-concept①⑨">indexes</a> in this <a data-link-type="dfn" href="#object-store-handle" id="ref-for-object-store-handle①⑤">object store handle</a>'s <a data-link-type="dfn" href="#object-store-handle-index-set" id="ref-for-object-store-handle-index-set①">index set</a>.</p>
+getter must return a <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/html52/single-page.html#domstringlist" id="ref-for-domstringlist③">DOMStringList</a></code> associated with a <a data-link-type="dfn" href="#sorted-name-list" id="ref-for-sorted-name-list①">sorted name list</a> of the <a data-link-type="dfn" href="#index-name" id="ref-for-index-name①">names</a> of <a data-link-type="dfn" href="#index-concept" id="ref-for-index-concept①⑨">indexes</a> in this <a data-link-type="dfn" href="#object-store-handle" id="ref-for-object-store-handle①⑤">object store handle</a>'s <a data-link-type="dfn" href="#object-store-handle-index-set" id="ref-for-object-store-handle-index-set①">index set</a>.</p>
    <details class="note">
     <summary> Is this the same as <a data-link-type="dfn" href="#object-store" id="ref-for-object-store⑦⑧">object store</a>'s list
     of <a data-link-type="dfn" href="#index-concept" id="ref-for-index-concept②⓪">index</a> <a data-link-type="dfn" href="#index-name" id="ref-for-index-name②">names</a>? </summary>
@@ -4171,7 +4171,7 @@ keyPath. If the <a data-link-type="dfn" href="#index-referenced" id="ref-for-ind
 which violates these constraints, this must not cause the
 implementation of <code class="idl"><a data-link-type="idl" href="#dom-idbobjectstore-createindex" id="ref-for-dom-idbobjectstore-createindex②">createIndex()</a></code> to throw an
 exception or affect what it returns. The implementation must still
-create and return an <code class="idl"><a data-link-type="idl" href="#idbindex" id="ref-for-idbindex⑥">IDBIndex</a></code> object, and the implementation must <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task" id="ref-for-queue-a-task③">queue a task</a> to abort the <a data-link-type="dfn" href="#upgrade-transaction" id="ref-for-upgrade-transaction③⑤">upgrade transaction</a> which was
+create and return an <code class="idl"><a data-link-type="idl" href="#idbindex" id="ref-for-idbindex⑥">IDBIndex</a></code> object, and the implementation must <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#queuing" id="ref-for-queue-a-task③">queue a task</a> to abort the <a data-link-type="dfn" href="#upgrade-transaction" id="ref-for-upgrade-transaction③⑤">upgrade transaction</a> which was
 used for the <code class="idl"><a data-link-type="idl" href="#dom-idbobjectstore-createindex" id="ref-for-dom-idbobjectstore-createindex③">createIndex()</a></code> call.</p>
    <p>This method synchronously modifies the <code class="idl"><a data-link-type="idl" href="#dom-idbobjectstore-indexnames" id="ref-for-dom-idbobjectstore-indexnames②">indexNames</a></code> property on the <code class="idl"><a data-link-type="idl" href="#idbobjectstore" id="ref-for-idbobjectstore⑧">IDBObjectStore</a></code> instance on which it was called.
 Although this method does not return an <code class="idl"><a data-link-type="idl" href="#idbrequest" id="ref-for-idbrequest②⑧">IDBRequest</a></code> object, the
@@ -5096,8 +5096,8 @@ the contents of the database.</p>
    <h3 class="heading settled" data-level="4.9" id="transaction"><span class="secno">4.9. </span><span class="content">The <code class="idl"><a data-link-type="idl" href="#idbtransaction" id="ref-for-idbtransaction⑤">IDBTransaction</a></code> interface</span><a class="self-link" href="#transaction"></a></h3>
    <p><a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept⑤⑤">transaction</a> objects implement the following interface:</p>
 <pre class="idl highlight def">[<a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#Exposed" id="ref-for-Exposed①⓪">Exposed</a>=(<span class="n">Window</span>,<span class="n">Worker</span>)]
-<span class="kt">interface</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="interface" data-export="" id="idbtransaction"><code>IDBTransaction</code></dfn> : <a class="n" data-link-type="idl-name" href="https://dom.spec.whatwg.org/#eventtarget" id="ref-for-eventtarget②">EventTarget</a> {
-  <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#domstringlist" id="ref-for-domstringlist④">DOMStringList</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="DOMStringList" href="#dom-idbtransaction-objectstorenames" id="ref-for-dom-idbtransaction-objectstorenames">objectStoreNames</a>;
+<span class="kt">interface</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="interface" data-export="" id="idbtransaction"><code>IDBTransaction</code></dfn> : <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/dom41/#eventtarget" id="ref-for-eventtarget②">EventTarget</a> {
+  <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#domstringlist" id="ref-for-domstringlist④">DOMStringList</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="DOMStringList" href="#dom-idbtransaction-objectstorenames" id="ref-for-dom-idbtransaction-objectstorenames">objectStoreNames</a>;
   <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="#enumdef-idbtransactionmode" id="ref-for-enumdef-idbtransactionmode①">IDBTransactionMode</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="IDBTransactionMode" href="#dom-idbtransaction-mode" id="ref-for-dom-idbtransaction-mode">mode</a>;
   [<a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#SameObject" id="ref-for-SameObject③">SameObject</a>] <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="#idbdatabase" id="ref-for-idbdatabase⑧">IDBDatabase</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="IDBDatabase" href="#dom-idbtransaction-db" id="ref-for-dom-idbtransaction-db">db</a>;
   <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://heycam.github.io/webidl/#idl-DOMException" id="ref-for-idl-DOMException①⑦①">DOMException</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="DOMException" href="#dom-idbtransaction-error" id="ref-for-dom-idbtransaction-error">error</a>;
@@ -5106,9 +5106,9 @@ the contents of the database.</p>
   <span class="kt">void</span> <a class="nv idl-code" data-link-type="method" href="#dom-idbtransaction-abort" id="ref-for-dom-idbtransaction-abort">abort</a>();
 
   // Event handlers:
-  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler" id="ref-for-eventhandler⑧">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbtransaction-onabort" id="ref-for-dom-idbtransaction-onabort">onabort</a>;
-  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler" id="ref-for-eventhandler⑨">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbtransaction-oncomplete" id="ref-for-dom-idbtransaction-oncomplete">oncomplete</a>;
-  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler" id="ref-for-eventhandler①⓪">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbtransaction-onerror" id="ref-for-dom-idbtransaction-onerror">onerror</a>;
+  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler" id="ref-for-eventhandler⑧">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbtransaction-onabort" id="ref-for-dom-idbtransaction-onabort">onabort</a>;
+  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler" id="ref-for-eventhandler⑨">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbtransaction-oncomplete" id="ref-for-dom-idbtransaction-oncomplete">oncomplete</a>;
+  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler" id="ref-for-eventhandler①⓪">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbtransaction-onerror" id="ref-for-dom-idbtransaction-onerror">onerror</a>;
 };
 
 <span class="kt">enum</span> <dfn class="nv dfn-paneled idl-code" data-dfn-type="enum" data-export="" id="enumdef-idbtransactionmode"><code>IDBTransactionMode</code></dfn> {
@@ -5138,10 +5138,10 @@ the contents of the database.</p>
     <ol>
      <li data-md="">
       <p>If this <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept⑤⑥">transaction</a> is an <a data-link-type="dfn" href="#upgrade-transaction" id="ref-for-upgrade-transaction④⑤">upgrade transaction</a>,
-return a <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#domstringlist" id="ref-for-domstringlist⑤">DOMStringList</a></code> associated with a <a data-link-type="dfn" href="#sorted-name-list" id="ref-for-sorted-name-list②">sorted name list</a> of the <a data-link-type="dfn" href="#object-store-name" id="ref-for-object-store-name①⑦">names</a> of the <a data-link-type="dfn" href="#object-store" id="ref-for-object-store⑨②">object stores</a> in this <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept⑤⑦">transaction</a>'s <a data-link-type="dfn" href="#connection" id="ref-for-connection⑤⑥">connection</a>'s <a data-link-type="dfn" href="#connection-object-store-set" id="ref-for-connection-object-store-set②">object store
+return a <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/html52/single-page.html#domstringlist" id="ref-for-domstringlist⑤">DOMStringList</a></code> associated with a <a data-link-type="dfn" href="#sorted-name-list" id="ref-for-sorted-name-list②">sorted name list</a> of the <a data-link-type="dfn" href="#object-store-name" id="ref-for-object-store-name①⑦">names</a> of the <a data-link-type="dfn" href="#object-store" id="ref-for-object-store⑨②">object stores</a> in this <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept⑤⑦">transaction</a>'s <a data-link-type="dfn" href="#connection" id="ref-for-connection⑤⑥">connection</a>'s <a data-link-type="dfn" href="#connection-object-store-set" id="ref-for-connection-object-store-set②">object store
 set</a>.</p>
      <li data-md="">
-      <p>Otherwise, return a <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#domstringlist" id="ref-for-domstringlist⑥">DOMStringList</a></code> associated with a <a data-link-type="dfn" href="#sorted-name-list" id="ref-for-sorted-name-list③">sorted name list</a> of the <a data-link-type="dfn" href="#object-store-name" id="ref-for-object-store-name①⑧">names</a> of the <a data-link-type="dfn" href="#object-store" id="ref-for-object-store⑨③">object stores</a> in
+      <p>Otherwise, return a <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/html52/single-page.html#domstringlist" id="ref-for-domstringlist⑥">DOMStringList</a></code> associated with a <a data-link-type="dfn" href="#sorted-name-list" id="ref-for-sorted-name-list③">sorted name list</a> of the <a data-link-type="dfn" href="#object-store-name" id="ref-for-object-store-name①⑧">names</a> of the <a data-link-type="dfn" href="#object-store" id="ref-for-object-store⑨③">object stores</a> in
 this <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept⑤⑧">transaction</a>'s <a data-link-type="dfn" href="#transaction-scope" id="ref-for-transaction-scope①②">scope</a>.</p>
     </ol>
    </div>
@@ -5251,7 +5251,7 @@ return a newly <a data-link-type="dfn" href="https://heycam.github.io/webidl/#df
         <p>Let <var>openConnections</var> be the set of all <a data-link-type="dfn" href="#connection" id="ref-for-connection⑤⑨">connections</a>,
 except <var>connection</var>, associated with <var>db</var>.</p>
        <li data-md="">
-        <p>For each <var>entry</var> in <var>openConnections</var> that does not have its <a data-link-type="dfn" href="#connection-close-pending-flag" id="ref-for-connection-close-pending-flag④">close pending flag</a> set, <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task" id="ref-for-queue-a-task④">queue a task</a> to <a data-link-type="dfn" href="#fire-a-version-change-event" id="ref-for-fire-a-version-change-event①">fire a
+        <p>For each <var>entry</var> in <var>openConnections</var> that does not have its <a data-link-type="dfn" href="#connection-close-pending-flag" id="ref-for-connection-close-pending-flag④">close pending flag</a> set, <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#queuing" id="ref-for-queue-a-task④">queue a task</a> to <a data-link-type="dfn" href="#fire-a-version-change-event" id="ref-for-fire-a-version-change-event①">fire a
 version change event</a> named <code>versionchange</code> at <var>entry</var> with <var>db</var>’s <a data-link-type="dfn" href="#database-version" id="ref-for-database-version①②">version</a> and <var>version</var>.</p>
         <aside class="note"> Firing this event might cause one or more of the other
   objects in <var>openConnections</var> to be closed, in which case the <code>versionchange</code> event is not fired at those
@@ -5260,7 +5260,7 @@ version change event</a> named <code>versionchange</code> at <var>entry</var> wi
         <p>Wait for all of the events to be fired.</p>
        <li data-md="">
         <p>If any of the <a data-link-type="dfn" href="#connection" id="ref-for-connection⑥⓪">connections</a> in <var>openConnections</var> are still
-not closed, <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task" id="ref-for-queue-a-task⑤">queue a task</a> to <a data-link-type="dfn" href="#fire-a-version-change-event" id="ref-for-fire-a-version-change-event②">fire a version change
+not closed, <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#queuing" id="ref-for-queue-a-task⑤">queue a task</a> to <a data-link-type="dfn" href="#fire-a-version-change-event" id="ref-for-fire-a-version-change-event②">fire a version change
 event</a> named <code><a data-link-type="dfn" href="#request-blocked" id="ref-for-request-blocked④">blocked</a></code> at <var>request</var> with <var>db</var>’s <a data-link-type="dfn" href="#database-version" id="ref-for-database-version①③">version</a> and <var>version</var>.</p>
        <li data-md="">
         <p><span id="version-change-close-block">Wait</span> until all <a data-link-type="dfn" href="#connection" id="ref-for-connection⑥①">connections</a> in <var>openConnections</var> are <a data-link-type="dfn" href="#connection-closed" id="ref-for-connection-closed④">closed</a>.</p>
@@ -5293,7 +5293,7 @@ transaction</a> with <var>transaction</var> and newly <a data-link-type="dfn" hr
       <p>Wait for all transactions <a data-link-type="dfn" href="#transaction-created" id="ref-for-transaction-created④">created</a> using <var>connection</var> to complete.
 Once they are complete, <var>connection</var> is <a data-link-type="dfn" href="#connection-closed" id="ref-for-connection-closed⑥">closed</a>.</p>
      <li data-md="">
-      <p>If the <var>forced flag</var> is set, then <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-event-fire" id="ref-for-concept-event-fire③">fire an event</a> named <code>close</code> at <var>connection</var>.</p>
+      <p>If the <var>forced flag</var> is set, then <a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-fire" id="ref-for-concept-event-fire③">fire an event</a> named <code>close</code> at <var>connection</var>.</p>
       <aside class="note"> The "<code>close</code>" event only fires if the connection closes
   abnormally, e.g. if the origin’s storage is cleared, or there is
   corruption or an I/O error. If <code class="idl"><a data-link-type="idl" href="#dom-idbdatabase-close" id="ref-for-dom-idbdatabase-close③">close()</a></code> is called explicitly
@@ -5326,7 +5326,7 @@ requested the <a data-link-type="dfn" href="#database" id="ref-for-database⑤�
      <li data-md="">
       <p>Let <var>openConnections</var> be the set of all <a data-link-type="dfn" href="#connection" id="ref-for-connection⑥④">connections</a> associated with <var>db</var>.</p>
      <li data-md="">
-      <p>For each <var>entry</var> in <var>openConnections</var> that does not have its <a data-link-type="dfn" href="#connection-close-pending-flag" id="ref-for-connection-close-pending-flag⑧">close pending flag</a> set, <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task" id="ref-for-queue-a-task⑥">queue a task</a> to <a data-link-type="dfn" href="#fire-a-version-change-event" id="ref-for-fire-a-version-change-event③">fire a version
+      <p>For each <var>entry</var> in <var>openConnections</var> that does not have its <a data-link-type="dfn" href="#connection-close-pending-flag" id="ref-for-connection-close-pending-flag⑧">close pending flag</a> set, <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#queuing" id="ref-for-queue-a-task⑥">queue a task</a> to <a data-link-type="dfn" href="#fire-a-version-change-event" id="ref-for-fire-a-version-change-event③">fire a version
 change event</a> named <code>versionchange</code> at <var>entry</var> with <var>db</var>’s <a data-link-type="dfn" href="#database-version" id="ref-for-database-version①④">version</a> and null.</p>
       <aside class="note"> Firing this event might cause one or more of the other objects
   in <var>openConnections</var> to be closed, in which case the <code>versionchange</code> event is not fired at those
@@ -5335,7 +5335,7 @@ change event</a> named <code>versionchange</code> at <var>entry</var> with <var>
       <p>Wait for all of the events to be fired.</p>
      <li data-md="">
       <p>If any of the <a data-link-type="dfn" href="#connection" id="ref-for-connection⑥⑤">connections</a> in <var>openConnections</var> are still not
-closed, <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task" id="ref-for-queue-a-task⑦">queue a task</a> to <a data-link-type="dfn" href="#fire-a-version-change-event" id="ref-for-fire-a-version-change-event④">fire a version change event</a> named <code><a data-link-type="dfn" href="#request-blocked" id="ref-for-request-blocked⑤">blocked</a></code> at <var>request</var> with <var>db</var>’s <a data-link-type="dfn" href="#database-version" id="ref-for-database-version①⑤">version</a> and null.</p>
+closed, <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#queuing" id="ref-for-queue-a-task⑦">queue a task</a> to <a data-link-type="dfn" href="#fire-a-version-change-event" id="ref-for-fire-a-version-change-event④">fire a version change event</a> named <code><a data-link-type="dfn" href="#request-blocked" id="ref-for-request-blocked⑤">blocked</a></code> at <var>request</var> with <var>db</var>’s <a data-link-type="dfn" href="#database-version" id="ref-for-database-version①⑤">version</a> and null.</p>
      <li data-md="">
       <p><span id="delete-close-block">Wait</span> until all <a data-link-type="dfn" href="#connection" id="ref-for-connection⑥⑥">connections</a> in <var>openConnections</var> are <a data-link-type="dfn" href="#connection-closed" id="ref-for-connection-closed⑦">closed</a>.</p>
      <li data-md="">
@@ -5361,12 +5361,12 @@ to <a data-link-type="dfn" href="#abort-a-transaction" id="ref-for-abort-a-trans
 appropriate for the error, for example "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#quotaexceedederror" id="ref-for-quotaexceedederror⑦">QuotaExceededError</a></code>" or
 "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#unknownerror" id="ref-for-unknownerror⑤">UnknownError</a></code>" <code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#idl-DOMException" id="ref-for-idl-DOMException①⑧⑤">DOMException</a></code>.</p>
      <li data-md="">
-      <p><a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task" id="ref-for-queue-a-task⑧">Queue a task</a> to run these steps:</p>
+      <p><a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#queuing" id="ref-for-queue-a-task⑧">Queue a task</a> to run these steps:</p>
       <ol>
        <li data-md="">
         <p>If <var>transaction</var> is an <a data-link-type="dfn" href="#upgrade-transaction" id="ref-for-upgrade-transaction④⑧">upgrade transaction</a>, set the <a data-link-type="dfn" href="#database" id="ref-for-database⑥③">database</a>'s <a data-link-type="dfn" href="#database-upgrade-transaction" id="ref-for-database-upgrade-transaction②">upgrade transaction</a> to null.</p>
        <li data-md="">
-        <p><a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-event-fire" id="ref-for-concept-event-fire④">Fire an event</a> named <code>complete</code> at <var>transaction</var>.</p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-fire" id="ref-for-concept-event-fire④">Fire an event</a> named <code>complete</code> at <var>transaction</var>.</p>
         <aside class="note"> Even if an exception is thrown from one of the event handlers of
   this event, the transaction is still committed since writing the
   database changes happens before the event takes places. Only
@@ -5398,7 +5398,7 @@ to <a data-link-type="dfn" href="#abort-an-upgrade-transaction" id="ref-for-abor
       <p>If <var>error</var> is not null, set <var>transaction</var>’s <a data-link-type="dfn" href="#transaction-error" id="ref-for-transaction-error①">error</a> to <var>error</var>.</p>
      <li data-md="">
       <p>For each <var>request</var> in <var>transaction</var>’s <a data-link-type="dfn" href="#transaction-request-list" id="ref-for-transaction-request-list">request list</a> with <a data-link-type="dfn" href="#request-done-flag" id="ref-for-request-done-flag①⑤">done flag</a> unset, abort the steps to <a data-link-type="dfn" href="#asynchronously-execute-a-request" id="ref-for-asynchronously-execute-a-request②④">asynchronously
-execute a request</a> for <var>request</var> and <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task" id="ref-for-queue-a-task⑨">queue a task</a> to
+execute a request</a> for <var>request</var> and <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#queuing" id="ref-for-queue-a-task⑨">queue a task</a> to
 run these steps:</p>
       <ol>
        <li data-md="">
@@ -5408,19 +5408,19 @@ run these steps:</p>
        <li data-md="">
         <p>Set the <a data-link-type="dfn" href="#request-error" id="ref-for-request-error⑦">error</a> of <var>request</var> to a newly <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-create-exception" id="ref-for-dfn-create-exception④">created</a> "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#aborterror" id="ref-for-aborterror⑥">AbortError</a></code>" <code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#idl-DOMException" id="ref-for-idl-DOMException①⑧⑥">DOMException</a></code>.</p>
        <li data-md="">
-        <p><a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-event-fire" id="ref-for-concept-event-fire⑤">Fire an event</a> named <code>error</code> at <var>request</var> with its <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-bubbles" id="ref-for-dom-event-bubbles③">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-cancelable" id="ref-for-dom-event-cancelable③">cancelable</a></code> attributes initialized to true.</p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-fire" id="ref-for-concept-event-fire⑤">Fire an event</a> named <code>error</code> at <var>request</var> with its <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-bubble" id="ref-for-dom-event-bubbles③">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-cancelable" id="ref-for-dom-event-cancelable③">cancelable</a></code> attributes initialized to true.</p>
       </ol>
       <aside class="note"> This does not always result in any <code>error</code> events
   being fired. For example if a transaction is aborted due to an
   error while <a data-link-type="dfn" href="#transaction-commit" id="ref-for-transaction-commit③">committing</a> the transaction,
   or if it was the last remaining request that failed. </aside>
      <li data-md="">
-      <p><a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task" id="ref-for-queue-a-task①⓪">Queue a task</a> to run these steps:</p>
+      <p><a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#queuing" id="ref-for-queue-a-task①⓪">Queue a task</a> to run these steps:</p>
       <ol>
        <li data-md="">
         <p>If <var>transaction</var> is an <a data-link-type="dfn" href="#upgrade-transaction" id="ref-for-upgrade-transaction⑤②">upgrade transaction</a>, set the <a data-link-type="dfn" href="#database" id="ref-for-database⑥⑤">database</a>'s <a data-link-type="dfn" href="#database-upgrade-transaction" id="ref-for-database-upgrade-transaction③">upgrade transaction</a> to null.</p>
        <li data-md="">
-        <p><a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-event-fire" id="ref-for-concept-event-fire⑥">Fire an event</a> named <code>abort</code> at <var>transaction</var> with its <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-bubbles" id="ref-for-dom-event-bubbles④">bubbles</a></code> attribute initialized to true.</p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-fire" id="ref-for-concept-event-fire⑥">Fire an event</a> named <code>abort</code> at <var>transaction</var> with its <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-bubble" id="ref-for-dom-event-bubbles④">bubbles</a></code> attribute initialized to true.</p>
        <li data-md="">
         <p>If <var>transaction</var> is an <a data-link-type="dfn" href="#upgrade-transaction" id="ref-for-upgrade-transaction⑤③">upgrade transaction</a>, then:</p>
         <ol>
@@ -5454,7 +5454,7 @@ created <a data-link-type="dfn" href="#request" id="ref-for-request③③">reque
      <li data-md="">
       <p>Add <var>request</var> to the end of <var>transaction</var>’s <a data-link-type="dfn" href="#transaction-request-list" id="ref-for-transaction-request-list①">request list</a>.</p>
      <li data-md="">
-      <p>Run these steps <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel" id="ref-for-in-parallel②">in parallel</a>:</p>
+      <p>Run these steps <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#in-parallel" id="ref-for-in-parallel②">in parallel</a>:</p>
       <ol>
        <li data-md="">
         <p>Wait until all previously added <a data-link-type="dfn" href="#request" id="ref-for-request③④">requests</a> in <var>transaction</var> have their <a data-link-type="dfn" href="#request-done-flag" id="ref-for-request-done-flag①⑧">done flag</a> set.</p>
@@ -5465,7 +5465,7 @@ created <a data-link-type="dfn" href="#request" id="ref-for-request③③">reque
         <aside class="note"> This only reverts the changes done by this request, not any
   other changes made by the transaction. </aside>
        <li data-md="">
-        <p><a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task" id="ref-for-queue-a-task①①">Queue a task</a> to run these steps:</p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#queuing" id="ref-for-queue-a-task①①">Queue a task</a> to run these steps:</p>
         <ol>
          <li data-md="">
           <p>Set the <a data-link-type="dfn" href="#request-done-flag" id="ref-for-request-done-flag①⑨">done flag</a> on <var>request</var>.</p>
@@ -5521,7 +5521,7 @@ for the <a data-link-type="dfn" href="#database" id="ref-for-database⑥⑦">dat
 considered part of the <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept⑦⑦">transaction</a>, and so if the
 transaction is <a data-link-type="dfn" href="#transaction-abort" id="ref-for-transaction-abort⑨">aborted</a>, this change is reverted.</p>
      <li data-md="">
-      <p><a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task" id="ref-for-queue-a-task①②">Queue a task</a> to run these steps:</p>
+      <p><a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#queuing" id="ref-for-queue-a-task①②">Queue a task</a> to run these steps:</p>
       <ol>
        <li data-md="">
         <p>Set <var>request</var>’s <a data-link-type="dfn" href="#request-result" id="ref-for-request-result①①">result</a> to <var>connection</var>.</p>
@@ -5612,11 +5612,11 @@ its <a data-link-type="dfn" href="#index-handle-index" id="ref-for-index-handle-
 the implementation must run these steps:</p>
     <ol>
      <li data-md="">
-      <p>Let <var>event</var> be the result of <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-event-create" id="ref-for-concept-event-create①">creating an event</a> using <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#event" id="ref-for-event①">Event</a></code>.</p>
+      <p>Let <var>event</var> be the result of <a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-create" id="ref-for-concept-event-create①">creating an event</a> using <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#event" id="ref-for-event①">Event</a></code>.</p>
      <li data-md="">
-      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-type" id="ref-for-dom-event-type①">type</a></code> attribute to "<code>success</code>".</p>
+      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-type" id="ref-for-dom-event-type①">type</a></code> attribute to "<code>success</code>".</p>
      <li data-md="">
-      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-bubbles" id="ref-for-dom-event-bubbles⑤">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-cancelable" id="ref-for-dom-event-cancelable④">cancelable</a></code> attributes to false.</p>
+      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-bubble" id="ref-for-dom-event-bubbles⑤">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-cancelable" id="ref-for-dom-event-cancelable④">cancelable</a></code> attributes to false.</p>
      <li data-md="">
       <p>Let <var>transaction</var> be <var>request</var>’s <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept⑧①">transaction</a>.</p>
      <li data-md="">
@@ -5624,7 +5624,7 @@ the implementation must run these steps:</p>
      <li data-md="">
       <p>Set <var>transaction</var>’s <a data-link-type="dfn" href="#transaction-active-flag" id="ref-for-transaction-active-flag⑧">active flag</a>.</p>
      <li data-md="">
-      <p><a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-event-dispatch" id="ref-for-concept-event-dispatch①">Dispatch</a> <var>event</var> at <var>request</var> with <var>legacyOutputDidListenersThrowFlag</var>.</p>
+      <p><a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#dispatch" id="ref-for-concept-event-dispatch①">Dispatch</a> <var>event</var> at <var>request</var> with <var>legacyOutputDidListenersThrowFlag</var>.</p>
      <li data-md="">
       <p>Unset <var>transaction</var>’s <a data-link-type="dfn" href="#transaction-active-flag" id="ref-for-transaction-active-flag⑨">active flag</a>.</p>
      <li data-md="">
@@ -5638,11 +5638,11 @@ run the steps to <a data-link-type="dfn" href="#abort-a-transaction" id="ref-for
 the implementation must run these steps:</p>
     <ol>
      <li data-md="">
-      <p>Let <var>event</var> be the result of <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-event-create" id="ref-for-concept-event-create②">creating an event</a> using <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#event" id="ref-for-event②">Event</a></code>.</p>
+      <p>Let <var>event</var> be the result of <a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-create" id="ref-for-concept-event-create②">creating an event</a> using <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#event" id="ref-for-event②">Event</a></code>.</p>
      <li data-md="">
-      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-type" id="ref-for-dom-event-type②">type</a></code> attribute to "<code>error</code>".</p>
+      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-type" id="ref-for-dom-event-type②">type</a></code> attribute to "<code>error</code>".</p>
      <li data-md="">
-      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-bubbles" id="ref-for-dom-event-bubbles⑥">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-cancelable" id="ref-for-dom-event-cancelable⑤">cancelable</a></code> attributes to true.</p>
+      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-bubble" id="ref-for-dom-event-bubbles⑥">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-cancelable" id="ref-for-dom-event-cancelable⑤">cancelable</a></code> attributes to true.</p>
      <li data-md="">
       <p>Let <var>transaction</var> be <var>request</var>’s <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept⑧②">transaction</a>.</p>
      <li data-md="">
@@ -5650,17 +5650,17 @@ the implementation must run these steps:</p>
      <li data-md="">
       <p>Set <var>transaction</var>’s <a data-link-type="dfn" href="#transaction-active-flag" id="ref-for-transaction-active-flag①⓪">active flag</a>.</p>
      <li data-md="">
-      <p><a data-link-type="dfn" href="https://dom.spec.whatwg.org/#concept-event-dispatch" id="ref-for-concept-event-dispatch②">Dispatch</a> <var>event</var> at <a data-link-type="dfn" href="#request" id="ref-for-request③⑥">request</a> with <var>legacyOutputDidListenersThrowFlag</var>.</p>
+      <p><a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#dispatch" id="ref-for-concept-event-dispatch②">Dispatch</a> <var>event</var> at <a data-link-type="dfn" href="#request" id="ref-for-request③⑥">request</a> with <var>legacyOutputDidListenersThrowFlag</var>.</p>
      <li data-md="">
       <p>Unset <var>transaction</var>’s <a data-link-type="dfn" href="#transaction-active-flag" id="ref-for-transaction-active-flag①①">active flag</a>.</p>
      <li data-md="">
       <p>If <var>legacyOutputDidListenersThrowFlag</var> is set,
 run the steps to <a data-link-type="dfn" href="#abort-a-transaction" id="ref-for-abort-a-transaction①②">abort a transaction</a> with <var>transaction</var> and a newly <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-create-exception" id="ref-for-dfn-create-exception⑦">created</a> "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#aborterror" id="ref-for-aborterror⑨">AbortError</a></code>" <code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#idl-DOMException" id="ref-for-idl-DOMException①⑧⑨">DOMException</a></code> and terminate these steps. This is done even if the
-event’s <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#canceled-flag" id="ref-for-canceled-flag">canceled flag</a> is not set.</p>
+event’s <a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#canceled-flag" id="ref-for-canceled-flag">canceled flag</a> is not set.</p>
       <aside class="note"> This means that if an error event is fired and any of the event
-  handlers throw an exception, <var>transaction</var>’s <code class="idl"><a data-link-type="idl" href="#dom-idbtransaction-error" id="ref-for-dom-idbtransaction-error②">error</a></code> property is set to an <code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#aborterror" id="ref-for-aborterror①⓪">AbortError</a></code> rather than <var>request</var>’s <a data-link-type="dfn" href="#request-error" id="ref-for-request-error①⓪">error</a>, even if <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#dom-event-preventdefault" id="ref-for-dom-event-preventdefault">preventDefault()</a></code> is never called. </aside>
+  handlers throw an exception, <var>transaction</var>’s <code class="idl"><a data-link-type="idl" href="#dom-idbtransaction-error" id="ref-for-dom-idbtransaction-error②">error</a></code> property is set to an <code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#aborterror" id="ref-for-aborterror①⓪">AbortError</a></code> rather than <var>request</var>’s <a data-link-type="dfn" href="#request-error" id="ref-for-request-error①⓪">error</a>, even if <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-preventdefault" id="ref-for-dom-event-preventdefault">preventDefault()</a></code> is never called. </aside>
      <li data-md="">
-      <p>If the event’s <a data-link-type="dfn" href="https://dom.spec.whatwg.org/#canceled-flag" id="ref-for-canceled-flag①">canceled flag</a> is not set, run the steps
+      <p>If the event’s <a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#canceled-flag" id="ref-for-canceled-flag①">canceled flag</a> is not set, run the steps
 to <a data-link-type="dfn" href="#abort-a-transaction" id="ref-for-abort-a-transaction①③">abort a transaction</a> using <var>transaction</var> and <a data-link-type="dfn" href="#request" id="ref-for-request③⑦">request</a>'s <a data-link-type="dfn" href="#request-error" id="ref-for-request-error①①">error</a>.</p>
     </ol>
    </div>
@@ -5670,9 +5670,9 @@ to <a data-link-type="dfn" href="#abort-a-transaction" id="ref-for-abort-a-trans
   the implementation must run these steps:</p>
     <ol>
      <li data-md="">
-      <p>Let <var>serialized</var> be <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-algorithm-conventions" id="ref-for-sec-algorithm-conventions">?</a> <a data-link-type="abstract-op" href="https://html.spec.whatwg.org/multipage/structured-data.html#structuredserializeforstorage" id="ref-for-structuredserializeforstorage②">StructuredSerializeForStorage</a>(<var>value</var>).</p>
+      <p>Let <var>serialized</var> be <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-algorithm-conventions" id="ref-for-sec-algorithm-conventions">?</a> <a data-link-type="abstract-op" href="https://www.w3.org/TR/html52/single-page.html#structuredserializeforstorage" id="ref-for-structuredserializeforstorage②">StructuredSerializeForStorage</a>(<var>value</var>).</p>
      <li data-md="">
-      <p>Let <var>clone</var> be <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-algorithm-conventions" id="ref-for-sec-algorithm-conventions①">?</a> <a data-link-type="abstract-op" href="https://html.spec.whatwg.org/multipage/structured-data.html#structureddeserialize" id="ref-for-structureddeserialize">StructuredDeserialize</a>(<var>serialized</var>, <var>targetRealm</var>).</p>
+      <p>Let <var>clone</var> be <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-algorithm-conventions" id="ref-for-sec-algorithm-conventions①">?</a> <a data-link-type="abstract-op" href="https://www.w3.org/TR/html52/single-page.html#structureddeserialize" id="ref-for-structureddeserialize">StructuredDeserialize</a>(<var>serialized</var>, <var>targetRealm</var>).</p>
      <li data-md="">
       <p>Return <var>clone</var>.</p>
     </ol>
@@ -5681,9 +5681,9 @@ to <a data-link-type="dfn" href="#abort-a-transaction" id="ref-for-abort-a-trans
    <p>This section describes various operations done on the data in <a data-link-type="dfn" href="#object-store" id="ref-for-object-store①⓪④">object stores</a> and <a data-link-type="dfn" href="#index-concept" id="ref-for-index-concept④⑥">indexes</a> in a <a data-link-type="dfn" href="#database" id="ref-for-database⑦③">database</a>.
 These operations are run by the steps to <a data-link-type="dfn" href="#asynchronously-execute-a-request" id="ref-for-asynchronously-execute-a-request②⑤">asynchronously execute
 a request</a>.</p>
-   <aside class="note"> Invocations of <a data-link-type="abstract-op" href="https://html.spec.whatwg.org/multipage/structured-data.html#structureddeserialize" id="ref-for-structureddeserialize①">StructuredDeserialize</a>() in the operation
+   <aside class="note"> Invocations of <a data-link-type="abstract-op" href="https://www.w3.org/TR/html52/single-page.html#structureddeserialize" id="ref-for-structureddeserialize①">StructuredDeserialize</a>() in the operation
   steps below can be asserted not to throw (as indicated by the <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-algorithm-conventions" id="ref-for-sec-algorithm-conventions②">!</a> prefix)
-  because they operate only on previous output of <a data-link-type="abstract-op" href="https://html.spec.whatwg.org/multipage/structured-data.html#structuredserializeforstorage" id="ref-for-structuredserializeforstorage③">StructuredSerializeForStorage</a>(). </aside>
+  because they operate only on previous output of <a data-link-type="abstract-op" href="https://www.w3.org/TR/html52/single-page.html#structuredserializeforstorage" id="ref-for-structuredserializeforstorage③">StructuredSerializeForStorage</a>(). </aside>
    <h3 class="heading settled" data-level="6.1" id="object-store-storage-operation"><span class="secno">6.1. </span><span class="content">Object Store Storage Operation</span><a class="self-link" href="#object-store-storage-operation"></a></h3>
    <div class="algorithm">
     <p>The steps to <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="store-a-record-into-an-object-store">store a record into an object store</dfn> with <var>store</var>, <var>value</var>, an optional <var>key</var>, and a <var>no-overwrite flag</var> are as
@@ -5718,7 +5718,7 @@ Abort this algorithm without taking any further steps.</p>
 to</a> <var>key</var>, then remove the <a data-link-type="dfn" href="#object-store-record" id="ref-for-object-store-record⑦⑨">record</a> from <var>store</var> using the
 steps to <a data-link-type="dfn" href="#delete-records-from-an-object-store" id="ref-for-delete-records-from-an-object-store②">delete records from an object store</a>.</p>
      <li data-md="">
-      <p>Store a record in <var>store</var> containing <var>key</var> as its key and <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-algorithm-conventions" id="ref-for-sec-algorithm-conventions③">!</a> <a data-link-type="abstract-op" href="https://html.spec.whatwg.org/multipage/structured-data.html#structuredserializeforstorage" id="ref-for-structuredserializeforstorage④">StructuredSerializeForStorage</a>(<var>value</var>)
+      <p>Store a record in <var>store</var> containing <var>key</var> as its key and <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-algorithm-conventions" id="ref-for-sec-algorithm-conventions③">!</a> <a data-link-type="abstract-op" href="https://www.w3.org/TR/html52/single-page.html#structuredserializeforstorage" id="ref-for-structuredserializeforstorage④">StructuredSerializeForStorage</a>(<var>value</var>)
 as its value. The record is stored in the object store’s <a data-link-type="dfn" href="#object-store-list-of-records" id="ref-for-object-store-list-of-records">list of records</a> such that the list is sorted
 according to the key of the records in <a data-link-type="dfn" href="#greater-than" id="ref-for-greater-than⑧">ascending</a> order.</p>
      <li data-md="">
@@ -5775,7 +5775,7 @@ any.</p>
      <li data-md="">
       <p>Let <var>serialized</var> be of <var>record</var>’s <a data-link-type="dfn" href="#value" id="ref-for-value①⑧">value</a>.</p>
      <li data-md="">
-      <p>Return <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-algorithm-conventions" id="ref-for-sec-algorithm-conventions④">!</a> <a data-link-type="abstract-op" href="https://html.spec.whatwg.org/multipage/structured-data.html#structureddeserialize" id="ref-for-structureddeserialize②">StructuredDeserialize</a>(<var>serialized</var>, <var>targetRealm</var>).</p>
+      <p>Return <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-algorithm-conventions" id="ref-for-sec-algorithm-conventions④">!</a> <a data-link-type="abstract-op" href="https://www.w3.org/TR/html52/single-page.html#structureddeserialize" id="ref-for-structureddeserialize②">StructuredDeserialize</a>(<var>serialized</var>, <var>targetRealm</var>).</p>
     </ol>
    </div>
    <div class="algorithm">
@@ -5794,7 +5794,7 @@ store</dfn> with <var>targetRealm</var>, <var>store</var>, <var>range</var> and 
        <li data-md="">
         <p>Let <var>serialized</var> be <var>record</var>’s <a data-link-type="dfn" href="#value" id="ref-for-value①⑨">value</a>.</p>
        <li data-md="">
-        <p>Let <var>entry</var> be <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-algorithm-conventions" id="ref-for-sec-algorithm-conventions⑤">!</a> <a data-link-type="abstract-op" href="https://html.spec.whatwg.org/multipage/structured-data.html#structureddeserialize" id="ref-for-structureddeserialize③">StructuredDeserialize</a>(<var>serialized</var>, <var>targetRealm</var>).</p>
+        <p>Let <var>entry</var> be <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-algorithm-conventions" id="ref-for-sec-algorithm-conventions⑤">!</a> <a data-link-type="abstract-op" href="https://www.w3.org/TR/html52/single-page.html#structureddeserialize" id="ref-for-structureddeserialize③">StructuredDeserialize</a>(<var>serialized</var>, <var>targetRealm</var>).</p>
        <li data-md="">
         <p>Append <var>entry</var> to <var>list</var>.</p>
       </ol>
@@ -5849,7 +5849,7 @@ records</a> whose key is <a data-link-type="dfn" href="#in" id="ref-for-in⑥">i
      <li data-md="">
       <p>Let <var>serialized</var> be <var>record</var>’s <a data-link-type="dfn" href="#index-referenced-value" id="ref-for-index-referenced-value②">referenced value</a>.</p>
      <li data-md="">
-      <p>Return <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-algorithm-conventions" id="ref-for-sec-algorithm-conventions⑥">!</a> <a data-link-type="abstract-op" href="https://html.spec.whatwg.org/multipage/structured-data.html#structureddeserialize" id="ref-for-structureddeserialize④">StructuredDeserialize</a>(<var>serialized</var>, <var>targetRealm</var>).</p>
+      <p>Return <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-algorithm-conventions" id="ref-for-sec-algorithm-conventions⑥">!</a> <a data-link-type="abstract-op" href="https://www.w3.org/TR/html52/single-page.html#structureddeserialize" id="ref-for-structureddeserialize④">StructuredDeserialize</a>(<var>serialized</var>, <var>targetRealm</var>).</p>
     </ol>
    </div>
    <div class="algorithm">
@@ -5868,7 +5868,7 @@ index</dfn> with <var>targetRealm</var>, <var>index</var>, <var>range</var> and 
        <li data-md="">
         <p>Let <var>serialized</var> be <var>record</var>’s <a data-link-type="dfn" href="#index-referenced-value" id="ref-for-index-referenced-value③">referenced value</a>.</p>
        <li data-md="">
-        <p>Let <var>entry</var> be <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-algorithm-conventions" id="ref-for-sec-algorithm-conventions⑦">!</a> <a data-link-type="abstract-op" href="https://html.spec.whatwg.org/multipage/structured-data.html#structureddeserialize" id="ref-for-structureddeserialize⑤">StructuredDeserialize</a>(<var>serialized</var>, <var>targetRealm</var>).</p>
+        <p>Let <var>entry</var> be <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-algorithm-conventions" id="ref-for-sec-algorithm-conventions⑦">!</a> <a data-link-type="abstract-op" href="https://www.w3.org/TR/html52/single-page.html#structureddeserialize" id="ref-for-structureddeserialize⑤">StructuredDeserialize</a>(<var>serialized</var>, <var>targetRealm</var>).</p>
        <li data-md="">
         <p>Append <var>entry</var> to <var>list</var>.</p>
       </ol>
@@ -6082,7 +6082,7 @@ store position</a> to <var>object store position</var>.</p>
        <li data-md="">
         <p>Let <var>serialized</var> be <var>found record</var>’s <a data-link-type="dfn" href="#index-referenced-value" id="ref-for-index-referenced-value④">referenced value</a>.</p>
        <li data-md="">
-        <p>Set <var>cursor</var>’s <a data-link-type="dfn" href="#cursor-value" id="ref-for-cursor-value⑨">value</a> to <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-algorithm-conventions" id="ref-for-sec-algorithm-conventions⑧">!</a> <a data-link-type="abstract-op" href="https://html.spec.whatwg.org/multipage/structured-data.html#structureddeserialize" id="ref-for-structureddeserialize⑥">StructuredDeserialize</a>(<var>serialized</var>, <var>targetRealm</var>)</p>
+        <p>Set <var>cursor</var>’s <a data-link-type="dfn" href="#cursor-value" id="ref-for-cursor-value⑨">value</a> to <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-algorithm-conventions" id="ref-for-sec-algorithm-conventions⑧">!</a> <a data-link-type="abstract-op" href="https://www.w3.org/TR/html52/single-page.html#structureddeserialize" id="ref-for-structureddeserialize⑥">StructuredDeserialize</a>(<var>serialized</var>, <var>targetRealm</var>)</p>
       </ol>
      <li data-md="">
       <p>Set <var>cursor</var>’s <a data-link-type="dfn" href="#cursor-got-value-flag" id="ref-for-cursor-got-value-flag①⑤">got value flag</a>.</p>
@@ -6200,7 +6200,7 @@ remaining steps.</p>
     </ol>
    </div>
    <aside class="note"> Assertions can be made in the above steps because this algorithm is
-  only applied to values that are the output of <a data-link-type="abstract-op" href="https://html.spec.whatwg.org/multipage/structured-data.html#structureddeserialize" id="ref-for-structureddeserialize⑦">StructuredDeserialize</a> and only access "own" properties. </aside>
+  only applied to values that are the output of <a data-link-type="abstract-op" href="https://www.w3.org/TR/html52/single-page.html#structureddeserialize" id="ref-for-structureddeserialize⑦">StructuredDeserialize</a> and only access "own" properties. </aside>
    <h3 class="heading settled" data-level="7.2" id="inject-key-into-value"><span class="secno">7.2. </span><span class="content">Inject a key into a value</span><a class="self-link" href="#inject-key-into-value"></a></h3>
    <aside class="note"> The <a data-link-type="dfn" href="#key-path" id="ref-for-key-path⑥">key paths</a> used in this section are always strings and never
   sequences, since it is not possible to create a <a data-link-type="dfn" href="#object-store" id="ref-for-object-store①⓪⑧">object store</a> which has a <a data-link-type="dfn" href="#key-generator" id="ref-for-key-generator②①">key generator</a> and also has a <a data-link-type="dfn" href="#object-store-key-path" id="ref-for-object-store-key-path②⓪">key path</a> that is a
@@ -6234,7 +6234,7 @@ true or false.</p>
      </ol>
     </div>
     <aside class="note"> Assertions can be made in the above steps because this algorithm is
-  only applied to values that are the output of <a data-link-type="abstract-op" href="https://html.spec.whatwg.org/multipage/structured-data.html#structureddeserialize" id="ref-for-structureddeserialize⑧">StructuredDeserialize</a>. </aside>
+  only applied to values that are the output of <a data-link-type="abstract-op" href="https://www.w3.org/TR/html52/single-page.html#structureddeserialize" id="ref-for-structureddeserialize⑧">StructuredDeserialize</a>. </aside>
     <div class="algorithm">
      <p>The steps to <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="inject-a-key-into-a-value-using-a-key-path">inject a key into a value using a key path</dfn> are
 as follows. The algorithm takes a <var>value</var>, a <var>key</var> and a <var>keyPath</var>.</p>
@@ -6279,7 +6279,7 @@ key to a value</a> with <var>key</var>.</p>
      </ol>
     </div>
     <aside class="note"> Assertions can be made in the above steps because this algorithm is
-  only applied to values that are the output of <a data-link-type="abstract-op" href="https://html.spec.whatwg.org/multipage/structured-data.html#structureddeserialize" id="ref-for-structureddeserialize⑨">StructuredDeserialize</a>,
+  only applied to values that are the output of <a data-link-type="abstract-op" href="https://www.w3.org/TR/html52/single-page.html#structureddeserialize" id="ref-for-structureddeserialize⑨">StructuredDeserialize</a>,
   and the steps to <a data-link-type="dfn" href="#check-that-a-key-could-be-injected-into-a-value" id="ref-for-check-that-a-key-could-be-injected-into-a-value②">check that a key could be injected into a value</a> have
   been run. </aside>
     <h3 class="heading settled" data-level="7.3" id="convert-key-to-value"><span class="secno">7.3. </span><span class="content">Convert a key to a value</span><a class="self-link" href="#convert-key-to-value"></a></h3>
@@ -6633,7 +6633,7 @@ therefore handle older serialization formats in some way. Improper
 handling of older data can result in security issues. In addition to
 basic serialization concerns, serialized data could encode assumptions
 which are not valid in newer versions of the user agent.</p>
-    <p>A practical example of this is the <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-regexp-regular-expression-objects" id="ref-for-sec-regexp-regular-expression-objects">RegExp</a> type. The <a data-link-type="abstract-op" href="https://html.spec.whatwg.org/multipage/structured-data.html#structuredserializeforstorage" id="ref-for-structuredserializeforstorage⑤">StructuredSerializeForStorage</a> operation allows serializing <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-regexp-regular-expression-objects" id="ref-for-sec-regexp-regular-expression-objects①">RegExp</a> objects. A typical user agent will compile a regular expression into
+    <p>A practical example of this is the <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-regexp-regular-expression-objects" id="ref-for-sec-regexp-regular-expression-objects">RegExp</a> type. The <a data-link-type="abstract-op" href="https://www.w3.org/TR/html52/single-page.html#structuredserializeforstorage" id="ref-for-structuredserializeforstorage⑤">StructuredSerializeForStorage</a> operation allows serializing <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-regexp-regular-expression-objects" id="ref-for-sec-regexp-regular-expression-objects①">RegExp</a> objects. A typical user agent will compile a regular expression into
 native machine instructions, with assumptions about how the input data
 is passed and results returned. If this internal state was serialized
 as part of the data stored to the database, various problems could
@@ -6723,18 +6723,18 @@ and define abstract types such as <a data-link-type="dfn" href="#key" id="ref-fo
       <p>Throw <code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#securityerror" id="ref-for-securityerror②">SecurityError</a></code> if <code class="idl"><a data-link-type="idl" href="#dom-idbfactory-open" id="ref-for-dom-idbfactory-open④">open()</a></code> or <code class="idl"><a data-link-type="idl" href="#dom-idbfactory-deletedatabase" id="ref-for-dom-idbfactory-deletedatabase③">deleteDatabase()</a></code> is called from an opaque origin.
 (<a href="https://github.com/w3c/IndexedDB/issues/148">bug #148</a>)</p>
      <li data-md="">
-      <p>Integrate with <var>legacyOutputDidListenersThrowFlag</var> hook in <a data-link-type="biblio" href="#biblio-dom">[DOM]</a>,
+      <p>Integrate with <var>legacyOutputDidListenersThrowFlag</var> hook in <a data-link-type="biblio" href="#biblio-dom">[DOM41]</a>,
 replacing monkey patching.
 (<a href="https://github.com/w3c/IndexedDB/issues/140">bug #140</a>)</p>
      <li data-md="">
-      <p>Define <a data-link-type="dfn" href="#cleanup-indexed-database-transactions" id="ref-for-cleanup-indexed-database-transactions">cleanup Indexed Database transactions</a> hook for <a data-link-type="biblio" href="#biblio-html">[HTML]</a>,
+      <p>Define <a data-link-type="dfn" href="#cleanup-indexed-database-transactions" id="ref-for-cleanup-indexed-database-transactions">cleanup Indexed Database transactions</a> hook for <a data-link-type="biblio" href="#biblio-html">[HTML52]</a>,
 replacing monkey patching.
 (<a href="https://github.com/w3c/IndexedDB/issues/87">bug #87</a>)</p>
      <li data-md="">
       <p>Fix handling of edge cases in key generation algorithm.
 (<a href="https://github.com/w3c/IndexedDB/issues/147">bug #147</a>)</p>
      <li data-md="">
-      <p>Use <a data-link-type="biblio" href="#biblio-html">[HTML]</a>'s <a data-link-type="abstract-op" href="https://html.spec.whatwg.org/multipage/structured-data.html#structuredserialize" id="ref-for-structuredserialize">StructuredSerialize</a> and <a data-link-type="abstract-op" href="https://html.spec.whatwg.org/multipage/structured-data.html#structureddeserialize" id="ref-for-structureddeserialize①⓪">StructuredDeserialize</a> hooks.
+      <p>Use <a data-link-type="biblio" href="#biblio-html">[HTML52]</a>'s <a data-link-type="abstract-op" href="https://www.w3.org/TR/html52/single-page.html#structuredserialize" id="ref-for-structuredserialize">StructuredSerialize</a> and <a data-link-type="abstract-op" href="https://www.w3.org/TR/html52/single-page.html#structureddeserialize" id="ref-for-structureddeserialize①⓪">StructuredDeserialize</a> hooks.
 (<a href="https://github.com/w3c/IndexedDB/issues/170">bug #170</a>)</p>
      <li data-md="">
       <p>Use [<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#SameObject" id="ref-for-SameObject④">SameObject</a></code>]/[<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#NewObject" id="ref-for-NewObject②⑨">NewObject</a></code>] in IDL where appropriate.
@@ -6744,7 +6744,7 @@ replacing monkey patching.
 the <a data-link-type="dfn" href="#asynchronously-execute-a-request" id="ref-for-asynchronously-execute-a-request②⑥">asynchronously execute a request</a> steps.
 (<a href="https://github.com/w3c/IndexedDB/issues/192">issue #192</a>)</p>
      <li data-md="">
-      <p>Use <a data-link-type="biblio" href="#biblio-html">[HTML]</a>'s <a data-link-type="abstract-op" href="https://html.spec.whatwg.org/multipage/structured-data.html#structuredserializeforstorage" id="ref-for-structuredserializeforstorage⑥">StructuredSerializeForStorage</a> hook.
+      <p>Use <a data-link-type="biblio" href="#biblio-html">[HTML52]</a>'s <a data-link-type="abstract-op" href="https://www.w3.org/TR/html52/single-page.html#structuredserializeforstorage" id="ref-for-structuredserializeforstorage⑥">StructuredSerializeForStorage</a> hook.
 (<a href="https://github.com/w3c/IndexedDB/issues/197">issue #197</a>, <a href="https://github.com/w3c/IndexedDB/issues/152">issue #152</a>)</p>
      <li data-md="">
       <p>Define <a data-link-type="dfn" href="#database" id="ref-for-database⑦④">database</a>'s associated <a data-link-type="dfn" href="#database-upgrade-transaction" id="ref-for-database-upgrade-transaction⑤">upgrade transaction</a> to
@@ -7338,21 +7338,20 @@ specification.</p>
      <li><a href="https://www.w3.org/TR/css-cascade-4/#origin">origin</a>
     </ul>
    <li>
-    <a data-link-type="biblio">[DOM]</a> defines the following terms:
+    <a data-link-type="biblio">[DOM41]</a> defines the following terms:
     <ul>
-     <li><a href="https://dom.spec.whatwg.org/#domerror">DOMError</a>
-     <li><a href="https://dom.spec.whatwg.org/#event">Event</a>
-     <li><a href="https://dom.spec.whatwg.org/#dictdef-eventinit">EventInit</a>
-     <li><a href="https://dom.spec.whatwg.org/#eventtarget">EventTarget</a>
-     <li><a href="https://dom.spec.whatwg.org/#dom-event-bubbles">bubbles</a>
-     <li><a href="https://dom.spec.whatwg.org/#dom-event-cancelable">cancelable</a>
-     <li><a href="https://dom.spec.whatwg.org/#canceled-flag">canceled flag</a>
-     <li><a href="https://dom.spec.whatwg.org/#concept-event-create">creating an event</a>
-     <li><a href="https://dom.spec.whatwg.org/#concept-event-dispatch">dispatch</a>
-     <li><a href="https://dom.spec.whatwg.org/#concept-event-fire">fire an event</a>
-     <li><a href="https://dom.spec.whatwg.org/#get-the-parent">get the parent</a>
-     <li><a href="https://dom.spec.whatwg.org/#dom-event-preventdefault">preventDefault()</a>
-     <li><a href="https://dom.spec.whatwg.org/#dom-event-type">type</a>
+     <li><a href="https://www.w3.org/TR/dom41/#event">Event</a>
+     <li><a href="https://www.w3.org/TR/dom41/#dictdef-eventinit">EventInit</a>
+     <li><a href="https://www.w3.org/TR/dom41/#eventtarget">EventTarget</a>
+     <li><a href="https://www.w3.org/TR/dom41/#dom-event-dom-event-bubble">bubbles</a>
+     <li><a href="https://www.w3.org/TR/dom41/#dom-event-dom-event-cancelable">cancelable</a>
+     <li><a href="https://www.w3.org/TR/dom41/#canceled-flag">canceled flag</a>
+     <li><a href="https://www.w3.org/TR/dom41/#concept-event-create">creating an event</a>
+     <li><a href="https://www.w3.org/TR/dom41/#dispatch">dispatch</a>
+     <li><a href="https://www.w3.org/TR/dom41/#concept-event-fire">fire an event</a>
+     <li><a href="https://www.w3.org/TR/dom41/#get-the-parent">get the parent</a>
+     <li><a href="https://www.w3.org/TR/dom41/#dom-event-preventdefault">preventDefault()</a>
+     <li><a href="https://www.w3.org/TR/dom41/#dom-event-dom-event-type">type</a>
     </ul>
    <li>
     <a data-link-type="biblio">[ecma262]</a> defines the following terms:
@@ -7394,25 +7393,24 @@ specification.</p>
      <li><a href="https://w3c.github.io/FileAPI/#dfn-type">type</a>
     </ul>
    <li>
-    <a data-link-type="biblio">[HTML]</a> defines the following terms:
+    <a data-link-type="biblio">[HTML52]</a> defines the following terms:
     <ul>
-     <li><a href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#domstringlist">DOMStringList</a>
-     <li><a href="https://html.spec.whatwg.org/multipage/dom.html#document">Document</a>
-     <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler">EventHandler</a>
-     <li><a href="https://html.spec.whatwg.org/multipage/canvas.html#imagedata">ImageData</a>
-     <li><a href="https://html.spec.whatwg.org/multipage/structured-data.html#structureddeserialize">StructuredDeserialize</a>
-     <li><a href="https://html.spec.whatwg.org/multipage/structured-data.html#structuredserialize">StructuredSerialize</a>
-     <li><a href="https://html.spec.whatwg.org/multipage/structured-data.html#structuredserializeforstorage">StructuredSerializeForStorage</a>
-     <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#windoworworkerglobalscope">WindowOrWorkerGlobalScope</a>
-     <li><a href="https://html.spec.whatwg.org/multipage/browsers.html#browsing-context">browsing context</a>
-     <li><a href="https://html.spec.whatwg.org/multipage/origin.html#dom-document-domain">domain</a>
-     <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-handler-idl-attributes">event handler idl attribute</a>
-     <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loop">event loop</a>
-     <li><a href="https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel">in parallel</a>
-     <li><a href="https://html.spec.whatwg.org/multipage/origin.html#concept-origin-opaque">opaque origin</a>
-     <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task">queue a task</a>
-     <li><a href="https://html.spec.whatwg.org/multipage/structured-data.html#serializable-objects">serializable objects</a>
-     <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#task-queue">task queues</a>
+     <li><a href="https://www.w3.org/TR/html52/single-page.html#domstringlist">DOMStringList</a>
+     <li><a href="https://www.w3.org/TR/html52/single-page.html#the-document-object">Document</a>
+     <li><a href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler">EventHandler</a>
+     <li><a href="https://www.w3.org/TR/html52/single-page.html#structureddeserialize">StructuredDeserialize</a>
+     <li><a href="https://www.w3.org/TR/html52/single-page.html#structuredserialize">StructuredSerialize</a>
+     <li><a href="https://www.w3.org/TR/html52/single-page.html#structuredserializeforstorage">StructuredSerializeForStorage</a>
+     <li><a href="https://www.w3.org/TR/html52/single-page.html#windoworworkerglobalscope">WindowOrWorkerGlobalScope</a>
+     <li><a href="https://www.w3.org/TR/html52/single-page.html#browsing-context">browsing context</a>
+     <li><a href="https://www.w3.org/TR/html52/single-page.html#dom-document-domain">domain</a>
+     <li><a href="https://www.w3.org/TR/html52/single-page.html#event-handler-idl-event-handler-idl-attribute">event handler idl attribute</a>
+     <li><a href="https://www.w3.org/TR/html52/single-page.html#event-loop">event loop</a>
+     <li><a href="https://www.w3.org/TR/html52/single-page.html#in-parallel">in parallel</a>
+     <li><a href="https://www.w3.org/TR/html52/single-page.html#opaque-origin">opaque origin</a>
+     <li><a href="https://www.w3.org/TR/html52/single-page.html#queuing">queue a task</a>
+     <li><a href="https://www.w3.org/TR/html52/single-page.html#serializable-objects">serializable objects</a>
+     <li><a href="https://www.w3.org/TR/html52/single-page.html#task-queues">task queues</a>
     </ul>
    <li>
     <a data-link-type="biblio">[INFRA]</a> defines the following terms:
@@ -7462,14 +7460,14 @@ specification.</p>
   <dl>
    <dt id="biblio-css-cascade-4">[CSS-CASCADE-4]
    <dd>Elika Etemad; Tab Atkins Jr.. <a href="https://www.w3.org/TR/css-cascade-4/">CSS Cascading and Inheritance Level 4</a>. 14 January 2016. CR. URL: <a href="https://www.w3.org/TR/css-cascade-4/">https://www.w3.org/TR/css-cascade-4/</a>
-   <dt id="biblio-dom">[DOM]
-   <dd>Anne van Kesteren. <a href="https://dom.spec.whatwg.org/">DOM Standard</a>. Living Standard. URL: <a href="https://dom.spec.whatwg.org/">https://dom.spec.whatwg.org/</a>
+   <dt id="biblio-dom">[DOM41]
+   <dd>Yongsheng Zhu. <a href="https://www.w3.org/TR/dom41/">DOM 4.1</a>. WD. URL: <a href="https://www.w3.org/TR/dom41/">https://www.w3.org/TR/dom41/</a>
    <dt id="biblio-ecma-262">[ECMA-262]
    <dd><a href="https://tc39.github.io/ecma262/">ECMAScript Language Specification</a>. URL: <a href="https://tc39.github.io/ecma262/">https://tc39.github.io/ecma262/</a>
    <dt id="biblio-fileapi">[FileAPI]
    <dd>Arun Ranganathan; Jonas Sicking. <a href="https://www.w3.org/TR/FileAPI/">File API</a>. 21 April 2015. WD. URL: <a href="https://www.w3.org/TR/FileAPI/">https://www.w3.org/TR/FileAPI/</a>
-   <dt id="biblio-html">[HTML]
-   <dd>Anne van Kesteren; et al. <a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a>. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a>
+   <dt id="biblio-html">[HTML52]
+   <dd><a href="https://www.w3.org/TR/html52/">HTML 5.2</a>. Steve Faulkner; Arron Eicholz; Travis Leithead; Alex Danilo; Sangwhan Moon. W3C. 8 August 2017. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/html52/">https://www.w3.org/TR/html52/</a>
    <dt id="biblio-infra">[INFRA]
    <dd>Anne van Kesteren; Domenic Denicola. <a href="https://infra.spec.whatwg.org/">Infra Standard</a>. Living Standard. URL: <a href="https://infra.spec.whatwg.org/">https://infra.spec.whatwg.org/</a>
    <dt id="biblio-rfc2119">[RFC2119]
@@ -7488,7 +7486,7 @@ specification.</p>
   </dl>
   <h2 class="no-num no-ref heading settled" id="idl-index"><span class="content">IDL Index</span><a class="self-link" href="#idl-index"></a></h2>
 <pre class="idl highlight def">[<a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#Exposed" id="ref-for-Exposed①①">Exposed</a>=(<span class="n">Window</span>,<span class="n">Worker</span>)]
-<span class="kt">interface</span> <a class="nv" href="#idbrequest"><code>IDBRequest</code></a> : <a class="n" data-link-type="idl-name" href="https://dom.spec.whatwg.org/#eventtarget" id="ref-for-eventtarget③">EventTarget</a> {
+<span class="kt">interface</span> <a class="nv" href="#idbrequest"><code>IDBRequest</code></a> : <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/dom41/#eventtarget" id="ref-for-eventtarget③">EventTarget</a> {
   <span class="kt">readonly</span> <span class="kt">attribute</span> <span class="kt">any</span> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="any" href="#dom-idbrequest-result" id="ref-for-dom-idbrequest-result②⑤">result</a>;
   <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://heycam.github.io/webidl/#idl-DOMException" id="ref-for-idl-DOMException⑧①⓪">DOMException</a>? <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="DOMException?" href="#dom-idbrequest-error" id="ref-for-dom-idbrequest-error③">error</a>;
   <span class="kt">readonly</span> <span class="kt">attribute</span> (<a class="n" data-link-type="idl-name" href="#idbobjectstore" id="ref-for-idbobjectstore②⑨">IDBObjectStore</a> <span class="kt">or</span> <a class="n" data-link-type="idl-name" href="#idbindex" id="ref-for-idbindex②⓪">IDBIndex</a> <span class="kt">or</span> <a class="n" data-link-type="idl-name" href="#idbcursor" id="ref-for-idbcursor⑨">IDBCursor</a>)? <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="(IDBObjectStore or IDBIndex or IDBCursor)?" href="#dom-idbrequest-source" id="ref-for-dom-idbrequest-source②">source</a>;
@@ -7496,8 +7494,8 @@ specification.</p>
   <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="#enumdef-idbrequestreadystate" id="ref-for-enumdef-idbrequestreadystate①">IDBRequestReadyState</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="IDBRequestReadyState" href="#dom-idbrequest-readystate" id="ref-for-dom-idbrequest-readystate②">readyState</a>;
 
   // Event handlers:
-  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler" id="ref-for-eventhandler①②">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbrequest-onsuccess" id="ref-for-dom-idbrequest-onsuccess①">onsuccess</a>;
-  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler" id="ref-for-eventhandler①①">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbrequest-onerror" id="ref-for-dom-idbrequest-onerror①">onerror</a>;
+  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler" id="ref-for-eventhandler①②">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbrequest-onsuccess" id="ref-for-dom-idbrequest-onsuccess①">onsuccess</a>;
+  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler" id="ref-for-eventhandler①①">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbrequest-onerror" id="ref-for-dom-idbrequest-onerror①">onerror</a>;
 };
 
 <span class="kt">enum</span> <a class="nv" href="#enumdef-idbrequestreadystate"><code>IDBRequestReadyState</code></a> {
@@ -7508,23 +7506,23 @@ specification.</p>
 [<a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#Exposed" id="ref-for-Exposed①②">Exposed</a>=(<span class="n">Window</span>,<span class="n">Worker</span>)]
 <span class="kt">interface</span> <a class="nv" href="#idbopendbrequest"><code>IDBOpenDBRequest</code></a> : <a class="n" data-link-type="idl-name" href="#idbrequest" id="ref-for-idbrequest⑤①">IDBRequest</a> {
   // Event handlers:
-  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler" id="ref-for-eventhandler②①">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbopendbrequest-onblocked" id="ref-for-dom-idbopendbrequest-onblocked①">onblocked</a>;
-  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler" id="ref-for-eventhandler③①">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbopendbrequest-onupgradeneeded" id="ref-for-dom-idbopendbrequest-onupgradeneeded①">onupgradeneeded</a>;
+  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler" id="ref-for-eventhandler②①">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbopendbrequest-onblocked" id="ref-for-dom-idbopendbrequest-onblocked①">onblocked</a>;
+  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler" id="ref-for-eventhandler③①">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbopendbrequest-onupgradeneeded" id="ref-for-dom-idbopendbrequest-onupgradeneeded①">onupgradeneeded</a>;
 };
 
 [<a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#Exposed" id="ref-for-Exposed②①">Exposed</a>=(<span class="n">Window</span>,<span class="n">Worker</span>),
  <a class="nv" href="#dom-idbversionchangeevent-idbversionchangeevent"><code>Constructor</code></a>(<a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-DOMString" id="ref-for-idl-DOMString②②"><span class="kt">DOMString</span></a> <a class="nv" href="#dom-idbversionchangeevent-idbversionchangeevent-type-eventinitdict-type"><code>type</code></a>, <span class="kt">optional</span> <a class="n" data-link-type="idl-name" href="#dictdef-idbversionchangeeventinit" id="ref-for-dictdef-idbversionchangeeventinit①">IDBVersionChangeEventInit</a> <a class="nv" href="#dom-idbversionchangeevent-idbversionchangeevent-type-eventinitdict-eventinitdict"><code>eventInitDict</code></a>)]
-<span class="kt">interface</span> <a class="nv" href="#idbversionchangeevent"><code>IDBVersionChangeEvent</code></a> : <a class="n" data-link-type="idl-name" href="https://dom.spec.whatwg.org/#event" id="ref-for-event③">Event</a> {
+<span class="kt">interface</span> <a class="nv" href="#idbversionchangeevent"><code>IDBVersionChangeEvent</code></a> : <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/dom41/#event" id="ref-for-event③">Event</a> {
   <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-unsigned-long-long" id="ref-for-idl-unsigned-long-long⑥"><span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span></a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="unsigned long long" href="#dom-idbversionchangeevent-oldversion" id="ref-for-dom-idbversionchangeevent-oldversion③">oldVersion</a>;
   <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-unsigned-long-long" id="ref-for-idl-unsigned-long-long①①"><span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span></a>? <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="unsigned long long?" href="#dom-idbversionchangeevent-newversion" id="ref-for-dom-idbversionchangeevent-newversion③">newVersion</a>;
 };
 
-<span class="kt">dictionary</span> <a class="nv" href="#dictdef-idbversionchangeeventinit"><code>IDBVersionChangeEventInit</code></a> : <a class="n" data-link-type="idl-name" href="https://dom.spec.whatwg.org/#dictdef-eventinit" id="ref-for-dictdef-eventinit①">EventInit</a> {
+<span class="kt">dictionary</span> <a class="nv" href="#dictdef-idbversionchangeeventinit"><code>IDBVersionChangeEventInit</code></a> : <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/dom41/#dictdef-eventinit" id="ref-for-dictdef-eventinit①">EventInit</a> {
   <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-unsigned-long-long" id="ref-for-idl-unsigned-long-long②①"><span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span></a> <a class="nv" data-default="0" data-type="unsigned long long " href="#dom-idbversionchangeeventinit-oldversion"><code>oldVersion</code></a> = 0;
   <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-unsigned-long-long" id="ref-for-idl-unsigned-long-long③①"><span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span></a>? <a class="nv" data-default="null" data-type="unsigned long long? " href="#dom-idbversionchangeeventinit-newversion"><code>newVersion</code></a> = <span class="kt">null</span>;
 };
 
-<span class="kt">partial</span> <span class="kt">interface</span> <a class="nv idl-code" data-link-type="interface" href="https://html.spec.whatwg.org/multipage/webappapis.html#windoworworkerglobalscope" id="ref-for-windoworworkerglobalscope①">WindowOrWorkerGlobalScope</a> {
+<span class="kt">partial</span> <span class="kt">interface</span> <a class="nv idl-code" data-link-type="interface" href="https://www.w3.org/TR/html52/single-page.html#windoworworkerglobalscope" id="ref-for-windoworworkerglobalscope①">WindowOrWorkerGlobalScope</a> {
   [<a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#SameObject" id="ref-for-SameObject⑤">SameObject</a>] <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="#idbfactory" id="ref-for-idbfactory②①">IDBFactory</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="IDBFactory" href="#dom-windoworworkerglobalscope-indexeddb" id="ref-for-dom-windoworworkerglobalscope-indexeddb①">indexedDB</a>;
 };
 
@@ -7538,10 +7536,10 @@ specification.</p>
 };
 
 [<a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#Exposed" id="ref-for-Exposed④①">Exposed</a>=(<span class="n">Window</span>,<span class="n">Worker</span>)]
-<span class="kt">interface</span> <a class="nv" href="#idbdatabase"><code>IDBDatabase</code></a> : <a class="n" data-link-type="idl-name" href="https://dom.spec.whatwg.org/#eventtarget" id="ref-for-eventtarget①①">EventTarget</a> {
+<span class="kt">interface</span> <a class="nv" href="#idbdatabase"><code>IDBDatabase</code></a> : <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/dom41/#eventtarget" id="ref-for-eventtarget①①">EventTarget</a> {
   <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-DOMString" id="ref-for-idl-DOMString⑤①"><span class="kt">DOMString</span></a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="DOMString" href="#dom-idbdatabase-name" id="ref-for-dom-idbdatabase-name③">name</a>;
   <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-unsigned-long-long" id="ref-for-idl-unsigned-long-long⑤①"><span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span></a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="unsigned long long" href="#dom-idbdatabase-version" id="ref-for-dom-idbdatabase-version③">version</a>;
-  <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#domstringlist" id="ref-for-domstringlist⑦">DOMStringList</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="DOMStringList" href="#dom-idbdatabase-objectstorenames" id="ref-for-dom-idbdatabase-objectstorenames⑤">objectStoreNames</a>;
+  <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#domstringlist" id="ref-for-domstringlist⑦">DOMStringList</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="DOMStringList" href="#dom-idbdatabase-objectstorenames" id="ref-for-dom-idbdatabase-objectstorenames⑤">objectStoreNames</a>;
 
   [<a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#NewObject" id="ref-for-NewObject②①⓪">NewObject</a>] <a class="n" data-link-type="idl-name" href="#idbtransaction" id="ref-for-idbtransaction②①">IDBTransaction</a> <a class="nv idl-code" data-link-type="method" href="#dom-idbdatabase-transaction" id="ref-for-dom-idbdatabase-transaction②①">transaction</a>((<a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-DOMString" id="ref-for-idl-DOMString⑥①"><span class="kt">DOMString</span></a> <span class="kt">or</span> <span class="kt">sequence</span>&lt;<a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-DOMString" id="ref-for-idl-DOMString⑦①"><span class="kt">DOMString</span></a>>) <a class="nv" href="#dom-idbdatabase-transaction-storenames-mode-storenames"><code>storeNames</code></a>,
                                          <span class="kt">optional</span> <a class="n" data-link-type="idl-name" href="#enumdef-idbtransactionmode" id="ref-for-enumdef-idbtransactionmode②">IDBTransactionMode</a> <a class="nv" href="#dom-idbdatabase-transaction-storenames-mode-mode"><code>mode</code></a> = "readonly");
@@ -7552,10 +7550,10 @@ specification.</p>
   <span class="kt">void</span> <a class="nv idl-code" data-link-type="method" href="#dom-idbdatabase-deleteobjectstore" id="ref-for-dom-idbdatabase-deleteobjectstore③">deleteObjectStore</a>(<a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-DOMString" id="ref-for-idl-DOMString⑨①"><span class="kt">DOMString</span></a> <a class="nv" href="#dom-idbdatabase-deleteobjectstore-name-name"><code>name</code></a>);
 
   // Event handlers:
-  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler" id="ref-for-eventhandler④①">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbdatabase-onabort" id="ref-for-dom-idbdatabase-onabort①">onabort</a>;
-  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler" id="ref-for-eventhandler⑤①">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbdatabase-onclose" id="ref-for-dom-idbdatabase-onclose③">onclose</a>;
-  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler" id="ref-for-eventhandler⑥①">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbdatabase-onerror" id="ref-for-dom-idbdatabase-onerror①">onerror</a>;
-  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler" id="ref-for-eventhandler⑦①">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbdatabase-onversionchange" id="ref-for-dom-idbdatabase-onversionchange①">onversionchange</a>;
+  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler" id="ref-for-eventhandler④①">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbdatabase-onabort" id="ref-for-dom-idbdatabase-onabort①">onabort</a>;
+  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler" id="ref-for-eventhandler⑤①">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbdatabase-onclose" id="ref-for-dom-idbdatabase-onclose③">onclose</a>;
+  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler" id="ref-for-eventhandler⑥①">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbdatabase-onerror" id="ref-for-dom-idbdatabase-onerror①">onerror</a>;
+  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler" id="ref-for-eventhandler⑦①">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbdatabase-onversionchange" id="ref-for-dom-idbdatabase-onversionchange①">onversionchange</a>;
 };
 
 <span class="kt">dictionary</span> <a class="nv" href="#dictdef-idbobjectstoreparameters"><code>IDBObjectStoreParameters</code></a> {
@@ -7567,7 +7565,7 @@ specification.</p>
 <span class="kt">interface</span> <a class="nv" href="#idbobjectstore"><code>IDBObjectStore</code></a> {
   <span class="kt">attribute</span> <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-DOMString" id="ref-for-idl-DOMString①②①"><span class="kt">DOMString</span></a> <a class="nv idl-code" data-link-type="attribute" data-type="DOMString" href="#dom-idbobjectstore-name" id="ref-for-dom-idbobjectstore-name⑧">name</a>;
   <span class="kt">readonly</span> <span class="kt">attribute</span> <span class="kt">any</span> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="any" href="#dom-idbobjectstore-keypath" id="ref-for-dom-idbobjectstore-keypath②">keyPath</a>;
-  <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#domstringlist" id="ref-for-domstringlist②①">DOMStringList</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="DOMStringList" href="#dom-idbobjectstore-indexnames" id="ref-for-dom-idbobjectstore-indexnames⑥">indexNames</a>;
+  <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#domstringlist" id="ref-for-domstringlist②①">DOMStringList</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="DOMStringList" href="#dom-idbobjectstore-indexnames" id="ref-for-dom-idbobjectstore-indexnames⑥">indexNames</a>;
   [<a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#SameObject" id="ref-for-SameObject①①">SameObject</a>] <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="#idbtransaction" id="ref-for-idbtransaction④①">IDBTransaction</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="IDBTransaction" href="#dom-idbobjectstore-transaction" id="ref-for-dom-idbobjectstore-transaction②">transaction</a>;
   <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n idl-code" data-link-type="interface" href="https://heycam.github.io/webidl/#idl-boolean" id="ref-for-idl-boolean①③"><span class="kt">boolean</span></a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="boolean" href="#dom-idbobjectstore-autoincrement" id="ref-for-dom-idbobjectstore-autoincrement②">autoIncrement</a>;
 
@@ -7670,8 +7668,8 @@ specification.</p>
 };
 
 [<a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#Exposed" id="ref-for-Exposed①⓪①">Exposed</a>=(<span class="n">Window</span>,<span class="n">Worker</span>)]
-<span class="kt">interface</span> <a class="nv" href="#idbtransaction"><code>IDBTransaction</code></a> : <a class="n" data-link-type="idl-name" href="https://dom.spec.whatwg.org/#eventtarget" id="ref-for-eventtarget②①">EventTarget</a> {
-  <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#domstringlist" id="ref-for-domstringlist④①">DOMStringList</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="DOMStringList" href="#dom-idbtransaction-objectstorenames" id="ref-for-dom-idbtransaction-objectstorenames④">objectStoreNames</a>;
+<span class="kt">interface</span> <a class="nv" href="#idbtransaction"><code>IDBTransaction</code></a> : <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/dom41/#eventtarget" id="ref-for-eventtarget②①">EventTarget</a> {
+  <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#domstringlist" id="ref-for-domstringlist④①">DOMStringList</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="DOMStringList" href="#dom-idbtransaction-objectstorenames" id="ref-for-dom-idbtransaction-objectstorenames④">objectStoreNames</a>;
   <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="#enumdef-idbtransactionmode" id="ref-for-enumdef-idbtransactionmode①①">IDBTransactionMode</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="IDBTransactionMode" href="#dom-idbtransaction-mode" id="ref-for-dom-idbtransaction-mode②">mode</a>;
   [<a class="nv idl-code" data-link-type="extended-attribute" href="https://heycam.github.io/webidl/#SameObject" id="ref-for-SameObject③①">SameObject</a>] <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="#idbdatabase" id="ref-for-idbdatabase⑧①">IDBDatabase</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="IDBDatabase" href="#dom-idbtransaction-db" id="ref-for-dom-idbtransaction-db②">db</a>;
   <span class="kt">readonly</span> <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://heycam.github.io/webidl/#idl-DOMException" id="ref-for-idl-DOMException①⑦①①">DOMException</a> <a class="nv idl-code" data-link-type="attribute" data-readonly="" data-type="DOMException" href="#dom-idbtransaction-error" id="ref-for-dom-idbtransaction-error③">error</a>;
@@ -7680,9 +7678,9 @@ specification.</p>
   <span class="kt">void</span> <a class="nv idl-code" data-link-type="method" href="#dom-idbtransaction-abort" id="ref-for-dom-idbtransaction-abort②">abort</a>();
 
   // Event handlers:
-  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler" id="ref-for-eventhandler⑧①">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbtransaction-onabort" id="ref-for-dom-idbtransaction-onabort①">onabort</a>;
-  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler" id="ref-for-eventhandler⑨①">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbtransaction-oncomplete" id="ref-for-dom-idbtransaction-oncomplete①">oncomplete</a>;
-  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler" id="ref-for-eventhandler①⓪①">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbtransaction-onerror" id="ref-for-dom-idbtransaction-onerror①">onerror</a>;
+  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler" id="ref-for-eventhandler⑧①">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbtransaction-onabort" id="ref-for-dom-idbtransaction-onabort①">onabort</a>;
+  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler" id="ref-for-eventhandler⑨①">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbtransaction-oncomplete" id="ref-for-dom-idbtransaction-oncomplete①">oncomplete</a>;
+  <span class="kt">attribute</span> <a class="n" data-link-type="idl-name" href="https://www.w3.org/TR/html52/single-page.html#typedefdef-eventhandler" id="ref-for-eventhandler①⓪①">EventHandler</a> <a class="nv idl-code" data-link-type="attribute" data-type="EventHandler" href="#dom-idbtransaction-onerror" id="ref-for-dom-idbtransaction-onerror①">onerror</a>;
 };
 
 <span class="kt">enum</span> <a class="nv" href="#enumdef-idbtransactionmode"><code>IDBTransactionMode</code></a> {
