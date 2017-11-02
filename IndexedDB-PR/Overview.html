@@ -1176,9 +1176,9 @@ Possible extra rowspan handling
 		}
 	}
 </style>
-  <meta content="Bikeshed version 0d6a1c7475b7bb2485f411c7e73d9990fd0cfef5" name="generator">
+  <meta content="Bikeshed version 4679d5ca787d737883d9c905dd138257fc2cec85" name="generator">
   <link href="https://www.w3.org/TR/IndexedDB-2/" rel="canonical">
-  <meta content="d96bb032393c647498103bde101f8cb5012ce4bf" name="document-revision">
+  <meta content="dcb90219528be99b26fdfe12db9b7af606aedbcd" name="document-revision">
 <style>
 /* Default ED/WD stylesheets set "both"; not needed for logo floated right */
 div.head h1 { clear: left; }
@@ -1459,11 +1459,11 @@ pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">Indexed Database API 2.0</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">W3C Proposed Recommendation, <time class="dt-updated" datetime="2017-11-02">2 November 2017</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">W3C Proposed Recommendation, <time class="dt-updated" datetime="2017-11-16">16 November 2017</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
-     <dd><a class="u-url" href="https://www.w3.org/TR/2017/PR-IndexedDB-2-20171102/">https://www.w3.org/TR/2017/PR-IndexedDB-2-20171102/</a>
+     <dd><a class="u-url" href="https://www.w3.org/TR/2017/PR-IndexedDB-2-20171116/">https://www.w3.org/TR/2017/PR-IndexedDB-2-20171116/</a>
      <dt>Latest published version:
      <dd><a href="https://www.w3.org/TR/IndexedDB-2/">https://www.w3.org/TR/IndexedDB-2/</a>
      <dt>Editor's Draft:
@@ -1496,7 +1496,7 @@ persistent B-tree data structure.</p>
   </div>
   <h2 class="no-num no-toc no-ref heading settled" id="status"><span class="content">Status of this document</span></h2>
   <div data-fill-with="status">
-    
+
     <p> <em>This section describes the status of this document at the time of
         its publication. Other documents may supersede this document. A list of
         current W3C publications and the latest revision of this technical report
@@ -1507,7 +1507,7 @@ persistent B-tree data structure.</p>
          <p>The <abbr title="World Wide Web Consortium">W3C</abbr> Membership and other interested
             parties are invited to review the document and send comments to
             <a rel="discussion" href="mailto:public-webapps@w3.org">public-webapps@w3.org</a> (<a href="mailto:public-webapps-request@w3.org?subject=subscribe">subscribe</a>,
-            <a href="https://lists.w3.org/Archives/Public/public-webapps/">archives</a>) or <a href="https://github.com/w3c/IndexedDB/issues/">file a bug</a> on GitHub through 30 November 2017. Advisory Committee Representatives should consult their
+            <a href="https://lists.w3.org/Archives/Public/public-webapps/">archives</a>) or <a href="https://github.com/w3c/IndexedDB/issues/">file a bug</a> on GitHub through 14 December 2017. Advisory Committee Representatives should consult their
             <a href="https://www.w3.org/2002/09/wbs/myQuestionnaires">WBS questionnaires</a>.</p>
         <p>
             Please see the Working Group's <a href="http://wpt.fyi/IndexedDB">implementation
@@ -2005,7 +2005,7 @@ transaction</a> is running.</p>
    <h3 class="heading settled" data-level="2.3" id="value-construct"><span class="secno">2.3. </span><span class="content">Values</span><a class="self-link" href="#value-construct"></a></h3>
    <p>Each record is associated with a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport="" id="value">value</dfn>. User agents must
 support any <a data-link-type="dfn" href="https://www.w3.org/TR/html52/single-page.html#serializable-objects" id="ref-for-serializable-objects">serializable object</a>. This includes simple types
-such as <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-terms-and-definitions-string-type" id="ref-for-sec-terms-and-definitions-string-type①">String</a> primitive values and <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-date-objects" id="ref-for-sec-date-objects">Date</a> objects as well as <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-object-objects" id="ref-for-sec-object-objects">Object</a> and <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-array-objects" id="ref-for-sec-array-objects①">Array</a> instances, <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/FileAPI/#dfn-file" id="ref-for-dfn-file">File</a></code> objects, <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/FileAPI/#dfn-Blob" id="ref-for-dfn-Blob">Blob</a></code> objects, <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/2dcontext/#imagedata" id="ref-for-imagedata">ImageData</a></code> objects, and so on. Record <a data-link-type="dfn" href="#value" id="ref-for-value②">values</a> are
+such as <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-terms-and-definitions-string-type" id="ref-for-sec-terms-and-definitions-string-type①">String</a> primitive values and <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-date-objects" id="ref-for-sec-date-objects">Date</a> objects as well as <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-object-objects" id="ref-for-sec-object-objects">Object</a> and <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-array-objects" id="ref-for-sec-array-objects①">Array</a> instances, <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/FileAPI/#dfn-file" id="ref-for-dfn-file">File</a></code> objects, <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/FileAPI/#dfn-Blob" id="ref-for-dfn-Blob">Blob</a></code> objects, <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/canvas.html#imagedata" id="ref-for-imagedata">ImageData</a></code> objects, and so on. Record <a data-link-type="dfn" href="#value" id="ref-for-value②">values</a> are
 stored and retrieved by value rather than by reference; later changes
 to a value have no effect on the record stored in the database.</p>
    <p>Record <a data-link-type="dfn" href="#value" id="ref-for-value③">values</a> are <a data-link-type="dfn" href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type" id="ref-for-sec-list-and-record-specification-type">Records</a> output by the <a data-link-type="abstract-op" href="https://www.w3.org/TR/html52/single-page.html#structuredserializeforstorage" id="ref-for-structuredserializeforstorage">StructuredSerializeForStorage</a> operation.</p>
@@ -3110,9 +3110,9 @@ events</a>, in <a data-link-type="biblio" href="#biblio-dom">[DOM41]</a>.</p>
      <li data-md="">
       <p>Let <var>event</var> be the result of <a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-create" id="ref-for-concept-event-create">creating an event</a> using <code class="idl"><a data-link-type="idl" href="#idbversionchangeevent" id="ref-for-idbversionchangeevent">IDBVersionChangeEvent</a></code>.</p>
      <li data-md="">
-      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-type" id="ref-for-dom-event-type">type</a></code> attribute to <var>e</var>.</p>
+      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-type" id="ref-for-dom-event-type">type</a></code> attribute to <var>e</var>.</p>
      <li data-md="">
-      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-bubble" id="ref-for-dom-event-bubbles">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-cancelable" id="ref-for-dom-event-cancelable">cancelable</a></code> attributes to false.</p>
+      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-bubbles" id="ref-for-dom-event-bubbles">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-cancelable" id="ref-for-dom-event-cancelable">cancelable</a></code> attributes to false.</p>
      <li data-md="">
       <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="#dom-idbversionchangeevent-oldversion" id="ref-for-dom-idbversionchangeevent-oldversion①">oldVersion</a></code> attribute to <var>oldVersion</var>.</p>
      <li data-md="">
@@ -3120,7 +3120,7 @@ events</a>, in <a data-link-type="biblio" href="#biblio-dom">[DOM41]</a>.</p>
      <li data-md="">
       <p>Let <var>legacyOutputDidListenersThrowFlag</var> be unset.</p>
      <li data-md="">
-      <p><a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#dispatch" id="ref-for-concept-event-dispatch">Dispatch</a> <var>event</var> at <var>target</var> with <var>legacyOutputDidListenersThrowFlag</var>.</p>
+      <p><a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-dispatch" id="ref-for-concept-event-dispatch">Dispatch</a> <var>event</var> at <var>target</var> with <var>legacyOutputDidListenersThrowFlag</var>.</p>
      <li data-md="">
       <p>Return <var>legacyOutputDidListenersThrowFlag</var>.</p>
       <aside class="note"> The return value of this algorithm is not always used. </aside>
@@ -3197,7 +3197,7 @@ otherwise, and <var>request</var>.</p>
 set <var>request</var>’s <a data-link-type="dfn" href="#request-result" id="ref-for-request-result④">result</a> to undefined,
 set <var>request</var>’s <a data-link-type="dfn" href="#request-error" id="ref-for-request-error④">error</a> to <var>result</var>,
 set <var>request</var>’s <a data-link-type="dfn" href="#request-done-flag" id="ref-for-request-done-flag⑧">done flag</a>,
-and <a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-fire" id="ref-for-concept-event-fire">fire an event</a> named <code>error</code> at <var>request</var> with its <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-bubble" id="ref-for-dom-event-bubbles①">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-cancelable" id="ref-for-dom-event-cancelable①">cancelable</a></code> attributes initialized to true.</p>
+and <a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-fire" id="ref-for-concept-event-fire">fire an event</a> named <code>error</code> at <var>request</var> with its <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-bubbles" id="ref-for-dom-event-bubbles①">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-cancelable" id="ref-for-dom-event-cancelable①">cancelable</a></code> attributes initialized to true.</p>
          <li data-md="">
           <p>Otherwise,
 set <var>request</var>’s <a data-link-type="dfn" href="#request-result" id="ref-for-request-result⑤">result</a> to <var>result</var>,
@@ -3248,7 +3248,7 @@ to access this <code class="idl"><a data-link-type="idl" href="#idbfactory" id="
 set <var>request</var>’s <a data-link-type="dfn" href="#request-error" id="ref-for-request-error⑤">error</a> to <var>result</var>,
 set <var>request</var>’s <a data-link-type="dfn" href="#request-done-flag" id="ref-for-request-done-flag①⓪">done flag</a>,
 and <a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-fire" id="ref-for-concept-event-fire②">fire an event</a> named <code>error</code> at <var>request</var> with
-its <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-bubble" id="ref-for-dom-event-bubbles②">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-cancelable" id="ref-for-dom-event-cancelable②">cancelable</a></code> attributes initialized to true.</p>
+its <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-bubbles" id="ref-for-dom-event-bubbles②">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-cancelable" id="ref-for-dom-event-cancelable②">cancelable</a></code> attributes initialized to true.</p>
          <li data-md="">
           <p>Otherwise,
 set <var>request</var>’s <a data-link-type="dfn" href="#request-result" id="ref-for-request-result⑥">result</a> to undefined,
@@ -5408,7 +5408,7 @@ run these steps:</p>
        <li data-md="">
         <p>Set the <a data-link-type="dfn" href="#request-error" id="ref-for-request-error⑦">error</a> of <var>request</var> to a newly <a data-link-type="dfn" href="https://heycam.github.io/webidl/#dfn-create-exception" id="ref-for-dfn-create-exception④">created</a> "<code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#aborterror" id="ref-for-aborterror⑥">AbortError</a></code>" <code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#idl-DOMException" id="ref-for-idl-DOMException①⑧⑥">DOMException</a></code>.</p>
        <li data-md="">
-        <p><a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-fire" id="ref-for-concept-event-fire⑤">Fire an event</a> named <code>error</code> at <var>request</var> with its <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-bubble" id="ref-for-dom-event-bubbles③">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-cancelable" id="ref-for-dom-event-cancelable③">cancelable</a></code> attributes initialized to true.</p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-fire" id="ref-for-concept-event-fire⑤">Fire an event</a> named <code>error</code> at <var>request</var> with its <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-bubbles" id="ref-for-dom-event-bubbles③">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-cancelable" id="ref-for-dom-event-cancelable③">cancelable</a></code> attributes initialized to true.</p>
       </ol>
       <aside class="note"> This does not always result in any <code>error</code> events
   being fired. For example if a transaction is aborted due to an
@@ -5420,7 +5420,7 @@ run these steps:</p>
        <li data-md="">
         <p>If <var>transaction</var> is an <a data-link-type="dfn" href="#upgrade-transaction" id="ref-for-upgrade-transaction⑤②">upgrade transaction</a>, set the <a data-link-type="dfn" href="#database" id="ref-for-database⑥⑤">database</a>'s <a data-link-type="dfn" href="#database-upgrade-transaction" id="ref-for-database-upgrade-transaction③">upgrade transaction</a> to null.</p>
        <li data-md="">
-        <p><a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-fire" id="ref-for-concept-event-fire⑥">Fire an event</a> named <code>abort</code> at <var>transaction</var> with its <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-bubble" id="ref-for-dom-event-bubbles④">bubbles</a></code> attribute initialized to true.</p>
+        <p><a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-fire" id="ref-for-concept-event-fire⑥">Fire an event</a> named <code>abort</code> at <var>transaction</var> with its <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-bubbles" id="ref-for-dom-event-bubbles④">bubbles</a></code> attribute initialized to true.</p>
        <li data-md="">
         <p>If <var>transaction</var> is an <a data-link-type="dfn" href="#upgrade-transaction" id="ref-for-upgrade-transaction⑤③">upgrade transaction</a>, then:</p>
         <ol>
@@ -5614,9 +5614,9 @@ the implementation must run these steps:</p>
      <li data-md="">
       <p>Let <var>event</var> be the result of <a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-create" id="ref-for-concept-event-create①">creating an event</a> using <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#event" id="ref-for-event①">Event</a></code>.</p>
      <li data-md="">
-      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-type" id="ref-for-dom-event-type①">type</a></code> attribute to "<code>success</code>".</p>
+      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-type" id="ref-for-dom-event-type①">type</a></code> attribute to "<code>success</code>".</p>
      <li data-md="">
-      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-bubble" id="ref-for-dom-event-bubbles⑤">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-cancelable" id="ref-for-dom-event-cancelable④">cancelable</a></code> attributes to false.</p>
+      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-bubbles" id="ref-for-dom-event-bubbles⑤">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-cancelable" id="ref-for-dom-event-cancelable④">cancelable</a></code> attributes to false.</p>
      <li data-md="">
       <p>Let <var>transaction</var> be <var>request</var>’s <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept⑧①">transaction</a>.</p>
      <li data-md="">
@@ -5624,7 +5624,7 @@ the implementation must run these steps:</p>
      <li data-md="">
       <p>Set <var>transaction</var>’s <a data-link-type="dfn" href="#transaction-active-flag" id="ref-for-transaction-active-flag⑧">active flag</a>.</p>
      <li data-md="">
-      <p><a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#dispatch" id="ref-for-concept-event-dispatch①">Dispatch</a> <var>event</var> at <var>request</var> with <var>legacyOutputDidListenersThrowFlag</var>.</p>
+      <p><a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-dispatch" id="ref-for-concept-event-dispatch①">Dispatch</a> <var>event</var> at <var>request</var> with <var>legacyOutputDidListenersThrowFlag</var>.</p>
      <li data-md="">
       <p>Unset <var>transaction</var>’s <a data-link-type="dfn" href="#transaction-active-flag" id="ref-for-transaction-active-flag⑨">active flag</a>.</p>
      <li data-md="">
@@ -5640,9 +5640,9 @@ the implementation must run these steps:</p>
      <li data-md="">
       <p>Let <var>event</var> be the result of <a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-create" id="ref-for-concept-event-create②">creating an event</a> using <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#event" id="ref-for-event②">Event</a></code>.</p>
      <li data-md="">
-      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-type" id="ref-for-dom-event-type②">type</a></code> attribute to "<code>error</code>".</p>
+      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-type" id="ref-for-dom-event-type②">type</a></code> attribute to "<code>error</code>".</p>
      <li data-md="">
-      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-bubble" id="ref-for-dom-event-bubbles⑥">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-dom-event-cancelable" id="ref-for-dom-event-cancelable⑤">cancelable</a></code> attributes to true.</p>
+      <p>Set <var>event</var>’s <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-bubbles" id="ref-for-dom-event-bubbles⑥">bubbles</a></code> and <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#dom-event-cancelable" id="ref-for-dom-event-cancelable⑤">cancelable</a></code> attributes to true.</p>
      <li data-md="">
       <p>Let <var>transaction</var> be <var>request</var>’s <a data-link-type="dfn" href="#transaction-concept" id="ref-for-transaction-concept⑧②">transaction</a>.</p>
      <li data-md="">
@@ -5650,7 +5650,7 @@ the implementation must run these steps:</p>
      <li data-md="">
       <p>Set <var>transaction</var>’s <a data-link-type="dfn" href="#transaction-active-flag" id="ref-for-transaction-active-flag①⓪">active flag</a>.</p>
      <li data-md="">
-      <p><a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#dispatch" id="ref-for-concept-event-dispatch②">Dispatch</a> <var>event</var> at <a data-link-type="dfn" href="#request" id="ref-for-request③⑥">request</a> with <var>legacyOutputDidListenersThrowFlag</var>.</p>
+      <p><a data-link-type="dfn" href="https://www.w3.org/TR/dom41/#concept-event-dispatch" id="ref-for-concept-event-dispatch②">Dispatch</a> <var>event</var> at <a data-link-type="dfn" href="#request" id="ref-for-request③⑥">request</a> with <var>legacyOutputDidListenersThrowFlag</var>.</p>
      <li data-md="">
       <p>Unset <var>transaction</var>’s <a data-link-type="dfn" href="#transaction-active-flag" id="ref-for-transaction-active-flag①①">active flag</a>.</p>
      <li data-md="">
@@ -6678,7 +6678,7 @@ and define abstract types such as <a data-link-type="dfn" href="#key" id="ref-fo
       <p>Added <code class="idl"><a data-link-type="idl" href="#dom-idbobjectstore-getall" id="ref-for-dom-idbobjectstore-getall③">getAll()</a></code> and <code class="idl"><a data-link-type="idl" href="#dom-idbobjectstore-getallkeys" id="ref-for-dom-idbobjectstore-getallkeys③">getAllKeys()</a></code> on <code class="idl"><a data-link-type="idl" href="#idbobjectstore" id="ref-for-idbobjectstore②⑥">IDBObjectStore</a></code>, and <code class="idl"><a data-link-type="idl" href="#dom-idbindex-getall" id="ref-for-dom-idbindex-getall③">getAll()</a></code> and <code class="idl"><a data-link-type="idl" href="#dom-idbindex-getallkeys" id="ref-for-dom-idbindex-getallkeys③">getAllKeys()</a></code> on <code class="idl"><a data-link-type="idl" href="#idbindex" id="ref-for-idbindex①⑧">IDBIndex</a></code>.
 (<a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=16595">bug #16595</a>)</p>
      <li data-md="">
-      <p>Replaced <code class="idl"><a data-link-type="idl" href="https://dom.spec.whatwg.org/#domerror" id="ref-for-domerror">DOMError</a></code> with <code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#idl-DOMException" id="ref-for-idl-DOMException①⑨④">DOMException</a></code>.
+      <p>Replaced <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/dom41/#domerror" id="ref-for-domerror">DOMError</a></code> with <code class="idl"><a data-link-type="idl" href="https://heycam.github.io/webidl/#idl-DOMException" id="ref-for-idl-DOMException①⑨④">DOMException</a></code>.
 (<a href="https://github.com/w3c/IndexedDB/issues/16">bug #16</a>)</p>
      <li data-md="">
       <p>Added <code class="idl"><a data-link-type="idl" href="#dom-idbtransaction-objectstorenames" id="ref-for-dom-idbtransaction-objectstorenames③">objectStoreNames</a></code> on <code class="idl"><a data-link-type="idl" href="#idbtransaction" id="ref-for-idbtransaction①⓪">IDBTransaction</a></code>.
@@ -7340,18 +7340,19 @@ specification.</p>
    <li>
     <a data-link-type="biblio">[DOM41]</a> defines the following terms:
     <ul>
+     <li><a href="https://www.w3.org/TR/dom41/#domerror">DOMError</a>
      <li><a href="https://www.w3.org/TR/dom41/#event">Event</a>
      <li><a href="https://www.w3.org/TR/dom41/#dictdef-eventinit">EventInit</a>
      <li><a href="https://www.w3.org/TR/dom41/#eventtarget">EventTarget</a>
-     <li><a href="https://www.w3.org/TR/dom41/#dom-event-dom-event-bubble">bubbles</a>
-     <li><a href="https://www.w3.org/TR/dom41/#dom-event-dom-event-cancelable">cancelable</a>
+     <li><a href="https://www.w3.org/TR/dom41/#dom-event-bubbles">bubbles</a>
+     <li><a href="https://www.w3.org/TR/dom41/#dom-event-cancelable">cancelable</a>
      <li><a href="https://www.w3.org/TR/dom41/#canceled-flag">canceled flag</a>
      <li><a href="https://www.w3.org/TR/dom41/#concept-event-create">creating an event</a>
-     <li><a href="https://www.w3.org/TR/dom41/#dispatch">dispatch</a>
+     <li><a href="https://www.w3.org/TR/dom41/#concept-event-dispatch">dispatch</a>
      <li><a href="https://www.w3.org/TR/dom41/#concept-event-fire">fire an event</a>
      <li><a href="https://www.w3.org/TR/dom41/#get-the-parent">get the parent</a>
      <li><a href="https://www.w3.org/TR/dom41/#dom-event-preventdefault">preventDefault()</a>
-     <li><a href="https://www.w3.org/TR/dom41/#dom-event-dom-event-type">type</a>
+     <li><a href="https://www.w3.org/TR/dom41/#dom-event-type">type</a>
     </ul>
    <li>
     <a data-link-type="biblio">[ecma262]</a> defines the following terms:
