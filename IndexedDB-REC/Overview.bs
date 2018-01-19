@@ -10,7 +10,7 @@ Abstract: This document defines APIs for a database of records holding
     be layered on this API. An indexed database can be implemented using a
     persistent B-tree data structure.
 Status: REC
-Date: 2017-01-25
+Date: 2017-01-30
 Previous Version: https://www.w3.org/TR/2017/PR-IndexedDB-2-20171116/
 ED: https://w3c.github.io/IndexedDB/
 TR: https://www.w3.org/TR/IndexedDB-2/
