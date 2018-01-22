@@ -4621,6 +4621,9 @@ or not given, an <a data-link-type="dfn" href="#unbounded-key-range" id="ref-for
 };
 </pre>
    <div class="note" role="note">
+    <span>Note:</span> When mapping the <code >_includes</code> identifier to ECMAscript, the leading <span style="font-size: 85%">U+005F LOW LINE ("_")</span> character should be removed. A leading <span style="font-size: 85%">"_"</span> is used to escape the identifier from looking like a reserved word (in this case, the <code>includes</code> keyword).
+   </div>
+   <div class="note" role="note">
     <dl class="domintro">
      <dt><var>range</var> . <code class="idl"><a data-link-type="idl" href="#dom-idbkeyrange-lower" id="ref-for-dom-idbkeyrange-lower①">lower</a></code>
      <dd> Returns <a data-link-type="dfn" href="#lower-bound" id="ref-for-lower-bound⑦">lower bound</a>, or <code>undefined</code> if none. 
