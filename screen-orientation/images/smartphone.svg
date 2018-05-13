@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="210mm" height="297mm" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" baseProfile="tiny" preserveAspectRatio="xMidYMid" version="1.2" viewBox="0 0 21000 29700" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+  <rect width="21000" height="29700" fill="none"/>
+   <path d="m5865 1900c-833 0-1665 832-1665 1665v23020c0 832 832 1665 1665 1665h9670c833 0 1666-833 1666-1665v-23020c0-833-833-1665-1666-1665h-9670z" fill="#808080"/>
+   <path d="m5865 1900c-833 0-1665 832-1665 1665v23020c0 832 832 1665 1665 1665h9670c833 0 1666-833 1666-1665v-23020c0-833-833-1665-1666-1665h-9670z" fill="none" stroke="#808080" stroke-linejoin="round"/>
+   <path d="m5665 1700c-833 0-1665 832-1665 1665v23020c0 832 832 1665 1665 1665h9670c833 0 1666-833 1666-1665v-23020c0-833-833-1665-1666-1665h-9670z"/>
+   <path d="m5665 1700c-833 0-1665 832-1665 1665v23020c0 832 832 1665 1665 1665h9670c833 0 1666-833 1666-1665v-23020c0-833-833-1665-1666-1665h-9670z" fill="none" stroke="#000" stroke-linejoin="round"/>
+   <rect x="4e3" y="1700" width="13001" height="26351" fill="none"/>
+   <path d="m9427 26260c-224 0-447 223-447 447v386c0 224 223 448 447 448h2146c224 0 448-224 448-448v-386c0-224-224-447-448-447h-2146z"/>
+   <path d="m9427 26260c-224 0-447 223-447 447v386c0 224 223 448 447 448h2146c224 0 448-224 448-448v-386c0-224-224-447-448-447h-2146z" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="50"/>
+   <rect x="8980" y="26260" width="3041" height="1281" fill="none"/>
+   <path d="m9334 2420c-67 0-134 67-134 134s67 135 134 135h2332c67 0 135-68 135-135s-68-134-135-134h-2332z"/>
+   <path d="m9334 2420c-67 0-134 67-134 134s67 135 134 135h2332c67 0 135-68 135-135s-68-134-135-134h-2332z" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="50"/>
+   <rect x="9200" y="2420" width="2601" height="269" fill="none"/>
+   <path d="m10550 25810h-6095v-21515h12190v21515h-6095z" fill="#fff"/>
+   <path d="m10550 25810h-6095v-21515h12190v21515h-6095z" fill="none" stroke="#fff" stroke-linejoin="round"/>
+</svg>
