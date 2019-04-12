@@ -6,7 +6,7 @@
   <meta content="WD" name="w3c-status">
   <meta content="Bikeshed version 4d208866a95a1121fceca549a36bfb09c5bf1705" name="generator">
   <link href="http://www.w3.org/TR/orientation-event/" rel="canonical">
-  <meta content="7be87673188c47ba6cae28ceeb57414bde13ea19" name="document-revision">
+  <meta content="e48472020bf9cd0167de3b601e49dc0d359b7084" name="document-revision">
 <style>/* style-md-lists */
 
 /* This is a weird hack for me not yet following the commonmark spec
@@ -254,11 +254,11 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">DeviceOrientation Event Specification</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">W3C Working Draft, <time class="dt-updated" datetime="2019-04-02">2 April 2019</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">W3C Working Draft, <time class="dt-updated" datetime="2019-04-18">18 April 2019</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
-     <dd><a class="u-url" href="https://www.w3.org/TR/2019/WD-orientation-event-20190402/">https://www.w3.org/TR/2019/WD-orientation-event-20190402/</a>
+     <dd><a class="u-url" href="https://www.w3.org/TR/2019/WD-orientation-event-20190418/">https://www.w3.org/TR/2019/WD-orientation-event-20190418/</a>
      <dt>Latest published version:
      <dd><a href="https://www.w3.org/TR/orientation-event/">https://www.w3.org/TR/orientation-event/</a>
      <dt>Editor's Draft:
@@ -650,6 +650,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
    <p>The <code class="idl"><a data-link-type="idl" href="#dom-devicemotionevent-interval" id="ref-for-dom-devicemotionevent-interval①">interval</a></code> attribute must be initialized with the interval at which data is obtained from the underlying hardware and must be expressed in milliseconds (ms). It must be a constant, to simplify filtering of the data by the Web application.</p>
    <p>Implementations that are unable to provide all attributes must initialize the values of the unknown attributes to null. If an implementation can never provide motion information, the event should be fired with the <code class="idl"><a data-link-type="idl" href="#dom-devicemotionevent-acceleration" id="ref-for-dom-devicemotionevent-acceleration④">acceleration</a></code>, <code class="idl"><a data-link-type="idl" href="#dom-devicemotionevent-accelerationincludinggravity" id="ref-for-dom-devicemotionevent-accelerationincludinggravity⑤">accelerationIncludingGravity</a></code> and <code class="idl"><a data-link-type="idl" href="#dom-devicemotionevent-rotationrate" id="ref-for-dom-devicemotionevent-rotationrate③">rotationRate</a></code> attributes set to null.</p>
    <h3 class="heading settled" data-level="4.5" id="id=permission-model"><span class="secno">4.5. </span><span class="content">Permission model</span><a class="self-link" href="#id=permission-model"></a></h3>
+   <div class="issue" id="issue-53485653"><a class="self-link" href="#issue-53485653"></a>Further implementation experience is being gathered for the permission model and specification clarifications informed by this experience are being discussed in <a href="https://github.com/w3c/deviceorientation/issues/74">GitHub issue #74</a>.</div>
    <p>Implementations may choose to share device orientation &amp; motion only if the
 user (or user agent on behalf of the user) has granted <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="permission">permission</dfn>.
 The <a data-link-type="dfn" href="#permission" id="ref-for-permission④">permission</a> to share device orientation &amp; motion
