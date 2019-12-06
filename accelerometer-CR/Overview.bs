@@ -3,8 +3,8 @@ Title: Accelerometer
 Level: none
 Status: CR
 ED: https://w3c.github.io/accelerometer/
-Date: 2019-11-28
-Deadline: 2019-12-27
+Date: 2019-12-10
+Deadline: 2020-01-06
 Prepare For TR: yes
 Shortname: accelerometer
 TR: https://www.w3.org/TR/accelerometer/
