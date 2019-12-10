@@ -1,8 +1,8 @@
 <pre class="metadata">
 Title: Orientation Sensor
 Status: CR
-Date: 2019-12-10
-Deadline: 2020-01-06
+Date: 2019-12-12
+Deadline: 2020-01-08
 Prepare For TR: yes
 Level: none
 ED: https://w3c.github.io/orientation-sensor/

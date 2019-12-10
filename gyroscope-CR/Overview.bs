@@ -1,13 +1,13 @@
 <pre class="metadata">
 Title: Gyroscope
 Status: CR
-Date: 2019-12-10
-Deadline: 2020-01-06
+Date: 2019-12-12
+Deadline: 2020-01-08
 Prepare For TR: yes
 Level: none
 ED: https://w3c.github.io/gyroscope/
 Shortname: gyroscope
-TR: http://www.w3.org/TR/gyroscope/
+TR: https://www.w3.org/TR/gyroscope/
 Previous Version: https://www.w3.org/TR/2019/WD-gyroscope-20190307/
 Editor: Anssi Kostiainen 41974, Intel Corporation, http://intel.com/
 Former Editor: Mikhail Pozdnyakov 78325, Intel Corporation, http://intel.com/

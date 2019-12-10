@@ -3,8 +3,8 @@ Title: Generic Sensor API
 Shortname: generic-sensor
 Level: none
 Status: CR
-Date: 2019-12-10
-Deadline: 2020-01-06
+Date: 2019-12-12
+Deadline: 2020-01-08
 Prepare For TR: yes
 Group: dap
 ED: https://w3c.github.io/sensors/
@@ -30,8 +30,13 @@ Boilerplate: omit issues-index, omit conformance, omit feedback-header
 Ignored Vars: activated_sensors
 Inline GitHub Issues: yes
 Default Biblio Status: current
-Status Text: Further implementation experience is being gathered for the [=permission request algorithm=] and specification clarifications informed by this experience are being discussed in <a href="https://github.com/w3c/sensors/issues/397">GitHub issue #397</a>.
-At Risk: [[PERMISSIONS-REQUEST]]
+Status Text:
+   Further implementation experience is being gathered for the
+   [=permission request algorithm=] and specification clarifications
+   informed by this experience are being discussed in
+   <a href="https://github.com/w3c/sensors/issues/397">GitHub issue #397</a>.
+   The group does not expect to advance this specification beyond CR until
+   [[PERMISSIONS-REQUEST]] moves beyond incubation.
 </pre>
 <pre class="anchors">
 urlPrefix: https://dom.spec.whatwg.org; spec: DOM
