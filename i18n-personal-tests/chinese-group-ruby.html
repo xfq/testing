@@ -13,20 +13,17 @@
         width: 360px;
       }
 
-      rb {
+      ruby {
         margin-right: 0.5em;
-      }
-
-      rb.nomargin {
-        margin-right: 0;
-      }
-
-      rt {
         ruby-align: center;
       }
 
-      rt.first {
+      ruby.first rt {
         ruby-align: start;
+      }
+
+      ruby.last {
+        margin: 0;
       }
 
 /* p {
@@ -39,17 +36,7 @@ rt {
   </head>
   <body>
     <p>
-      <ruby
-        ><rb>每个</rb><rt class="first">Měigè</rt> <rb>人</rb><rt>rén</rt>
-        <rb>迫切</rb><rt>pòqiè</rt> <rb>要</rb><rt>yào</rt> <rb>处理</rb
-        ><rt>chǔlǐ</rt> <rb>和</rb><rt>hé</rt> <rb>对付</rb><rt>duìfu</rt>
-        <rb class="nomargin">的</rb><rt>de,</rt> </ruby
-      >，<ruby>
-        <rb>其实</rb><rt>qíshí</rt> <rb>就</rb><rt>jiù</rt> <rb>身边</rb
-        ><rt>shēnbiān</rt> <rb>周围</rb><rt>zhōuwéi</rt> <rb>那么</rb
-        ><rt>nàme</rt> <rb>几个</rb><rt>jǐgè</rt> <rb class="nomargin">人</rb
-        ><rt>rén.</rt> </ruby
-      >。
+      <ruby class="first"><rb>每个<rt>Měigè</ruby><ruby><rb>人<rt>rén</ruby><ruby><rb>迫切<rt>pòqiè</ruby><ruby><rb>要<rt>yào</ruby><ruby><rb>处理<rt>chǔlǐ</ruby><ruby><rb>和<rt>hé</ruby><ruby><rb>对付<rt>duìfu</ruby><ruby class="last"><rb>的<rt>de,</ruby>，<ruby><rb>其实<rt>qíshí</ruby><ruby><rb>就<rt>jiù</ruby><ruby><rb>身边<rt>shēnbiān</ruby><ruby><rb>周围<rt>zhōuwéi</ruby><ruby><rb>那么<rt>nàme</ruby><ruby><rb>几个<rt>jǐgè</ruby><ruby class="last"><rb>人<rt>rén.</ruby>。
     </p>
   </body>
 </html>
