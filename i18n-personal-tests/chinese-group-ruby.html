@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+  <head>
+    <meta charset="utf-8" />
+    <title>My test page</title>
+    <style>
+      [lang="zh-hans"] {
+        font-family: "PingFang SC", "Noto Sans CJK SC", "Heiti SC", "DengXian",
+          "Microsoft YaHei", Helvetica, Segoe UI, Arial, sans-serif;
+      }
+
+      body {
+        width: 360px;
+      }
+
+      rb {
+        margin-right: 0.5em;
+      }
+
+      rb.nomargin {
+        margin-right: 0;
+      }
+
+      rt {
+        ruby-align: center;
+      }
+
+      rt.first {
+        ruby-align: start;
+      }
+
+/* p {
+  letter-spacing: 0.25em;
+}
+rt {
+  letter-spacing: normal;
+} */
+    </style>
+  </head>
+  <body>
+    <p>
+      <ruby
+        ><rb>每个</rb><rt class="first">Měigè</rt> <rb>人</rb><rt>rén</rt>
+        <rb>迫切</rb><rt>pòqiè</rt> <rb>要</rb><rt>yào</rt> <rb>处理</rb
+        ><rt>chǔlǐ</rt> <rb>和</rb><rt>hé</rt> <rb>对付</rb><rt>duìfu</rt>
+        <rb class="nomargin">的</rb><rt>de,</rt> </ruby
+      >，<ruby>
+        <rb>其实</rb><rt>qíshí</rt> <rb>就</rb><rt>jiù</rt> <rb>身边</rb
+        ><rt>shēnbiān</rt> <rb>周围</rb><rt>zhōuwéi</rt> <rb>那么</rb
+        ><rt>nàme</rt> <rb>几个</rb><rt>jǐgè</rt> <rb class="nomargin">人</rb
+        ><rt>rén.</rt> </ruby
+      >。
+    </p>
+  </body>
+</html>
