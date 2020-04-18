@@ -1,0 +1,32 @@
+body {
+    line-height: 1.7;
+    font-size: 180%;
+}
+
+.serif {
+    font-family: serif;
+}
+
+.sans-serif {
+    font-family: sans-serif;
+}
+
+.cursive {
+    font-family: cursive;
+}
+
+.fantasy {
+    font-family: fantasy;
+}
+
+.monospace {
+    font-family: monospace;
+}
+
+.system-ui {
+    font-family: system-ui;
+}
+
+.fangsong {
+    font-family: fangsong;
+}
