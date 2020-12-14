@@ -1,0 +1,1755 @@
+<!DOCTYPE html><html lang="en" dir="ltr"><head>
+<meta charset="utf-8">
+<meta name="generator" content="ReSpec 26.0.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+span.example-title{text-transform:none}
+aside.example,div.example,div.illegal-example{padding:.5em;margin:1em 0;position:relative;clear:both}
+div.illegal-example{color:red}
+div.illegal-example p{color:#000}
+aside.example,div.example{padding:.5em;border-left-width:.5em;border-left-style:solid;border-color:#e0cb52;background:#fcfaee}
+aside.example div.example{border-left-width:.1em;border-color:#999;background:#fff}
+aside.example div.example span.example-title{color:#999}
+</style>
+<style>
+.issue-label{text-transform:initial}
+.warning>p:first-child{margin-top:0}
+.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
+span.warning{padding:.1em .5em .15em}
+.issue.closed span.issue-number{text-decoration:line-through}
+.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}
+.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
+li.task-list-item{list-style:none}
+input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
+.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
+</style>
+<style>
+pre.idl{padding:1em;position:relative}
+@media print{
+pre.idl{white-space:pre-wrap}
+}
+.idlHeader{display:block;width:150px;background:#8ccbf2;color:#fff;font-family:sans-serif;font-weight:700;margin:-1em 0 1em -1em;height:28px;line-height:28px}
+.idlHeader a.self-link{margin-left:.3cm;text-decoration:none;border-bottom:none}
+.idlID{font-weight:700;color:#005a9c}
+.idlType{color:#005a9c}
+.idlName{color:#ff4500}
+.idlName a{color:#ff4500;border-bottom:1px dotted #ff4500;text-decoration:none}
+a.idlEnumItem{color:#000;border-bottom:1px dotted #ccc;text-decoration:none}
+.idlSuperclass{font-style:italic;color:#005a9c}
+.idlDefaultValue,.idlParamName{font-style:italic}
+.extAttr{color:#666}
+.idlSectionComment{color:gray}
+.idlIncludes a{font-weight:700}
+.respec-button-copy-paste:focus{text-decoration:none;border-color:#51a7e8;outline:0;box-shadow:0 0 5px rgba(81,167,232,.5)}
+.respec-button-copy-paste.selected:focus,.respec-button-copy-paste:focus:hover{border-color:#51a7e8}
+.respec-button-copy-paste.zeroclipboard-is-active,.respec-button-copy-paste.zeroclipboard-is-hover,.respec-button-copy-paste:active,.respec-button-copy-paste:hover{text-decoration:none;background-color:#ddd;background-image:linear-gradient(#eee,#ddd);border-color:#ccc}
+.respec-button-copy-paste.selected,.respec-button-copy-paste.zeroclipboard-is-active,.respec-button-copy-paste:active{background-color:#dcdcdc;background-image:none;border-color:#b5b5b5;box-shadow:inset 0 2px 4px rgba(0,0,0,.15)}
+.respec-button-copy-paste.selected:hover{background-color:#cfcfcf}
+.respec-button-copy-paste.disabled,.respec-button-copy-paste.disabled:hover,.respec-button-copy-paste:disabled,.respec-button-copy-paste:disabled:hover{color:rgba(102,102,102,.5);cursor:default;background-color:rgba(229,229,229,.5);background-image:none;border-color:rgba(197,197,197,.5);box-shadow:none}
+@media print{
+.respec-button-copy-paste{visibility:hidden}
+}
+</style>
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font:small Helvetica Neue,sans-serif,Droid Sans Fallback;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;margin-top:.25em}
+.dfn-panel ul a[href]{color:#333}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
+    
+    
+<title>The Screen Fold API</title>
+    
+    
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    
+    
+<style>
+
+      :root {
+        --drawing-size: 10rem;
+      }
+
+      .drawing {
+        width: var(--drawing-size);
+        object-fit: contain;
+      }
+
+      .centered {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      .postures {
+        display: grid;
+        grid-template: 1fr / auto auto;
+        grid-gap: 2rem;
+      }
+
+      section img {
+        width: 70%;
+        height: auto;
+        margin:auto;
+        display: flex;
+      }
+
+      @media (max-width: 500px) { /*for narrow displays like the fold*/
+        .postures {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+        }
+      }
+
+      body {
+        background-repeat: no-repeat !important;
+      }
+    
+</style>
+  
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+.hljs{background:0 0!important}
+a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}
+dfn{font-weight:700}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:normal}
+code{color:#c63501}
+th code{color:inherit}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+.toc a,.tof a{text-decoration:none}
+a .figno,a .secno{color:#000}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
+.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+.simple th a{color:#fff;padding:3px 5px;text-align:left}
+.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+.simple td{padding:3px 10px;border-top:1px solid #ddd}
+.simple tr:nth-child(even){background:#f0f6ff}
+.section dd>p:first-child{margin-top:0}
+.section dd>p:last-child{margin-bottom:0}
+.section dd{margin-bottom:1em}
+.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+h2,h3,h4,h5,h6{position:relative}
+aside.example .marker>a.self-link{color:inherit}
+h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
+h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}
+@media (max-width:767px){
+dd{margin-left:0}
+h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
+<meta name="description" content="This document specifies an API that allows web applications to request the
+        angular value to which a device with a screen hinge is folded. Under the
+        right conditions, and if allowed, the value representing the angle in
+        degrees is returned.">
+<link rel="canonical" href="https://www.w3.org/TR/screen-fold/">
+<style>
+.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}
+.hljs-comment,.hljs-quote{color:#717277;font-style:italic}
+.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4}
+.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;font-weight:700}
+.hljs-literal{color:#0b76c5}
+.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c}
+.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01}
+.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801}
+.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3}
+.hljs-emphasis{font-style:italic}
+.hljs-strong{font-weight:700}
+.hljs-link{text-decoration:underline}
+</style>
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
+<script id="initialUserConfig" type="application/json">{
+  "specStatus": "FPWD",
+  "publishDate": "2020-12-15",
+  "shortName": "screen-fold",
+  "editors": [
+    {
+      "name": "Diego González",
+      "url": "https://twitter.com/diekus",
+      "company": "Samsung",
+      "companyURL": "https://developer.samsung.com/internet",
+      "w3cid": 66757
+    },
+    {
+      "name": "Kenneth Rohde Christiansen",
+      "url": "https://github.com/kenchris",
+      "company": "Intel Corporation",
+      "companyURL": "https://intel.com/",
+      "w3cid": 57705
+    }
+  ],
+  "github": "https://github.com/w3c/screen-fold",
+  "group": "das",
+  "implementationReportURI": "https://www.w3.org/wiki/DAS/Implementations",
+  "otherLinks": [
+    {
+      "key": "Participate",
+      "data": [
+        {
+          "value": "GitHub w3c/screen-fold",
+          "href": "https://github.com/w3c/screen-fold/"
+        },
+        {
+          "value": "File a bug",
+          "href": "https://github.com/w3c/screen-fold/issues/"
+        },
+        {
+          "value": "Commit history",
+          "href": "https://github.com/w3c/screen-fold/commits/gh-pages"
+        },
+        {
+          "value": "Pull requests",
+          "href": "https://github.com/w3c/screen-fold/pulls/"
+        }
+      ]
+    },
+    {
+      "key": "Additional resources",
+      "data": [
+        {
+          "value": "'Fold State' initial explainer & key scenarios",
+          "href": "https://github.com/SamsungInternet/Explainers/blob/master/Foldables/FoldState.md"
+        },
+        {
+          "value": "Polyfill",
+          "href": "https://w3c.github.io/screen-fold/polyfill/demo.html"
+        }
+      ]
+    }
+  ],
+  "xref": "web-platform",
+  "publishISODate": "2020-12-15T00:00:00.000Z",
+  "generatedSubtitle": "First Public Working Draft 15 December 2020"
+}</script>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-WD"></head>
+  <body data-cite="WebIDL FEATURE-POLICY PERMISSIONS CSSOM-VIEW SCREEN-ORIENTATION HTML INFRA URL WEBIDL DOM FETCH" class="h-entry" data-new-gr-c-s-check-loaded="14.987.0" data-gr-ext-installed=""><div class="head">
+    <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">The Screen Fold API</h1>
+    
+    <h2>
+      W3C First Public Working Draft
+      <time class="dt-published" datetime="2020-12-15">15 December 2020</time>
+    </h2>
+    <dl>
+      <dt>This version:</dt><dd>
+              <a class="u-url" href="https://www.w3.org/TR/2020/WD-screen-fold-20201215/">https://www.w3.org/TR/2020/WD-screen-fold-20201215/</a>
+            </dd><dt>Latest published version:</dt><dd>
+              <a href="https://www.w3.org/TR/screen-fold/">https://www.w3.org/TR/screen-fold/</a>
+            </dd>
+      <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/screen-fold/">https://w3c.github.io/screen-fold/</a></dd>
+      
+      <dt>Implementation report:</dt><dd>
+              <a href="https://www.w3.org/wiki/DAS/Implementations">https://www.w3.org/wiki/DAS/Implementations</a>
+            </dd>
+      
+      
+      
+      <dt>Editors:</dt>
+      <dd class="p-author h-card vcard" data-editor-id="66757"><a class="u-url url p-name fn" href="https://twitter.com/diekus">Diego González</a>
+            (<a class="p-org org h-org h-card" href="https://developer.samsung.com/internet">Samsung</a>)
+          </dd><dd class="p-author h-card vcard" data-editor-id="57705"><a class="u-url url p-name fn" href="https://github.com/kenchris">Kenneth Rohde Christiansen</a>
+            (<a class="p-org org h-org h-card" href="https://intel.com/">Intel Corporation</a>)
+          </dd>
+      
+      
+      <dt>Participate:</dt><dd>
+    <a href="https://github.com/w3c/screen-fold/">GitHub w3c/screen-fold</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/screen-fold/issues/">File a bug</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/screen-fold/commits/gh-pages">Commit history</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/screen-fold/pulls/">Pull requests</a>
+  </dd><dt>Additional resources:</dt><dd>
+    <a href="https://github.com/SamsungInternet/Explainers/blob/master/Foldables/FoldState.md">'Fold State' initial explainer &amp; key scenarios</a>
+  </dd><dd>
+    <a href="https://w3c.github.io/screen-fold/polyfill/demo.html">Polyfill</a>
+  </dd>
+    </dl>
+    
+    
+    
+    <p class="copyright">
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+    ©
+    2020
+    
+    <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+    <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+    <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
+    W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules
+    apply.
+  </p>
+    <hr title="Separator for header">
+  </div>
+    <section id="abstract" class="introductory"><h2>Abstract</h2>
+      <p>
+        This document specifies an API that allows web applications to request the
+        angular value to which a device with a screen hinge is folded. Under the
+        right conditions, and if allowed, the value representing the angle in
+        degrees is returned.
+      </p>
+    </section>
+    <section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
+      document at the time of its publication. Other documents may supersede
+      this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision
+      of this technical report can be found in the
+      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+      https://www.w3.org/TR/.</em></p>
+      <p>
+        Implementors need to be aware that this specification is extremely
+        unstable. <strong>Implementors who are not taking part in the
+        discussions will find the specification changing out from under them in
+        incompatible ways.</strong> Vendors interested in implementing this
+        specification before it eventually reaches the Candidate Recommendation
+        phase should <a href="https://github.com/w3c/screen-fold">
+        subscribe to the repository on GitHub</a> and take part in the discussions.
+      </p>
+    <p>
+    This document was published by the <a href="https://www.w3.org/das/">Devices and Sensors Working Group</a> as a
+    First Public Working Draft. 
+    This document is intended to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
+  </p><p>
+    <a href="https://github.com/w3c/screen-fold/issues/">GitHub Issues</a> are preferred for
+          discussion of this specification.
+        
+    
+  </p><p>
+      Publication as a First Public Working Draft does not imply endorsement
+      by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership. 
+    </p><p>This is a draft document and may be updated, replaced
+  or obsoleted by other documents at any time. It is inappropriate to cite this
+  document as other than work in progress.
+  </p><p></p><p>
+    
+        This document was produced by a group
+        operating under the
+        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
+          Policy</a>.
+       
+    
+                <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+                <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/43696/status">public list of any patent disclosures</a>
+          made in connection with the deliverables of
+          the group; that page also includes
+          instructions for disclosing a patent. An individual who has actual
+          knowledge of a patent which the individual believes contains
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+          must disclose the information in accordance with
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+        
+    
+  </p><p>
+                  This document is governed by the
+                  <a id="w3c_process_revision" href="https://www.w3.org/2020/Process-20200915/">15 September 2020 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>
+        Introduction
+      </a></li><li class="tocline"><a class="tocxref" href="#extensions-to-the-screen-interface"><bdi class="secno">2. </bdi>
+        Extensions to the <code>Screen</code> interface
+      </a></li><li class="tocline"><a class="tocxref" href="#the-screenfold-interface"><bdi class="secno">3. </bdi>
+        The <span data-export="" data-dfn-type="interface" data-idl="interface" data-title="ScreenFold" data-dfn-for=""><code>ScreenFold</code></span> interface
+      </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#the-angle-attribute-get-current-screen-fold-angle"><bdi class="secno">3.1 </bdi>The <span data-export="" data-dfn-type="attribute" data-idl="attribute" data-title="angle" data-dfn-for="ScreenFold" data-type="unsigned short" data-lt="angle" data-local-lt="ScreenFold.angle"><code>angle</code></span> attribute: Get current screen fold angle</a></li><li class="tocline"><a class="tocxref" href="#the-posture-attribute-get-current-screen-fold-posture"><bdi class="secno">3.2 </bdi>The <span data-plurals="postures" data-export="" data-dfn-type="attribute" data-idl="attribute" data-title="posture" data-dfn-for="ScreenFold" data-type="ScreenFoldPosture" data-lt="posture" data-local-lt="ScreenFold.posture"><code>posture</code></span> attribute: Get current screen fold posture</a></li><li class="tocline"><a class="tocxref" href="#the-onchange-attribute-handle-angle-posture-changes"><bdi class="secno">3.3 </bdi>The <span data-export="" data-dfn-type="attribute" data-idl="attribute" data-title="onchange" data-dfn-for="ScreenFold" data-type="EventHandler" data-lt="onchange" data-local-lt="ScreenFold.onchange"><code>onchange</code></span> attribute: Handle angle/posture changes</a></li></ol></li><li class="tocline"><a class="tocxref" href="#posture-modes"><bdi class="secno">4. </bdi>
+        Posture modes
+      </a></li><li class="tocline"><a class="tocxref" href="#screen-fold-media-queries"><bdi class="secno">5. </bdi>Screen Fold Media Queries</a></li><li class="tocline"><a class="tocxref" href="#reading-the-posture"><bdi class="secno">6. </bdi>
+        Reading the posture
+      </a></li><li class="tocline"><a class="tocxref" href="#algorithms"><bdi class="secno">7. </bdi>
+        Algorithms
+      </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#updating-the-screen-fold-information"><bdi class="secno">7.1 </bdi>
+          Updating the screen fold information
+        </a></li><li class="tocline"><a class="tocxref" href="#screen-fold-angle-change"><bdi class="secno">7.2 </bdi>
+          Screen fold angle change
+        </a></li></ol></li><li class="tocline"><a class="tocxref" href="#security-and-privacy-considerations"><bdi class="secno">8. </bdi>
+        Security and Privacy considerations
+      </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#types-of-security-and-privacy-threats"><bdi class="secno">8.1 </bdi>
+          Types of security and privacy threats
+        </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#device-fingerprinting"><bdi class="secno">8.1.1 </bdi>
+          Device Fingerprinting
+        </a></li></ol></li><li class="tocline"><a class="tocxref" href="#mitigation-strategies"><bdi class="secno">8.2 </bdi>Mitigation Strategies</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#secure-context"><bdi class="secno">8.2.1 </bdi>
+            Secure Context
+          </a></li><li class="tocline"><a class="tocxref" href="#focused-area"><bdi class="secno">8.2.2 </bdi>
+            Focused Area
+          </a></li><li class="tocline"><a class="tocxref" href="#visibility-state"><bdi class="secno">8.2.3 </bdi>
+            Visibility State
+          </a></li></ol></li><li class="tocline"><a class="tocxref" href="#mitigation-strategies-applied-on-a-case-by-case-basis"><bdi class="secno">8.3 </bdi>Mitigation strategies applied on a case by case basis</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#limit-maximum-sampling-frequency"><bdi class="secno">8.3.1 </bdi>
+            Limit maximum sampling frequency
+          </a></li><li class="tocline"><a class="tocxref" href="#limit-number-of-delivered-readings"><bdi class="secno">8.3.2 </bdi>
+            Limit number of delivered readings
+          </a></li><li class="tocline"><a class="tocxref" href="#reduce-accuracy"><bdi class="secno">8.3.3 </bdi>
+            Reduce accuracy
+          </a></li><li class="tocline"><a class="tocxref" href="#applying-fuzziness-to-the-angle-value"><bdi class="secno">8.3.4 </bdi>
+            Applying fuzziness to the angle value
+          </a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#examples"><bdi class="secno">9. </bdi>
+        Examples
+      </a></li><li class="tocline"><a class="tocxref" href="#dependencies"><bdi class="secno">10. </bdi>
+        Dependencies
+      </a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">11. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#idl-index"><bdi class="secno">A. </bdi>IDL Index</a></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><bdi class="secno">B. </bdi>
+        Acknowledgments
+      </a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">C. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">C.1 </bdi>Normative references</a></li></ol></li></ol></nav>
+    <section id="introduction">
+      <h2 id="x1-introduction"><bdi class="secno">1. </bdi>
+        Introduction
+      <a class="self-link" aria-label="§" href="#introduction"></a></h2>
+      <p>
+        New types of mobile devices are appearing that have some sort of folding capabilities around the screen. Hence, 
+        when the device folds, it physically forms an angle. The main interest in knowing the fold angle is because there
+         are opportunities in responsive design that enable new user experiences.
+      </p>
+      <p>Among the described "folding" devices, there are mainly two different physical form factors: devices with a single
+         flexible screen (seamless), and devices with two screens (with seam). They can both fold around a hinge, and the 
+         current specification applies to both types. It should be clarified as well that both seamless and (devices) with seam
+         can be of different dimension ranging from mobile and tablets to laptop sizes. It should also be noted that different
+         devices will have different default orientations (portrait or landscape), and that the fold might happen in a vertical
+         or horizontal way.    
+      </p>
+      <span class="centered">
+        <img src="images/form-factors.svg" height="150" alt="drawing of different type of foldable devices">
+      </span>
+      <p>
+        From enhancing the usability of a website by avoiding the area of a fold, to enabling innovative use cases for the 
+        web, knowing the fold angle can help developers tailor their content to different devices. It can also enable to 
+        detect different postures the device might be in.
+      </p>
+      <p>
+        Content can be consumed and browsed even when the device is not flat, in which case the developer might want to
+         provide a different layout for it depending on the state of the angle of the fold. Additionally, developers can 
+         adapt content depending on various “postures” and potentially also animate some of these transitions. You can 
+         refer to a description of use cases.
+      </p>
+    </section>
+    <section data-dfn-for="Screen" id="extensions-to-the-screen-interface">
+      <h2 id="x2-extensions-to-the-screen-interface"><bdi class="secno">2. </bdi>
+        Extensions to the <code>Screen</code> interface
+      <a class="self-link" aria-label="§" href="#extensions-to-the-screen-interface"></a></h2>
+      <p>
+        The [<cite><a class="bibref" data-link-type="biblio" href="#bib-cssom-view" title="CSSOM View Module">cssom-view</a></cite>] specification defines the <dfn id="dom-screen" data-idl="interface" data-title="Screen" data-dfn-for=""><code>Screen</code></dfn> interface,
+        which this specification extends:
+      </p>
+      <pre class="idl def" id="webidl-950955589"><span class="idlHeader"><a class="self-link" href="#webidl-950955589">WebIDL</a></span><span data-idl="" class="idlInterface" id="idl-def-screen-partial-1" data-title="Screen">[<span class="extAttr"><a data-type="extended-attribute" href="https://heycam.github.io/webidl/#SecureContext">SecureContext</a></span>]
+partial interface <a class="internalDFN idlID" data-link-type="interface" href="#dom-screen" id="ref-for-dom-screen-1"><code>Screen</code></a> {<span data-idl="" class="idlAttribute" id="idl-def-screen-fold" data-title="fold" data-dfn-for="Screen">
+  [<span class="extAttr"><a data-type="extended-attribute" href="https://heycam.github.io/webidl/#SameObject">SameObject</a></span>] readonly attribute<span class="idlType"> <a href="#dom-screenfold" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfold-1"><code>ScreenFold</code></a></span> <dfn data-export="" data-dfn-type="attribute" id="dom-screen-fold" data-idl="attribute" data-title="fold" data-dfn-for="Screen" data-type="ScreenFold" data-lt="fold" data-local-lt="Screen.fold" class="idlName"><code>fold</code></dfn>;</span>
+};</span></pre>
+    </section>
+    <section data-dfn-for="ScreenFold" id="the-screenfold-interface">
+      <h2 id="x3-the-screenfold-interface"><bdi class="secno">3. </bdi>
+        The <dfn data-export="" data-dfn-type="interface" id="dom-screenfold" data-idl="interface" data-title="ScreenFold" data-dfn-for=""><code>ScreenFold</code></dfn> interface
+      <a class="self-link" aria-label="§" href="#the-screenfold-interface"></a></h2>
+      <pre class="idl def" id="webidl-2052775708"><span class="idlHeader"><a class="self-link" href="#webidl-2052775708">WebIDL</a></span><span data-idl="" class="idlInterface" id="idl-def-screenfold" data-title="ScreenFold">[<span class="extAttr"><a data-type="extended-attribute" href="https://heycam.github.io/webidl/#SecureContext">SecureContext</a></span>, <span class="extAttr"><a data-type="extended-attribute" href="https://heycam.github.io/webidl/#Exposed">Exposed</a>=(<a data-type="interface" href="https://html.spec.whatwg.org/multipage/window-object.html#window">Window</a>)</span>]
+interface <a class="internalDFN idlID" data-link-type="interface" href="#dom-screenfold" id="ref-for-dom-screenfold-2"><code>ScreenFold</code></a> : <span class="idlSuperclass"><a data-type="interface" href="https://dom.spec.whatwg.org/#eventtarget">EventTarget</a></span> {<span data-idl="" class="idlAttribute" id="idl-def-screenfold-angle" data-title="angle" data-dfn-for="ScreenFold">
+  readonly attribute<span class="idlType"> <a data-type="interface" href="https://heycam.github.io/webidl/#idl-unsigned-short">unsigned short</a></span> <a class="internalDFN idlName" data-link-type="attribute" href="#dom-screenfold-angle" id="ref-for-dom-screenfold-angle-1"><code>angle</code></a>;</span><span data-idl="" class="idlAttribute" id="idl-def-screenfold-posture" data-title="posture" data-dfn-for="ScreenFold">
+  readonly attribute<span class="idlType"> <a href="#dom-screenfoldposture" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-1"><code>ScreenFoldPosture</code></a></span> <a class="internalDFN idlName" data-link-type="attribute" href="#dom-screenfold-posture" id="ref-for-dom-screenfold-posture-1"><code>posture</code></a>;</span><span data-idl="" class="idlAttribute" id="idl-def-screenfold-onchange" data-title="onchange" data-dfn-for="ScreenFold">
+  attribute<span class="idlType"> <a data-type="typedef" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler">EventHandler</a></span> <a class="internalDFN idlName" data-link-type="attribute" href="#dom-screenfold-onchange" id="ref-for-dom-screenfold-onchange-1"><code>onchange</code></a>;</span>
+};</span><span data-idl="" class="idlEnum" id="idl-def-screenfoldposture" data-title="ScreenFoldPosture">
+
+enum <dfn data-export="" data-dfn-type="enum" id="dom-screenfoldposture" data-idl="enum" data-title="ScreenFoldPosture" data-dfn-for="ScreenFoldPosture" class="idlID"><code>ScreenFoldPosture</code></dfn> {
+  <span class="idlEnumItem">"<dfn data-export="" data-dfn-type="enum-value" id="dom-screenfoldposture-no-fold" data-idl="enum-value" data-title="no-fold" data-dfn-for="ScreenFoldPosture"><code>no-fold</code></dfn>"</span>,
+  <span class="idlEnumItem">"<dfn data-export="" data-dfn-type="enum-value" id="dom-screenfoldposture-laptop" data-idl="enum-value" data-title="laptop" data-dfn-for="ScreenFoldPosture"><code>laptop</code></dfn>"</span>,
+  <span class="idlEnumItem">"<dfn data-export="" data-dfn-type="enum-value" id="dom-screenfoldposture-flat" data-idl="enum-value" data-title="flat" data-dfn-for="ScreenFoldPosture"><code>flat</code></dfn>"</span>,
+  <span class="idlEnumItem">"<dfn data-export="" data-dfn-type="enum-value" id="dom-screenfoldposture-tent" data-idl="enum-value" data-title="tent" data-dfn-for="ScreenFoldPosture"><code>tent</code></dfn>"</span>,
+  <span class="idlEnumItem">"<dfn data-export="" data-dfn-type="enum-value" id="dom-screenfoldposture-tablet" data-idl="enum-value" data-title="tablet" data-dfn-for="ScreenFoldPosture"><code>tablet</code></dfn>"</span>,
+  <span class="idlEnumItem">"<dfn data-export="" data-dfn-type="enum-value" id="dom-screenfoldposture-book" data-idl="enum-value" data-title="book" data-dfn-for="ScreenFoldPosture"><code>book</code></dfn>"</span>
+};</span></pre>
+      <section id="the-angle-attribute-get-current-screen-fold-angle">
+        <h3 id="x3-1-the-angle-attribute-get-current-screen-fold-angle"><bdi class="secno">3.1 </bdi>The <dfn data-export="" data-dfn-type="attribute" id="dom-screenfold-angle" data-idl="attribute" data-title="angle" data-dfn-for="ScreenFold" data-type="unsigned short" data-lt="angle" data-local-lt="ScreenFold.angle"><code>angle</code></dfn> attribute: Get current screen fold angle<a class="self-link" aria-label="§" href="#the-angle-attribute-get-current-screen-fold-angle"></a></h3>
+        <p>
+          When getting the type attribute, the user agent <em class="rfc2119">MUST</em> return the
+          <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#responsible-document">responsible document</a>'s current screen fold angle.
+        </p>
+      </section>
+      <section id="the-posture-attribute-get-current-screen-fold-posture">
+        <h3 id="x3-2-the-posture-attribute-get-current-screen-fold-posture"><bdi class="secno">3.2 </bdi>The <dfn data-plurals="postures" data-export="" data-dfn-type="attribute" id="dom-screenfold-posture" data-idl="attribute" data-title="posture" data-dfn-for="ScreenFold" data-type="ScreenFoldPosture" data-lt="posture" data-local-lt="ScreenFold.posture"><code>posture</code></dfn> attribute: Get current screen fold posture<a class="self-link" aria-label="§" href="#the-posture-attribute-get-current-screen-fold-posture"></a></h3>
+        <p>
+          When getting the type attribute, the user agent <em class="rfc2119">MUST</em> return the
+          <a data-link-type="dfn" data-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#responsible-document">responsible document</a>'s current screen fold <a data-link-type="idl" href="#dfn-posture" class="internalDFN" id="ref-for-dfn-posture-1"><code>posture</code></a>.
+        </p>
+      </section>
+      <section id="the-onchange-attribute-handle-angle-posture-changes">
+        <h3 id="x3-3-the-onchange-attribute-handle-angle-posture-changes"><bdi class="secno">3.3 </bdi>The <dfn data-export="" data-dfn-type="attribute" id="dom-screenfold-onchange" data-idl="attribute" data-title="onchange" data-dfn-for="ScreenFold" data-type="EventHandler" data-lt="onchange" data-local-lt="ScreenFold.onchange"><code>onchange</code></dfn> attribute: Handle angle/posture changes<a class="self-link" aria-label="§" href="#the-onchange-attribute-handle-angle-posture-changes"></a></h3>
+        <p data-link-for="ScreenFold">
+          The <a data-link-type="idl" href="#dom-screenfold-onchange" class="internalDFN" id="ref-for-dom-screenfold-onchange-2"><code><code>onchange</code></code></a> attribute is an <a data-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#event-handlers">event handler</a> whose corresponding
+          <a data-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#event-handler-event-type">event handler event type</a> is "<code>change</code>".
+        </p>
+      </section>
+    </section>
+    <section data-link-for="ScreenFoldPosture" id="posture-modes">
+      <h2 id="x4-posture-modes"><bdi class="secno">4. </bdi>
+        Posture modes
+      <a class="self-link" aria-label="§" href="#posture-modes"></a></h2>
+      <p>
+        This specification defines the following
+        <dfn data-export="" data-plurals="postures" id="dfn-posture">posture</dfn> values:
+      </p>
+      <ol class="postures">
+        <li>
+          <img src="images/nofold-mode-graphic.svg" class="drawing" alt="drawing of no-fold mode" height="150" width="236">
+          <a href="#dom-screenfoldposture-no-fold" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-no-fold-1">No-Fold</a> is the posture of a device without a hinge. 
+          This is the expected value for devices that do not fold.
+        </li>
+        <li>
+          <img src="images/laptop-mode-graphic.svg" class="drawing" alt="drawing of laptop mode" height="150" width="175">
+          <a href="#dom-screenfoldposture-laptop" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-laptop-1">Laptop</a> posture indicates that the device is being used as
+          a traditional laptop, meaning one screen is placed on a more or
+          less horizontal surface with a screen angle between 180 to 0 degrees.
+        </li>
+        <li>
+          <img src="images/flat-mode-graphic.svg" class="drawing" alt="drawing of flat mode" height="150" width="233">
+          <a href="#dom-screenfoldposture-flat" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-flat-1">Flat</a> posture indicates that one screen is being placed on
+          a more or less horizontal surface with a screen angle around 180 degrees.
+        </li>
+        <li>
+          <img src="images/tent-mode-graphic.svg" class="drawing" alt="drawing of tent mode" height="150" width="258">
+          <a href="#dom-screenfoldposture-tent" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-tent-1">Tent</a> posture indicates that the edges of both screens are placed
+          on a horizontal surface but with an angle &gt; 180 degrees.
+        </li>        
+        <li>
+          <img src="images/tablet-mode-graphic.svg" class="drawing" alt="drawing of tablet mode" height="150" width="253">
+          <a href="#dom-screenfoldposture-tablet" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-tablet-1">Tablet</a> posture is when the device can turn around on its hinge all the way to have
+          the screen back to back. The angle is considered to be around 360 degrees.
+        </li>
+        <li>
+          <img src="images/book-mode-graphic.svg" class="drawing" alt="drawing of book mode" height="150" width="245">
+          <a href="#dom-screenfoldposture-book" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-book-1">Book</a> posture is when the device is used between around 50 and 160 degrees. 
+          It is generally used while being held on (not on a surface).
+        </li>
+      </ol>
+      <p>
+        In the API, the <a data-link-type="dfn" href="#dfn-posture" class="internalDFN" id="ref-for-dfn-posture-2">posture</a> values are represented by the
+        <a data-link-type="idl" href="#dom-screenfoldposture" class="internalDFN" id="ref-for-dom-screenfoldposture-2"><code><code>ScreenFoldPosture</code></code></a> enum values.
+      </p>
+    </section>
+    <section data-link-for="ScreenFoldPosture" id="screen-fold-media-queries">
+      <h2 id="x5-screen-fold-media-queries"><bdi class="secno">5. </bdi>Screen Fold Media Queries<a class="self-link" aria-label="§" href="#screen-fold-media-queries"></a></h2>
+      <h3 id="the-screen-fold-posture-media-feature">
+        The <code>'screen-fold-posture'</code> media feature
+      <a class="self-link" aria-label="§" href="#screen-fold-media-queries"></a></h3>
+      <p>
+        The <code><dfn id="dfn-screen-fold-posture">screen-fold-posture</dfn></code> media feature represents,
+        via a CSS media query [<cite><a class="bibref" data-link-type="biblio" href="#bib-mediaq" title="Media Queries Level 4">MEDIAQ</a></cite>], the <a href="#dfn-posture" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-posture-3">posture</a> of the device.
+        This media feature applies to the top-level browsing
+        context and any child browsing contexts. Child browsing contexts
+        reflect the <a href="#dfn-posture" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-posture-4">posture</a> of the <a data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context">top-level browsing
+        context</a>.
+      </p>
+      <dl>
+        <dt>
+          Value:
+        </dt>
+        <dd>
+          <a href="#dom-screenfoldposture-no-fold" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-no-fold-2"><code>no-fold</code></a> | <a href="#dom-screenfoldposture-laptop" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-laptop-2"><code>laptop</code></a> | <a href="#dom-screenfoldposture-flat" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-flat-2"><code>flat</code></a> | <a href="#dom-screenfoldposture-tent" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-tent-2"><code>tent</code></a> | <a href="#dom-screenfoldposture-tablet" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-tablet-2"><code>tablet</code></a> | <a href="#dom-screenfoldposture-book" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-book-2"><code>book</code></a>
+        </dd>
+        <dt>
+          Applies to:
+        </dt>
+        <dd>
+          visual media types
+        </dd>
+        <dt>
+          Accepts min/max prefixes:
+        </dt>
+        <dd>
+          No
+        </dd>
+      </dl>
+      <p>
+        A user agent <em class="rfc2119">MUST</em> reflect the applied <a href="#dfn-posture" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-posture-5">posture</a> of the web
+        application via a CSS media query [<cite><a class="bibref" data-link-type="biblio" href="#bib-mediaq" title="Media Queries Level 4">MEDIAQ</a></cite>].
+      </p>
+      
+      <h3 id="the-screen-fold-angle-media-feature">
+        The <code>'screen-fold-angle'</code> media feature
+      <a class="self-link" aria-label="§" href="#screen-fold-media-queries"></a></h3>
+      <p>
+        The <code><dfn id="dfn-screen-fold-angle">screen-fold-angle</dfn></code> media feature represents,
+        via a CSS media query [<cite><a class="bibref" data-link-type="biblio" href="#bib-mediaq" title="Media Queries Level 4">MEDIAQ</a></cite>], the <a class="production css" href="https://drafts.csswg.org/css-values-3/#angle-value">&lt;angle&gt;</a> of the device.
+        This media feature applies to the top-level browsing
+        context and any child browsing contexts. Child browsing contexts
+        reflect the <a class="production css" href="https://drafts.csswg.org/css-values-3/#angle-value">&lt;angle&gt;</a> of the <a data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context">top-level browsing
+        context</a>.
+      </p>
+      <dl>
+        <dt>
+          Value:
+        </dt>
+        <dd>
+          <a class="production css" href="https://drafts.csswg.org/css-values-3/#angle-value">&lt;angle&gt;</a>  
+        </dd>
+        <dt>
+          Applies to:
+        </dt>
+        <dd>
+          visual media types
+        </dd>
+        <dt>
+          Accepts min/max prefixes:
+        </dt>
+        <dd>
+          Yes
+        </dd>
+      </dl>
+      <p>
+        A user agent <em class="rfc2119">MUST</em> reflect the applied <a class="production css" href="https://drafts.csswg.org/css-values-3/#angle-value">&lt;angle&gt;</a> of the web
+        application via a CSS media query [<cite><a class="bibref" data-link-type="biblio" href="#bib-mediaq" title="Media Queries Level 4">MEDIAQ</a></cite>].
+      </p>
+    </section>
+    
+    <section id="reading-the-posture">
+      <h2 id="x6-reading-the-posture"><bdi class="secno">6. </bdi>
+        Reading the posture
+      <a class="self-link" aria-label="§" href="#reading-the-posture"></a></h2>
+      <p>
+        All <a data-type="dfn" href="https://dom.spec.whatwg.org/#concept-document">documents</a> have a <dfn id="dfn-current-screen-fold-angle">current screen fold angle</dfn> and a
+        <dfn id="dfn-current-posture">current posture</dfn>. Both of them <em class="rfc2119">SHOULD</em> be
+        initialized when the <a data-type="dfn" href="https://dom.spec.whatwg.org/#concept-document">document</a> is created, otherwise they <em class="rfc2119">MUST</em>
+        be initialized the first time they are accessed and before their
+        value is read. The <a href="#dfn-user-agent" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-user-agent-1">user agent</a> <em class="rfc2119">MUST</em> <a href="#dfn-update-the-screen-fold-information" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-update-the-screen-fold-information-1">update the screen fold
+        information</a> of the <a data-type="dfn" href="https://dom.spec.whatwg.org/#concept-document">document</a> to initialize them.
+      </p>
+      <p>
+        For a given <a data-type="dfn" href="https://dom.spec.whatwg.org/#concept-document">document</a>, the <a href="#dfn-current-posture" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-current-posture-1">current posture</a>
+        is derived from the <a href="#dfn-current-screen-fold-angle" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-current-screen-fold-angle-1">current screen fold angle</a> and the <a href="#dfn-current-screen-orientation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-current-screen-orientation-1">
+        current screen orientation</a>.
+      </p>
+      <p><i>These tables are non-normative.</i></p>
+      <h3 id="posture-values-table"><dfn id="dfn-posture-values-table">Posture values table</dfn><a class="self-link" aria-label="§" href="#reading-the-posture"></a></h3>
+      <p>The values are approximations and might differ per device. For instance, a device might not yield exactly 180° when laying flat, but instead values ranging from 175° to 185°. Device makers <em class="rfc2119">SHOULD</em> make sure that the physical device postures map correctly to the postures defined by this specification.</p>
+
+        <p>Some devices might also lack one or more of the postures due to physical constraints or device design, in which case the device <em class="rfc2119">SHOULD</em> make sure that all combinations of angles and device orientation (which can be locked by [<cite><a class="bibref" data-link-type="biblio" href="#bib-screen-orientation" title="The Screen Orientation API">SCREEN-ORIENTATION</a></cite>] and host OS) maps into one of the defined postures.</p>
+      <p>
+        <img src="images/angle-graphic.svg" alt="An illustration on how posture values are derived from the orientation of the fold" height="150" width="210">
+        The <a href="#dfn-posture-values-table" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-posture-values-table-1">posture values table</a> shows how the <a data-link-type="idl" href="#dfn-posture" class="internalDFN" id="ref-for-dfn-posture-6"><code>posture</code></a>
+        values are derived depending on the orientation of the fold:
+      </p>
+      <h4 id="horizontal-fold">Horizontal Fold<a class="self-link" aria-label="§" href="#reading-the-posture"></a></h4>
+      <div class="postures">
+        <img src="images/horizontal-fold.svg" class="drawing" alt="drawing of a device with a vertical fold" height="150" width="213">
+        <p>
+          Devices with a horizontal fold are the ones for which in their 
+        main form factor, the folding occurs from side to side, across 
+        the screen(s).
+        </p>
+        
+      </div>
+        <table class="simple">
+        <caption>
+          The posture values table for devices with a horizontal fold
+        </caption>
+        <thead>
+          <tr>
+            <th>
+              <a href="#dfn-current-posture" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-current-posture-2">Current posture</a>
+            </th>
+            <th>
+              <a href="#dfn-current-screen-orientation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-current-screen-orientation-2">Current screen orientation</a>
+            </th>
+            <th>
+              <a href="#dfn-current-screen-fold-angle" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-current-screen-fold-angle-2">Current screen fold angle</a>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-link-for="ScreenFoldPosture">
+              <a href="#dom-screenfoldposture-laptop" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-laptop-3">Laptop</a>
+            </td>
+            <td>
+              <i><a href="https://www.w3.org/TR/screen-orientation/#dom-orientationlocktype-portrait-primary">"portrait-primary"</a> | <a href="https://www.w3.org/TR/screen-orientation/#dom-orientationlocktype-portrait-secondary">"portrait-secondary"</a></i>
+            </td>
+            <td>
+              <code>[0° - 140°[</code>
+            </td>
+          </tr>
+          <tr>
+            <td data-link-for="ScreenFoldPosture">
+              <a href="#dom-screenfoldposture-flat" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-flat-3">Flat</a>
+            </td>
+            <td>
+              <i>any orientation</i>
+            </td>
+            <td>
+              <code>[140° - 185°[</code>
+            </td>
+          </tr>
+          <tr>
+            <td data-link-for="ScreenFoldPosture">
+              <a href="#dom-screenfoldposture-tent" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-tent-3">Tent</a>
+            </td>
+            <td>
+              <i>any orientation</i>
+            </td>
+            <td>
+              <code>[185° - 335°[</code>
+            </td>
+          </tr>
+          <tr>
+            <td data-link-for="ScreenFoldPosture">
+              <a href="#dom-screenfoldposture-tablet" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-tablet-3">Tablet</a>
+            </td>
+            <td>
+              <i>any orientation</i>
+            </td>
+            <td>
+              <code>[335° - 360°]</code>
+            </td>
+          </tr>
+          <tr>
+            <td data-link-for="ScreenFoldPosture">
+              <a href="#dom-screenfoldposture-book" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-book-3">Book</a>
+            </td>
+            <td>
+              <i><a href="https://www.w3.org/TR/screen-orientation/#dom-orientationlocktype-landscape-primary">"landscape-primary"</a> | <a href="https://www.w3.org/TR/screen-orientation/#dom-orientationlocktype-landscape-secondary">"landscape-secondary"</a></i>
+            </td>
+            <td>
+              <code>[0° - 140°[</code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h4 id="vertical-fold">Vertical Fold<a class="self-link" aria-label="§" href="#reading-the-posture"></a></h4>
+      <div class="postures">
+        <img src="images/vertical-fold.svg" class="drawing" alt="drawing of a device with a horizontal fold" height="150" width="197">
+        <p>
+          Devices with a vertical fold are the ones for which in their main form 
+          factor, the folding occurs from top to bottom, across the screen(s).
+        </p>
+      </div>
+      <table class="simple">
+        <caption>
+          The posture values table for devices with a vertical fold
+        </caption>
+        <thead>
+          <tr>
+            <th>
+              <a href="#dfn-current-posture" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-current-posture-3">Current posture</a>
+            </th>
+            <th>
+              <a href="#dfn-current-screen-orientation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-current-screen-orientation-3">Current screen orientation</a>
+            </th>
+            <th>
+              <a href="#dfn-current-screen-fold-angle" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-current-screen-fold-angle-3">Current screen fold angle</a>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-link-for="ScreenFoldPosture">
+              <a href="#dom-screenfoldposture-laptop" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-laptop-4">Laptop</a>
+            </td>
+            <td>
+              <i><a href="https://www.w3.org/TR/screen-orientation/#dom-orientationlocktype-landscape-primary">"landscape-primary"</a> | <a href="https://www.w3.org/TR/screen-orientation/#dom-orientationlocktype-landscape-secondary">"landscape-secondary"</a></i>
+            </td>
+            <td>
+              <code>[0° - 140°[</code>
+            </td>
+          </tr>
+          <tr>
+            <td data-link-for="ScreenFoldPosture">
+              <a href="#dom-screenfoldposture-flat" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-flat-4">Flat</a>
+            </td>
+            <td>
+              <i>any orientation</i>
+            </td>
+            <td>
+              <code>[140° - 185°[</code> 
+            </td>
+          </tr>
+          <tr>
+            <td data-link-for="ScreenFoldPosture">
+              <a href="#dom-screenfoldposture-tent" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-tent-4">Tent</a>
+            </td>
+            <td>
+              <i>any orientation</i>
+            </td>
+            <td>
+              <code>[185° - 335°[</code>
+            </td>
+          </tr>
+          <tr>
+            <td data-link-for="ScreenFoldPosture">
+              <a href="#dom-screenfoldposture-tablet" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-tablet-4">Tablet</a>
+            </td>
+            <td>
+              <i>any orientation</i>
+            </td>
+            <td>
+              <code>[335° - 360°]</code> 
+            </td>
+          </tr>
+          <tr>
+            <td data-link-for="ScreenFoldPosture">
+              <a href="#dom-screenfoldposture-book" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-book-4">Book</a>
+            </td>
+            <td>
+              <i><a href="https://www.w3.org/TR/screen-orientation/#dom-orientationlocktype-portrait-primary">"portrait-primary"</a> | <a href="https://www.w3.org/TR/screen-orientation/#dom-orientationlocktype-portrait-secondary">"portrait-secondary"</a></i>
+            </td>
+            <td>
+              <code>[0° - 140°[</code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="algorithms">
+      <h2 id="x7-algorithms"><bdi class="secno">7. </bdi>
+        Algorithms
+      <a class="self-link" aria-label="§" href="#algorithms"></a></h2>
+      <section data-link-for="ScreenFold" id="updating-the-screen-fold-information">
+        <h3 id="x7-1-updating-the-screen-fold-information"><bdi class="secno">7.1 </bdi>
+          Updating the screen fold information
+        <a class="self-link" aria-label="§" href="#updating-the-screen-fold-information"></a></h3>
+        <p>
+          The steps to <dfn id="dfn-update-the-screen-fold-information">update the screen fold information</dfn> of a
+          <a data-type="dfn" href="https://dom.spec.whatwg.org/#concept-document">document</a> are as follows:
+        </p>
+        <ol class="algorithm">
+          <li>
+            Set the <a data-type="dfn" href="https://dom.spec.whatwg.org/#concept-document">document</a>'s <a href="#dfn-current-screen-fold-angle" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-current-screen-fold-angle-4">current screen fold angle</a> to the 
+            angle between the screen fold in degrees (or two screens in
+            case of a dual screen device).
+          </li>
+          <li>
+            Update the <a data-type="dfn" href="https://dom.spec.whatwg.org/#concept-document">document</a>'s <a href="#dfn-current-posture" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-current-posture-4">current posture</a> given
+            the <a href="#dfn-current-screen-fold-angle" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-current-screen-fold-angle-5">current screen fold angle</a> and <a href="#dfn-current-screen-orientation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-current-screen-orientation-4">current screen orientation</a>,
+            according to <a href="#dfn-posture-values-table" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-posture-values-table-2">posture values table</a>.
+          </li>
+        </ol>
+      </section>
+      <section data-link-for="ScreenFold" id="screen-fold-angle-change">
+        <h3 id="x7-2-screen-fold-angle-change"><bdi class="secno">7.2 </bdi>
+          Screen fold angle change
+        <a class="self-link" aria-label="§" href="#screen-fold-angle-change"></a></h3>
+        <p>
+          Whenever the screen(s) fold angle changes, the <a href="#dfn-user-agent" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-user-agent-2">user agent</a> <em class="rfc2119">MUST</em> run
+          the following steps as part of the next <a href="#dfn-animation-frame-task" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-animation-frame-task-1">animation frame task</a>:
+        </p>
+        <ol class="algorithm">
+          <li>
+            Let <var>browsing contexts</var> be the <a data-link-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#list-of-the-descendant-browsing-contexts">list of the descendant browsing contexts</a>
+            of the <a data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context">top-level browsing context</a>'s <a data-type="dfn" href="https://dom.spec.whatwg.org/#concept-document">document</a>.
+          </li>
+          <li><a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#list-iterate">for each</a> <var data-type="browsing context">context</var> in <var>browsing contexts</var>, run
+          the following sub-steps:
+            <ol>
+              <li>
+                Let <var>document</var> be the <var data-type="browsing context">context</var>'s <a data-type="dfn" href="https://html.spec.whatwg.org/multipage/browsers.html#active-document">active document</a>.
+              </li>
+              <li>
+                If <var>document</var> is not visible per [<cite><a class="bibref" data-link-type="biblio" href="#bib-page-visibility" title="Page Visibility (Second Edition)">PAGE-VISIBILITY</a></cite>],
+                abort these steps.
+              </li>
+              <li>
+                <a href="#dfn-update-the-screen-fold-information" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-update-the-screen-fold-information-2">Update the screen fold information</a> of <var>document</var>.
+              </li>
+              <li>
+                <a data-type="dfn" href="https://dom.spec.whatwg.org/#concept-event-fire">Fire an event</a> named <code>change</code> at <var>document</var>'s
+                <a data-link-type="idl" href="#dom-screen" class="internalDFN" id="ref-for-dom-screen-2"><code><code>Screen</code></code></a>.<a data-link-type="idl" href="#dom-screen-fold" class="internalDFN" id="ref-for-dom-screen-fold-1"><code><code>fold</code></code></a> object.
+              </li>
+            </ol>
+          </li>
+        </ol>
+        <p>
+          Whenever a <a data-type="dfn" href="https://dom.spec.whatwg.org/#concept-document">document</a> becomes visible per [<cite><a class="bibref" data-link-type="biblio" href="#bib-page-visibility" title="Page Visibility (Second Edition)">PAGE-VISIBILITY</a></cite>],
+          in other words after the <a data-link-type="dfn" href="https://www.w3.org/TR/page-visibility/#dfn-now-visible-algorithm">now visible algorithm</a> is run, the
+          <a href="#dfn-user-agent" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-user-agent-3">user agent</a> <em class="rfc2119">MUST</em> run the following substeps as part of the next
+          <a href="#dfn-animation-frame-task" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-animation-frame-task-2">animation frame task</a>:
+        </p>
+        <ol class="algorithm">
+          <li>
+            Let <var>document</var> be the <a data-type="dfn" href="https://dom.spec.whatwg.org/#concept-document">document</a> in question.
+          </li>
+          <li>
+            Let <var>posture</var> and <var>angle</var> be respectively the <var>document</var>'s <a href="#dfn-current-posture" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-current-posture-5">
+            current posture</a> and <a href="#dfn-current-screen-fold-angle" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-current-screen-fold-angle-6">current screen fold angle</a>.
+          </li>
+          <li>
+            <a href="#dfn-update-the-screen-fold-information" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-update-the-screen-fold-information-3">Update the screen fold information</a> of the <var>document</var>.
+          </li>
+          <li>If <var>posture</var> is different from the <var>document</var>'s <a href="#dfn-current-posture" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-current-posture-6">current
+          posture</a> or <var>angle</var> from the <var>document</var>'s <a href="#dfn-current-screen-fold-angle" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-current-screen-fold-angle-7">current screen
+          fold angle</a>, run the following sub-steps:
+            <ol>
+              <li>
+                <a data-type="dfn" href="https://dom.spec.whatwg.org/#concept-event-fire">Fire an event</a> named <code>change</code> at the <var>document</var>'s
+                <a data-link-type="idl" href="#dom-screen" class="internalDFN" id="ref-for-dom-screen-3"><code><code>Screen</code></code></a>.<a data-link-type="idl" href="#dom-screen-fold" class="internalDFN" id="ref-for-dom-screen-fold-2"><code><code>fold</code></code></a> object.
+              </li>
+            </ol>
+          </li>
+        </ol>
+        <div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="4"><span>Note</span></div><div class="">
+          <p>
+            Developers need to be aware that a <a data-link-type="idl" href="#dom-screen" class="internalDFN" id="ref-for-dom-screen-4"><code><code>Screen</code></code></a>.<a data-link-type="idl" href="#dom-screen-fold" class="internalDFN" id="ref-for-dom-screen-fold-3"><code><code>fold</code></code></a> object
+            from a <a data-type="dfn" href="https://dom.spec.whatwg.org/#concept-document">document</a> that is not visible, as per
+            [<cite><a class="bibref" data-link-type="biblio" href="#bib-page-visibility" title="Page Visibility (Second Edition)">PAGE-VISIBILITY</a></cite>], will not receive an orientation change event.
+            This is to prevent unnecessary changes to layout, etc. in the
+            non-visible web application.
+          </p>
+        </div></div>
+        <div class="issue" id="issue-container-number-1"><div role="heading" class="issue-title marker" id="h-issue" aria-level="4"><span>Issue 1</span></div><div class="">
+          This section could be improved if the [<cite><a class="bibref" data-link-type="biblio" href="#bib-page-visibility" title="Page Visibility (Second Edition)">PAGE-VISIBILITY</a></cite>]
+          specification had a hook for when the document becomes visible and
+          hidden. <a href="https://github.com/w3c/page-visibility/pull/54">PR 54</a>.
+        </div></div>
+      </section>
+    </section>
+    <section id="security-and-privacy-considerations">
+      <h2 id="x8-security-and-privacy-considerations"><bdi class="secno">8. </bdi>
+        Security and Privacy considerations
+      <a class="self-link" aria-label="§" href="#security-and-privacy-considerations"></a></h2>
+      <p>
+        The Screen Fold API exposes two kinds of information:
+      </p>
+        <ol class="algorithm">
+          <li>
+            an <a href="#the-angle-attribute-get-current-screen-fold-angle">angle</a> value
+            representing the hinge position
+          </li>
+          <li>
+            A <a href="#dfn-posture" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-posture-7">posture</a> determined from the angle value
+          </li>
+        </ol>
+      <p>
+        Typical sensor readings are sent at a constant frequency to whomever is listening to its readings.
+        However the fold angle only communicates its value when the hinge is manipulated by the user.
+        Variations in the angle’s readings and posture calculation, as well as event dispatching frequency
+        offer a possibility of fingerprinting to identify users. User agents may reduce this risk by limiting
+        or coalescing events when exposing this information to web developers. Users don’t constantly adjust
+        the angle, so the fold angle value is changing in bursts: the events may be dispatched at a very low
+        frequency most of the time and fire at a high frequency when the device is being opened or closed.
+        In order for the events to be dispatched, the content must be on the foreground and visible to the
+        user.
+      </p>
+      <p>
+        Minimizing the accuracy of the angle readout generally decreases the risk of fingerprinting.
+        User agents should not provide unnecessarily verbose readouts of the hinge angle data.
+        Posture values are not very useful values to fingerprint a user. They’re similar in concept
+        with the orientation values. The posture change is only triggered in certain fold angle values
+        providing a very low resolution reading. Because the changes are very sparse changes with very
+        few predefined values, it makes it hard to precisely identify users across sites.
+      </p>
+      <p>
+        If the same code using the API can be used simultaneously in different window contexts on the same
+        device it may be possible for that code to correlate the user across those two contexts, creating
+        unanticipated tracking mechanisms.
+      </p>
+      <section id="types-of-security-and-privacy-threats">
+        <h3 id="x8-1-types-of-security-and-privacy-threats"><bdi class="secno">8.1 </bdi>
+          Types of security and privacy threats
+        <a class="self-link" aria-label="§" href="#types-of-security-and-privacy-threats"></a></h3>
+        <p>
+          <i>This section is non-normative.</i>
+        </p>
+        <section id="device-fingerprinting">
+        <h4 id="x8-1-1-device-fingerprinting"><bdi class="secno">8.1.1 </bdi>
+          Device Fingerprinting
+        <a class="self-link" aria-label="§" href="#device-fingerprinting"></a></h4>
+        <p>
+          Sensors can provide information that can uniquely identify the device using those sensors.
+          Every concrete sensor model has minor manufacturing imperfections and differences that will be
+          unique for this model. These manufacturing variations and imperfections can be used to
+          fingerprint the device.
+        </p>
+        </section>
+      </section>
+      <section id="mitigation-strategies">
+        <h3 id="x8-2-mitigation-strategies"><bdi class="secno">8.2 </bdi>Mitigation Strategies<a class="self-link" aria-label="§" href="#mitigation-strategies"></a></h3>
+        <p>
+          <i>This section is non-normative.</i>
+        </p>
+        <p>
+          This section gives a high-level presentation of some of the mitigation strategies specified
+          in the normative sections of this specification.
+        </p>
+        <section id="secure-context">
+          <h4 id="x8-2-1-secure-context"><bdi class="secno">8.2.1 </bdi>
+            Secure Context
+          <a class="self-link" aria-label="§" href="#secure-context"></a></h4>
+          <p>
+            Posture value and fold angle readings are explicitly flagged by the Secure Contexts specification as a
+            high-value target for network attackers. Thus all interfaces defined by this specification or extension
+            specifications are only available within a secure context.
+          </p>
+        </section>
+        <section id="focused-area">
+          <h4 id="x8-2-2-focused-area"><bdi class="secno">8.2.2 </bdi>
+            Focused Area
+          <a class="self-link" aria-label="§" href="#focused-area"></a></h4>
+          <p>
+            Posture value and fold angle readings are only available for active documents whose origin is the
+            same origin-domain with the currently focused area document.
+          </p>
+          <p>
+            This is done in order to mitigate the risk of a skimming attack against the browsing context
+            containing an element which has gained focus, for example when the user carries out an in-game
+            purchase using a third party payment service from within an iframe.
+          </p>
+        </section>
+        <section id="visibility-state">
+          <h4 id="x8-2-3-visibility-state"><bdi class="secno">8.2.3 </bdi>
+            Visibility State
+          <a class="self-link" aria-label="§" href="#visibility-state"></a></h4>
+          <p>
+            Posture value and fold angle readings are only available for the active documents
+            whose visibility state is "visible".
+          </p>
+        </section>
+      </section>
+      <section id="mitigation-strategies-applied-on-a-case-by-case-basis">
+        <h3 id="x8-3-mitigation-strategies-applied-on-a-case-by-case-basis"><bdi class="secno">8.3 </bdi>Mitigation strategies applied on a case by case basis<a class="self-link" aria-label="§" href="#mitigation-strategies-applied-on-a-case-by-case-basis"></a></h3>
+        <section id="limit-maximum-sampling-frequency">
+          <h4 id="x8-3-1-limit-maximum-sampling-frequency"><bdi class="secno">8.3.1 </bdi>
+            Limit maximum sampling frequency
+          <a class="self-link" aria-label="§" href="#limit-maximum-sampling-frequency"></a></h4>
+          <p>
+            User agents may mitigate certain threats by limiting the maximum sampling frequency.
+            Coalescing and aligning the fold angle readings with the animation frame would limit
+            the fingerprinting while still allowing animations responding to the fold angle. Limiting
+            the maximum sampling frequency prevents use cases which rely on low latency or high
+            data density.
+          </p>
+        </section>
+        <section id="limit-number-of-delivered-readings">
+          <h4 id="x8-3-2-limit-number-of-delivered-readings"><bdi class="secno">8.3.2 </bdi>
+            Limit number of delivered readings
+          <a class="self-link" aria-label="§" href="#limit-number-of-delivered-readings"></a></h4>
+          <p>
+            An alternative to limiting the maximum sampling frequency is to limit the number of sensor
+            readings delivered to Web application developers, regardless of what frequency the sensor
+            is polled at. This allows use cases which have low latency requirements to increase sampling
+            frequency without increasing the amount of data provided. Discarding intermediary readings
+            prevents certain use cases, such as those relying on certain kinds of filters.
+            User agent should wait before sending the angle value changes after a minimum of degrees
+            changes to remove the noise as well as to avoid getting events while the user is just
+            interacting with the screen. This would limit identifying users with shaky hands.
+          </p>
+        </section>
+        <section id="reduce-accuracy">
+          <h4 id="x8-3-3-reduce-accuracy"><bdi class="secno">8.3.3 </bdi>
+            Reduce accuracy
+          <a class="self-link" aria-label="§" href="#reduce-accuracy"></a></h4>
+          <p>
+            Lowering the resolution of the angle <em class="rfc2119">MAY</em> lead to reducing the uniqueness
+            that the value can have. Nonetheless, if several sites are being displayed
+            on the same device, it can be easy to identify that it is the same user,
+            even if the value is rounded. As a solution, applying some fuzziness to
+            the value itself <em class="rfc2119">MAY</em> work.
+          </p>
+        </section>
+        <section id="applying-fuzziness-to-the-angle-value">
+          <h4 id="x8-3-4-applying-fuzziness-to-the-angle-value"><bdi class="secno">8.3.4 </bdi>
+            Applying fuzziness to the angle value
+          <a class="self-link" aria-label="§" href="#applying-fuzziness-to-the-angle-value"></a></h4>
+          <p>
+            Lowering the resolution of the returned value may not be enough, so fuzzing
+            out the value can algo help, in order to report different values. This fuzzy
+            offset can help differentiate returned values, minimizing the risk of fingerprinting.
+          </p>
+        </section>
+      </section>
+    </section>
+    <section id="examples" class="informative">
+      <h2 id="x9-examples"><bdi class="secno">9. </bdi>
+        Examples
+      <a class="self-link" aria-label="§" href="#examples"></a></h2><p><em>This section is non-normative.</em></p>
+      <h3 id="example-1-screen-fold-data">Example 1: screen.fold data<a class="self-link" aria-label="§" href="#examples"></a></h3>
+      <p>This is a simple use case of the <a href="#dfn-posture" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-posture-8">posture</a> and <a href="#the-angle-attribute-get-current-screen-fold-angle">angle</a> value being printed on the console. </p>
+      <div class="example" id="example-1-react-to-poster-change">
+        <div class="marker">
+    <a class="self-link" href="#example-1-react-to-poster-change">Example<bdi> 1</bdi></a><span class="example-title">: React to poster change</span>
+  </div> <pre aria-busy="false"><code class="hljs js">screen.fold.addEventListener(<span class="hljs-string">"change"</span>, () =&gt; {
+  <span class="hljs-keyword">const</span> { angle, posture } = screen.fold;
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`The current screen angle is <span class="hljs-subst">${angle}</span>, which means it is in <span class="hljs-subst">${posture}</span> posture!`</span>);
+})</code></pre>
+      </div>
+      
+      <h3 id="example-2-screen-fold-posture">Example 2: screen-fold-posture<a class="self-link" aria-label="§" href="#examples"></a></h3>
+      <p>The device is being used for a video call web service. It can be folded into the laptop <a href="#dfn-posture" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-posture-9">posture</a> to
+        enable a hands-free when placed on a surface. The UA detects the posture and the UI is enhanced.
+        Similar examples can be drafted for content to adapt to any posture. See the <a href="https://github.com/SamsungInternet/Explainers/blob/master/Foldables/FoldState.md#key-scenarios">explainer</a> for other key scenarios.
+      </p>
+      <img src="images/example-videocall.svg" alt="An illustration of a video call web service that uses the screen-fold-posture media feature" class="img-example" height="150" width="213">
+      <div class="example" id="example-2-adapting-ui-to-posture">
+        <div class="marker">
+    <a class="self-link" href="#example-2-adapting-ui-to-posture">Example<bdi> 2</bdi></a><span class="example-title">: Adapting UI to posture</span>
+  </div> <pre aria-busy="false"><code class="hljs css"><span class="hljs-keyword">@media</span> (<span class="hljs-attribute">screen-fold-posture:</span> laptop) <span class="hljs-keyword">and</span> (<span class="hljs-attribute">spanning:</span> single-fold-horizontal){
+  <span class="hljs-selector-tag">body</span> {
+    <span class="hljs-attribute">display</span>: flex;
+    <span class="hljs-attribute">flex-flow</span>: column nowrap;
+  }
+
+  <span class="hljs-selector-class">.videocall-area</span>, <span class="hljs-selector-class">.videocall-controls</span>  {
+    <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-built_in">env</span>(fold-bottom);
+  }
+}</code></pre>
+      </div>
+
+      <h3 id="example-3-screen-fold-angle">Example 3: screen-fold-angle<a class="self-link" aria-label="§" href="#examples"></a></h3>
+      <p>
+        Some scenarios might span outside of the default <a href="#dfn-posture" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-posture-10">postures</a> envisioned in this document.
+        The screen-fold-angle media feature allows to define a range or threshold for the layout to 
+        change. 
+      </p>
+      <p>As an example, an experience that might require a separate viewing area by user (like a game)
+        might find that the default 185° starting angle for the tent posture is too "open" to guarantee
+        one user will not see the other user's screen. Using screen-fold-angle the threshold can be 
+        defined by the developer.</p>
+        <img src="images/example-screen-fold-angle.svg" alt="diagram of an example that uses an angle range to tailor content" height="150" width="180">
+        <div class="example" id="example-3-defining-angle-ranges-for-content">
+        <div class="marker">
+    <a class="self-link" href="#example-3-defining-angle-ranges-for-content">Example<bdi> 3</bdi></a><span class="example-title">: Defining angle ranges for content</span>
+  </div> <pre aria-busy="false"><code class="hljs css"><span class="hljs-keyword">@media</span> (<span class="hljs-attribute">min-screen-fold-angle:</span> <span class="hljs-number">270deg</span>) {
+  <span class="hljs-comment">/*enable custom layout for the app*/</span> 
+}</code></pre>
+      </div>
+
+      <h3 id="example-4-5-animation">Example 4 &amp; 5: Animation<a class="self-link" aria-label="§" href="#examples"></a></h3>
+      <p>
+        Opening and closing a device might include animations linked to the value of the angle of the fold.
+        This allows the creation of content that can mimic the effect of a pop-up book.  
+      </p>
+      <p>Another example can be mapping the state of the fold of a device to transformations of a DOM element.
+        With this approach you could rotate an element based on the value of the angle.</p>
+        <img src="images/exampler-animation.svg" alt="diagram of an img element rotating on the center of a webpage" height="150" width="212">
+        <div class="example" id="example-4-element-animation-based-on-fold-value-js">
+        <div class="marker">
+    <a class="self-link" href="#example-4-element-animation-based-on-fold-value-js">Example<bdi> 4</bdi></a><span class="example-title">: Element animation based on fold value (JS)</span>
+  </div> <pre aria-busy="false"><code class="hljs js"><span class="hljs-keyword">let</span> fish = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.fish-circle'</span>);
+
+ScreenFold.addEventListener(<span class="hljs-string">'change'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-comment">//animation keyframes</span>
+  <span class="hljs-keyword">let</span> rotationFish = [
+    {<span class="hljs-attr">transform</span>: <span class="hljs-string">`rotate(<span class="hljs-subst">${e.angle}</span>)`</span>, <span class="hljs-attr">easing</span>: <span class="hljs-string">'ease-out'</span>}
+  ];
+
+  fish.animate(rotationFish, <span class="hljs-number">100</span>);
+};</code></pre>
+      </div>
+        <div class="example" id="example-5-element-animation-based-on-fold-value-css">
+        <div class="marker">
+    <a class="self-link" href="#example-5-element-animation-based-on-fold-value-css">Example<bdi> 5</bdi></a><span class="example-title">: Element animation based on fold value (CSS)</span>
+  </div> <pre aria-busy="false"><code class="hljs css"><span class="hljs-selector-class">.fish-circle</span> {
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(env(screen-fold-angle));
+}</code></pre>
+      </div>
+
+        <h3 id="example-6-feature-detection-of-screen-fold-posture-media-feature">Example 6: Feature detection of screen-fold-posture media feature<a class="self-link" aria-label="§" href="#examples"></a></h3>
+        <p>
+          As one of the valid screen-fold-posture values will always be true, you can use the following
+          snippet to detect whether a user agent supports the media feature:
+        </p>
+        <div class="example" id="example-6-feature-detect-the-screen-fold-posture">
+        <div class="marker">
+    <a class="self-link" href="#example-6-feature-detect-the-screen-fold-posture">Example<bdi> 6</bdi></a><span class="example-title">: Feature detect the screen-fold-posture</span>
+  </div> <pre aria-busy="false"><code class="hljs css"><span class="hljs-keyword">@media</span> (screen-fold-posture) {
+  <span class="hljs-comment">/*The browser supports screen-fold-posture feature*/</span>
+}</code></pre>
+      </div>
+        For more information about media features in a boolean context please refer to
+        <a data-link-type="dfn" href="https://www.w3.org/TR/mediaqueries-4/#mq-boolean-context">Evaluating Media Features in a Boolean Context</a>.
+    </section>
+    <section id="dependencies">
+      <h2 id="x10-dependencies"><bdi class="secno">10. </bdi>
+        Dependencies
+      <a class="self-link" aria-label="§" href="#dependencies"></a></h2>
+      <p>
+        The following concepts and interfaces are defined in [<cite><a class="bibref" data-link-type="biblio" href="#bib-screen-orientation" title="The Screen Orientation API">SCREEN-ORIENTATION</a></cite>]:
+        <dfn id="dfn-current-screen-orientation">current screen orientation</dfn> as represented by the <a data-link-type="idl" data-type="enum" href="https://www.w3.org/TR/screen-orientation/#dom-orientationtype"><code>OrientationType</code></a> enum.
+      </p>
+      <p>
+        The following is defined in [<cite><a class="bibref" data-link-type="biblio" href="#bib-mediaq" title="Media Queries Level 4">MEDIAQ</a></cite>]:
+        <dfn id="dfn-evaluating-media-features-in-a-boolean-context" data-no-export=""><a href="https://www.w3.org/TR/mediaqueries-4/#mq-boolean-context">Evaluating Media Features in a Boolean Context</a></dfn>.
+      </p>
+      <p>
+        The following concepts and interfaces are defined in [<cite><a class="bibref" data-link-type="biblio" href="#bib-html" title="HTML Standard">HTML</a></cite>]:
+        <dfn id="dfn-list-of-the-descendant-browsing-contexts" data-no-export=""><a href="https://html.spec.whatwg.org/multipage/browsers.html#list-of-the-descendant-browsing-contexts">list of
+        the descendant browsing contexts</a></dfn>.
+      </p>
+      <p>
+        The following is defined in [<cite><a class="bibref" data-link-type="biblio" href="#bib-page-visibility" title="Page Visibility (Second Edition)">PAGE-VISIBILITY</a></cite>]: <dfn id="dfn-now-visible-algorithm" data-no-export=""><a href="https://www.w3.org/TR/page-visibility/#dfn-now-visible-algorithm">now visible
+        algorithm</a></dfn>.
+      </p>
+      <p>
+        The following is used but not defined in [<cite><a class="bibref" data-link-type="biblio" href="#bib-fullscreen" title="Fullscreen API Standard">FULLSCREEN</a></cite>]: <dfn id="dfn-animation-frame-task"><a href="https://github.com/whatwg/fullscreen/issues/16">animation frame
+        task</a></dfn>.
+      </p>
+      <div class="issue" id="issue-container-number-2"><div role="heading" class="issue-title marker" id="h-issue-0" aria-level="3"><span>Issue 2</span></div><div class="">
+        This should now be updated since the <a href="#dfn-animation-frame-task" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-animation-frame-task-3">animation frame task</a> issue
+        is recently resolved and the timing is now defined.
+      </div></div>
+    </section>
+    <section id="conformance"><h2 id="x11-conformance"><bdi class="secno">11. </bdi>Conformance<a class="self-link" aria-label="§" href="#conformance"></a></h2><p>As well as sections marked as non-normative, all authoring guidelines, diagrams, examples, and notes in this specification are non-normative. Everything else in this specification is normative.</p><p>
+        The key words <em class="rfc2119">MAY</em>, <em class="rfc2119">MUST</em>, and <em class="rfc2119">SHOULD</em> in this document
+        are to be interpreted as described in
+        <a href="https://tools.ietf.org/html/bcp14">BCP 14</a>
+        [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">RFC2119</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8174" title="Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words">RFC8174</a></cite>]
+        when, and only when, they appear in all capitals, as shown here.
+      </p>
+      <p>
+        This specification defines conformance criteria for a single product: a
+        <dfn id="dfn-user-agent">user agent</dfn> that implements the interfaces that it contains.
+      </p>
+    </section>
+    <section id="idl-index" class="appendix"><h2 id="a-idl-index"><bdi class="secno">A. </bdi>IDL Index<a class="self-link" aria-label="§" href="#idl-index"></a></h2><pre class="idl def" id="actual-idl-index"><span class="idlHeader"><a class="self-link" href="#actual-idl-index">WebIDL</a></span><span data-idl="" class="idlInterface" data-title="Screen">[<span class="extAttr"><a data-type="extended-attribute" href="https://heycam.github.io/webidl/#SecureContext">SecureContext</a></span>]
+partial interface <a class="internalDFN idlID" data-link-type="interface" href="#dom-screen" id="ref-for-dom-screen-5"><code>Screen</code></a> {<span data-idl="" class="idlAttribute" data-title="fold" data-dfn-for="Screen">
+  [<span class="extAttr"><a data-type="extended-attribute" href="https://heycam.github.io/webidl/#SameObject">SameObject</a></span>] readonly attribute<span class="idlType"> <a href="#dom-screenfold" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfold-3"><code>ScreenFold</code></a></span> <dfn data-export="" data-dfn-type="attribute" data-idl="attribute" data-title="fold" data-dfn-for="Screen" data-type="ScreenFold" data-lt="fold" data-local-lt="Screen.fold" class="idlName"><code>fold</code></dfn>;</span>
+};</span>
+
+<span data-idl="" class="idlInterface" data-title="ScreenFold">[<span class="extAttr"><a data-type="extended-attribute" href="https://heycam.github.io/webidl/#SecureContext">SecureContext</a></span>, <span class="extAttr"><a data-type="extended-attribute" href="https://heycam.github.io/webidl/#Exposed">Exposed</a>=(<a data-type="interface" href="https://html.spec.whatwg.org/multipage/window-object.html#window">Window</a>)</span>]
+interface <a class="internalDFN idlID" data-link-type="interface" href="#dom-screenfold" id="ref-for-dom-screenfold-4"><code>ScreenFold</code></a> : <span class="idlSuperclass"><a data-type="interface" href="https://dom.spec.whatwg.org/#eventtarget">EventTarget</a></span> {<span data-idl="" class="idlAttribute" data-title="angle" data-dfn-for="ScreenFold">
+  readonly attribute<span class="idlType"> <a data-type="interface" href="https://heycam.github.io/webidl/#idl-unsigned-short">unsigned short</a></span> <a class="internalDFN idlName" data-link-type="attribute" href="#dom-screenfold-angle" id="ref-for-dom-screenfold-angle-2"><code>angle</code></a>;</span><span data-idl="" class="idlAttribute" data-title="posture" data-dfn-for="ScreenFold">
+  readonly attribute<span class="idlType"> <a href="#dom-screenfoldposture" class="internalDFN" data-link-type="idl" id="ref-for-dom-screenfoldposture-3"><code>ScreenFoldPosture</code></a></span> <a class="internalDFN idlName" data-link-type="attribute" href="#dom-screenfold-posture" id="ref-for-dom-screenfold-posture-2"><code>posture</code></a>;</span><span data-idl="" class="idlAttribute" data-title="onchange" data-dfn-for="ScreenFold">
+  attribute<span class="idlType"> <a data-type="typedef" href="https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler">EventHandler</a></span> <a class="internalDFN idlName" data-link-type="attribute" href="#dom-screenfold-onchange" id="ref-for-dom-screenfold-onchange-3"><code>onchange</code></a>;</span>
+};</span><span data-idl="" class="idlEnum" data-title="ScreenFoldPosture">
+
+enum <dfn data-export="" data-dfn-type="enum" data-idl="enum" data-title="ScreenFoldPosture" data-dfn-for="ScreenFoldPosture" class="idlID"><code>ScreenFoldPosture</code></dfn> {
+  <span class="idlEnumItem">"<dfn data-export="" data-dfn-type="enum-value" data-idl="enum-value" data-title="no-fold" data-dfn-for="ScreenFoldPosture"><code>no-fold</code></dfn>"</span>,
+  <span class="idlEnumItem">"<dfn data-export="" data-dfn-type="enum-value" data-idl="enum-value" data-title="laptop" data-dfn-for="ScreenFoldPosture"><code>laptop</code></dfn>"</span>,
+  <span class="idlEnumItem">"<dfn data-export="" data-dfn-type="enum-value" data-idl="enum-value" data-title="flat" data-dfn-for="ScreenFoldPosture"><code>flat</code></dfn>"</span>,
+  <span class="idlEnumItem">"<dfn data-export="" data-dfn-type="enum-value" data-idl="enum-value" data-title="tent" data-dfn-for="ScreenFoldPosture"><code>tent</code></dfn>"</span>,
+  <span class="idlEnumItem">"<dfn data-export="" data-dfn-type="enum-value" data-idl="enum-value" data-title="tablet" data-dfn-for="ScreenFoldPosture"><code>tablet</code></dfn>"</span>,
+  <span class="idlEnumItem">"<dfn data-export="" data-dfn-type="enum-value" data-idl="enum-value" data-title="book" data-dfn-for="ScreenFoldPosture"><code>book</code></dfn>"</span>
+};</span></pre></section>
+    <section class="appendix informative" id="acknowledgments">
+      <h2 id="b-acknowledgments"><bdi class="secno">B. </bdi>
+        Acknowledgments
+      <a class="self-link" aria-label="§" href="#acknowledgments"></a></h2><p><em>This section is non-normative.</em></p>
+      <p>
+        We would like to offer our sincere thanks to Daniel Appelquist, Alexis Menard,
+        Jo Balletti, and Michael Blix for their contributions
+        to this work.
+      </p>
+    </section>
+  
+
+<section id="references" class="appendix"><h2 id="c-references"><bdi class="secno">C. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="normative-references">
+    <h3 id="c-1-normative-references"><bdi class="secno">C.1 </bdi>Normative references<a class="self-link" aria-label="§" href="#normative-references"></a></h3>
+    <dl class="bibliography"><dt id="bib-cssom-view">[cssom-view]</dt><dd><a href="https://www.w3.org/TR/cssom-view-1/"><cite>CSSOM View Module</cite></a>. Simon Pieters.  W3C. 17 March 2016. W3C Working Draft. URL: <a href="https://www.w3.org/TR/cssom-view-1/">https://www.w3.org/TR/cssom-view-1/</a></dd><dt id="bib-dom">[dom]</dt><dd><a href="https://dom.spec.whatwg.org/"><cite>DOM Standard</cite></a>. Anne van Kesteren.  WHATWG. Living Standard. URL: <a href="https://dom.spec.whatwg.org/">https://dom.spec.whatwg.org/</a></dd><dt id="bib-fullscreen">[FULLSCREEN]</dt><dd><a href="https://fullscreen.spec.whatwg.org/"><cite>Fullscreen API Standard</cite></a>. Philip Jägenstedt.  WHATWG. Living Standard. URL: <a href="https://fullscreen.spec.whatwg.org/">https://fullscreen.spec.whatwg.org/</a></dd><dt id="bib-html">[HTML]</dt><dd><a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></dd><dt id="bib-infra">[infra]</dt><dd><a href="https://infra.spec.whatwg.org/"><cite>Infra Standard</cite></a>. Anne van Kesteren; Domenic Denicola.  WHATWG. Living Standard. URL: <a href="https://infra.spec.whatwg.org/">https://infra.spec.whatwg.org/</a></dd><dt id="bib-mediaq">[MEDIAQ]</dt><dd><a href="https://www.w3.org/TR/mediaqueries-4/"><cite>Media Queries Level 4</cite></a>. Florian Rivoal; Tab Atkins Jr..  W3C. 21 July 2020. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/mediaqueries-4/">https://www.w3.org/TR/mediaqueries-4/</a></dd><dt id="bib-page-visibility">[PAGE-VISIBILITY]</dt><dd><a href="https://www.w3.org/TR/page-visibility/"><cite>Page Visibility (Second Edition)</cite></a>. Jatinder Mann; Arvind Jain.  W3C. 29 October 2013. W3C Recommendation. URL: <a href="https://www.w3.org/TR/page-visibility/">https://www.w3.org/TR/page-visibility/</a></dd><dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://tools.ietf.org/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner.  IETF. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a></dd><dt id="bib-rfc8174">[RFC8174]</dt><dd><a href="https://tools.ietf.org/html/rfc8174"><cite>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</cite></a>. B. Leiba.  IETF. May 2017. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc8174">https://tools.ietf.org/html/rfc8174</a></dd><dt id="bib-screen-orientation">[SCREEN-ORIENTATION]</dt><dd><a href="https://www.w3.org/TR/screen-orientation/"><cite>The Screen Orientation API</cite></a>. Mounir Lamouri; Marcos Caceres; Johanna Herman.  W3C. 19 October 2020. W3C Working Draft. URL: <a href="https://www.w3.org/TR/screen-orientation/">https://www.w3.org/TR/screen-orientation/</a></dd><dt id="bib-webidl">[webidl]</dt><dd><a href="https://heycam.github.io/webidl/"><cite>Web IDL</cite></a>. Boris Zbarsky.  W3C. 15 December 2016. W3C Editor's Draft. URL: <a href="https://heycam.github.io/webidl/">https://heycam.github.io/webidl/</a></dd></dl>
+  </section></section><p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><aside class="dfn-panel" hidden="" id="dfn-panel-for-dom-screen">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dom-screen">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dom-screen-1">2. Extensions to the Screen interface</a> 
+  </li><li>
+    <a href="#ref-for-dom-screen-2">7.2 Screen fold angle change</a> <a href="#ref-for-dom-screen-3">(2)</a> <a href="#ref-for-dom-screen-4">(3)</a> 
+  </li><li>
+    <a href="#ref-for-dom-screen-5">A. IDL Index</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dom-screen-fold">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dom-screen-fold">Permalink</a>
+        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span> 
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dom-screen-fold-1">7.2 Screen fold angle change</a> <a href="#ref-for-dom-screen-fold-2">(2)</a> <a href="#ref-for-dom-screen-fold-3">(3)</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dom-screenfold">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dom-screenfold">Permalink</a>
+        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span> <a class="marker idl-block" title="Jump to IDL declaration" href="#webidl-2052775708">IDL</a>
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dom-screenfold-1">2. Extensions to the Screen interface</a> 
+  </li><li>
+    <a href="#ref-for-dom-screenfold-2">3. The ScreenFold interface</a> 
+  </li><li>
+    <a href="#ref-for-dom-screenfold-3">A. IDL Index</a> <a href="#ref-for-dom-screenfold-4">(2)</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dom-screenfoldposture">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dom-screenfoldposture">Permalink</a>
+        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span> 
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dom-screenfoldposture-1">3. The ScreenFold interface</a> 
+  </li><li>
+    <a href="#ref-for-dom-screenfoldposture-2">4. Posture modes</a> 
+  </li><li>
+    <a href="#ref-for-dom-screenfoldposture-3">A. IDL Index</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dom-screenfoldposture-no-fold">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dom-screenfoldposture-no-fold">Permalink</a>
+        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span> 
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dom-screenfoldposture-no-fold-1">4. Posture modes</a> 
+  </li><li>
+    <a href="#ref-for-dom-screenfoldposture-no-fold-2">5. Screen Fold Media Queries</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dom-screenfoldposture-laptop">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dom-screenfoldposture-laptop">Permalink</a>
+        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span> 
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dom-screenfoldposture-laptop-1">4. Posture modes</a> 
+  </li><li>
+    <a href="#ref-for-dom-screenfoldposture-laptop-2">5. Screen Fold Media Queries</a> 
+  </li><li>
+    <a href="#ref-for-dom-screenfoldposture-laptop-3">6. Reading the posture</a> <a href="#ref-for-dom-screenfoldposture-laptop-4">(2)</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dom-screenfoldposture-flat">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dom-screenfoldposture-flat">Permalink</a>
+        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span> 
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dom-screenfoldposture-flat-1">4. Posture modes</a> 
+  </li><li>
+    <a href="#ref-for-dom-screenfoldposture-flat-2">5. Screen Fold Media Queries</a> 
+  </li><li>
+    <a href="#ref-for-dom-screenfoldposture-flat-3">6. Reading the posture</a> <a href="#ref-for-dom-screenfoldposture-flat-4">(2)</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dom-screenfoldposture-tent">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dom-screenfoldposture-tent">Permalink</a>
+        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span> 
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dom-screenfoldposture-tent-1">4. Posture modes</a> 
+  </li><li>
+    <a href="#ref-for-dom-screenfoldposture-tent-2">5. Screen Fold Media Queries</a> 
+  </li><li>
+    <a href="#ref-for-dom-screenfoldposture-tent-3">6. Reading the posture</a> <a href="#ref-for-dom-screenfoldposture-tent-4">(2)</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dom-screenfoldposture-tablet">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dom-screenfoldposture-tablet">Permalink</a>
+        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span> 
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dom-screenfoldposture-tablet-1">4. Posture modes</a> 
+  </li><li>
+    <a href="#ref-for-dom-screenfoldposture-tablet-2">5. Screen Fold Media Queries</a> 
+  </li><li>
+    <a href="#ref-for-dom-screenfoldposture-tablet-3">6. Reading the posture</a> <a href="#ref-for-dom-screenfoldposture-tablet-4">(2)</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dom-screenfoldposture-book">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dom-screenfoldposture-book">Permalink</a>
+        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span> 
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dom-screenfoldposture-book-1">4. Posture modes</a> 
+  </li><li>
+    <a href="#ref-for-dom-screenfoldposture-book-2">5. Screen Fold Media Queries</a> 
+  </li><li>
+    <a href="#ref-for-dom-screenfoldposture-book-3">6. Reading the posture</a> <a href="#ref-for-dom-screenfoldposture-book-4">(2)</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dom-screenfold-angle">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dom-screenfold-angle">Permalink</a>
+        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span> <a class="marker idl-block" title="Jump to IDL declaration" href="#webidl-2052775708">IDL</a>
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dom-screenfold-angle-1">3. The ScreenFold interface</a> 
+  </li><li>
+    <a href="#ref-for-dom-screenfold-angle-2">A. IDL Index</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dom-screenfold-posture">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dom-screenfold-posture">Permalink</a>
+        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span> <a class="marker idl-block" title="Jump to IDL declaration" href="#webidl-2052775708">IDL</a>
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dom-screenfold-posture-1">3. The ScreenFold interface</a> 
+  </li><li>
+    <a href="#ref-for-dom-screenfold-posture-2">A. IDL Index</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dom-screenfold-onchange">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dom-screenfold-onchange">Permalink</a>
+        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span> <a class="marker idl-block" title="Jump to IDL declaration" href="#webidl-2052775708">IDL</a>
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dom-screenfold-onchange-1">3. The ScreenFold interface</a> 
+  </li><li>
+    <a href="#ref-for-dom-screenfold-onchange-2">3.3 The onchange attribute: Handle angle/posture changes</a> 
+  </li><li>
+    <a href="#ref-for-dom-screenfold-onchange-3">A. IDL Index</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-posture">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-posture">Permalink</a>
+        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span> 
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-posture-1">3.2 The posture attribute: Get current screen fold posture</a> 
+  </li><li>
+    <a href="#ref-for-dfn-posture-2">4. Posture modes</a> 
+  </li><li>
+    <a href="#ref-for-dfn-posture-3">5. Screen Fold Media Queries</a> <a href="#ref-for-dfn-posture-4">(2)</a> <a href="#ref-for-dfn-posture-5">(3)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-posture-6">6. Reading the posture</a> 
+  </li><li>
+    <a href="#ref-for-dfn-posture-7">8. Security and Privacy considerations</a> 
+  </li><li>
+    <a href="#ref-for-dfn-posture-8">9. Examples</a> <a href="#ref-for-dfn-posture-9">(2)</a> <a href="#ref-for-dfn-posture-10">(3)</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-screen-fold-posture">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-screen-fold-posture">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-screen-fold-angle">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-screen-fold-angle">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-current-screen-fold-angle">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-current-screen-fold-angle">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-current-screen-fold-angle-1">6. Reading the posture</a> <a href="#ref-for-dfn-current-screen-fold-angle-2">(2)</a> <a href="#ref-for-dfn-current-screen-fold-angle-3">(3)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-current-screen-fold-angle-4">7.1 Updating the screen fold information</a> <a href="#ref-for-dfn-current-screen-fold-angle-5">(2)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-current-screen-fold-angle-6">7.2 Screen fold angle change</a> <a href="#ref-for-dfn-current-screen-fold-angle-7">(2)</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-current-posture">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-current-posture">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-current-posture-1">6. Reading the posture</a> <a href="#ref-for-dfn-current-posture-2">(2)</a> <a href="#ref-for-dfn-current-posture-3">(3)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-current-posture-4">7.1 Updating the screen fold information</a> 
+  </li><li>
+    <a href="#ref-for-dfn-current-posture-5">7.2 Screen fold angle change</a> <a href="#ref-for-dfn-current-posture-6">(2)</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-posture-values-table">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-posture-values-table">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-posture-values-table-1">6. Reading the posture</a> 
+  </li><li>
+    <a href="#ref-for-dfn-posture-values-table-2">7.1 Updating the screen fold information</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-update-the-screen-fold-information">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-update-the-screen-fold-information">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-update-the-screen-fold-information-1">6. Reading the posture</a> 
+  </li><li>
+    <a href="#ref-for-dfn-update-the-screen-fold-information-2">7.2 Screen fold angle change</a> <a href="#ref-for-dfn-update-the-screen-fold-information-3">(2)</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-current-screen-orientation">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-current-screen-orientation">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-current-screen-orientation-1">6. Reading the posture</a> <a href="#ref-for-dfn-current-screen-orientation-2">(2)</a> <a href="#ref-for-dfn-current-screen-orientation-3">(3)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-current-screen-orientation-4">7.1 Updating the screen fold information</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-evaluating-media-features-in-a-boolean-context">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-evaluating-media-features-in-a-boolean-context">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-list-of-the-descendant-browsing-contexts">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-list-of-the-descendant-browsing-contexts">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-now-visible-algorithm">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-now-visible-algorithm">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-animation-frame-task">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-animation-frame-task">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-animation-frame-task-1">7.2 Screen fold angle change</a> <a href="#ref-for-dfn-animation-frame-task-2">(2)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-animation-frame-task-3">10. Dependencies</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-user-agent">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-user-agent">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-user-agent-1">6. Reading the posture</a> 
+  </li><li>
+    <a href="#ref-for-dfn-user-agent-2">7.2 Screen fold angle change</a> <a href="#ref-for-dfn-user-agent-3">(2)</a> 
+  </li>
+  </ul>
+    </aside><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(dfnPanel);
+} else {
+  dfnPanel();
+}
+
+function dfnPanel() {
+  /** @type {HTMLElement} */
+  let panel;
+  document.body.addEventListener("click", event => {
+    if (!(event.target instanceof HTMLElement)) return;
+
+    /** @type {HTMLElement} */
+    const el = event.target;
+
+    const action = deriveAction(el);
+    switch (action) {
+      case "show": {
+        if (panel) hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = el.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        displayPanel(dfn, panel, { x: event.clientX, y: event.clientY });
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        break;
+      }
+    }
+  });
+}
+
+/** @param {HTMLElement} clickTarget */
+function deriveAction(clickTarget) {
+  const hitALink = !!clickTarget.closest("a");
+  if (clickTarget.closest("dfn, .index-term")) {
+    return hitALink ? null : "show";
+  }
+  if (clickTarget.closest(".dfn-panel")) {
+    if (hitALink) {
+      const clickedSelfLink = clickTarget.classList.contains("self-link");
+      return clickedSelfLink ? "hide" : "dock";
+    }
+    const panel = clickTarget.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : null;
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return null;
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
