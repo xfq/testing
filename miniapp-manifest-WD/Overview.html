@@ -1,0 +1,2365 @@
+<!DOCTYPE html><html lang="en" class="is-multilingual"><head>
+<meta charset="utf-8">
+<meta name="generator" content="ReSpec 26.5.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+span.example-title{text-transform:none}
+aside.example,div.example,div.illegal-example{padding:.5em;margin:1em 0;position:relative;clear:both}
+div.illegal-example{color:red}
+div.illegal-example p{color:#000}
+aside.example,div.example{padding:.5em;border-left-width:.5em;border-left-style:solid;border-color:#e0cb52;background:#fcfaee}
+aside.example div.example{border-left-width:.1em;border-color:#999;background:#fff}
+aside.example div.example span.example-title{color:#999}
+.example pre{background-color:rgba(0,0,0,.03)}
+</style>
+<style>
+.issue-label{text-transform:initial}
+.warning>p:first-child{margin-top:0}
+.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
+span.warning{padding:.1em .5em .15em}
+.issue.closed span.issue-number{text-decoration:line-through}
+.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}
+.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
+li.task-list-item{list-style:none}
+input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
+.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
+</style>
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font:small Helvetica Neue,sans-serif,Droid Sans Fallback;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;margin-top:.25em}
+.dfn-panel ul a[href]{color:#333}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
+    
+    
+<title>MiniApp Manifest</title>
+    
+<link rel="stylesheet" href="./local.css">
+
+    
+<style>
+
+    .two-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    table {
+      border-collapse:collapse;
+    }
+
+    table,th, td {
+      border: 1px solid #666;
+    }
+
+    td {
+      padding:2px 15px;
+    }
+    
+</style>
+
+    
+    
+<script defer="" src="./script.js"></script>
+
+    
+
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+.hljs{background:0 0!important}
+a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}
+dfn{font-weight:700}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:normal}
+code{color:#c63501}
+th code{color:inherit}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+.toc a,.tof a{text-decoration:none}
+a .figno,a .secno{color:#000}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
+.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+.simple th a{color:#fff;padding:3px 5px;text-align:left}
+.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+.simple td{padding:3px 10px;border-top:1px solid #ddd}
+.simple tr:nth-child(even){background:#f0f6ff}
+.section dd>p:first-child{margin-top:0}
+.section dd>p:last-child{margin-bottom:0}
+.section dd{margin-bottom:1em}
+.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+h2,h3,h4,h5,h6{position:relative}
+aside.example .marker>a.self-link{color:inherit}
+h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
+h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}
+@media (max-width:767px){
+dd{margin-left:0}
+h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
+<meta name="description" content="This specification is a registry of supplementary members for the Web Application Manifest and Web App Manifest - Application Information specifications that provide additional metadata to an application manifest to describe MiniApps. This JSON-based manifest file enables developers to set up basic information, window style, page route, and other information of a MiniApp. The basic information of a MiniApp includes but is not limited to MiniApp ID, app name, version name, version code, minimum platform version, etc.; window style includes but is not limited to the navigation bar, title, window background, etc.; &quot;pages&quot; are used to specify page route information; and &quot;widgets&quot; are used to describe card information.">
+<link rel="canonical" href="https://www.w3.org/TR/miniapp-manifest/">
+<style>
+.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}
+.hljs-comment,.hljs-quote{color:#717277;font-style:italic}
+.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4}
+.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;font-weight:700}
+.hljs-literal{color:#0b76c5}
+.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c}
+.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01}
+.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801}
+.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3}
+.hljs-emphasis{font-style:italic}
+.hljs-strong{font-weight:700}
+.hljs-link{text-decoration:underline}
+</style>
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
+<script id="initialUserConfig" type="application/json">{
+  "specStatus": "FPWD",
+  "copyrightStart": "2020",
+  "edDraftURI": "https://w3c.github.io/miniapp-manifest/",
+  "shortName": "miniapp-manifest",
+  "publishDate": "2021-04-20",
+  "editors": [
+    {
+      "name": "Martin Alvarez-Espinar",
+      "companyURL": "https://www.huawei.com/",
+      "company": "Huawei",
+      "w3cid": 125049
+    },
+    {
+      "name": "Yongjing Zhang",
+      "companyURL": "https://www.huawei.com/",
+      "company": "Huawei",
+      "w3cid": 75048
+    }
+  ],
+  "formerEditors": [
+    {
+      "name": "Shouren Lan",
+      "companyURL": "https://www.huawei.com/",
+      "company": "Huawei",
+      "w3cid": 119736
+    },
+    {
+      "name": "Zhiqiang Yu",
+      "companyURL": "https://www.huawei.com/",
+      "company": "Huawei",
+      "w3cid": 102877
+    },
+    {
+      "name": "Xiaofeng Zhang",
+      "companyURL": "https://www.huawei.com/",
+      "company": "Huawei",
+      "w3cid": 111840
+    }
+  ],
+  "group": "wg/miniapps",
+  "github": {
+    "repoURL": "https://github.com/w3c/miniapp-manifest",
+    "branch": "main"
+  },
+  "localBiblio": {
+    "SEMANTIC-VERSIONING": {
+      "title": "Semantic Versioning",
+      "href": "https://semver.org/",
+      "id": "semantic-versioning"
+    }
+  },
+  "publishISODate": "2021-04-20T00:00:00.000Z",
+  "generatedSubtitle": "First Public Working Draft 20 April 2021"
+}</script>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-WD"></head>
+
+<body data-cite="appmanifest manifest-app-info INFRA" data-new-gr-c-s-check-loaded="14.1006.0" data-gr-ext-installed="" class="h-entry"><div class="head">
+    <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">MiniApp Manifest</h1>
+    
+    <h2>
+      W3C First Public Working Draft
+      <time class="dt-published" datetime="2021-04-20">20 April 2021</time>
+    </h2>
+    <dl>
+      <dt data-original-text="This version:">This version:</dt><dd>
+              <a class="u-url" href="https://www.w3.org/TR/2021/WD-miniapp-manifest-20210420/">https://www.w3.org/TR/2021/WD-miniapp-manifest-20210420/</a>
+            </dd><dt data-original-text="Latest published version:">Latest published version:</dt><dd>
+              <a href="https://www.w3.org/TR/miniapp-manifest/">https://www.w3.org/TR/miniapp-manifest/</a>
+            </dd>
+      <dt data-original-text="Latest editor's draft:">Latest editor's draft:</dt><dd><a href="https://w3c.github.io/miniapp-manifest/">https://w3c.github.io/miniapp-manifest/</a></dd>
+      
+      
+      
+      
+      
+      <dt data-original-text="Editors:">Editors:</dt>
+      <dd class="p-author h-card vcard" data-editor-id="125049"><span class="p-name fn">Martin Alvarez-Espinar</span>
+            (<a class="p-org org h-org h-card" href="https://www.huawei.com/">Huawei</a>)
+          </dd><dd class="p-author h-card vcard" data-editor-id="75048"><span class="p-name fn">Yongjing Zhang</span>
+            (<a class="p-org org h-org h-card" href="https://www.huawei.com/">Huawei</a>)
+          </dd>
+      <dt data-original-text="Former editors:">Former editors:</dt><dd class="p-author h-card vcard" data-editor-id="119736"><span class="p-name fn">Shouren Lan</span>
+            (<a class="p-org org h-org h-card" href="https://www.huawei.com/">Huawei</a>)
+          </dd><dd class="p-author h-card vcard" data-editor-id="102877"><span class="p-name fn">Zhiqiang Yu</span>
+            (<a class="p-org org h-org h-card" href="https://www.huawei.com/">Huawei</a>)
+          </dd><dd class="p-author h-card vcard" data-editor-id="111840"><span class="p-name fn">Xiaofeng Zhang</span>
+            (<a class="p-org org h-org h-card" href="https://www.huawei.com/">Huawei</a>)
+          </dd>
+      
+      <dt data-original-text="Participate:">Participate:</dt><dd>
+    <a href="https://github.com/w3c/miniapp-manifest/">GitHub w3c/miniapp-manifest</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/miniapp-manifest/issues/">File a bug</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/miniapp-manifest/commits/main">Commit history</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/miniapp-manifest/pulls/">Pull requests</a>
+  </dd>
+    </dl>
+    
+    
+    
+    <p class="copyright">
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+    ©
+    2020-2021
+    
+    <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+    <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+    <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
+    W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules
+    apply.
+  </p>
+    <hr title="Separator for header">
+  </div>
+  <section id="abstract" class="introductory"><h2>Abstract</h2>
+    <p its-locale-filter-list="en" lang="en">
+      This specification is a registry of supplementary members for the <cite><a href="https://www.w3.org/TR/appmanifest/">Web Application Manifest</a></cite> and <cite><a href="https://www.w3.org/TR/manifest-app-info/">Web App Manifest - Application Information</a></cite> specifications that provide additional metadata to an <a data-type="dfn" href="https://www.w3.org/TR/appmanifest/#dfn-application-manifest">application manifest</a> to describe MiniApps. This JSON-based manifest file enables developers to set up basic information, window style, page route, and other information of a MiniApp. The basic information of a MiniApp includes but is not limited to MiniApp ID, app name, version name, version code, minimum platform version, etc.; window style includes but is not limited to the navigation bar, title, window background, etc.; "pages" are used to specify page route information; and "widgets" are used to describe card information.
+    </p>
+    <p its-locale-filter-list="zh-hans" lang="zh-hans">
+      本规范定义了基于JSON格式的Manifest文件，使开发者可通过Manifest文件设置MiniApp的基本信息、窗口样式和页面路由等信息。这里，MiniApp基本信息包括但不限于MiniApp ID、名称、版本名称、版本号以及最小平台版本等；窗口样式window包括但不限于导航栏、标题和窗口背景等；pages用于指定页面路由信息；widgets用于描述卡片信息。
+    </p>
+    <p its-locale-filter-list="en" lang="en">
+      Note: At present, only a basic subset of MiniApp Manifest is specified, and it will be gradually updated and supplemented based on different scenario requirements.
+    </p>
+    <p its-locale-filter-list="zh-hans" lang="zh-hans">
+      备注：目前只是列出MiniApp Manifest的一个基础子集，后续会根据不同的场景需求进行渐进式更新和补充。
+    </p>
+  </section>
+
+  <section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
+      document at the time of its publication. Other documents may supersede
+      this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision
+      of this technical report can be found in the
+      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+      https://www.w3.org/TR/.</em></p>
+    
+    <p id="langSwitch">
+      <button onclick="switchLang('zh-hans')" lang="zh-hans">简体中文</button>
+      <button onclick="switchLang('en')" lang="en">English</button>
+      <button onclick="switchLang('all')" lang="en">All</button>
+    </p>
+  <p>
+    This document was published by the <a href="https://www.w3.org/2021/miniapps/">MiniApps Working Group</a> as a
+    First Public Working Draft. 
+    This document is intended to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
+  </p><p>
+    <a href="https://github.com/w3c/miniapp-manifest/issues/">GitHub Issues</a> are preferred for
+          discussion of this specification.
+        
+    
+  </p><p>
+      Publication as a First Public Working Draft does not imply endorsement
+      by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership. 
+    </p><p>This is a draft document and may be updated, replaced
+  or obsoleted by other documents at any time. It is inappropriate to cite this
+  document as other than work in progress.
+  </p><p></p><p>
+    
+        This document was produced by a group
+        operating under the
+        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
+          Policy</a>.
+       
+    
+                <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+                <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/128558/status">public list of any patent disclosures</a>
+          made in connection with the deliverables of
+          the group; that page also includes
+          instructions for disclosing a patent. An individual who has actual
+          knowledge of a patent which the individual believes contains
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+          must disclose the information in accordance with
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+        
+    
+  </p><p>
+                  This document is governed by the
+                  <a id="w3c_process_revision" href="https://www.w3.org/2020/Process-20200915/">15 September 2020 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#miniapp-manifest"><bdi class="secno">1. </bdi>MiniApp Manifest</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#manifest-requirements"><bdi class="secno">1.1 </bdi>Requirements</a></li><li class="tocline"><a class="tocxref" href="#summary-of-members"><bdi class="secno">1.2 </bdi>Summary of Members</a></li></ol></li><li class="tocline"><a class="tocxref" href="#manifest-members"><bdi class="secno">2. </bdi>
+      <span its-locale-filter-list="en" lang="en"><span>MiniApp Manifest</span> members</span>
+      <span its-locale-filter-list="zh-hans" lang="zh-hans">字段</span>
+    </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#webappmanifest-members"><bdi class="secno">2.1 </bdi>Members inherited from the Web Application Manifest</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#dir-member"><bdi class="secno">2.1.1 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>dir</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">方向</span>
+        </a></li><li class="tocline"><a class="tocxref" href="#icons-member"><bdi class="secno">2.1.2 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>icons</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">图标</span>
+        </a></li><li class="tocline"><a class="tocxref" href="#lang-member"><bdi class="secno">2.1.3 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>lang</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">语言</span>
+        </a></li><li class="tocline"><a class="tocxref" href="#name-member"><bdi class="secno">2.1.4 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>name</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">名称</span>
+        </a></li><li class="tocline"><a class="tocxref" href="#short_name-member"><bdi class="secno">2.1.5 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>short_name</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">简称</span>
+        </a></li></ol></li><li class="tocline"><a class="tocxref" href="#WebAppManifest-app-info-members"><bdi class="secno">2.2 </bdi>Members supplemented from the Application Information</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#description-member"><bdi class="secno">2.2.1 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>description</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">简述</span>
+        </a></li></ol></li><li class="tocline"><a class="tocxref" href="#supplementary-manifest-members"><bdi class="secno">2.3 </bdi>Supplementary manifest members</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#app_id-member"><bdi class="secno">2.3.1 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>app_id</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">标识</span>
+        </a></li><li class="tocline"><a class="tocxref" href="#version_name-member"><bdi class="secno">2.3.2 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>version_name</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">版本名称</span>
+        </a></li><li class="tocline"><a class="tocxref" href="#version_code-member"><bdi class="secno">2.3.3 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>version_code</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">版本号</span>
+        </a></li><li class="tocline"><a class="tocxref" href="#min_platform_version-member"><bdi class="secno">2.3.4 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>min_platform_version</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">平台版本</span>
+        </a></li><li class="tocline"><a class="tocxref" href="#pages-member"><bdi class="secno">2.3.5 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>pages</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">页面路由</span>
+        </a></li><li class="tocline"><a class="tocxref" href="#window-member"><bdi class="secno">2.3.6 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>window</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">窗口</span>
+        </a></li><li class="tocline"><a class="tocxref" href="#widgets-member"><bdi class="secno">2.3.7 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>widgets</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">卡片</span>
+        </a></li><li class="tocline"><a class="tocxref" href="#req_permissions-member"><bdi class="secno">2.3.8 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>req_permissions</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">所需权限</span>
+        </a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#miniapp-window-resource-members"><bdi class="secno">3. </bdi><span data-lt="MiniApp window resources|MiniApp window resource">MiniApp window resource</span> members</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#navigation_bar_background_color-member"><bdi class="secno">3.1 </bdi><code>navigation_bar_background_color</code> member</a></li><li class="tocline"><a class="tocxref" href="#navigation_bar_text_style-member"><bdi class="secno">3.2 </bdi><code>navigation_bar_text_style</code> member</a></li><li class="tocline"><a class="tocxref" href="#navigation_bar_title_text-member"><bdi class="secno">3.3 </bdi><code>navigation_bar_title_text</code> member</a></li><li class="tocline"><a class="tocxref" href="#navigation_style-member"><bdi class="secno">3.4 </bdi><code>navigation_style</code> member</a></li><li class="tocline"><a class="tocxref" href="#background_color-member"><bdi class="secno">3.5 </bdi><code>background_color</code> member</a></li><li class="tocline"><a class="tocxref" href="#background_text_style-member"><bdi class="secno">3.6 </bdi><code>background_text_style</code> member</a></li><li class="tocline"><a class="tocxref" href="#enable_pull_down_refresh-member"><bdi class="secno">3.7 </bdi><code>enable_pull_down_refresh</code> member</a></li><li class="tocline"><a class="tocxref" href="#on_reach_bottom_distance-member"><bdi class="secno">3.8 </bdi><code>on_reach_bottom_distance</code> member</a></li><li class="tocline"><a class="tocxref" href="#orientation-member"><bdi class="secno">3.9 </bdi><code>orientation</code> member</a></li><li class="tocline"><a class="tocxref" href="#fullscreen-member"><bdi class="secno">3.10 </bdi><code>fullscreen</code> member</a></li><li class="tocline"><a class="tocxref" href="#design_width-member"><bdi class="secno">3.11 </bdi><code>design_width</code> member</a></li><li class="tocline"><a class="tocxref" href="#auto_design_width-member"><bdi class="secno">3.12 </bdi><code>auto_design_width</code> member</a></li></ol></li><li class="tocline"><a class="tocxref" href="#miniapp-widget-resource-members"><bdi class="secno">4. </bdi><span>MiniApp Widget resource</span> members</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#name-member-0"><bdi class="secno">4.1 </bdi><code>name</code> member</a></li><li class="tocline"><a class="tocxref" href="#path-member"><bdi class="secno">4.2 </bdi><code>path</code> member</a></li><li class="tocline"><a class="tocxref" href="#min_platform_version-member-0"><bdi class="secno">4.3 </bdi><code>min_platform_version</code> member</a></li></ol></li><li class="tocline"><a class="tocxref" href="#miniapp-permission-resource-members"><bdi class="secno">5. </bdi><span>MiniApp permission resource</span> members</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#name-member-1"><bdi class="secno">5.1 </bdi><code>name</code> member</a></li><li class="tocline"><a class="tocxref" href="#reason-member"><bdi class="secno">5.2 </bdi><code>reason</code> member</a></li></ol></li><li class="tocline"><a class="tocxref" href="#localizable-members"><bdi class="secno">6. </bdi>
+          <span its-locale-filter-list="en" lang="en"><span>Localizable members</span></span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans"><span>可本地化属性</span></span>
+      </a></li><li class="tocline"><a class="tocxref" href="#dependencies"><bdi class="secno">7. </bdi>
+      <span its-locale-filter-list="en" lang="en">Dependencies</span>
+      <span its-locale-filter-list="zh-hans" lang="zh-hans">依赖</span>
+    </a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">8. </bdi>
+      <span its-locale-filter-list="en" lang="en">Conformance</span>
+      <span its-locale-filter-list="zh-hans" lang="zh-hans">标准符合性</span>
+    </a></li><li class="tocline"><a class="tocxref" href="#security-and-privacy-considerations"><bdi class="secno">9. </bdi>
+        <span its-locale-filter-list="en" lang="en">Security and Privacy Considerations</span>
+        <span its-locale-filter-list="zh-hans" lang="zh-hans">安全隐私考虑</span>
+    </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#content-constraint"><bdi class="secno">9.1 </bdi>
+            <span its-locale-filter-list="en" lang="en">Content constraint</span>
+            <span its-locale-filter-list="zh-hans" lang="zh-hans">内容限制</span>
+        </a></li><li class="tocline"><a class="tocxref" href="#local-resource-access"><bdi class="secno">9.2 </bdi>
+            <span its-locale-filter-list="en" lang="en">Local resource access</span>
+            <span its-locale-filter-list="zh-hans" lang="zh-hans">本地资源访问</span>
+        </a></li><li class="tocline"><a class="tocxref" href="#integrity"><bdi class="secno">9.3 </bdi>
+            <span its-locale-filter-list="en" lang="en">Integrity</span>
+            <span its-locale-filter-list="zh-hans" lang="zh-hans">完整性</span>
+        </a></li><li class="tocline"><a class="tocxref" href="#transparency"><bdi class="secno">9.4 </bdi>
+            <span its-locale-filter-list="en" lang="en">Transparency</span>
+            <span its-locale-filter-list="zh-hans" lang="zh-hans">信息透明</span>
+        </a></li></ol></li><li class="tocline"><a class="tocxref" href="#json-schema-json"><bdi class="secno">10. </bdi>
+        <span its-locale-filter-list="en" lang="en">JSON Schema</span>
+        <span its-locale-filter-list="zh-hans" lang="zh-hans">JSON语法</span>
+    </a></li><li class="tocline"><a class="tocxref" href="#example"><bdi class="secno">11. </bdi>
+      <span its-locale-filter-list="en" lang="en"> Example</span>
+      <span its-locale-filter-list="zh-hans" lang="zh-hans">样例</span>
+    </a></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><bdi class="secno">A. </bdi>
+             <span its-locale-filter-list="en" lang="en">Acknowledgments</span>
+             <span its-locale-filter-list="zh-hans" lang="zh-hans">致谢</span>
+    </a></li><li class="tocline"><a class="tocxref" href="#extensibility-extensibility"><bdi class="secno">B. </bdi>
+      <span its-locale-filter-list="en" lang="en">Extensibility</span>
+      <span its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">Extensibility</span>
+    </a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">C. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">C.1 </bdi>Normative references</a></li></ol></li></ol></nav>
+
+  <section id="miniapp-manifest">
+    <h2 id="x1-miniapp-manifest"><bdi class="secno">1. </bdi>MiniApp Manifest<a class="self-link" aria-label="§" href="#miniapp-manifest"></a></h2>
+    <p its-locale-filter-list="en" lang="en">
+      A MiniApp manifest extends and profiles the Web App Manifest format [<cite><a class="bibref" data-link-type="biblio" href="#bib-appmanifest" title="Web Application Manifest">appManifest</a></cite>] and
+      contains metadata associated with a MiniApp.
+    </p>
+    <p its-locale-filter-list="zh-hans" lang="zh-hans">
+      MiniApp Manifest 是一个JSON文档，其中包含与该MiniApp关联的元数据。
+    </p>
+    <section id="manifest-requirements" data-cite="image-resource">
+      <h3 id="x1-1-requirements"><bdi class="secno">1.1 </bdi>Requirements<a class="self-link" aria-label="§" href="#manifest-requirements"></a></h3>
+      <p its-locale-filter-list="en" lang="en">
+        The following members <em class="rfc2119">MUST</em> be set in the <a href="#dfn-miniapp-manifest" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-miniapp-manifest-1">MiniApp Manifest</a>.
+      </p>
+      <p its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+        The following members <em class="rfc2119">MUST</em> be set in the <a href="#dfn-miniapp-manifest" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-miniapp-manifest-2">MiniApp Manifest</a>.
+      </p>
+      <ul>
+        <li>
+          <a href="#dfn-app_id" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-app_id-1">app_id</a>
+        </li>
+        <li>
+          <a data-link-type="dfn" href="#dfn-name" class="internalDFN" id="ref-for-dfn-name-1">name</a>
+        </li>
+        <li>
+          <a href="#dfn-icons" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-icons-1">icons</a>
+        </li>
+        <li>
+          <a href="#dfn-version_name" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-version_name-1">version_name</a>
+        </li>  
+        <li>
+          <a href="#dfn-version_code" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-version_code-1">version_code</a>
+        </li>
+        <li>
+          <a data-link-type="dfn" href="#dfn-min_platform_version" class="internalDFN" id="ref-for-dfn-min_platform_version-1">min_platform_version</a>
+        </li>
+        <li>
+          <a href="#dfn-pages" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-pages-1">pages</a>
+        </li>
+      </ul>
+      <p its-locale-filter-list="en" lang="en">
+          The following members <em class="rfc2119">MUST</em> be set in an <a data-link-type="idl" data-type="dictionary" href="https://www.w3.org/TR/image-resource/#dom-imageresource"><code>ImageResource</code></a>.
+      </p>
+      <p its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+        The following members <em class="rfc2119">MUST</em> be set in an <a data-link-type="idl" data-type="dictionary" href="https://www.w3.org/TR/image-resource/#dom-imageresource"><code>ImageResource</code></a>.
+      </p>
+      <ul>
+        <li>
+          <a data-link-type="idl" data-type="dict-member" href="https://www.w3.org/TR/image-resource/#dom-imageresource-src"><code>src</code></a>
+        </li>
+        <li>
+          <a data-link-type="idl" data-type="dict-member" href="https://www.w3.org/TR/image-resource/#dom-imageresource-sizes"><code>sizes</code></a>
+        </li>
+      </ul>
+      <p its-locale-filter-list="en" lang="en">
+        The following members <em class="rfc2119">MUST</em> be set in a <a href="#dfn-miniapp-widget-resource" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-miniapp-widget-resource-1">MiniApp Widget resource</a>.
+      </p>
+      <p its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+        The following members <em class="rfc2119">MUST</em> be set in a <a href="#dfn-miniapp-widget-resource" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-miniapp-widget-resource-2">MiniApp Widget resource</a>.
+      </p>
+      <ul>
+        <li>
+         <a data-link-type="dfn" href="#dfn-name-0" class="internalDFN" id="ref-for-dfn-name-0-1">name</a>
+        </li>
+        <li>
+         <a href="#dfn-path" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-path-1">path</a>
+        </li>
+      </ul>
+      <p its-locale-filter-list="en" lang="en">
+        The following member <em class="rfc2119">MUST</em> be set in a <a href="#dfn-miniapp-permission-resource" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-miniapp-permission-resource-1">MiniApp permission resource</a>.
+      </p>
+      <p its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+        The following member <em class="rfc2119">MUST</em> be set in a <a href="#dfn-miniapp-permission-resource" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-miniapp-permission-resource-2">MiniApp permission resource</a>.
+      </p>
+      <ul>
+        <li>
+         <a data-link-type="dfn" href="#dfn-name-1" class="internalDFN" id="ref-for-dfn-name-1-1">name</a>
+        </li>
+      </ul>    
+      <p>The priority of all other <a href="#manifest-members">members</a> is <em class="rfc2119">OPTIONAL</em>, but <em class="rfc2119">MAY</em> be modified by implementations of the manifest format in the case of specific MiniApp extensions.</p>
+    </section>
+
+    <section data-cite="image-resource" id="summary-of-members">
+      <h3 id="x1-2-summary-of-members"><bdi class="secno">1.2 </bdi>Summary of Members<a class="self-link" aria-label="§" href="#summary-of-members"></a></h3>
+      <p its-locale-filter-list="en" lang="en">
+        The following table is a summary of each member:
+      </p>
+      <p its-locale-filter-list="zh-hans" lang="zh-hans">
+        下表是manifest中每个属性的总结：
+      </p>
+      <table>
+        <thead><tr>
+          <th colspan="2">
+            <span its-locale-filter-list="en" lang="en">Member</span>
+            <span its-locale-filter-list="zh-hans" lang="zh-hans">属性</span>
+          </th>         
+          <th>
+            <span its-locale-filter-list="en" lang="en">Type</span>
+            <span its-locale-filter-list="zh-hans" lang="zh-hans">类型</span>
+          </th>
+          <th>
+            <span its-locale-filter-list="en" lang="en">Required</span>
+            <span its-locale-filter-list="zh-hans" lang="zh-hans">必填</span>
+          </th>
+          <th>
+            <span its-locale-filter-list="en" lang="en">Description</span>
+            <span its-locale-filter-list="zh-hans" lang="zh-hans">描述</span>
+          </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="2"><a href="#dfn-app_id" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-app_id-2">app_id</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-1">string</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Yes</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">是</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">ID of the MiniApp</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">ID标识</span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><a href="#dfn-description" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-description-1">description</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-2">string</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">No</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">否</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Description</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">简述</span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><a href="#dfn-dir" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-dir-1">dir</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-3">string</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">No</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">否</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Text direction</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">文本方向</span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><a href="#dfn-icons" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-icons-2">icons</a></td>
+            <td> <a data-link-type="idl" data-type="dict-member" href="https://www.w3.org/TR/image-resource/#dom-imageresource-src"><code>src</code></a> <a data-link-type="dfn" href="#dfn-array" class="internalDFN" id="ref-for-dfn-array-1">array</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Yes</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">是</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Application icons</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">图标</span>
+            </td>
+          </tr>
+          <tr>
+            <th rowspan="2">icons</th>
+            <td><a data-link-type="idl" data-type="dict-member" href="https://www.w3.org/TR/image-resource/#dom-imageresource-src"><code>src</code></a></td>
+            <td> <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-4">string</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Yes</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">是</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">the source of the icon image in the format of a path <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-5">string</a></span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">以路径字符串所表示的图标图片来源</span>
+            </td>
+          </tr>
+          <tr>
+            <td><a data-link-type="idl" data-type="dict-member" href="https://www.w3.org/TR/image-resource/#dom-imageresource-sizes"><code>sizes</code></a></td>
+            <td> <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-6">string</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Yes</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">是</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">The applicable resolution sizes of the icon image from the above mentioned <code>src</code></span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">来自以上<code>src</code>的图标图片所适用的分辨率大小</span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><a href="#dfn-lang" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-lang-1">lang</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-7">string</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">No</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">否</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Language tag</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">语言</span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><a data-link-type="dfn" href="#dfn-min_platform_version" class="internalDFN" id="ref-for-dfn-min_platform_version-2">min_platform_version</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-8">string</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Yes</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">是</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Minimum platform version supported</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">支持最小平台版本</span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><a data-link-type="dfn" href="#dfn-name" class="internalDFN" id="ref-for-dfn-name-2">name</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-9">string</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Yes</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">是</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">App name</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">名称</span>
+            </td>
+          </tr>          
+          <tr>
+            <td colspan="2"><a href="#dfn-pages" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-pages-2">pages</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-array" class="internalDFN" id="ref-for-dfn-array-2">array</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Yes</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">是</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Route information</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">路由信息</span>
+            </td>
+          </tr>          
+          <tr>
+            <td colspan="2"><a href="#dfn-short_name" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-short_name-1">short_name</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-10">string</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">No</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">否</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Short name</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">简称</span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><a href="#dfn-version_code" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-version_code-2">version_code</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-11">string</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Yes?</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">是</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Version code</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">版本号</span>
+            </td>
+          </tr>          
+          <tr>
+            <td colspan="2"><a href="#dfn-version_name" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-version_name-2">version_name</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-12">string</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Yes</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">是</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Version name</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">版本名称</span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><a href="#dfn-widgets" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-widgets-1">widgets</a></td>
+            <td> <a href="#dfn-miniapp-widget-resource" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-miniapp-widget-resource-3">MiniApp Widget resource</a> <a data-link-type="dfn" href="#dfn-array" class="internalDFN" id="ref-for-dfn-array-3">array</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">No</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">否</span>
+            </td>
+            <td> <span its-locale-filter-list="en" lang="en">Widget</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">卡片</span>
+            </td>
+          </tr>
+          <tr>
+            <th rowspan="3">widgets</th>
+            <td><a data-link-type="dfn" href="#dfn-name-0" class="internalDFN" id="ref-for-dfn-name-0-2">name</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-13">string</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Yes</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">是</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Widget name</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">Widget名字</span>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#dfn-path" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-path-2">path</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-14">string</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Yes</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">是</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Corresponding page path of Widget. It follows the same path route format as defined in <code>pages</code>.</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">Widget对应页面路径，采用与<code>pages</code>中相同页面路由的格式。</span>
+            </td>
+          </tr>
+          <tr>
+            <td><a data-link-type="dfn" href="#dfn-min_platform_version-0" class="internalDFN" id="ref-for-dfn-min_platform_version-0-1">min_platform_version</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-15">string</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">No</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">否</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Minimum platform version supported</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">支持最小平台版本</span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><a href="#dfn-window" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-window-1">window</a></td>
+            <td> <a href="#dfn-miniapp-window-resources" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-miniapp-window-resources-1">MiniApp window resource</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">No</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">否</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Window style</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">窗口样式</span>
+            </td>
+          </tr>
+          <tr>
+            <th rowspan="12">window</th>
+            <td><a href="#dfn-navigation_bar_background_color" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-navigation_bar_background_color-1">navigation_bar_background_color</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-hexcolor" class="internalDFN" id="ref-for-dfn-hexcolor-1">hexColor</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">No</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">否</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Background color of the navigation bar</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">导航栏背景颜色</span>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#dfn-navigation_bar_text_style" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-navigation_bar_text_style-1">navigation_bar_text_style</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-16">string</a>  </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">No</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">否</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Background title color, valid values: <code>black</code> and <code>white</code>.</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">导航栏标题颜色，有效值：<code>black</code>和<code>white</code>。</span>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#dfn-navigation_bar_title_text" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-navigation_bar_title_text-1">navigation_bar_title_text</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-17">string</a>  </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">No</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">否</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Title text of the navigation bar</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans"> 导航栏标题文字内容</span>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#dfn-navigation_style" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-navigation_style-1">navigation_style</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-18">string</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">No</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">否</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Style of the navigation bar, valid values: <code>default</code> (default style) and <code>custom</code> (customized navigation bar). Note: The capsule button at the right corner is not customizable.</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">导航栏样式，有效值：<code>default</code>（默认样式）和<code>custom</code>（自定义导航栏）。注意：右上角胶囊按钮不可自定义。</span>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#dfn-background_color" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-background_color-1">background_color</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-hexcolor" class="internalDFN" id="ref-for-dfn-hexcolor-2">hexColor</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">No</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">否</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Background color of the window</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">窗口的背景颜色</span>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#dfn-background_text_style" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-background_text_style-1">background_text_style</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-19">string</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">No</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">否</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Background text style, valid values: <code>dark</code> and <code>light</code>.</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">背景文字样式，有效值：<code>dark</code>和<code>light</code>。</span>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#dfn-enable_pull_down_refresh" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-enable_pull_down_refresh-1">enable_pull_down_refresh</a></td>
+            <td> <a href="#dfn-true-false" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-true-false-1">true | false</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">No</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">否</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Enable pull-to-refresh</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">是否开启下拉刷新</span>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#dfn-on_reach_bottom_distance" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-on_reach_bottom_distance-1">on_reach_bottom_distance</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-number" class="internalDFN" id="ref-for-dfn-number-1">number</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">No</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">否</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Distance from the bottom when page pull-up bottom event is triggered. The value is a non-negative integer and the unit is in <code>px</code>.</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">页面上拉触底事件触发时距页面底部距离。取值应为非负整数，单位为 <code>px</code>。</span>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#dfn-orientation" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-orientation-1">orientation</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-20">string</a>  </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">No</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">否</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Screen orientation settings, valid values: <code>portrait</code> and <code>landscape</code>.</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">屏幕方向设置，有效值：<code>portrait</code>和<code>landscape</code>。</span>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#dfn-fullscreen" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-fullscreen-1">fullscreen</a></td>
+            <td> <a href="#dfn-true-false" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-true-false-2">true | false</a>  </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">No</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">否</span>
+            </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Full screen display</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">全屏显示</span>
+            </td>
+          </tr>          
+          <tr>
+            <td><a href="#dfn-design_width" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-design_width-1">design_width</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-number" class="internalDFN" id="ref-for-dfn-number-2">number</a>  </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">No</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">否</span>
+            </td>
+            <td>
+                <span its-locale-filter-list="en" lang="en">The baseline width of the page design in <code>px</code>, based on which the size of the components on the page would be adjusted accordingly. The value is a non-negative integer.</span>
+                <span its-locale-filter-list="zh-hans" lang="zh-hans">以<code>px</code>为单位的页面设计基准宽度，元素大小将根据实际设备宽度来缩放。取值应为非负整数。</span>
+            </td>
+          </tr> 
+          <tr>
+            <td><a href="#dfn-auto_design_width" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-auto_design_width-1">auto_design_width</a></td>
+            <td> <a href="#dfn-true-false" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-true-false-3">true | false</a>  </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">No</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">否</span>
+            </td>
+            <td>
+                <span its-locale-filter-list="en" lang="en">Whether the design_width of the page is auto-calculated. When it's <i>true</i>, the value of the <code>design_width</code> is ignored, and the baseline width is determined by the system automatically according to the pixel density of the screen.</span>
+                <span its-locale-filter-list="zh-hans" lang="zh-hans">页面设计基准宽度是否自动计算，当设为true时，designWidth将会被忽略，设计基准宽度由设备宽度与屏幕密度计算得出。</span>
+            </td>
+          </tr> 
+          <tr>
+              <td colspan="2"><a href="#dfn-req_permissions" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-req_permissions-1">req_permissions</a></td>
+              <td> <a href="#dfn-miniapp-permission-resource" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-miniapp-permission-resource-3">MiniApp permission resource</a> <a data-link-type="dfn" href="#dfn-array" class="internalDFN" id="ref-for-dfn-array-4">array</a> </td>
+              <td>
+                <span its-locale-filter-list="en" lang="en">No</span>
+                <span its-locale-filter-list="zh-hans" lang="zh-hans">否</span>
+              </td>
+              <td> <span its-locale-filter-list="en" lang="en">Required permissions</span>
+                <span its-locale-filter-list="zh-hans" lang="zh-hans">所需权限</span>
+              </td>
+          </tr>
+          <tr>
+            <th rowspan="2">req_permissions</th>
+            <td><a data-link-type="dfn" href="#dfn-name-1" class="internalDFN" id="ref-for-dfn-name-1-2">name</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-21">string</a> </td>
+            <td>
+              <span its-locale-filter-list="en" lang="en">Yes</span>
+              <span its-locale-filter-list="zh-hans" lang="zh-hans">是</span>
+            </td>
+            <td>
+                <span its-locale-filter-list="en" lang="en">Permission name</span>
+                <span its-locale-filter-list="zh-hans" lang="zh-hans">权限名称</span>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#dfn-reason" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-reason-1">reason</a></td>
+            <td> <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-22">string</a> </td>
+            <td>
+                <span its-locale-filter-list="en" lang="en">No</span>
+                <span its-locale-filter-list="zh-hans" lang="zh-hans">否</span>
+            </td>
+            <td>
+                <span its-locale-filter-list="en" lang="en">The reason to use this permission</span>
+                <span its-locale-filter-list="zh-hans" lang="zh-hans">该权限的使用目的</span>
+            </td>
+          </tr>          
+        </tbody>
+        <tfoot>
+        </tfoot>
+      </table>
+
+      <div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="4">Note</div><p class="">
+      Other Web Application Manifest members
+        (<a href="https://www.w3.org/TR/appmanifest/#scope-member"><code>scope</code></a>,
+        <a href="https://www.w3.org/TR/appmanifest/#theme_color-member"><code>theme_color</code></a>,
+        <a href="https://www.w3.org/TR/appmanifest/#related_applications-member"><code>related_applications</code></a>,
+        <a href="https://www.w3.org/TR/appmanifest/#prefer_related_applications-member"><code>prefer_related_applications</code></a>, and
+        <a href="https://www.w3.org/TR/appmanifest/#shortcuts-member"><code>shortcuts</code></a>) are not currently supported by MiniApp user agents.
+      </p></div>
+    </section>
+  </section>
+  <section id="manifest-members">
+    <h2 id="x2-miniapp-manifest-members"><bdi class="secno">2. </bdi>
+      <span its-locale-filter-list="en" lang="en"><dfn id="dfn-miniapp-manifest">MiniApp Manifest</dfn> members</span>
+      <span its-locale-filter-list="zh-hans" lang="zh-hans">字段</span>
+    <a class="self-link" aria-label="§" href="#manifest-members"></a></h2>
+    <p>
+      As the <a data-link-type="dfn" data-type="dfn" href="https://www.w3.org/TR/appmanifest/#dfn-application-manifest">application manifest</a> is JSON, the members for this
+      specification are of the types <dfn id="dfn-number">number</dfn>, <dfn id="dfn-true-false">true | false</dfn> literals, <dfn id="dfn-object">object</dfn>,
+      <dfn id="dfn-array">array</dfn>, and <dfn id="dfn-string">string</dfn> as defined in <cite><a href="https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf">The JSON Data Interchange Format</a></cite>. <dfn id="dfn-hexcolor">hexcolor</dfn> is a <a data-link-type="dfn" href="#dfn-string" class="internalDFN" id="ref-for-dfn-string-23">string</a> expressing RGB color values [<cite><a class="bibref" data-link-type="biblio" href="#bib-css-color-3" title="CSS Color Module Level 3">css-color-3</a></cite>] in hexadecimal notation: ‘#’ immediately followed by six hexadecimal characters (#rrggbb).
+    </p>
+    <section id="webappmanifest-members">
+      <h3 id="x2-1-members-inherited-from-the-web-application-manifest"><bdi class="secno">2.1 </bdi>Members inherited from the Web Application Manifest<a class="self-link" aria-label="§" href="#webappmanifest-members"></a></h3>          
+      <section id="dir-member">
+        <h4 id="x2-1-1-dir-member"><bdi class="secno">2.1.1 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>dir</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">方向</span>
+        <a class="self-link" aria-label="§" href="#dir-member"></a></h4>
+        <p its-locale-filter-list="en" lang="en">
+          <dfn id="dfn-dir">dir</dfn> member, while
+          specifying the base direction of the <a href="#dfn-localizable-members" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-localizable-members-1">localizable members</a> of the manifest, also specifies
+          the default base text direction of the whole MiniApp. The <a href="#dfn-dir" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-dir-2">dir</a>
+          member's value can be set to one of the <a href="https://www.w3.org/TR/appmanifest/#dfn-text-direction-value">text-direction values</a> as specified in [<cite><a class="bibref" data-link-type="biblio" href="#bib-appmanifest" title="Web Application Manifest">appManifest</a></cite>].
+        </p>
+        <p its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+          dir member, while
+          specifying the base direction of the <a href="#dfn-localizable-members" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-localizable-members-2">localizable members</a> of the manifest, also specifies
+          the default base text direction of the whole MiniApp. The <a href="#dfn-dir" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-dir-3">dir</a>
+          member's value can be set to one of the <a href="https://www.w3.org/TR/appmanifest/#dfn-text-direction-value">text-direction values</a> as specified in [<cite><a class="bibref" data-link-type="biblio" href="#bib-appmanifest" title="Web Application Manifest">appManifest</a></cite>].
+        </p>        
+
+      </section>
+      <section data-cite="image-resource" id="icons-member">
+        <h4 id="x2-1-2-icons-member"><bdi class="secno">2.1.2 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>icons</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">图标</span>
+        <a class="self-link" aria-label="§" href="#icons-member"></a></h4>
+        <p its-locale-filter-list="en" lang="en">
+          The <dfn id="dfn-icons">icons</dfn> member describes images that serve as iconic representations of MiniApps in various contexts. Both <a data-link-type="idl" data-type="dict-member" href="https://www.w3.org/TR/image-resource/#dom-imageresource-src"><code>src</code></a> and <a data-link-type="idl" data-type="dict-member" href="https://www.w3.org/TR/image-resource/#dom-imageresource-sizes"><code>sizes</code></a> are required. <a data-link-type="idl" data-type="dict-member" href="https://www.w3.org/TR/image-resource/#dom-imageresource-src"><code>src</code></a> <em class="rfc2119">MUST</em> be a <a data-type="dfn" href="https://url.spec.whatwg.org/#relative-url-string">relative-url string</a>.
+        </p>
+        <p its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+          The icons member describes images that serve as iconic representations of MiniApps in various contexts. Both <a data-link-type="idl" data-type="dict-member" href="https://www.w3.org/TR/image-resource/#dom-imageresource-src"><code>src</code></a> and <a data-link-type="idl" data-type="dict-member" href="https://www.w3.org/TR/image-resource/#dom-imageresource-sizes"><code>sizes</code></a> are required. <a data-link-type="idl" data-type="dict-member" href="https://www.w3.org/TR/image-resource/#dom-imageresource-src"><code>src</code></a> <em class="rfc2119">MUST</em> be a <a data-type="dfn" href="https://url.spec.whatwg.org/#relative-url-string">relative-url string</a>.
+        </p>
+      </section>      
+      <section id="lang-member">
+        <h4 id="x2-1-3-lang-member"><bdi class="secno">2.1.3 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>lang</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">语言</span>
+        <a class="self-link" aria-label="§" href="#lang-member"></a></h4>
+        <p its-locale-filter-list="en" lang="en">
+          The <dfn id="dfn-lang">lang</dfn> member, while
+          specifying the primary language of the <a href="#dfn-localizable-members" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-localizable-members-3">localizable members</a>, also specifies
+          the primary language of the whole MiniApp.
+        </p>
+        <p its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+          The lang member, while
+          specifying the primary language of the <a href="#dfn-localizable-members" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-localizable-members-4">localizable members</a>, also specifies
+          the primary language of the whole MiniApp.
+        </p>
+        <div class="note" role="note" id="issue-container-generatedID-0"><div role="heading" class="note-title marker" id="h-note-0" aria-level="5">Note</div><p class="">
+          Implementers are encouraged to provide an accurate value that matches the manifest content.
+        </p></div>
+      </section>
+      <section id="name-member">
+        <h4 id="x2-1-4-name-member"><bdi class="secno">2.1.4 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>name</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">名称</span>
+        <a class="self-link" aria-label="§" href="#name-member"></a></h4>
+        <p its-locale-filter-list="en" lang="en">
+          The <dfn data-dfn-for="MiniApp Manifest" id="dfn-name">name</dfn> member is the descriptive name of the application. This is the name directly displayed to the user. It is used as the display name of MiniApp along with the desktop icon and in the context of MiniApp management. 
+        </p>
+        <p its-locale-filter-list="zh-hans" lang="zh-hans">
+          <code>name</code>，直接呈现给用户的名称，用于在桌面图标和MiniApp管理等处显示MiniApp的名称。
+        </p>
+      </section>
+      <section id="short_name-member">
+        <h4 id="x2-1-5-short_name-member"><bdi class="secno">2.1.5 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>short_name</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">简称</span>
+        <a class="self-link" aria-label="§" href="#short_name-member"></a></h4>
+        <p its-locale-filter-list="en" lang="en">
+          The <dfn id="dfn-short_name">short_name</dfn> member provides a concise and easy-to-read name for MiniApp. It can be used when there is insufficient space to display the full MiniApp name provided in <code>name</code>.
+        </p>
+        <p its-locale-filter-list="zh-hans" lang="zh-hans">
+          <code>short_name</code>，为MiniApp提供简短易读的名称，可在没有足够空间显示MiniApp名称时使用。
+        </p>
+      </section>
+    </section>
+    <section id="WebAppManifest-app-info-members" data-cite="manifest-app-info">
+        <h3 id="x2-2-members-supplemented-from-the-application-information"><bdi class="secno">2.2 </bdi>Members supplemented from the Application Information<a class="self-link" aria-label="§" href="#WebAppManifest-app-info-members"></a></h3>
+        <p>
+          The members listed in this section are defined in <cite>Web App Manifest - Application Information</cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-manifest-app-info" title="Web App Manifest - Application Information">manifest-app-info</a></cite>].
+        </p>
+      <section id="description-member">
+        <h4 id="x2-2-1-description-member"><bdi class="secno">2.2.1 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>description</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">简述</span>
+        <a class="self-link" aria-label="§" href="#description-member"></a></h4>
+        <p its-locale-filter-list="en" lang="en">
+          The <dfn id="dfn-description">description</dfn> member provides a textual description for the MiniApp.
+        </p>
+        <p its-locale-filter-list="zh-hans" lang="zh-hans">
+          <code>description</code>，为MiniApp提供简短的描述。
+        </p>
+      </section>
+    </section>
+    <section id="supplementary-manifest-members">
+      <h3 id="x2-3-supplementary-manifest-members"><bdi class="secno">2.3 </bdi>Supplementary manifest members<a class="self-link" aria-label="§" href="#supplementary-manifest-members"></a></h3>
+      <section id="app_id-member">
+        <h4 id="x2-3-1-app_id-member"><bdi class="secno">2.3.1 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>app_id</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">标识</span>
+        <a class="self-link" aria-label="§" href="#app_id-member"></a></h4>
+        <p its-locale-filter-list="en" lang="en">
+          The <dfn id="dfn-app_id">app_id</dfn> member identifies the MiniApp univocally. This member is mainly used for the package management.
+          It supports the update and release of MiniApp versions.
+          The format of <code>app_id</code> <em class="rfc2119">SHALL</em> be a <a href="https://datatracker.ietf.org/doc/html/rfc8259#section-7">string</a> defined by the rule below:
+        </p>
+        <p its-locale-filter-list="zh-hans" lang="zh-hans">
+          <code>app_id</code>是MiniApp的唯一标识符，主要用于包管理，支撑MiniApp版本更新和发布。<code>app_id</code>的格式是由字母起头的字符串，剩余字符为数字、字母、下划线或点[a-zA-Z_\.]。一种常见的实现方式是使用类似反向域名的命名方式，如<code>com.company.miniapp</code>。
+        </p>
+        <pre aria-busy="false"><code class="hljs abnf">app_idrule = <span class="hljs-keyword">ALPHA</span> <span class="hljs-number">1</span>*( <span class="hljs-keyword">ALPHA</span> / <span class="hljs-keyword">DIGIT</span> / <span class="hljs-string">"_"</span> / <span class="hljs-string">"."</span> )</code></pre>
+        <div class="note" role="note" id="issue-container-generatedID-1"><div role="heading" class="note-title marker" id="h-note-1" aria-level="5">Note</div><p class="">
+           <span its-locale-filter-list="en" lang="en">
+             One common practice is to use the reverse-domain-name-like convention,
+             e.g. <code>com.company.miniapp</code>.
+           </span>
+           <span its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+             One common practice is to use the reverse-domain-name-like convention,
+             e.g. <code>com.company.miniapp</code>.
+           </span>
+        </p></div>
+      </section>
+      <section id="version_name-member">
+        <h4 id="x2-3-2-version_name-member"><bdi class="secno">2.3.2 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>version_name</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">版本名称</span>
+        <a class="self-link" aria-label="§" href="#version_name-member"></a></h4>
+        <p its-locale-filter-list="en" lang="en">
+          The <dfn id="dfn-version_name">version_name</dfn> member is a string-type character string that is mainly used for describing the version information. It is also the version name that is displayed to the user. The general format is "1.0.0" as specified in <cite>Semantic Versioning</cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-semantic-versioning" title="Semantic Versioning">SEMANTIC-VERSIONING</a></cite>]. It plays an important role in version control, MiniApp application, and equipment compatibility.
+        </p>
+        <p its-locale-filter-list="zh-hans" lang="zh-hans">
+          <code>version_name</code>是一个string类型的字符串，主要用作版本信息描述，也是面向用户显示的版本名称。一般格式为：<code>"1.0.0"</code>，详见定义<cite>Semantic Versioning</cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-semantic-versioning" title="Semantic Versioning">SEMANTIC-VERSIONING</a></cite>]，该参数在版本控制、MiniApp应用与设备兼容性等方面发挥重要作用。
+        </p>
+      </section>
+      <section id="version_code-member">
+        <h4 id="x2-3-3-version_code-member"><bdi class="secno">2.3.3 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>version_code</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">版本号</span>
+        <a class="self-link" aria-label="§" href="#version_code-member"></a></h4>
+        <p its-locale-filter-list="en" lang="en">
+          The <dfn id="dfn-version_code">version_code</dfn> member is a number that is mainly used for enhancing the maintainability and security of MiniApp, e.g., a lower version is not compatible with a higher version. <code>version_code</code> is not displayed to the user and is incrementing according to the version iteration process. Value by default: 1.
+        </p>
+        <p its-locale-filter-list="zh-hans" lang="zh-hans">
+          <code>version_code</code>是一个number类型的数值，主要用作提高MiniApp的可维护性和安全性，比如：低版本不能覆盖高版本。此版本号不向用户显示，根据版本迭代过程进行递增。取值是非负整数。默认值：<code>1</code>。
+        </p>
+      </section>
+      <section id="min_platform_version-member">
+        <h4 id="x2-3-4-min_platform_version-member"><bdi class="secno">2.3.4 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>min_platform_version</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">平台版本</span>
+        <a class="self-link" aria-label="§" href="#min_platform_version-member"></a></h4>
+        <p its-locale-filter-list="en" lang="en">
+          The <dfn data-dfn-for="MiniApp Manifest" id="dfn-min_platform_version">min_platform_version</dfn> member is a string-type character string that indicates the minimum supported version of the required platform to ensure the normal operation of MiniApp (e.g. <code>"1.0.0"</code>).
+        </p>
+        <p its-locale-filter-list="zh-hans" lang="zh-hans">
+          <code>min_platform_version</code>是一个string类型的字符串，保证MiniApp正常运行所需平台的最小支持版本。比如：<code>"1.0.0"</code>。
+        </p>
+      </section>
+      <section id="pages-member">
+        <h4 id="x2-3-5-pages-member"><bdi class="secno">2.3.5 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>pages</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">页面路由</span>
+        <a class="self-link" aria-label="§" href="#pages-member"></a></h4>
+        <p its-locale-filter-list="en" lang="en">
+            The <dfn id="dfn-pages">pages</dfn> member is an <a data-link-type="dfn" href="#dfn-array" class="internalDFN" id="ref-for-dfn-array-5">array</a> of <a data-type="dfn" href="https://url.spec.whatwg.org/#relative-url-string">relative-url string</a> used for specifying which pages are included in a MiniApp. Each item in the array represents a page route. Page route = <code>[path + filename]</code>. During the MiniApp development process, adding or deleting pages is done by configuring the array. When configuring the page route, there is no need to add the file name extension, since the MiniApp platform will automatically parse it. Note: the first item in the <code>pages</code> array stands for the homepage of a MiniApp.
+        </p>
+        <p its-locale-filter-list="zh-hans" lang="zh-hans">
+          <code>pages</code>数组用于指定MiniApp都包含哪些页面，数组中每一项代表一个页面路由，页面路由 = <code>[路径 + 文件名]</code>。MiniApp开发时新增或删除页面需在数组中进行配置，配置页面路由时文件名不需加后缀名，MiniApp平台会自动解析。备注：<code>pages</code>数组中第一项代表MiniApp首页。
+        </p>
+        <div class="note" role="note" id="issue-container-generatedID-2"><div role="heading" class="note-title marker" id="h-note-2" aria-level="5">Note</div><p class="">
+          For compatibility with the Web platform, it is <em class="rfc2119">RECOMMENDED</em> to use both <a href="#dfn-pages" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-pages-3">pages</a> and <a href="https://www.w3.org/TR/appmanifest/#start_url-member"><code>start_url</code></a>  and use the value <code>"."</code> for <code>scope</code> in the manifest file. The value of <a href="https://www.w3.org/TR/appmanifest/#start_url-member"><code>start_url</code></a>  <em class="rfc2119">MUST</em> be the same as the first entry in <a href="#dfn-pages" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-pages-4">pages</a>.
+          If <code>scope</code>.
+        </p></div>
+        <div class="issue" id="issue-container-generatedID-3"><div role="heading" class="issue-title marker" id="h-issue" aria-level="5"><span>Issue</span></div><p class="">
+        Are <code>pages.[0]</code> and <code>start_url</code> aligned in all cases?
+        </p></div>
+      </section>
+      <section id="window-member">
+        <h4 id="x2-3-6-window-member"><bdi class="secno">2.3.6 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>window</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">窗口</span>
+        <a class="self-link" aria-label="§" href="#window-member"></a></h4>
+        <p its-locale-filter-list="en" lang="en">
+          The <dfn id="dfn-window">window</dfn> member contains sub-attributes, defined in <a href="#dfn-miniapp-window-resources" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-miniapp-window-resources-2">MiniApp window resource</a>, used for styling the status bar, navigation bar, title, window background color, etc.
+        </p>
+        <p its-locale-filter-list="zh-hans" lang="zh-hans">
+          用于设置MiniApp的状态栏、导航条、标题和窗口背景色等样式，如下表所示：
+        </p>
+        <p its-locale-filter-list="en" lang="en">
+            <code>window</code> inherits the text direction and language configuration from <code>dir</code> and <code>lang</code>.
+        </p>
+        <p its-locale-filter-list="zh-hans" lang="zh-hans">
+          <code>window</code>的文字方向和语言设置继承自<code>dir</code>和<code>lang</code>.
+        </p>
+      </section>
+      <section id="widgets-member">
+        <h4 id="x2-3-7-widgets-member"><bdi class="secno">2.3.7 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>widgets</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">卡片</span>
+        <a class="self-link" aria-label="§" href="#widgets-member"></a></h4>
+        <p its-locale-filter-list="en" lang="en">
+            The <dfn id="dfn-widgets">widgets</dfn> member defines a set of widgets that are a part of a MiniApp.
+            Specifically, a MiniApp package can include MiniApp Pages and Widgets concurrently.
+            As a part of the MiniApp application, widgets share some of the Manifest fields with the
+            MiniApp main program, e.g. <code>dir</code>, <code>lang</code>, <code>app_id</code>, <code>name</code>, <code>short_name</code>, <code>icons</code>, <code>version_name</code>, and <code>version_code</code>. However, a widget also has its private fields, defined in <a href="#dfn-miniapp-widget-resource" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-miniapp-widget-resource-4">MiniApp Widget resource</a>.
+        </p>
+        <p its-locale-filter-list="zh-hans" lang="zh-hans">
+            Widget是MiniApp的一部分。具体来说，MiniApp包中可同时包含 MiniApp Page和Widget。Widget作为MiniApp应用程序的一部分，Widget和MiniApp主体程序共用部分Manifest字段，比如：<code>dir</code>、<code>lang</code>、<code>app_id</code>、<code>name</code>、<code>short_name</code>、<code>icons</code>、<code>version_name</code>和<code>version_code</code>。但是Widget也有自己的私有字段，如下表所示：
+        </p>
+        <p its-locale-filter-list="en" lang="en">There are certain differences between the Widget-related APIs and the MiniApp APIs, hence, the declaration of the minimum platform version may be different. If the <code>min_platform_version</code> field of a widget is not set explicitly, it is then identical to the <code>min_platform_version</code> of the MiniApp by default.
+        </p>
+        <p its-locale-filter-list="zh-hans" lang="zh-hans">Widget 涉及的API与MiniApp API有一定差别，因此最小平台版本声明可能不同。如不单独设置Widget的<code>min_platform_version</code>字段，则默认与MiniApp平台版本相同。
+        </p>
+      </section>
+      <section id="req_permissions-member">
+        <h4 id="x2-3-8-req_permissions-member"><bdi class="secno">2.3.8 </bdi>
+          <span its-locale-filter-list="en" lang="en"><code>req_permissions</code> member</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">所需权限</span>
+        <a class="self-link" aria-label="§" href="#req_permissions-member"></a></h4>
+        <p its-locale-filter-list="en" lang="en">
+            The <dfn id="dfn-req_permissions">req_permissions</dfn> member is an <a data-link-type="dfn" href="#dfn-array" class="internalDFN" id="ref-for-dfn-array-6">array</a> of permission objects. Each <a href="#dfn-miniapp-permission-resource" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-miniapp-permission-resource-4">MiniApp permission resource</a> object declares permission (such as the access to the location information, user contacts, and hardware features like camera) required for the proper running of the MiniApp. User's consent may be asked to protect the user's privacy related to such permissions. Such information can also be used by an app store or a hosting platform to filter a MiniApp according to user's policy or device capabilities. 
+        </p>
+        <p its-locale-filter-list="zh-hans" lang="zh-hans" class="retranslateme">
+          <code>req_permissions</code>是一个权限对象的数组，其中每个对象声明了MiniApp正常运行所需的一个权限（比如对位置信息、联系人和摄像头等硬件特性的访问）。为保护权限相关的用户隐私，可能需要征得用户同意。此类权限信息还可以被应用市场或宿主平台用来根据用户策略或者设备能力来过滤MiniApp。详细的权限对象结构定义如下表。
+        </p>
+      </section>
+    </section>
+  </section> 
+
+  <section id="miniapp-window-resource-members">
+    <h2 id="x3-miniapp-window-resource-members"><bdi class="secno">3. </bdi><dfn data-lt="MiniApp window resources|MiniApp window resource" id="dfn-miniapp-window-resources">MiniApp window resource</dfn> members<a class="self-link" aria-label="§" href="#miniapp-window-resource-members"></a></h2>
+    
+    <section id="navigation_bar_background_color-member">
+      <h3 id="x3-1-navigation_bar_background_color-member"><bdi class="secno">3.1 </bdi><code>navigation_bar_background_color</code> member<a class="self-link" aria-label="§" href="#navigation_bar_background_color-member"></a></h3>
+      <p>
+        <span its-locale-filter-list="en" lang="en">The <dfn id="dfn-navigation_bar_background_color">navigation_bar_background_color</dfn> member specifies the color of the navigation bar background.</span>
+        <span its-locale-filter-list="zh-hans" lang="zh-hans">导航栏背景颜色</span>
+      </p>
+      <div class="note" role="note" id="issue-container-generatedID-4"><div role="heading" class="note-title marker" id="h-note-3" aria-level="4">Note</div><p class="">
+        <span its-locale-filter-list="en" lang="en">
+          Value by default: <code>#000000</code>.
+          </span>
+        <span its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+          Value by default: <code>#000000</code>.
+        </span>
+      </p></div>
+    </section>
+    <section id="navigation_bar_text_style-member">
+      <h3 id="x3-2-navigation_bar_text_style-member"><bdi class="secno">3.2 </bdi><code>navigation_bar_text_style</code> member<a class="self-link" aria-label="§" href="#navigation_bar_text_style-member"></a></h3>
+      <p>
+        <span its-locale-filter-list="en" lang="en">The <dfn id="dfn-navigation_bar_text_style">navigation_bar_text_style</dfn> member specifies the text color of the navigation bar title.</span>
+      </p>
+      <div class="note" role="note" id="issue-container-generatedID-5"><div role="heading" class="note-title marker" id="h-note-4" aria-level="4">Note</div><p class="">
+        <span its-locale-filter-list="en" lang="en">
+         Value by default: <code>white</code>.
+        </span>
+        <span its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+          Value by default: <code>white</code>.
+        </span>
+        </p></div>
+    </section>
+    <section id="navigation_bar_title_text-member">
+      <h3 id="x3-3-navigation_bar_title_text-member"><bdi class="secno">3.3 </bdi><code>navigation_bar_title_text</code> member<a class="self-link" aria-label="§" href="#navigation_bar_title_text-member"></a></h3>
+      <p>
+        <span its-locale-filter-list="en" lang="en">The <dfn id="dfn-navigation_bar_title_text">navigation_bar_title_text</dfn> member specifies the title text of the navigation bar</span>
+        <span its-locale-filter-list="zh-hans" lang="zh-hans"> 导航栏标题文字内容</span>
+      </p>
+    </section>
+    <section id="navigation_style-member">
+      <h3 id="x3-4-navigation_style-member"><bdi class="secno">3.4 </bdi><code>navigation_style</code> member<a class="self-link" aria-label="§" href="#navigation_style-member"></a></h3>
+      <p>
+        <span its-locale-filter-list="en" lang="en">The <dfn id="dfn-navigation_style">navigation_style</dfn> member specifies the style of the navigation bar: <code>default</code> (default style) and <code>custom</code> (customized navigation bar). Note: The capsule button at the right corner is not customizable.</span>
+        <span its-locale-filter-list="zh-hans" lang="zh-hans">导航栏样式：<code>default</code>（默认样式）和<code>custom</code>（自定义导航栏）。注意：右上角胶囊按钮不可自定义。</span>
+      </p>
+      <div class="note" role="note" id="issue-container-generatedID-6"><div role="heading" class="note-title marker" id="h-note-5" aria-level="4">Note</div><p class="">
+        <span its-locale-filter-list="en" lang="en">
+          Value by default: <code>default</code>.
+        </span>
+        <span its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+          Value by default: <code>default</code>.
+        </span>
+      </p></div>
+    </section>
+    <section id="background_color-member">
+      <h3 id="x3-5-background_color-member"><bdi class="secno">3.5 </bdi><code>background_color</code> member<a class="self-link" aria-label="§" href="#background_color-member"></a></h3>
+      <p>
+        <span its-locale-filter-list="en" lang="en">The <dfn id="dfn-background_color">background_color</dfn> member specifies the background color of the window. This member is equivalent to  <a href="https://www.w3.org/TR/appmanifest/#background_color-member"><code>background_color</code></a>.</span>
+        <span its-locale-filter-list="zh-hans" lang="zh-hans">窗口的背景颜色</span>
+      </p>
+      <div class="note" role="note" id="issue-container-generatedID-7"><div role="heading" class="note-title marker" id="h-note-6" aria-level="4">Note</div><p class="">
+        <span its-locale-filter-list="en" lang="en">
+          Value by default: <code>#ffffff</code>.
+        </span>
+        <span its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+          Value by default: <code>#ffffff</code>.
+        </span>
+      </p></div>
+    </section>
+    <section id="background_text_style-member">
+      <h3 id="x3-6-background_text_style-member"><bdi class="secno">3.6 </bdi><code>background_text_style</code> member<a class="self-link" aria-label="§" href="#background_text_style-member"></a></h3>
+      <p>
+        <span its-locale-filter-list="en" lang="en">The <dfn id="dfn-background_text_style">background_text_style</dfn> member specifies the background text style.</span>
+        <span its-locale-filter-list="zh-hans" lang="zh-hans">背景文字样式，。</span>
+      </p>
+      <div class="note" role="note" id="issue-container-generatedID-8"><div role="heading" class="note-title marker" id="h-note-7" aria-level="4">Note</div><p class="">
+        <span its-locale-filter-list="en" lang="en">
+          Value by default: <code>dark</code>.
+        </span>
+        <span its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+          Value by default: <code>dark</code>.
+        </span>
+      </p></div>
+    </section>
+    <section id="enable_pull_down_refresh-member">
+      <h3 id="x3-7-enable_pull_down_refresh-member"><bdi class="secno">3.7 </bdi><code>enable_pull_down_refresh</code> member<a class="self-link" aria-label="§" href="#enable_pull_down_refresh-member"></a></h3>
+      <p>
+        <span its-locale-filter-list="en" lang="en">The <dfn id="dfn-enable_pull_down_refresh">enable_pull_down_refresh</dfn> member specifies if the pull-to-refresh event is enabled.</span>
+        <span its-locale-filter-list="zh-hans" lang="zh-hans">是否开启下拉刷新</span>
+      </p>
+      <div class="note" role="note" id="issue-container-generatedID-9"><div role="heading" class="note-title marker" id="h-note-8" aria-level="4">Note</div><p class="">
+        <span its-locale-filter-list="en" lang="en">
+          Value by default: <code>false</code>.
+        </span>
+        <span its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+          Value by default: <code>false</code>.
+        </span>
+      </p></div>
+    </section>
+    <section id="on_reach_bottom_distance-member">
+      <h3 id="x3-8-on_reach_bottom_distance-member"><bdi class="secno">3.8 </bdi><code>on_reach_bottom_distance</code> member<a class="self-link" aria-label="§" href="#on_reach_bottom_distance-member"></a></h3>
+      <p>
+        <span its-locale-filter-list="en" lang="en">The <dfn id="dfn-on_reach_bottom_distance">on_reach_bottom_distance</dfn> member specifies the distance from the bottom when page pull-up bottom event is triggered. The value is a non-negative integer and the unit is in <a data-type="dfn" href="https://www.w3.org/TR/css-values-3/#visual-angle-unit">pixel unit</a>.</span>
+        <span its-locale-filter-list="zh-hans" lang="zh-hans">页面上拉触底事件触发时距页面底部距离。取值应为非负整数，单位为 <code>px</code>。</span>
+      </p>
+      <div class="note" role="note" id="issue-container-generatedID-10"><div role="heading" class="note-title marker" id="h-note-9" aria-level="4">Note</div><p class="">
+        <span its-locale-filter-list="en" lang="en">
+          Value by default: <code>50</code>.
+        </span>
+        <span its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+          Value by default: <code>50</code>.
+        </span>
+      </p></div>
+    </section>
+    <section id="orientation-member">
+      <h3 id="x3-9-orientation-member"><bdi class="secno">3.9 </bdi><code>orientation</code> member<a class="self-link" aria-label="§" href="#orientation-member"></a></h3>
+      <p>
+        <span its-locale-filter-list="en" lang="en">The <dfn id="dfn-orientation">orientation</dfn> member specifies the screen orientation settings to which a screen can be locked. The two supported values are <code>portrait</code> and <code>landscape</code>, defined in <a data-link-type="idl" data-type="enum" href="https://www.w3.org/TR/screen-orientation/#dom-orientationlocktype"><code>OrientationLockType</code></a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-screen-orientation" title="The Screen Orientation API">screen-orientation</a></cite>]. This member is equivalent to <a href="https://www.w3.org/TR/appmanifest/#orientation-member"><code>orientation</code></a>.</span>
+        <span its-locale-filter-list="zh-hans" lang="zh-hans">屏幕方向设置</span>
+      </p>
+      <div class="note" role="note" id="issue-container-generatedID-11"><div role="heading" class="note-title marker" id="h-note-10" aria-level="4">Note</div><p class="">
+        <span its-locale-filter-list="en" lang="en">
+          Value by default: <code>portrait</code>.
+        </span>
+        <span its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+          Value by default: <code>portrait</code>.
+        </span>
+      </p></div>
+      <div class="issue" id="issue-container-number-8"><div role="heading" class="issue-title marker" id="h-issue-0" aria-level="4"><a href="https://github.com/w3c/miniapp-manifest/issues/8"><span class="issue-number">Issue 8</span></a><span class="issue-label">: About window.orientation</span></div><p>The description of <code>window.orientation</code> is currently:</p>
+<blockquote>
+<p>Screen orientation settings, valid values: <code>portrait</code> and <code>landscape</code>.</p>
+</blockquote>
+<p>It is not clear to me if this is just a <em>default</em> orientation when the user opens a MiniApp (the user can change it when using the MiniApp), or a <em>locked</em> orientation (the user can't change it).</p></div>
+    </section>
+      <section id="fullscreen-member">
+        <h3 id="x3-10-fullscreen-member"><bdi class="secno">3.10 </bdi><code>fullscreen</code> member<a class="self-link" aria-label="§" href="#fullscreen-member"></a></h3>
+        <p>
+          <span its-locale-filter-list="en" lang="en">The <dfn id="dfn-fullscreen">fullscreen</dfn> member indicates the full screen display. <code>true</code> is equivalent to the <code>fullscreen</code> value of
+            <a href="https://www.w3.org/TR/appmanifest/#display-member"><code>display</code></a>, and <code>false</code> to <code>minimal-ui</code>.</span>
+        </p>
+        <div class="note" role="note" id="issue-container-generatedID-12"><div role="heading" class="note-title marker" id="h-note-11" aria-level="4">Note</div><p class="">
+          <span its-locale-filter-list="en" lang="en">
+            Value by default: <code>false</code>.
+          </span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+            Value by default: <code>false</code>.
+          </span>
+        </p></div>
+        <div class="issue" id="issue-container-generatedID-13"><div role="heading" class="issue-title marker" id="h-issue-1" aria-level="4"><span>Issue</span></div><p class="">
+          Should it be <code>standalone</code> instead of <code>minimal-ui</code>?
+        </p></div>
+      </section>
+      <section id="design_width-member">
+        <h3 id="x3-11-design_width-member"><bdi class="secno">3.11 </bdi><code>design_width</code> member<a class="self-link" aria-label="§" href="#design_width-member"></a></h3>
+        <p>
+            <span its-locale-filter-list="en" lang="en">The <dfn id="dfn-design_width">design_width</dfn> member indicates the baseline width of the page design in <a data-type="dfn" href="https://www.w3.org/TR/css-values-3/#visual-angle-unit">pixel unit</a>, based on which the size of the components on the page would be adjusted accordingly. The value is a non-negative integer.</span>
+            <span its-locale-filter-list="zh-hans" lang="zh-hans">以<code>px</code>为单位的页面设计基准宽度，元素大小将根据实际设备宽度来缩放。取值应为非负整数。</span>
+        </p>
+        <div class="note" role="note" id="issue-container-generatedID-14"><div role="heading" class="note-title marker" id="h-note-12" aria-level="4">Note</div><p class="">
+          <span its-locale-filter-list="en" lang="en">
+            Value by default: <code>750</code>.
+          </span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+            Value by default: <code>750</code>.
+          </span>
+        </p></div>
+      </section>
+      <section id="auto_design_width-member">
+        <h3 id="x3-12-auto_design_width-member"><bdi class="secno">3.12 </bdi><code>auto_design_width</code> member<a class="self-link" aria-label="§" href="#auto_design_width-member"></a></h3>
+        <p>
+            <span its-locale-filter-list="en" lang="en">The <dfn id="dfn-auto_design_width">auto_design_width</dfn> member indicates whether the design_width of the page is auto-calculated. When it's <i>true</i>, the value of the <code>design_width</code> is ignored, and the baseline width is determined by the system automatically according to the pixel density of the screen.</span>
+            <span its-locale-filter-list="zh-hans" lang="zh-hans">页面设计基准宽度是否自动计算，当设为true时，designWidth将会被忽略，设计基准宽度由设备宽度与屏幕密度计算得出。</span>
+        </p>
+        <div class="note" role="note" id="issue-container-generatedID-15"><div role="heading" class="note-title marker" id="h-note-13" aria-level="4">Note</div><p class="">
+          <span its-locale-filter-list="en" lang="en">
+            Value by default: <code>false</code>.
+          </span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+            Value by default: <code>false</code>.
+          </span>
+        </p></div>
+      </section>
+    </section>
+
+    <section id="miniapp-widget-resource-members">
+      <h2 id="x4-miniapp-widget-resource-members"><bdi class="secno">4. </bdi><dfn id="dfn-miniapp-widget-resource">MiniApp Widget resource</dfn> members<a class="self-link" aria-label="§" href="#miniapp-widget-resource-members"></a></h2>
+      <section id="name-member-0">
+        <h3 id="x4-1-name-member"><bdi class="secno">4.1 </bdi><code>name</code> member<a class="self-link" aria-label="§" href="#name-member-0"></a></h3>
+        <p>
+          <span its-locale-filter-list="en" lang="en">The <dfn data-dfn-for="MiniApp Widget resource" id="dfn-name-0">name</dfn> member describes the name of the Widget</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">Widget名字</span>
+        </p>
+      </section>
+      <section id="path-member">
+        <h3 id="x4-2-path-member"><bdi class="secno">4.2 </bdi><code>path</code> member<a class="self-link" aria-label="§" href="#path-member"></a></h3>
+        <p>
+          <span its-locale-filter-list="en" lang="en">The <dfn id="dfn-path">path</dfn> member indicates the corresponding page path of a Widget. It follows the same path route format as defined in <a href="#dfn-pages" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-pages-5">pages</a>.</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">Widget对应页面路径，采用与<code>pages</code>中相同页面路由的格式。</span>
+        </p>
+      </section>
+      <section id="min_platform_version-member-0">
+        <h3 id="x4-3-min_platform_version-member"><bdi class="secno">4.3 </bdi><code>min_platform_version</code> member<a class="self-link" aria-label="§" href="#min_platform_version-member-0"></a></h3>
+        <p>
+          <span its-locale-filter-list="en" lang="en">The <dfn data-dfn-for="MiniApp Widget resource" id="dfn-min_platform_version-0">min_platform_version</dfn> member indicates the minimum platform version supported</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">支持最小平台版本</span>
+        </p>
+        <p its-locale-filter-list="en" lang="en">There are certain differences between the Widget-related APIs and the MiniApp APIs, hence, the declaration of the minimum platform version may be different. If the <code>min_platform_version</code> field of a widget is not set explicitly, it is then identical to the <code>min_platform_version</code> of the MiniApp by default.
+        </p>
+        <p its-locale-filter-list="zh-hans" lang="zh-hans">Widget 涉及的API与MiniApp API有一定差别，因此最小平台版本声明可能不同。如不单独设置Widget的<code>min_platform_version</code>字段，则默认与MiniApp平台版本相同。
+        </p>
+      </section>
+    </section>
+
+    <section id="miniapp-permission-resource-members">
+      <h2 id="x5-miniapp-permission-resource-members"><bdi class="secno">5. </bdi><dfn id="dfn-miniapp-permission-resource">MiniApp permission resource</dfn> members<a class="self-link" aria-label="§" href="#miniapp-permission-resource-members"></a></h2>
+      <section id="name-member-1">
+        <h3 id="x5-1-name-member"><bdi class="secno">5.1 </bdi><code>name</code> member<a class="self-link" aria-label="§" href="#name-member-1"></a></h3>
+        <p>
+          <span its-locale-filter-list="en" lang="en">The <dfn data-dfn-for="MiniApp permission resource" id="dfn-name-1">name</dfn> member indicates the permission name</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">权限名称</span>
+        </p>
+      </section>
+      <section id="reason-member">
+        <h3 id="x5-2-reason-member"><bdi class="secno">5.2 </bdi><code>reason</code> member<a class="self-link" aria-label="§" href="#reason-member"></a></h3>
+        <p>
+          <span its-locale-filter-list="en" lang="en">The <dfn id="dfn-reason">reason</dfn> member indicates the reason to use this permission</span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans">该权限的使用目的</span>
+        </p>
+      </section>
+
+      <div class="note" id="issue-container-generatedID-16"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3"><span>Editor's note</span></div><div class="">
+        <p its-locale-filter-list="en" lang="en">
+        It's for further study whether the predefined permissions, permission extension, permission groups, and protection levels need to be specified.
+        </p>
+
+        <p its-locale-filter-list="zh-hans" lang="zh-hans">
+        预定义权限、权限扩展、权限分组和保护等级是否需要定义有待进一步研究。
+        </p>
+      </div></div>
+      
+    </section>
+
+    <section id="localizable-members">
+      <h2 id="x6-localizable-members"><bdi class="secno">6. </bdi>
+          <span its-locale-filter-list="en" lang="en"><dfn id="dfn-localizable-members">Localizable members</dfn></span>
+          <span its-locale-filter-list="zh-hans" lang="zh-hans"><dfn id="dfn-generatedID">可本地化属性</dfn></span>
+      <a class="self-link" aria-label="§" href="#localizable-members"></a></h2>
+      <p its-locale-filter-list="en" lang="en">
+          The following members are localizable and share the same default configuration of <code>dir</code> and <code>lang</code> if not otherwise specified.
+      </p>
+      <p its-locale-filter-list="zh-hans" lang="zh-hans">
+          如下属性为可本地化属性。无特别规定的情况下，共享默认的<code>dir</code>和<code>lang</code>配置。
+      </p>
+      <ul>
+          <li><a data-link-type="dfn" href="#dfn-name" class="internalDFN" id="ref-for-dfn-name-3">name</a></li>
+          <li><a href="#dfn-short_name" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-short_name-2">short_name</a></li>
+          <li><a href="#dfn-description" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-description-2">description</a></li>
+          <li>MiniApp window resource's <a href="#dfn-navigation_bar_title_text" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-navigation_bar_title_text-2">navigation_bar_title_text</a></li>
+          <li>MiniApp Widget resource's <a data-link-type="dfn" href="#dfn-name-0" class="internalDFN" id="ref-for-dfn-name-0-3">name</a></li>
+      </ul>
+    </section>
+
+  <section id="dependencies">
+    <h2 id="x7-dependencies"><bdi class="secno">7. </bdi>
+      <span its-locale-filter-list="en" lang="en">Dependencies</span>
+      <span its-locale-filter-list="zh-hans" lang="zh-hans">依赖</span>
+    <a class="self-link" aria-label="§" href="#dependencies"></a></h2>
+
+    <p its-locale-filter-list="en" lang="en">
+        As a key part of a MiniApp package, the <code>manifest.json</code> file describes several important aspects of the MiniApp by referring to the resources inside the MiniApp package in different forms of files, such as the page files in the <code>pages</code> directory and the icon images in the <code>common</code> directory. Details are specified in the <a href="https://w3c.github.io/miniapp-packaging/">MiniApp Packaging specification</a>.
+    </p>
+    <p its-locale-filter-list="zh-hans" lang="zh-hans">
+      作为MiniApp包中的关键部分，<code>manifest.json</code>文件通过引用MiniApp包中的多个不同形式的资源文件描述了MiniApp应用的多个重要方面，比如引用<code>pages</code>目录中的页面相关文件和<code>common</code>目录中的图标文件。详细情况在<a href="https://w3c.github.io/miniapp-packaging/">MiniApp Packaging规范</a>中定义。
+    </p>
+
+    <p its-locale-filter-list="en" lang="en">
+        The normal operation of a MiniApp relies on the proper configuration of the manifest file according to this specification and the availability of the dependent resources in the MiniApp package. Such dependency needs to be checked during both the development phase and deployment phase.
+    </p>
+
+    <p its-locale-filter-list="zh-hans" lang="zh-hans">
+        MiniApp的正常运行依赖于根据本规范进行恰当的manifest文件配置以及MiniApp包中所依赖资源的可用性。此依赖关系需要在开发和部署阶段进行检查。
+    </p>
+
+
+  </section>
+
+  <section id="conformance" class="override">
+    <h2 id="x8-conformance"><bdi class="secno">8. </bdi>
+      <span its-locale-filter-list="en" lang="en">Conformance</span>
+      <span its-locale-filter-list="zh-hans" lang="zh-hans">标准符合性</span>
+    <a class="self-link" aria-label="§" href="#conformance"></a></h2>
+    <p its-locale-filter-list="en" lang="en">
+      As well as sections marked as non-normative, all authoring guidelines, diagrams, examples, and notes in this specification are non-normative. Everything else in this specification is normative.
+    </p>
+    <p its-locale-filter-list="zh-hans" lang="zh-hans">
+      本规范中的所有内容均为本草案的规范性内容，但明确标记为“非规范性”的部分、示例和注释除外。
+    </p>
+
+    <p its-locale-filter-list="en" lang="en">
+      The key word <em class="rfc2119">RECOMMENDED</em> in this document
+      is to be interpreted as described in
+      <a href="https://tools.ietf.org/html/bcp14">BCP 14</a>
+      [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">RFC2119</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8174" title="Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words">RFC8174</a></cite>]
+      when, and only when, they appear in all capitals, as shown here.
+    </p>
+
+    <p its-locale-filter-list="zh-hans" lang="zh-hans">
+      如此处所示，当且仅当以着重号标记时，<span class="rfc2119-zh">建议</span>（<em class="rfc2119"><em class="rfc2119">RECOMMENDED</em></em>）才以<a href="https://tools.ietf.org/html/bcp14">BCP 14</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">RFC2119</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8174" title="Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words">RFC8174</a></cite>]中的说明解释。
+    </p>
+
+    <p>
+      This specification uses the Augmented Backus-Naur Form (ABNF) notation of [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc5234" title="Augmented BNF for Syntax Specifications: ABNF">RFC5234</a></cite>].
+    </p>
+  </section>
+
+  <section id="security-and-privacy-considerations">
+    <h2 id="x9-security-and-privacy-considerations"><bdi class="secno">9. </bdi>
+        <span its-locale-filter-list="en" lang="en">Security and Privacy Considerations</span>
+        <span its-locale-filter-list="zh-hans" lang="zh-hans">安全隐私考虑</span>
+    <a class="self-link" aria-label="§" href="#security-and-privacy-considerations"></a></h2>
+    <section id="content-constraint">
+        <h3 id="x9-1-content-constraint"><bdi class="secno">9.1 </bdi>
+            <span its-locale-filter-list="en" lang="en">Content constraint</span>
+            <span its-locale-filter-list="zh-hans" lang="zh-hans">内容限制</span>
+        <a class="self-link" aria-label="§" href="#content-constraint"></a></h3>
+        <p its-locale-filter-list="en" lang="en">
+            As the manifest is a JSON file and will commonly be encoded using [<cite><a class="bibref" data-link-type="biblio" href="#bib-unicode" title="The Unicode Standard">UNICODE</a></cite>], the security considerations described in [<cite><a class="bibref" data-link-type="biblio" href="#bib-ecma-404" title="The JSON Data Interchange Format">ECMA-404</a></cite>] and [<cite><a class="bibref" data-link-type="biblio" href="#bib-utr36" title="Unicode Security Considerations">UTR36</a></cite>] apply. In order to prevent developers from including custom/unrestrained data in a manifest, implementors may use a more strict schema than that defined in <a href="#json-schema-json">JSON Schema</a> to impose their own implementation-specific limits on the member names, types and value ranges, e.g. to guard against memory overflow, or to meet platform-specific limitations.
+        </p>
+        <p its-locale-filter-list="zh-hans" lang="zh-hans">
+            Manifest作为一个JSON文件，通常以[<cite><a class="bibref" data-link-type="biblio" href="#bib-unicode" title="The Unicode Standard">UNICODE</a></cite>]方式编码，因此[<cite><a class="bibref" data-link-type="biblio" href="#bib-ecma-404" title="The JSON Data Interchange Format">ECMA-404</a></cite>]和[<cite><a class="bibref" data-link-type="biblio" href="#bib-utr36" title="Unicode Security Considerations">UTR36</a></cite>]中所定义的安全措施同样适用。为了防止开发者在manifest中添加任意不受限的数据，开发者可在其具体实现中采用比<a href="#json-schema-json">JSON Schema</a>中所定义的更加严格的schema来约束文件中的成员元素名称、类型和取值范围等，从而防止内存耗尽或满足平台特有的限制。
+        </p>
+    </section>
+
+    <section id="local-resource-access">
+        <h3 id="x9-2-local-resource-access"><bdi class="secno">9.2 </bdi>
+            <span its-locale-filter-list="en" lang="en">Local resource access</span>
+            <span its-locale-filter-list="zh-hans" lang="zh-hans">本地资源访问</span>
+        <a class="self-link" aria-label="§" href="#local-resource-access"></a></h3>
+        <p its-locale-filter-list="en" lang="en"> Members like <code>icons</code>, <code>pages</code>, <code>widgets</code> contain paths referring to local resources on the hosting platform. Implementors and the hosting platform should check the validity of those paths to ensure no illegal access outside the scope of the <a href="https://w3c.github.io/miniapp-packaging/">MiniApp package</a>. On the other hand, the MiniApp itself (e.g. in JS code) may provide means to jump to external resources either on the hosting platform, or on a remote web site (e.g. through a uri). In this case, the hosting platform is responsible for providing clear indication to an end-user about such context switch.</p>
+
+        <p its-locale-filter-list="zh-hans" lang="zh-hans"> <code>icons</code>, <code>pages</code>, <code>widgets</code>等属性包含了宿主平台上的本地资源引用路径，开发者和宿主平台应该检查这些路径的合法性以确保没有<a href="https://w3c.github.io/miniapp-packaging/">MiniApp package</a>之外的非法访问。另一方面，MiniApp自身（如JS代码中）可能提供跳转到其他外部资源的方式，包括宿主平台或远程网站上的外部资源（比如通过uri)。此时，宿主平台应该负责向用户提供明确的上下文切换的指示信息。</p>
+
+	<p its-locale-filter-list="en" lang="en">
+            In addition, the <code>req_permissions</code> member provides a specific means to control the access to the local software, hardware and data resources on the user's device. User's consent should be asked when it comes to privacy-related or high-level privileged resources.
+        </p>
+
+        <p its-locale-filter-list="zh-hans" lang="zh-hans">
+            此外，<code>req_permissions</code>属性提供了具体的控制访问用户设备上的本地软硬件及数据资源的方法。当涉及隐私或者高级权限相关的资源访问时，应该征询用户的同意。
+        </p>
+    </section>
+
+    <section id="integrity">
+        <h3 id="x9-3-integrity"><bdi class="secno">9.3 </bdi>
+            <span its-locale-filter-list="en" lang="en">Integrity</span>
+            <span its-locale-filter-list="zh-hans" lang="zh-hans">完整性</span>
+        <a class="self-link" aria-label="§" href="#integrity"></a></h3>
+        <p its-locale-filter-list="en" lang="en"> The integrity of the manifest document is protected by a cryptographic hash mechanism as part of the whole MiniApp package. Details are specified in the <a href="https://w3c.github.io/miniapp-packaging/">MiniApp Packaging specification</a>. </p>
+        <p its-locale-filter-list="zh-hans" lang="zh-hans"> Manifest文档的完整性作为MiniApp package的一部分被密码哈希机制所保护。详细定义见<a href="https://w3c.github.io/miniapp-packaging/">MiniApp Packaging specification</a>。 </p>
+    </section>
+
+    <section id="transparency">
+        <h3 id="x9-4-transparency"><bdi class="secno">9.4 </bdi>
+            <span its-locale-filter-list="en" lang="en">Transparency</span>
+            <span its-locale-filter-list="zh-hans" lang="zh-hans">信息透明</span>
+        <a class="self-link" aria-label="§" href="#transparency"></a></h3>
+        <p its-locale-filter-list="en" lang="en">
+            It is <em class="rfc2119">RECOMMENDED</em> that the hosting platform makes the necessary meta information in the manifest available to the end-user, such as <code>app_id</code>, <code>name</code>, <code>short_name</code>, <code>icons</code>, <code>version_name</code>, <code>description</code>. This is to give an end-user an opportunity to make a conscious decision to approve the installation and use of the MiniApp. This could also help to identify a spoofing MiniApp.</p>
+        <p its-locale-filter-list="zh-hans" lang="zh-hans"> <span class="rfc2119-zh">建议</span>宿主平台将manifest中的必要元数据信息提供给用户，比如<code>app_id</code>, <code>name</code>, <code>short_name</code>, <code>icons</code>, <code>version_name</code>, <code>description</code>。这样可以给用户一个机会来对MiniApp的安装和使用提供清晰的判断依据，也可以帮助用户来识别伪装的恶意MiniApp。</p>
+    </section>
+</section>
+
+<section id="json-schema-json">
+    <h2 id="x10-json-schema-json"><bdi class="secno">10. </bdi>
+        <span its-locale-filter-list="en" lang="en">JSON Schema</span>
+        <span its-locale-filter-list="zh-hans" lang="zh-hans">JSON语法</span>
+    <a class="self-link" aria-label="§" href="#json-schema-json"></a></h2>
+    <p its-locale-filter-list="en" lang="en">
+        Developers interested in validating the MiniApp manifest document can use the JSON Schema defined <a href="./manifest_schema.json">here</a>.
+    </p>
+
+    <p its-locale-filter-list="zh-hans" lang="zh-hans"> 开发者可使用<a href="./manifest_schema.json">此处</a>所定义的JSON Schema来验证manifest文件。
+    </p>
+</section>
+
+  <section class="informative" id="example">
+    <h2 id="x11-example"><bdi class="secno">11. </bdi>
+      <span its-locale-filter-list="en" lang="en"> Example</span>
+      <span its-locale-filter-list="zh-hans" lang="zh-hans">样例</span>
+    <a class="self-link" aria-label="§" href="#example"></a></h2><p><em>This section is non-normative.</em></p>
+            <div class="example" id="example-1">
+        <div class="marker">
+    <a class="self-link" href="#example-1">Example<bdi> 1</bdi></a>
+  </div> <pre aria-busy="false"><code class="hljs json">{
+  <span class="hljs-attr">"dir"</span>: <span class="hljs-string">"ltr"</span>,
+  <span class="hljs-attr">"lang"</span>: <span class="hljs-string">"en-US"</span>,
+  <span class="hljs-attr">"app_id"</span>: <span class="hljs-string">"org.w3c.miniapp"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"MiniApp Demo"</span>,
+  <span class="hljs-attr">"short_name"</span>: <span class="hljs-string">"MiniApp"</span>,
+  <span class="hljs-attr">"version_name"</span>: <span class="hljs-string">"1.0.0"</span>,
+  <span class="hljs-attr">"version_code"</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"A Simple MiniApp Demo"</span>,
+  <span class="hljs-attr">"icons"</span>: [
+    {
+      <span class="hljs-attr">"src"</span>: <span class="hljs-string">"common/icons/icon.png"</span>,
+      <span class="hljs-attr">"sizes"</span>: <span class="hljs-string">"48x48"</span>
+    }
+  ],
+  <span class="hljs-attr">"min_platform_version"</span>: <span class="hljs-string">"1.0.0"</span>,
+  <span class="hljs-attr">"pages"</span>: [
+    <span class="hljs-string">"pages/index/index"</span>,
+    <span class="hljs-string">"pages/detail/detail"</span>
+  ],
+  <span class="hljs-attr">"window"</span>: {
+    <span class="hljs-attr">"navigation_bar_text_style"</span>: <span class="hljs-string">"black"</span>,
+    <span class="hljs-attr">"navigation_bar_title_text"</span>: <span class="hljs-string">"Demo"</span>,
+    <span class="hljs-attr">"navigation_bar_background_color"</span>: <span class="hljs-string">"#f8f8f8"</span>,
+    <span class="hljs-attr">"background_color"</span>: <span class="hljs-string">"#ffffff"</span>,
+    <span class="hljs-attr">"fullscreen"</span>: <span class="hljs-literal">false</span>
+  },
+  <span class="hljs-attr">"widgets"</span>: [
+    {
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"widget"</span>,
+      <span class="hljs-attr">"path"</span>: <span class="hljs-string">"widgets/index/index"</span>,
+      <span class="hljs-attr">"min_platform_version"</span>: <span class="hljs-string">"1.0.0"</span>
+    }
+  ],
+  <span class="hljs-attr">"req_permissions"</span>: [
+    {
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"system.permission.LOCATION"</span>,
+      <span class="hljs-attr">"reason"</span>: <span class="hljs-string">"To show user's position on the map"</span>
+    },
+    {
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"system.permission.CAMERA"</span>,
+      <span class="hljs-attr">"reason"</span>: <span class="hljs-string">"To scan the QR code"</span>
+    }
+  ]
+}</code></pre>
+      </div>
+     </section>
+
+  <section class="appendix" id="acknowledgments">
+           <h2 id="a-acknowledgments"><bdi class="secno">A. </bdi>
+             <span its-locale-filter-list="en" lang="en">Acknowledgments</span>
+             <span its-locale-filter-list="zh-hans" lang="zh-hans">致谢</span>
+    <a class="self-link" aria-label="§" href="#acknowledgments"></a></h2>
+    <p its-locale-filter-list="en" lang="en">
+      This document refers to <a href="https://www.w3.org/TR/appmanifest"><abbr title="World Wide Web Consortium">W3C</abbr> Web App Manifest</a>, <a href="https://smartprogram.baidu.com/docs/develop/tutorial/process/">Baidu MiniApp</a>, <a href="https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html">WeChat MiniApp</a>, <a href="https://opendocs.alipay.com/mini/framework/app-json">Alipay MiniApp</a>, <a href="https://developer.toutiao.com/dev/cn/mini-app/develop/framework/basic-reference/general-configuration">ByteDance MiniApp</a>, <a href="https://doc.quickapp.cn/framework/manifest.html">Quick App Specification</a>, <a href="https://w3c.github.io/miniapp-widget/req/">MiniApp Widget Requirements</a>, <a href="https://w3c.github.io/miniapp-lifecycle/">MiniApp Lifecycle Specification</a>, <a href="https://w3c.github.io/miniapp-addressing/">MiniApp Addressing</a>, and <a href="https://semver.org/">Semantic Versioning</a>. We appreciate the open source efforts of these documents.
+    </p>
+    <p its-locale-filter-list="zh-hans" lang="zh-hans" class="retranslateme">
+      本文档参考了<a href="https://www.w3.org/TR/appmanifest"><abbr title="World Wide Web Consortium">W3C</abbr> Web App Manifest</a>，<a href="https://smartprogram.baidu.com/docs/develop/tutorial/process/">百度小程序</a>，<a href="https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html">微信小程序</a>，<a href="https://opendocs.alipay.com/mini/framework/app-json">支付宝小程序</a>，<a href="https://developer.toutiao.com/dev/cn/mini-app/develop/framework/basic-reference/general-configuration">字节跳动小程序</a>，<a href="https://doc.quickapp.cn/framework/manifest.html">快应用联盟规范</a>，<a href="https://w3c.github.io/miniapp-widget/req/">MiniApp Widget Requirement文件规范</a>，<a href="https://w3c.github.io/miniapp-lifecycle/">MiniApp Lifecycle规范</a>，<a href="https://w3c.github.io/miniapp-addressing/">MiniApp Addressing规范</a>, <a href="https://semver.org/">Semantic Versioning规范</a>。感谢这些文档的开源努力。
+    </p>
+  </section>
+  <section class="appendix informative" id="extensibility-extensibility">
+    <h2 id="b-extensibility-extensibility"><bdi class="secno">B. </bdi>
+      <span its-locale-filter-list="en" lang="en">Extensibility</span>
+      <span its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">Extensibility</span>
+    <a class="self-link" aria-label="§" href="#extensibility-extensibility"></a></h2><p><em>This section is non-normative.</em></p>
+    <p its-locale-filter-list="en" lang="en">
+      This specification is based on the Web App Manifest <a href="https://www.w3.org/TR/appmanifest/#extensibility">extensibility principle</a>. 
+    </p>
+    <p its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+      This specification is based on the Web App Manifest <a href="https://www.w3.org/TR/appmanifest/#extensibility">extensibility principle</a>. 
+    </p>    
+    <p its-locale-filter-list="en" lang="en">
+      Although proprietary extensions are undesirable, they may be included as a manifest extension. In this case, it is <em class="rfc2119">RECOMMENDED</em> to use vendor prefixes for the new members.
+    </p>
+    <p its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+      Although proprietary extensions are undesirable, they may be included as a manifest extension. In this case, it is <em class="rfc2119">RECOMMENDED</em> to use vendor prefixes for the new members.
+    </p>
+    <p its-locale-filter-list="en" lang="en">
+      We encourage implementors to add proprietary extensions to the Extensions Registry. This allows the community to track what extensions vendors and/or the web community have defined and documented.
+    </p>
+    <p its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+      We encourage implementors to add proprietary extensions to the Extensions Registry. This allows the community to track what extensions vendors and/or the web community have defined and documented.
+    </p>
+    <div class="issue" id="issue-container-number-9"><div role="heading" class="issue-title marker" id="h-issue-2" aria-level="3"><a href="https://github.com/w3c/miniapp-manifest/issues/9"><span class="issue-number">Issue 9</span></a><span class="issue-label">: Proprietary extensions of the manifest</span></div><p>The Web App Manifest allows adding new proprietary manifest members using vendor prefixes: <a rel="nofollow" href="https://www.w3.org/TR/appmanifest/#proprietary-extensions">https://www.w3.org/TR/appmanifest/#proprietary-extensions</a></p>
+<p>We probably need something similar.</p></div>
+    <p its-locale-filter-list="en" lang="en">
+      The following is an example of three hypothetical vendor extensions.
+    </p>
+    <p its-locale-filter-list="zh-hans" lang="zh-hans" class="translateme">
+      The following is an example of three hypothetical vendor extensions.
+    </p>
+    <div class="example" id="example-2-proprietary-extensions">
+        <div class="marker">
+    <a class="self-link" href="#example-2-proprietary-extensions">Example<bdi> 2</bdi></a><span class="example-title">: Proprietary extensions</span>
+  </div> <pre class="json" aria-busy="false"><code class="hljs">{
+  ...
+  "wechat_new_feature": "foo",
+  "ali_new_url_system": "http://example.org",
+  "coolminiapp_menu_color": "#FA0000"
+  ...
+}</code></pre>
+      </div>
+  </section>
+
+
+<section id="references" class="appendix"><h2 id="c-references"><bdi class="secno">C. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="normative-references">
+    <h3 id="c-1-normative-references"><bdi class="secno">C.1 </bdi>Normative references<a class="self-link" aria-label="§" href="#normative-references"></a></h3>
+    <dl class="bibliography"><dt id="bib-appmanifest">[appManifest]</dt><dd><a href="https://www.w3.org/TR/appmanifest/"><cite>Web Application Manifest</cite></a>. Marcos Caceres; Kenneth Christiansen; Mounir Lamouri; Anssi Kostiainen; Matt Giuca; Aaron Gustafson.  W3C. 7 April 2021. W3C Working Draft. URL: <a href="https://www.w3.org/TR/appmanifest/">https://www.w3.org/TR/appmanifest/</a></dd><dt id="bib-css-color-3">[css-color-3]</dt><dd><a href="https://www.w3.org/TR/css-color-3/"><cite>CSS Color Module Level 3</cite></a>. Tantek Çelik; Chris Lilley; David Baron.  W3C. 19 June 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/css-color-3/">https://www.w3.org/TR/css-color-3/</a></dd><dt id="bib-css-values">[css-values]</dt><dd><a href="https://www.w3.org/TR/css-values-3/"><cite>CSS Values and Units Module Level 3</cite></a>. Tab Atkins Jr.; Elika Etemad.  W3C. 6 June 2019. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/css-values-3/">https://www.w3.org/TR/css-values-3/</a></dd><dt id="bib-ecma-404">[ECMA-404]</dt><dd><a href="https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf"><cite>The JSON Data Interchange Format</cite></a>.  Ecma International. 1 October 2013. Standard. URL: <a href="https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf">https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf</a></dd><dt id="bib-image-resource">[image-resource]</dt><dd><a href="https://www.w3.org/TR/image-resource/"><cite>Image Resource</cite></a>. Aaron Gustafson; Rayan Kanso; Marcos Caceres.  W3C. 29 March 2021. W3C Working Draft. URL: <a href="https://www.w3.org/TR/image-resource/">https://www.w3.org/TR/image-resource/</a></dd><dt id="bib-manifest-app-info">[manifest-app-info]</dt><dd><a href="https://www.w3.org/TR/manifest-app-info/"><cite>Web App Manifest - Application Information</cite></a>. Aaron Gustafson.  W3C. 28 January 2021. W3C Note. URL: <a href="https://www.w3.org/TR/manifest-app-info/">https://www.w3.org/TR/manifest-app-info/</a></dd><dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://tools.ietf.org/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner.  IETF. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a></dd><dt id="bib-rfc5234">[RFC5234]</dt><dd><a href="https://tools.ietf.org/html/rfc5234"><cite>Augmented BNF for Syntax Specifications: ABNF</cite></a>. D. Crocker, Ed.; P. Overell.  IETF. January 2008. Internet Standard. URL: <a href="https://tools.ietf.org/html/rfc5234">https://tools.ietf.org/html/rfc5234</a></dd><dt id="bib-rfc8174">[RFC8174]</dt><dd><a href="https://tools.ietf.org/html/rfc8174"><cite>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</cite></a>. B. Leiba.  IETF. May 2017. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc8174">https://tools.ietf.org/html/rfc8174</a></dd><dt id="bib-rfc8259">[rfc8259]</dt><dd><a href="https://datatracker.ietf.org/doc/html/rfc8259"><cite>The JavaScript Object Notation (JSON) Data Interchange Format</cite></a>. T. Bray, Ed..  IETF. December 2017. Internet Standard. URL: <a href="https://datatracker.ietf.org/doc/html/rfc8259">https://datatracker.ietf.org/doc/html/rfc8259</a></dd><dt id="bib-screen-orientation">[screen-orientation]</dt><dd><a href="https://www.w3.org/TR/screen-orientation/"><cite>The Screen Orientation API</cite></a>. Mounir Lamouri; Marcos Caceres; Johanna Herman.  W3C. 19 October 2020. W3C Working Draft. URL: <a href="https://www.w3.org/TR/screen-orientation/">https://www.w3.org/TR/screen-orientation/</a></dd><dt id="bib-semantic-versioning">[SEMANTIC-VERSIONING]</dt><dd><a href="https://semver.org/"><cite>Semantic Versioning</cite></a>. URL: <a href="https://semver.org/">https://semver.org/</a></dd><dt id="bib-unicode">[UNICODE]</dt><dd><a href="https://www.unicode.org/versions/latest/"><cite>The Unicode Standard</cite></a>.  Unicode Consortium. URL: <a href="https://www.unicode.org/versions/latest/">https://www.unicode.org/versions/latest/</a></dd><dt id="bib-url">[url]</dt><dd><a href="https://url.spec.whatwg.org/"><cite>URL Standard</cite></a>. Anne van Kesteren.  WHATWG. Living Standard. URL: <a href="https://url.spec.whatwg.org/">https://url.spec.whatwg.org/</a></dd><dt id="bib-utr36">[UTR36]</dt><dd><a href="https://www.unicode.org/reports/tr36/tr36-15.html"><cite>Unicode Security Considerations</cite></a>. Mark Davis; Michel Suignard.  Unicode Consortium. 19 September 2014. Unicode Technical Report #36. URL: <a href="https://www.unicode.org/reports/tr36/tr36-15.html">https://www.unicode.org/reports/tr36/tr36-15.html</a></dd></dl>
+  </section></section><p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-miniapp-manifest">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-miniapp-manifest">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-miniapp-manifest-1">1.1 Requirements</a> <a href="#ref-for-dfn-miniapp-manifest-2">(2)</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-number">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-number">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-number-1">1.2 Summary of Members</a> <a href="#ref-for-dfn-number-2">(2)</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-true-false">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-true-false">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-true-false-1">1.2 Summary of Members</a> <a href="#ref-for-dfn-true-false-2">(2)</a> <a href="#ref-for-dfn-true-false-3">(3)</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-object">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-object">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-array">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-array">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-array-1">1.2 Summary of Members</a> <a href="#ref-for-dfn-array-2">(2)</a> <a href="#ref-for-dfn-array-3">(3)</a> <a href="#ref-for-dfn-array-4">(4)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-array-5">2.3.5 pages member 页面路由</a> 
+  </li><li>
+    <a href="#ref-for-dfn-array-6">2.3.8 req_permissions member 所需权限</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-string">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-string">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-string-1">1.2 Summary of Members</a> <a href="#ref-for-dfn-string-2">(2)</a> <a href="#ref-for-dfn-string-3">(3)</a> <a href="#ref-for-dfn-string-4">(4)</a> <a href="#ref-for-dfn-string-5">(5)</a> <a href="#ref-for-dfn-string-6">(6)</a> <a href="#ref-for-dfn-string-7">(7)</a> <a href="#ref-for-dfn-string-8">(8)</a> <a href="#ref-for-dfn-string-9">(9)</a> <a href="#ref-for-dfn-string-10">(10)</a> <a href="#ref-for-dfn-string-11">(11)</a> <a href="#ref-for-dfn-string-12">(12)</a> <a href="#ref-for-dfn-string-13">(13)</a> <a href="#ref-for-dfn-string-14">(14)</a> <a href="#ref-for-dfn-string-15">(15)</a> <a href="#ref-for-dfn-string-16">(16)</a> <a href="#ref-for-dfn-string-17">(17)</a> <a href="#ref-for-dfn-string-18">(18)</a> <a href="#ref-for-dfn-string-19">(19)</a> <a href="#ref-for-dfn-string-20">(20)</a> <a href="#ref-for-dfn-string-21">(21)</a> <a href="#ref-for-dfn-string-22">(22)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-string-23">2. MiniApp Manifest members 字段</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-hexcolor">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-hexcolor">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-hexcolor-1">1.2 Summary of Members</a> <a href="#ref-for-dfn-hexcolor-2">(2)</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-dir">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-dir">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-dir-1">1.2 Summary of Members</a> 
+  </li><li>
+    <a href="#ref-for-dfn-dir-2">2.1.1 dir member 方向</a> <a href="#ref-for-dfn-dir-3">(2)</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-icons">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-icons">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-icons-1">1.1 Requirements</a> 
+  </li><li>
+    <a href="#ref-for-dfn-icons-2">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-lang">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-lang">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-lang-1">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-name">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-name">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-name-1">1.1 Requirements</a> 
+  </li><li>
+    <a href="#ref-for-dfn-name-2">1.2 Summary of Members</a> 
+  </li><li>
+    <a href="#ref-for-dfn-name-3">6. Localizable members 可本地化属性</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-short_name">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-short_name">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-short_name-1">1.2 Summary of Members</a> 
+  </li><li>
+    <a href="#ref-for-dfn-short_name-2">6. Localizable members 可本地化属性</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-description">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-description">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-description-1">1.2 Summary of Members</a> 
+  </li><li>
+    <a href="#ref-for-dfn-description-2">6. Localizable members 可本地化属性</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-app_id">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-app_id">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-app_id-1">1.1 Requirements</a> 
+  </li><li>
+    <a href="#ref-for-dfn-app_id-2">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-version_name">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-version_name">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-version_name-1">1.1 Requirements</a> 
+  </li><li>
+    <a href="#ref-for-dfn-version_name-2">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-version_code">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-version_code">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-version_code-1">1.1 Requirements</a> 
+  </li><li>
+    <a href="#ref-for-dfn-version_code-2">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-min_platform_version">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-min_platform_version">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-min_platform_version-1">1.1 Requirements</a> 
+  </li><li>
+    <a href="#ref-for-dfn-min_platform_version-2">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-pages">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-pages">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-pages-1">1.1 Requirements</a> 
+  </li><li>
+    <a href="#ref-for-dfn-pages-2">1.2 Summary of Members</a> 
+  </li><li>
+    <a href="#ref-for-dfn-pages-3">2.3.5 pages member 页面路由</a> <a href="#ref-for-dfn-pages-4">(2)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-pages-5">4.2 path member</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-window">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-window">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-window-1">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-widgets">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-widgets">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-widgets-1">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-req_permissions">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-req_permissions">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-req_permissions-1">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-miniapp-window-resources">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-miniapp-window-resources">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-miniapp-window-resources-1">1.2 Summary of Members</a> 
+  </li><li>
+    <a href="#ref-for-dfn-miniapp-window-resources-2">2.3.6 window member 窗口</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-navigation_bar_background_color">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-navigation_bar_background_color">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-navigation_bar_background_color-1">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-navigation_bar_text_style">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-navigation_bar_text_style">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-navigation_bar_text_style-1">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-navigation_bar_title_text">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-navigation_bar_title_text">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-navigation_bar_title_text-1">1.2 Summary of Members</a> 
+  </li><li>
+    <a href="#ref-for-dfn-navigation_bar_title_text-2">6. Localizable members 可本地化属性</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-navigation_style">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-navigation_style">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-navigation_style-1">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-background_color">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-background_color">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-background_color-1">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-background_text_style">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-background_text_style">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-background_text_style-1">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-enable_pull_down_refresh">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-enable_pull_down_refresh">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-enable_pull_down_refresh-1">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-on_reach_bottom_distance">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-on_reach_bottom_distance">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-on_reach_bottom_distance-1">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-orientation">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-orientation">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-orientation-1">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-fullscreen">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-fullscreen">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-fullscreen-1">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-design_width">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-design_width">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-design_width-1">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-auto_design_width">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-auto_design_width">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-auto_design_width-1">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-miniapp-widget-resource">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-miniapp-widget-resource">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-miniapp-widget-resource-1">1.1 Requirements</a> <a href="#ref-for-dfn-miniapp-widget-resource-2">(2)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-miniapp-widget-resource-3">1.2 Summary of Members</a> 
+  </li><li>
+    <a href="#ref-for-dfn-miniapp-widget-resource-4">2.3.7 widgets member 卡片</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-name-0">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-name-0">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-name-0-1">1.1 Requirements</a> 
+  </li><li>
+    <a href="#ref-for-dfn-name-0-2">1.2 Summary of Members</a> 
+  </li><li>
+    <a href="#ref-for-dfn-name-0-3">6. Localizable members 可本地化属性</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-path">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-path">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-path-1">1.1 Requirements</a> 
+  </li><li>
+    <a href="#ref-for-dfn-path-2">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-min_platform_version-0">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-min_platform_version-0">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-min_platform_version-0-1">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-miniapp-permission-resource">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-miniapp-permission-resource">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-miniapp-permission-resource-1">1.1 Requirements</a> <a href="#ref-for-dfn-miniapp-permission-resource-2">(2)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-miniapp-permission-resource-3">1.2 Summary of Members</a> 
+  </li><li>
+    <a href="#ref-for-dfn-miniapp-permission-resource-4">2.3.8 req_permissions member 所需权限</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-name-1">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-name-1">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-name-1-1">1.1 Requirements</a> 
+  </li><li>
+    <a href="#ref-for-dfn-name-1-2">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-reason">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-reason">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-reason-1">1.2 Summary of Members</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-localizable-members">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-localizable-members">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-localizable-members-1">2.1.1 dir member 方向</a> <a href="#ref-for-dfn-localizable-members-2">(2)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-localizable-members-3">2.1.3 lang member 语言</a> <a href="#ref-for-dfn-localizable-members-4">(2)</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-generatedID">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-generatedID">Permalink</a>
+         
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(dfnPanel);
+} else {
+  dfnPanel();
+}
+
+function dfnPanel() {
+  /** @type {HTMLElement} */
+  let panel;
+  document.body.addEventListener("click", event => {
+    if (!(event.target instanceof HTMLElement)) return;
+
+    /** @type {HTMLElement} */
+    const el = event.target;
+
+    const action = deriveAction(el);
+    switch (action) {
+      case "show": {
+        if (panel) hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = el.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        displayPanel(dfn, panel, { x: event.clientX, y: event.clientY });
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        break;
+      }
+    }
+  });
+}
+
+/** @param {HTMLElement} clickTarget */
+function deriveAction(clickTarget) {
+  const hitALink = !!clickTarget.closest("a");
+  if (clickTarget.closest("dfn, .index-term")) {
+    return hitALink ? null : "show";
+  }
+  if (clickTarget.closest(".dfn-panel")) {
+    if (hitALink) {
+      const clickedSelfLink = clickTarget.classList.contains("self-link");
+      return clickedSelfLink ? "hide" : "dock";
+    }
+    const panel = clickTarget.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : null;
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return null;
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
