@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en" dir="ltr"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 26.6.2">
+<meta name="generator" content="ReSpec 26.8.0">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -220,12 +220,12 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     }
   ],
   "group": "das",
-  "publishDate": "2021-05-11",
+  "publishDate": "2021-05-20",
   "previousPublishDate": "2016-11-08",
   "previousMaturity": "REC",
   "github": "w3c/geolocation-api",
   "caniuse": "geolocation",
-  "testSuiteURI": "http://wpt.live/geolocation-API/",
+  "testSuiteURI": "https://wpt.live/geolocation-API/",
   "localBiblio": {
     "WGS84": {
       "title": "National Imagery and Mapping Agency Technical Report 8350.2, Third Edition",
@@ -235,25 +235,25 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     }
   },
   "xref": "web-platform",
-  "publishISODate": "2021-05-11T00:00:00.000Z",
-  "generatedSubtitle": "First Public Working Draft 11 May 2021"
+  "publishISODate": "2021-05-20T00:00:00.000Z",
+  "generatedSubtitle": "First Public Working Draft 20 May 2021"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-WD"></head>
-  <body data-cite="WebIDL secure-contexts permissions-policy permissions HTML INFRA URL WEBIDL DOM FETCH" data-new-gr-c-s-check-loaded="14.1007.0" data-gr-ext-installed="" class="h-entry"><div class="head">
+  <body data-cite="WebIDL secure-contexts permissions-policy permissions HTML INFRA URL WEBIDL DOM FETCH" data-new-gr-c-s-check-loaded="14.1012.0" data-gr-ext-installed="" class="h-entry"><div class="head">
     <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Geolocation API</h1>
     
     <h2>
       W3C First Public Working Draft
-      <time class="dt-published" datetime="2021-05-11">11 May 2021</time>
+      <time class="dt-published" datetime="2021-05-20">20 May 2021</time>
     </h2>
     <dl>
       <dt>This version:</dt><dd>
-              <a class="u-url" href="https://www.w3.org/TR/2021/WD-geolocation-API-20210511/">https://www.w3.org/TR/2021/WD-geolocation-API-20210511/</a>
+              <a class="u-url" href="https://www.w3.org/TR/2021/WD-geolocation-API-20210520/">https://www.w3.org/TR/2021/WD-geolocation-API-20210520/</a>
             </dd><dt>Latest published version:</dt><dd>
               <a href="https://www.w3.org/TR/geolocation-API/">https://www.w3.org/TR/geolocation-API/</a>
             </dd>
       <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/geolocation-api/">https://w3c.github.io/geolocation-api/</a></dd>
-      <dt>Test suite:</dt><dd><a href="http://wpt.live/geolocation-API/">http://wpt.live/geolocation-API/</a></dd>
+      <dt>Test suite:</dt><dd><a href="https://wpt.live/geolocation-API/">https://wpt.live/geolocation-API/</a></dd>
       
       
       
@@ -337,7 +337,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
        
     
                 <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
-                <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/43696/status">public list of any patent disclosures</a>
+                <a rel="disclosure" href="https://www.w3.org/groups/wg/das/ipr">public list of any patent disclosures</a>
           made in connection with the deliverables of
           the group; that page also includes
           instructions for disclosing a patent. An individual who has actual
@@ -875,7 +875,7 @@ navigator.geolocation.getCurrentPosition(
         Extensions to the <code>Navigator</code> interface
       <a class="self-link" aria-label="§" href="#navigator_interface"></a></h2>
       <pre class="idl def" id="webidl-1776506972"><span class="idlHeader"><a class="self-link" href="#webidl-1776506972">WebIDL</a></span><code><span data-idl="" class="idlInterface" id="idl-def-navigator-partial-1" data-title="Navigator">partial interface <a data-idl="partial" data-link-type="interface" data-title="Navigator" class="idlID" data-dfn-for="Navigator" data-type="interface" href="https://html.spec.whatwg.org/multipage/system-state.html#navigator" id="ref-for-index-term-navigator-interface-1">Navigator</a> {<span data-idl="" class="idlAttribute" id="idl-def-navigator-geolocation" data-title="geolocation" data-dfn-for="Navigator">
-  [<span class="extAttr"><a data-type="extended-attribute" href="https://heycam.github.io/webidl/#SameObject" id="ref-for-index-term-sameobject-extended-attribute-1">SameObject</a></span>] readonly attribute<span class="idlType"> <a href="#dom-geolocation" class="internalDFN" data-link-type="idl" id="ref-for-dom-geolocation-1"><code>Geolocation</code></a></span> <dfn data-export="" data-dfn-type="attribute" id="dom-navigator-geolocation" data-idl="attribute" data-title="geolocation" data-dfn-for="Navigator" data-type="Geolocation" data-lt="geolocation" data-local-lt="Navigator.geolocation" class="idlName" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>geolocation</code></dfn>;</span>
+  [<span class="extAttr"><a data-type="extended-attribute" href="https://heycam.github.io/webidl/#SameObject" id="ref-for-index-term-sameobject-extended-attribute-1">SameObject</a></span>] readonly attribute<span class="idlType"> <a href="#dom-geolocation" class="internalDFN" data-link-type="idl" id="ref-for-dom-geolocation-1"><code>Geolocation</code></a></span> <dfn data-export="" data-dfn-type="attribute" id="dom-navigator-geolocation" data-idl="attribute" data-title="geolocation" data-dfn-for="Navigator" data-type="Geolocation" data-lt="geolocation" data-local-lt="Navigator.geolocation" class="idlName" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>geolocation</code></dfn>;</span>
 };</span></code></pre>
     </section>
     <aside class="mdn"><details>
@@ -929,7 +929,7 @@ navigator.geolocation.getCurrentPosition(
         <code>Geolocation</code> interface and callbacks
       <a class="self-link" aria-label="§" href="#geolocation_interface"></a></h2>
       <pre class="idl def" id="webidl-212590439"><span class="idlHeader"><a class="self-link" href="#webidl-212590439">WebIDL</a></span><code><span data-idl="" class="idlInterface" id="idl-def-geolocation" data-title="Geolocation">[<span class="extAttr"><a data-type="extended-attribute" href="https://heycam.github.io/webidl/#Exposed" id="ref-for-index-term-exposed-extended-attribute-1">Exposed</a>=<a data-type="interface" href="https://html.spec.whatwg.org/multipage/window-object.html#window" id="ref-for-index-term-window-interface-1">Window</a></span>]
-interface <dfn data-export="" data-dfn-type="interface" id="dom-geolocation" data-idl="interface" data-title="Geolocation" data-dfn-for="Geolocation" class="idlID" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>Geolocation</code></dfn> {<span data-idl="" class="idlMethod" id="idl-def-geolocation-getcurrentposition-successcallback-errorcallback-options" data-title="getCurrentPosition" data-dfn-for="Geolocation"><span class="idlType">
+interface <dfn data-export="" data-dfn-type="interface" id="dom-geolocation" data-idl="interface" data-title="Geolocation" data-dfn-for="Geolocation" class="idlID" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>Geolocation</code></dfn> {<span data-idl="" class="idlMethod" id="idl-def-geolocation-getcurrentposition-successcallback-errorcallback-options" data-title="getCurrentPosition" data-dfn-for="Geolocation"><span class="idlType">
   <a data-type="interface" href="https://heycam.github.io/webidl/#idl-undefined" id="ref-for-index-term-undefined-type-1">undefined</a></span> <a class="internalDFN idlName" data-link-type="method" href="#dom-geolocation-getcurrentposition" id="ref-for-dom-geolocation-getcurrentposition-3"><code>getCurrentPosition</code></a> (<span class="idlType">
     <a href="#dom-positioncallback" class="internalDFN" data-link-type="idl" id="ref-for-dom-positioncallback-1"><code>PositionCallback</code></a></span> <span class="idlParamName">successCallback</span>,
     optional<span class="idlType"> <a href="#dom-positionerrorcallback" class="internalDFN" data-link-type="idl" id="ref-for-dom-positionerrorcallback-1"><code>PositionErrorCallback</code></a>?</span> <span class="idlParamName">errorCallback</span> = null,
@@ -945,11 +945,11 @@ interface <dfn data-export="" data-dfn-type="interface" id="dom-geolocation" dat
   <a data-type="interface" href="https://heycam.github.io/webidl/#idl-undefined" id="ref-for-index-term-undefined-type-2">undefined</a></span> <a class="internalDFN idlName" data-link-type="method" href="#dom-geolocation-clearwatch" id="ref-for-dom-geolocation-clearwatch-2"><code>clearWatch</code></a> (<span class="idlType"><a data-type="interface" href="https://heycam.github.io/webidl/#idl-long" id="ref-for-index-term-long-type-2">long</a></span> <span class="idlParamName">watchId</span>);</span>
 };</span><span data-idl="" class="idlCallback" id="idl-def-positioncallback" data-title="PositionCallback">
 
-callback <dfn data-export="" data-dfn-type="callback" id="dom-positioncallback" data-idl="callback" data-title="PositionCallback" data-dfn-for="PositionCallback" class="idlID" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>PositionCallback</code></dfn> =<span class="idlType"> <a data-type="interface" href="https://heycam.github.io/webidl/#idl-undefined" id="ref-for-index-term-undefined-type-3">undefined</a></span> (<span class="idlType">
+callback <dfn data-export="" data-dfn-type="callback" id="dom-positioncallback" data-idl="callback" data-title="PositionCallback" data-dfn-for="PositionCallback" class="idlID" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>PositionCallback</code></dfn> =<span class="idlType"> <a data-type="interface" href="https://heycam.github.io/webidl/#idl-undefined" id="ref-for-index-term-undefined-type-3">undefined</a></span> (<span class="idlType">
   <a href="#dom-geolocationposition" class="internalDFN" data-link-type="idl" id="ref-for-dom-geolocationposition-2"><code>GeolocationPosition</code></a></span> <span class="idlParamName">position</span>
 );</span><span data-idl="" class="idlCallback" id="idl-def-positionerrorcallback" data-title="PositionErrorCallback">
 
-callback <dfn data-export="" data-dfn-type="callback" id="dom-positionerrorcallback" data-idl="callback" data-title="PositionErrorCallback" data-dfn-for="PositionErrorCallback" class="idlID" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>PositionErrorCallback</code></dfn> =<span class="idlType"> <a data-type="interface" href="https://heycam.github.io/webidl/#idl-undefined" id="ref-for-index-term-undefined-type-4">undefined</a></span> (<span class="idlType">
+callback <dfn data-export="" data-dfn-type="callback" id="dom-positionerrorcallback" data-idl="callback" data-title="PositionErrorCallback" data-dfn-for="PositionErrorCallback" class="idlID" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>PositionErrorCallback</code></dfn> =<span class="idlType"> <a data-type="interface" href="https://heycam.github.io/webidl/#idl-undefined" id="ref-for-index-term-undefined-type-4">undefined</a></span> (<span class="idlType">
   <a href="#dom-geolocationpositionerror" class="internalDFN" data-link-type="idl" id="ref-for-dom-geolocationpositionerror-3"><code>GeolocationPositionError</code></a></span> <span class="idlParamName">positionError</span>
 );</span></code></pre>
       <section id="internal-slots">
@@ -971,7 +971,7 @@ callback <dfn data-export="" data-dfn-type="callback" id="dom-positionerrorcallb
           </tr>
           <tr>
             <td>
-              <dfn data-dfn-for="Geolocation" data-dfn-type="idl" data-export="" id="dfn-cachedposition" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">[[cachedPosition]]</dfn>
+              <dfn data-dfn-for="Geolocation" data-dfn-type="idl" data-export="" id="dfn-cachedposition" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">[[cachedPosition]]</dfn>
             </td>
             <td>
               A <a data-link-type="idl" href="#dom-geolocationposition" class="internalDFN" id="ref-for-dom-geolocationposition-3"><code>GeolocationPosition</code></a>, initialized to null. It's a reference
@@ -982,7 +982,7 @@ callback <dfn data-export="" data-dfn-type="callback" id="dom-positionerrorcallb
           </tr>
           <tr>
             <td>
-              <dfn data-dfn-for="Geolocation" data-dfn-type="idl" data-export="" id="dfn-watchtasks" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">[[watchTasks]]</dfn>
+              <dfn data-dfn-for="Geolocation" data-dfn-type="idl" data-export="" id="dfn-watchtasks" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">[[watchTasks]]</dfn>
             </td>
             <td>
               Initialized as an empty <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#ordered-set" id="ref-for-index-term-set-1">set</a> of <a data-link-type="idl" data-type="interface" href="https://heycam.github.io/webidl/#idl-unsigned-long" id="ref-for-index-term-unsigned-long-type-1"><code>unsigned long</code></a>
@@ -992,12 +992,58 @@ callback <dfn data-export="" data-dfn-type="callback" id="dom-positionerrorcallb
           </tr>
         </tbody></table></div>
       </section>
-      <section id="getcurrentposition-method">
+      <aside class="mdn"><details>
+    <summary aria-label="Expand MDN details for getCurrentPosition"><span>MDN</span><span title="This feature is in all major engines.">✅</span></summary>
+    <a title="The Geolocation.getCurrentPosition() method is used to get the current position of the device." href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition">Geolocation/getCurrentPosition</a>
+    <p class="engines-all">This feature is in all major engines.</p>
+    <table>
+    <tr class="chrome yes">
+      <td>Chrome</td>
+      <td>5+</td>
+    </tr><tr class="chrome_android yes">
+      <td>Chrome Android</td>
+      <td>18+</td>
+    </tr><tr class="edge yes">
+      <td>Edge</td>
+      <td>12+</td>
+    </tr><tr class="edge_mobile unknown">
+      <td>Edge Mobile</td>
+      <td>?</td>
+    </tr><tr class="firefox yes">
+      <td>Firefox</td>
+      <td>3.5+</td>
+    </tr><tr class="firefox_android yes">
+      <td>Firefox Android</td>
+      <td>4+</td>
+    </tr><tr class="ie yes">
+      <td>Internet Explorer</td>
+      <td>9+</td>
+    </tr><tr class="opera yes">
+      <td>Opera</td>
+      <td>10.6+</td>
+    </tr><tr class="opera_android yes">
+      <td>Opera Android</td>
+      <td>11+</td>
+    </tr><tr class="safari yes">
+      <td>Safari</td>
+      <td>5+</td>
+    </tr><tr class="safari_ios yes">
+      <td>Safari iOS</td>
+      <td>5+</td>
+    </tr><tr class="samsunginternet_android yes">
+      <td>Samsung Internet</td>
+      <td>1.0+</td>
+    </tr><tr class="webview_android yes">
+      <td>WebView Android</td>
+      <td>37+</td>
+    </tr>
+  </table>
+  </details></aside><section id="getcurrentposition-method">
         <h3 id="x5-2-getcurrentposition-method"><bdi class="secno">5.2 </bdi>
           <code>getCurrentPosition()</code> method
         <a class="self-link" aria-label="§" href="#getcurrentposition-method"></a></h3>
         <p data-tests="getCurrentPosition_IDL.https.html, getCurrentPosition_TypeError.html">
-          When <dfn data-export="" data-dfn-type="method" id="dom-geolocation-getcurrentposition" data-idl="operation" data-title="getCurrentPosition()" data-dfn-for="Geolocation" data-type="undefined" data-lt="getCurrentPosition()|getCurrentPosition(successCallback)|getCurrentPosition(successCallback, errorCallback)|getCurrentPosition(successCallback, errorCallback, options)" data-local-lt="Geolocation.getCurrentPosition|Geolocation.getCurrentPosition()|getCurrentPosition" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>getCurrentPosition()</code></dfn> is invoked, the user agent <em class="rfc2119">MUST</em>:
+          When <dfn data-export="" data-dfn-type="method" id="dom-geolocation-getcurrentposition" data-idl="operation" data-title="getCurrentPosition()" data-dfn-for="Geolocation" data-type="undefined" data-lt="getCurrentPosition()|getCurrentPosition(successCallback)|getCurrentPosition(successCallback, errorCallback)|getCurrentPosition(successCallback, errorCallback, options)" data-local-lt="Geolocation.getCurrentPosition|Geolocation.getCurrentPosition()|getCurrentPosition" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>getCurrentPosition()</code></dfn> is invoked, the user agent <em class="rfc2119">MUST</em>:
         </p>
         <ol class="algorithm">
           <li><a data-link-type="dfn" href="#dfn-request-position" class="internalDFN" id="ref-for-dfn-request-position-2">Request position</a>, passing <var>successCallback</var>, <var>errorCallback</var>,
@@ -1058,7 +1104,7 @@ callback <dfn data-export="" data-dfn-type="callback" id="dom-positionerrorcallb
           <code>watchPosition()</code> method
         <a class="self-link" aria-label="§" href="#watchposition-method"></a></h3>
         <p data-tests="getCurrentPosition_permission_allow.https.html, getCurrentPosition_permission_deny.https.html">
-          When <dfn data-export="" data-dfn-type="method" id="dom-geolocation-watchposition" data-idl="operation" data-title="watchPosition()" data-dfn-for="Geolocation" data-type="long" data-lt="watchPosition()|watchPosition(successCallback)|watchPosition(successCallback, errorCallback)|watchPosition(successCallback, errorCallback, options)" data-local-lt="Geolocation.watchPosition|Geolocation.watchPosition()|watchPosition" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>watchPosition()</code></dfn> is invoked, the user agent <em class="rfc2119">MUST</em>:
+          When <dfn data-export="" data-dfn-type="method" id="dom-geolocation-watchposition" data-idl="operation" data-title="watchPosition()" data-dfn-for="Geolocation" data-type="long" data-lt="watchPosition()|watchPosition(successCallback)|watchPosition(successCallback, errorCallback)|watchPosition(successCallback, errorCallback, options)" data-local-lt="Geolocation.watchPosition|Geolocation.watchPosition()|watchPosition" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>watchPosition()</code></dfn> is invoked, the user agent <em class="rfc2119">MUST</em>:
         </p>
         <ol class="algorithm">
           <li>Let <var data-type="long">watchId</var> be <a data-link-type="dfn" href="#dfn-request-position" class="internalDFN" id="ref-for-dfn-request-position-3">request position</a>, passing
@@ -1068,12 +1114,58 @@ callback <dfn data-export="" data-dfn-type="callback" id="dom-positionerrorcallb
           </li>
         </ol>
       </section>
-      <section id="clearwatch-method">
+      <aside class="mdn"><details>
+    <summary aria-label="Expand MDN details for clearWatch"><span>MDN</span><span title="This feature is in all major engines.">✅</span></summary>
+    <a title="The Geolocation.clearWatch() method is used to unregister location/error monitoring handlers previously installed using Geolocation.watchPosition()." href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/clearWatch">Geolocation/clearWatch</a>
+    <p class="engines-all">This feature is in all major engines.</p>
+    <table>
+    <tr class="chrome yes">
+      <td>Chrome</td>
+      <td>5+</td>
+    </tr><tr class="chrome_android yes">
+      <td>Chrome Android</td>
+      <td>18+</td>
+    </tr><tr class="edge yes">
+      <td>Edge</td>
+      <td>12+</td>
+    </tr><tr class="edge_mobile unknown">
+      <td>Edge Mobile</td>
+      <td>?</td>
+    </tr><tr class="firefox yes">
+      <td>Firefox</td>
+      <td>3.5+</td>
+    </tr><tr class="firefox_android yes">
+      <td>Firefox Android</td>
+      <td>4+</td>
+    </tr><tr class="ie yes">
+      <td>Internet Explorer</td>
+      <td>9+</td>
+    </tr><tr class="opera yes">
+      <td>Opera</td>
+      <td>10.6+</td>
+    </tr><tr class="opera_android yes">
+      <td>Opera Android</td>
+      <td>11+</td>
+    </tr><tr class="safari yes">
+      <td>Safari</td>
+      <td>5+</td>
+    </tr><tr class="safari_ios yes">
+      <td>Safari iOS</td>
+      <td>5+</td>
+    </tr><tr class="samsunginternet_android yes">
+      <td>Samsung Internet</td>
+      <td>1.0+</td>
+    </tr><tr class="webview_android yes">
+      <td>WebView Android</td>
+      <td>37+</td>
+    </tr>
+  </table>
+  </details></aside><section id="clearwatch-method">
         <h3 id="x5-4-clearwatch-method"><bdi class="secno">5.4 </bdi>
           <code>clearWatch()</code> method
         <a class="self-link" aria-label="§" href="#clearwatch-method"></a></h3>
         <p data-tests="clearWatch_TypeError.html">
-          When <dfn data-export="" data-dfn-type="method" id="dom-geolocation-clearwatch" data-idl="operation" data-title="clearWatch()" data-dfn-for="Geolocation" data-type="undefined" data-lt="clearWatch()|clearWatch(watchId)" data-local-lt="Geolocation.clearWatch|Geolocation.clearWatch()|clearWatch" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>clearWatch()</code></dfn> is invoked, the user agent <em class="rfc2119">MUST</em>:
+          When <dfn data-export="" data-dfn-type="method" id="dom-geolocation-clearwatch" data-idl="operation" data-title="clearWatch()" data-dfn-for="Geolocation" data-type="undefined" data-lt="clearWatch()|clearWatch(watchId)" data-local-lt="Geolocation.clearWatch|Geolocation.clearWatch()|clearWatch" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>clearWatch()</code></dfn> is invoked, the user agent <em class="rfc2119">MUST</em>:
         </p>
         <ol class="algorithm">
           <li>If <a data-link-type="dfn" data-type="dfn" href="https://heycam.github.io/webidl/#this" id="ref-for-index-term-this-1">this</a>'s <a data-lt="[[watchTasks]]" href="#dfn-watchtasks" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-watchtasks-1"><code>[[watchTasks]]</code></a>[<var>watchId</var>]
@@ -1087,7 +1179,7 @@ callback <dfn data-export="" data-dfn-type="callback" id="dom-positionerrorcallb
           Request position
         <a class="self-link" aria-label="§" href="#request-position"></a></h3>
         <p>
-          <dfn id="dfn-request-position" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">Request position</dfn> by passing a <a data-link-type="idl" href="#dom-positioncallback" class="internalDFN" id="ref-for-dom-positioncallback-3"><code>PositionCallback</code></a>
+          <dfn id="dfn-request-position" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">Request position</dfn> by passing a <a data-link-type="idl" href="#dom-positioncallback" class="internalDFN" id="ref-for-dom-positioncallback-3"><code>PositionCallback</code></a>
           <var data-type="PositionCallback">successCallback</var>, a <a data-link-type="idl" href="#dom-positionerrorcallback" class="internalDFN" id="ref-for-dom-positionerrorcallback-3"><code>PositionErrorCallback</code></a><code>?</code>
           <var data-type="PositionErrorCallback">errorCallback</var>, <a data-link-type="idl" href="#dom-positionoptions" class="internalDFN" id="ref-for-dom-positionoptions-5"><code>PositionOptions</code></a>
           <var data-type="PositionOptions">options</var>, a <a data-link-type="idl" data-type="interface" href="https://heycam.github.io/webidl/#idl-boolean" id="ref-for-index-term-boolean-type-1"><code>boolean</code></a> <var data-type="boolean">repeats</var>, and
@@ -1113,7 +1205,7 @@ callback <dfn data-export="" data-dfn-type="callback" id="dom-positionerrorcallb
           <li>Do security check.
             <ol>
               <li>If the <a data-type="dfn" href="https://html.spec.whatwg.org/multipage/webappapis.html#environment-settings-object" id="ref-for-index-term-environment-settings-object-1">environment settings object</a> is a
-                <a data-type="dfn" href="https://www.w3.org/TR/secure-contexts/TR/secure-contexts/#non-secure-context" id="ref-for-index-term-non-secure-context-1">non-secure context</a>, then:
+                <a data-type="dfn" data-cite-href="https://www.w3.org/TR/secure-contexts/#non-secure-context" href="https://www.w3.org/TR/secure-contexts/#non-secure-context" id="ref-for-index-term-non-secure-context-1">non-secure context</a>, then:
                 <ol>
                   <li><a data-link-type="dfn" href="#dfn-call-back-with-error" class="internalDFN" id="ref-for-dfn-call-back-with-error-1">Call back with error</a> <var data-type="PositionErrorCallback">errorCallback</var> and
                   <a data-link-type="idl" href="#dom-geolocationpositionerror-permission_denied" class="internalDFN" id="ref-for-dom-geolocationpositionerror-permission_denied-1"><code>PERMISSION_DENIED</code></a>.
@@ -1148,7 +1240,7 @@ callback <dfn data-export="" data-dfn-type="callback" id="dom-positionerrorcallb
             </ol>
           </li>
           <li>
-            <dfn data-local-lt="acquiring a position|acquire a position" data-lt="Acquire position|acquiring a position|acquire a position" id="dfn-acquire-position" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">Acquire position</dfn>.
+            <dfn data-local-lt="acquiring a position|acquire a position" data-lt="Acquire position|acquiring a position|acquire a position" id="dfn-acquire-position" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">Acquire position</dfn>.
             <ol>
               <li>Let <var data-type="DOMTimeStamp">acquisitionTime</var> be a new <a data-link-type="idl" data-type="typedef" href="https://heycam.github.io/webidl/#DOMTimeStamp" id="ref-for-index-term-domtimestamp-1"><code>DOMTimeStamp</code></a>
               that represents now in milliseconds, using 01 January, 1970 UTC
@@ -1264,7 +1356,7 @@ callback <dfn data-export="" data-dfn-type="callback" id="dom-positionerrorcallb
           Check permission
         <a class="self-link" aria-label="§" href="#check-permission"></a></h3>
         <p>
-          When instructed to <dfn id="dfn-check-permission" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">check permission</dfn>, given an
+          When instructed to <dfn id="dfn-check-permission" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">check permission</dfn>, given an
           <a data-link-type="idl" href="#dom-positionerrorcallback" class="internalDFN" id="ref-for-dom-positionerrorcallback-4"><code>PositionErrorCallback</code></a><code>?</code> <var data-type="PositionErrorCallback">errorCallback</var>:
         </p>
         <ol class="algorithm">
@@ -1288,7 +1380,7 @@ callback <dfn data-export="" data-dfn-type="callback" id="dom-positionerrorcallb
           Call back with error
         <a class="self-link" aria-label="§" href="#call-back-with-error"></a></h3>
         <p>
-          When instructed to <dfn id="dfn-call-back-with-error" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">call back with error</dfn>, given an
+          When instructed to <dfn id="dfn-call-back-with-error" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">call back with error</dfn>, given an
           <a data-link-type="idl" href="#dom-positionerrorcallback" class="internalDFN" id="ref-for-dom-positionerrorcallback-5"><code>PositionErrorCallback</code></a><code>?</code> <var data-type="PositionErrorCallback">callback</var> and an
           <a data-link-type="idl" data-type="interface" href="https://heycam.github.io/webidl/#idl-unsigned-short" id="ref-for-index-term-unsigned-short-type-1"><code>unsigned short</code></a> <var data-type="unsigned short">code</var>:
         </p>
@@ -1352,7 +1444,7 @@ callback <dfn data-export="" data-dfn-type="callback" id="dom-positionerrorcallb
   </table>
   </details></aside><section id="position_options_interface" data-dfn-for="PositionOptions">
       <h2 id="x6-positionoptions-dictionary"><bdi class="secno">6. </bdi>
-        <dfn data-export="" data-dfn-type="dictionary" id="dom-positionoptions" data-idl="dictionary" data-title="PositionOptions" data-dfn-for="" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>PositionOptions</code></dfn> dictionary
+        <dfn data-export="" data-dfn-type="dictionary" id="dom-positionoptions" data-idl="dictionary" data-title="PositionOptions" data-dfn-for="" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>PositionOptions</code></dfn> dictionary
       <a class="self-link" aria-label="§" href="#position_options_interface"></a></h2>
       <pre class="idl def" id="webidl-1341144555"><span class="idlHeader"><a class="self-link" href="#webidl-1341144555">WebIDL</a></span><code><span data-idl="" class="idlDictionary" id="idl-def-positionoptions" data-title="PositionOptions">dictionary <a class="internalDFN idlID" data-link-type="dictionary" href="#dom-positionoptions" id="ref-for-dom-positionoptions-6"><code>PositionOptions</code></a> {<span data-idl="" class="idlMember" id="idl-def-positionoptions-enablehighaccuracy" data-title="enableHighAccuracy" data-dfn-for="PositionOptions"><span class="idlType">
   <a data-type="interface" href="https://heycam.github.io/webidl/#idl-boolean" id="ref-for-index-term-boolean-type-2">boolean</a></span> <a class="internalDFN idlName" data-link-type="dict-member" href="#dom-positionoptions-enablehighaccuracy" id="ref-for-dom-positionoptions-enablehighaccuracy-5"><code>enableHighAccuracy</code></a> = false;</span><span data-idl="" class="idlMember" id="idl-def-positionoptions-timeout" data-title="timeout" data-dfn-for="PositionOptions">
@@ -1410,7 +1502,7 @@ callback <dfn data-export="" data-dfn-type="callback" id="dom-positionerrorcallb
           <code>enableHighAccuracy</code> member
         <a class="self-link" aria-label="§" href="#enablehighaccuracy-member"></a></h3>
         <p data-tests="PositionOptions.https.html">
-          The <dfn data-export="" data-dfn-type="dict-member" id="dom-positionoptions-enablehighaccuracy" data-idl="field" data-title="enableHighAccuracy" data-dfn-for="PositionOptions" data-type="boolean" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>enableHighAccuracy</code></dfn> member provides a hint that the
+          The <dfn data-export="" data-dfn-type="dict-member" id="dom-positionoptions-enablehighaccuracy" data-idl="field" data-title="enableHighAccuracy" data-dfn-for="PositionOptions" data-type="boolean" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>enableHighAccuracy</code></dfn> member provides a hint that the
           application would like to receive the most accurate location data.
           The intended purpose of this member is to allow applications to
           inform the implementation that they do not require high accuracy
@@ -1478,7 +1570,7 @@ callback <dfn data-export="" data-dfn-type="callback" id="dom-positionerrorcallb
           <code>timeout</code> member
         <a class="self-link" aria-label="§" href="#timeout-member"></a></h3>
         <p data-tests="PositionOptions.https.html">
-          The <dfn data-export="" data-dfn-type="dict-member" id="dom-positionoptions-timeout" data-idl="field" data-title="timeout" data-dfn-for="PositionOptions" data-type="unsigned long" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>timeout</code></dfn> member denotes the maximum length of time,
+          The <dfn data-export="" data-dfn-type="dict-member" id="dom-positionoptions-timeout" data-idl="field" data-title="timeout" data-dfn-for="PositionOptions" data-type="unsigned long" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>timeout</code></dfn> member denotes the maximum length of time,
           expressed in milliseconds, before <a data-link-type="dfn" href="#dfn-acquire-position" class="internalDFN" id="ref-for-dfn-acquire-position-4">acquiring a position</a> expires.
         </p>
         <p class="Note">
@@ -1540,7 +1632,7 @@ callback <dfn data-export="" data-dfn-type="callback" id="dom-positionerrorcallb
           <code>maximumAge</code> member
         <a class="self-link" aria-label="§" href="#maximumage-member"></a></h3>
         <p data-tests="PositionOptions.https.html">
-          The <dfn data-export="" data-dfn-type="dict-member" id="dom-positionoptions-maximumage" data-idl="field" data-title="maximumAge" data-dfn-for="PositionOptions" data-type="unsigned long" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>maximumAge</code></dfn> member indicates that the web application
+          The <dfn data-export="" data-dfn-type="dict-member" id="dom-positionoptions-maximumage" data-idl="field" data-title="maximumAge" data-dfn-for="PositionOptions" data-type="unsigned long" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>maximumAge</code></dfn> member indicates that the web application
           is willing to accept a cached position whose age is no greater than
           the specified time in milliseconds.
         </p>
@@ -1597,7 +1689,7 @@ callback <dfn data-export="" data-dfn-type="callback" id="dom-positionerrorcallb
         <code>GeolocationPosition</code> interface
       <a class="self-link" aria-label="§" href="#position_interface"></a></h2>
       <pre class="idl def" id="webidl-1855475801"><span class="idlHeader"><a class="self-link" href="#webidl-1855475801">WebIDL</a></span><code><span data-idl="" class="idlInterface" id="idl-def-geolocationposition" data-title="GeolocationPosition">[<span class="extAttr"><a data-type="extended-attribute" href="https://heycam.github.io/webidl/#Exposed" id="ref-for-index-term-exposed-extended-attribute-2">Exposed</a>=<a data-type="interface" href="https://html.spec.whatwg.org/multipage/window-object.html#window" id="ref-for-index-term-window-interface-2">Window</a></span>, <span class="extAttr"><a data-type="extended-attribute" href="https://heycam.github.io/webidl/#SecureContext" id="ref-for-index-term-securecontext-extended-attribute-1">SecureContext</a></span>]
-interface <dfn data-export="" data-dfn-type="interface" id="dom-geolocationposition" data-idl="interface" data-title="GeolocationPosition" data-dfn-for="GeolocationPosition" class="idlID" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>GeolocationPosition</code></dfn> {<span data-idl="" class="idlAttribute" id="idl-def-geolocationposition-coords" data-title="coords" data-dfn-for="GeolocationPosition">
+interface <dfn data-export="" data-dfn-type="interface" id="dom-geolocationposition" data-idl="interface" data-title="GeolocationPosition" data-dfn-for="GeolocationPosition" class="idlID" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>GeolocationPosition</code></dfn> {<span data-idl="" class="idlAttribute" id="idl-def-geolocationposition-coords" data-title="coords" data-dfn-for="GeolocationPosition">
   readonly attribute<span class="idlType"> <a href="#dom-geolocationcoordinates" class="internalDFN" data-link-type="idl" id="ref-for-dom-geolocationcoordinates-1"><code>GeolocationCoordinates</code></a></span> <a class="internalDFN idlName" data-link-type="attribute" href="#dom-geolocationposition-coords" id="ref-for-dom-geolocationposition-coords-1"><code>coords</code></a>;</span><span data-idl="" class="idlAttribute" id="idl-def-geolocationposition-timestamp" data-title="timestamp" data-dfn-for="GeolocationPosition">
   readonly attribute<span class="idlType"> <a data-type="typedef" href="https://heycam.github.io/webidl/#DOMTimeStamp" id="ref-for-index-term-domtimestamp-2">DOMTimeStamp</a></span> <a class="internalDFN idlName" data-link-type="attribute" href="#dom-geolocationposition-timestamp" id="ref-for-dom-geolocationposition-timestamp-2"><code>timestamp</code></a>;</span>
 };</span></code></pre>
@@ -1652,7 +1744,7 @@ interface <dfn data-export="" data-dfn-type="interface" id="dom-geolocationposit
           <code>coords</code> attribute
         <a class="self-link" aria-label="§" href="#coords-attribute"></a></h3>
         <p>
-          The <dfn data-export="" data-dfn-type="attribute" id="dom-geolocationposition-coords" data-idl="attribute" data-title="coords" data-dfn-for="GeolocationPosition" data-type="GeolocationCoordinates" data-lt="coords" data-local-lt="GeolocationPosition.coords" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>coords</code></dfn> attribute contains geographic coordinates.
+          The <dfn data-export="" data-dfn-type="attribute" id="dom-geolocationposition-coords" data-idl="attribute" data-title="coords" data-dfn-for="GeolocationPosition" data-type="GeolocationCoordinates" data-lt="coords" data-local-lt="GeolocationPosition.coords" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>coords</code></dfn> attribute contains geographic coordinates.
         </p>
       </section>
       <aside class="mdn"><details>
@@ -1706,7 +1798,7 @@ interface <dfn data-export="" data-dfn-type="interface" id="dom-geolocationposit
           <code>timestamp</code> attribute
         <a class="self-link" aria-label="§" href="#timestamp-attribute"></a></h3>
         <p>
-          The <dfn data-export="" data-dfn-type="attribute" id="dom-geolocationposition-timestamp" data-idl="attribute" data-title="timestamp" data-dfn-for="GeolocationPosition" data-type="DOMTimeStamp" data-lt="timestamp" data-local-lt="GeolocationPosition.timestamp" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>timestamp</code></dfn> attribute represents the time when the
+          The <dfn data-export="" data-dfn-type="attribute" id="dom-geolocationposition-timestamp" data-idl="attribute" data-title="timestamp" data-dfn-for="GeolocationPosition" data-type="DOMTimeStamp" data-lt="timestamp" data-local-lt="GeolocationPosition.timestamp" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>timestamp</code></dfn> attribute represents the time when the
           geographic position of the device was acquired.
         </p>
       </section>
@@ -1729,7 +1821,7 @@ interface <dfn data-export="" data-dfn-type="interface" id="dom-geolocationposit
           </tr>
           <tr>
             <td>
-              <dfn data-dfn-for="GeolocationPosition" data-dfn-type="idl" data-export="" id="dfn-ishighaccuracy" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">[[isHighAccuracy]]</dfn>
+              <dfn data-dfn-for="GeolocationPosition" data-dfn-type="idl" data-export="" id="dfn-ishighaccuracy" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">[[isHighAccuracy]]</dfn>
             </td>
             <td>
               A <a data-link-type="idl" data-type="interface" href="https://heycam.github.io/webidl/#idl-boolean" id="ref-for-index-term-boolean-type-3"><code>boolean</code></a> that records the value of the
@@ -1788,7 +1880,7 @@ interface <dfn data-export="" data-dfn-type="interface" id="dom-geolocationposit
   </table>
   </details></aside><section id="coordinates_interface" data-dfn-for="GeolocationCoordinates">
       <h2 id="x8-geolocationcoordinates-interface"><bdi class="secno">8. </bdi>
-        <dfn data-export="" data-dfn-type="interface" id="dom-geolocationcoordinates" data-idl="interface" data-title="GeolocationCoordinates" data-dfn-for="" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>GeolocationCoordinates</code></dfn> interface
+        <dfn data-export="" data-dfn-type="interface" id="dom-geolocationcoordinates" data-idl="interface" data-title="GeolocationCoordinates" data-dfn-for="" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>GeolocationCoordinates</code></dfn> interface
       <a class="self-link" aria-label="§" href="#coordinates_interface"></a></h2>
       <pre class="idl def" id="webidl-1124918410"><span class="idlHeader"><a class="self-link" href="#webidl-1124918410">WebIDL</a></span><code><span data-idl="" class="idlInterface" id="idl-def-geolocationcoordinates" data-title="GeolocationCoordinates">[<span class="extAttr"><a data-type="extended-attribute" href="https://heycam.github.io/webidl/#Exposed" id="ref-for-index-term-exposed-extended-attribute-3">Exposed</a>=<a data-type="interface" href="https://html.spec.whatwg.org/multipage/window-object.html#window" id="ref-for-index-term-window-interface-3">Window</a></span>, <span class="extAttr"><a data-type="extended-attribute" href="https://heycam.github.io/webidl/#SecureContext" id="ref-for-index-term-securecontext-extended-attribute-2">SecureContext</a></span>]
 interface <a class="internalDFN idlID" data-link-type="interface" href="#dom-geolocationcoordinates" id="ref-for-dom-geolocationcoordinates-2"><code>GeolocationCoordinates</code></a> {<span data-idl="" class="idlAttribute" id="idl-def-geolocationcoordinates-accuracy" data-title="accuracy" data-dfn-for="GeolocationCoordinates">
@@ -1943,11 +2035,11 @@ interface <a class="internalDFN idlID" data-link-type="interface" href="#dom-geo
           <code>latitude</code>, <code>longitude</code>, and <code>accuracy</code> attributes
         <a class="self-link" aria-label="§" href="#latitude-longitude-and-accuracy-attributes"></a></h3>
         <p>
-          The <dfn data-export="" data-dfn-type="attribute" id="dom-geolocationcoordinates-latitude" data-idl="attribute" data-title="latitude" data-dfn-for="GeolocationCoordinates" data-type="double" data-lt="latitude" data-local-lt="GeolocationCoordinates.latitude" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>latitude</code></dfn> and <dfn data-export="" data-dfn-type="attribute" id="dom-geolocationcoordinates-longitude" data-idl="attribute" data-title="longitude" data-dfn-for="GeolocationCoordinates" data-type="double" data-lt="longitude" data-local-lt="GeolocationCoordinates.longitude" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>longitude</code></dfn> attributes are
+          The <dfn data-export="" data-dfn-type="attribute" id="dom-geolocationcoordinates-latitude" data-idl="attribute" data-title="latitude" data-dfn-for="GeolocationCoordinates" data-type="double" data-lt="latitude" data-local-lt="GeolocationCoordinates.latitude" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>latitude</code></dfn> and <dfn data-export="" data-dfn-type="attribute" id="dom-geolocationcoordinates-longitude" data-idl="attribute" data-title="longitude" data-dfn-for="GeolocationCoordinates" data-type="double" data-lt="longitude" data-local-lt="GeolocationCoordinates.longitude" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>longitude</code></dfn> attributes are
           geographic coordinates specified in decimal degrees.
         </p>
         <p>
-          The <dfn data-export="" data-dfn-type="attribute" id="dom-geolocationcoordinates-accuracy" data-idl="attribute" data-title="accuracy" data-dfn-for="GeolocationCoordinates" data-type="double" data-lt="accuracy" data-local-lt="GeolocationCoordinates.accuracy" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>accuracy</code></dfn> attribute denotes the accuracy level of the
+          The <dfn data-export="" data-dfn-type="attribute" id="dom-geolocationcoordinates-accuracy" data-idl="attribute" data-title="accuracy" data-dfn-for="GeolocationCoordinates" data-type="double" data-lt="accuracy" data-local-lt="GeolocationCoordinates.accuracy" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>accuracy</code></dfn> attribute denotes the accuracy level of the
           latitude and longitude coordinates in meters (e.g., <code>65</code> meters).
         </p>
       </section>
@@ -2048,11 +2140,11 @@ interface <a class="internalDFN idlID" data-link-type="interface" href="#dom-geo
           <code>altitude</code> and <code>altitudeAccuracy</code> attributes
         <a class="self-link" aria-label="§" href="#altitude-and-altitudeaccuracy-attributes"></a></h3>
         <p>
-          The <dfn data-export="" data-dfn-type="attribute" id="dom-geolocationcoordinates-altitude" data-idl="attribute" data-title="altitude" data-dfn-for="GeolocationCoordinates" data-type="double" data-lt="altitude" data-local-lt="GeolocationCoordinates.altitude" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>altitude</code></dfn> attribute denotes the height of the position,
+          The <dfn data-export="" data-dfn-type="attribute" id="dom-geolocationcoordinates-altitude" data-idl="attribute" data-title="altitude" data-dfn-for="GeolocationCoordinates" data-type="double" data-lt="altitude" data-local-lt="GeolocationCoordinates.altitude" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>altitude</code></dfn> attribute denotes the height of the position,
           specified in meters above the [<cite><a class="bibref" data-link-type="biblio" href="#bib-wgs84" title="National Imagery and Mapping Agency Technical Report 8350.2, Third Edition">WGS84</a></cite>] ellipsoid.
         </p>
         <p>
-          The <dfn data-export="" data-dfn-type="attribute" id="dom-geolocationcoordinates-altitudeaccuracy" data-idl="attribute" data-title="altitudeAccuracy" data-dfn-for="GeolocationCoordinates" data-type="double" data-lt="altitudeAccuracy" data-local-lt="GeolocationCoordinates.altitudeAccuracy" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>altitudeAccuracy</code></dfn> attribute represents the altitude
+          The <dfn data-export="" data-dfn-type="attribute" id="dom-geolocationcoordinates-altitudeaccuracy" data-idl="attribute" data-title="altitudeAccuracy" data-dfn-for="GeolocationCoordinates" data-type="double" data-lt="altitudeAccuracy" data-local-lt="GeolocationCoordinates.altitudeAccuracy" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>altitudeAccuracy</code></dfn> attribute represents the altitude
           accuracy in meters (e.g., <code>10</code> meters).
         </p>
       </section>
@@ -2107,7 +2199,7 @@ interface <a class="internalDFN idlID" data-link-type="interface" href="#dom-geo
           <code>heading</code> attribute
         <a class="self-link" aria-label="§" href="#heading-attribute"></a></h3>
         <p>
-          The <dfn data-export="" data-dfn-type="attribute" id="dom-geolocationcoordinates-heading" data-idl="attribute" data-title="heading" data-dfn-for="GeolocationCoordinates" data-type="double" data-lt="heading" data-local-lt="GeolocationCoordinates.heading" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>heading</code></dfn> attribute denotes the direction of travel of
+          The <dfn data-export="" data-dfn-type="attribute" id="dom-geolocationcoordinates-heading" data-idl="attribute" data-title="heading" data-dfn-for="GeolocationCoordinates" data-type="double" data-lt="heading" data-local-lt="GeolocationCoordinates.heading" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>heading</code></dfn> attribute denotes the direction of travel of
           the hosting device and is specified in degrees, where 0° ≤ heading
           &lt; 360°, counting clockwise relative to the true north.
         </p>
@@ -2163,7 +2255,7 @@ interface <a class="internalDFN idlID" data-link-type="interface" href="#dom-geo
           <code>speed</code> attribute
         <a class="self-link" aria-label="§" href="#speed-attribute"></a></h3>
         <p>
-          The <dfn data-export="" data-dfn-type="attribute" id="dom-geolocationcoordinates-speed" data-idl="attribute" data-title="speed" data-dfn-for="GeolocationCoordinates" data-type="double" data-lt="speed" data-local-lt="GeolocationCoordinates.speed" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>speed</code></dfn> attribute denotes the magnitude of the
+          The <dfn data-export="" data-dfn-type="attribute" id="dom-geolocationcoordinates-speed" data-idl="attribute" data-title="speed" data-dfn-for="GeolocationCoordinates" data-type="double" data-lt="speed" data-local-lt="GeolocationCoordinates.speed" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>speed</code></dfn> attribute denotes the magnitude of the
           horizontal component of the hosting device's current velocity in
           meters per second.
         </p>
@@ -2173,7 +2265,7 @@ interface <a class="internalDFN idlID" data-link-type="interface" href="#dom-geo
           Constructing a <code>GeolocationPosition</code>
         <a class="self-link" aria-label="§" href="#constructing-a-geolocationposition"></a></h3>
         <p>
-          <dfn id="dfn-a-new-geolocationposition" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">A new <code>GeolocationPosition</code></dfn> is constructed with
+          <dfn id="dfn-a-new-geolocationposition" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">A new <code>GeolocationPosition</code></dfn> is constructed with
           <a data-link-type="idl" data-type="typedef" href="https://heycam.github.io/webidl/#DOMTimeStamp" id="ref-for-index-term-domtimestamp-3"><code>DOMTimeStamp</code></a> <var data-type="DOMTimeStamp">timestamp</var> and boolean
           <var>isHighAccuracy</var> by performing the following steps:
         </p>
@@ -2273,7 +2365,7 @@ interface <a class="internalDFN idlID" data-link-type="interface" href="#dom-geo
   </table>
   </details></aside><section id="position_error_interface" data-dfn-for="GeolocationPositionError">
       <h2 id="x9-geolocationpositionerror-interface"><bdi class="secno">9. </bdi>
-        <dfn data-export="" data-dfn-type="interface" id="dom-geolocationpositionerror" data-idl="interface" data-title="GeolocationPositionError" data-dfn-for="" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>GeolocationPositionError</code></dfn> interface
+        <dfn data-export="" data-dfn-type="interface" id="dom-geolocationpositionerror" data-idl="interface" data-title="GeolocationPositionError" data-dfn-for="" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>GeolocationPositionError</code></dfn> interface
       <a class="self-link" aria-label="§" href="#position_error_interface"></a></h2>
       <pre class="idl def" id="webidl-1281871320"><span class="idlHeader"><a class="self-link" href="#webidl-1281871320">WebIDL</a></span><code><span data-idl="" class="idlInterface" id="idl-def-geolocationpositionerror" data-title="GeolocationPositionError">[<span class="extAttr"><a data-type="extended-attribute" href="https://heycam.github.io/webidl/#Exposed" id="ref-for-index-term-exposed-extended-attribute-4">Exposed</a>=<a data-type="interface" href="https://html.spec.whatwg.org/multipage/window-object.html#window" id="ref-for-index-term-window-interface-4">Window</a></span>]
 interface <a class="internalDFN idlID" data-link-type="interface" href="#dom-geolocationpositionerror" id="ref-for-dom-geolocationpositionerror-6"><code>GeolocationPositionError</code></a> {<span data-idl="" class="idlConst" id="idl-def-geolocationpositionerror-permission_denied" data-title="PERMISSION_DENIED" data-dfn-for="GeolocationPositionError">
@@ -2289,20 +2381,20 @@ interface <a class="internalDFN idlID" data-link-type="interface" href="#dom-geo
         <a class="self-link" aria-label="§" href="#constants"></a></h3>
         <dl>
           <dt>
-            <dfn data-export="" data-dfn-type="const" id="dom-geolocationpositionerror-permission_denied" data-idl="const" data-title="PERMISSION_DENIED" data-dfn-for="GeolocationPositionError" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>PERMISSION_DENIED</code></dfn> (numeric value 1)
+            <dfn data-export="" data-dfn-type="const" id="dom-geolocationpositionerror-permission_denied" data-idl="const" data-title="PERMISSION_DENIED" data-dfn-for="GeolocationPositionError" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>PERMISSION_DENIED</code></dfn> (numeric value 1)
           </dt>
           <dd>
             <a data-link-type="dfn" href="#dfn-request-position" class="internalDFN" id="ref-for-dfn-request-position-5">Request position</a> failed because the user denied permission to
             use the API.
           </dd>
           <dt>
-            <dfn data-export="" data-dfn-type="const" id="dom-geolocationpositionerror-position_unavailable" data-idl="const" data-title="POSITION_UNAVAILABLE" data-dfn-for="GeolocationPositionError" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>POSITION_UNAVAILABLE</code></dfn> (numeric value 2)
+            <dfn data-export="" data-dfn-type="const" id="dom-geolocationpositionerror-position_unavailable" data-idl="const" data-title="POSITION_UNAVAILABLE" data-dfn-for="GeolocationPositionError" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>POSITION_UNAVAILABLE</code></dfn> (numeric value 2)
           </dt>
           <dd>
             <a data-link-type="dfn" href="#dfn-acquire-position" class="internalDFN" id="ref-for-dfn-acquire-position-6">Acquire a position</a> failed.
           </dd>
           <dt>
-            <dfn data-export="" data-dfn-type="const" id="dom-geolocationpositionerror-timeout" data-idl="const" data-title="TIMEOUT" data-dfn-for="GeolocationPositionError" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>TIMEOUT</code></dfn> (numeric value 3)
+            <dfn data-export="" data-dfn-type="const" id="dom-geolocationpositionerror-timeout" data-idl="const" data-title="TIMEOUT" data-dfn-for="GeolocationPositionError" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>TIMEOUT</code></dfn> (numeric value 3)
           </dt>
           <dd>
             The length of time specified by the <a data-link-type="idl" href="#dom-positionoptions-timeout" class="internalDFN" id="ref-for-dom-positionoptions-timeout-7"><code>timeout</code></a>
@@ -2362,7 +2454,7 @@ interface <a class="internalDFN idlID" data-link-type="interface" href="#dom-geo
           <code>code</code> attribute
         <a class="self-link" aria-label="§" href="#code-attribute"></a></h3>
         <p>
-          The <dfn data-export="" data-dfn-type="attribute" id="dom-geolocationpositionerror-code" data-idl="attribute" data-title="code" data-dfn-for="GeolocationPositionError" data-type="unsigned short" data-lt="code" data-local-lt="GeolocationPositionError.code" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>code</code></dfn> attribute returns the value it was <a data-link-type="dfn" data-lt="call back
+          The <dfn data-export="" data-dfn-type="attribute" id="dom-geolocationpositionerror-code" data-idl="attribute" data-title="code" data-dfn-for="GeolocationPositionError" data-type="unsigned short" data-lt="code" data-local-lt="GeolocationPositionError.code" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>code</code></dfn> attribute returns the value it was <a data-link-type="dfn" data-lt="call back
           with error" href="#dfn-call-back-with-error" class="internalDFN" id="ref-for-dfn-call-back-with-error-5">initialized to</a> (see <a href="#constants" class="sec-ref">§&nbsp;<bdi class="secno">9.1 </bdi>
           Constants</a> for possible
           values).
@@ -2419,22 +2511,18 @@ interface <a class="internalDFN idlID" data-link-type="interface" href="#dom-geo
           <code>message</code> attribute
         <a class="self-link" aria-label="§" href="#message-attribute"></a></h3>
         <p>
-          The <dfn data-export="" data-dfn-type="attribute" id="dom-geolocationpositionerror-message" data-idl="attribute" data-title="message" data-dfn-for="GeolocationPositionError" data-type="DOMString" data-lt="message" data-local-lt="GeolocationPositionError.message" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>message</code></dfn> attribute is a developer-friendly textual
+          The <dfn data-export="" data-dfn-type="attribute" id="dom-geolocationpositionerror-message" data-idl="attribute" data-title="message" data-dfn-for="GeolocationPositionError" data-type="DOMString" data-lt="message" data-local-lt="GeolocationPositionError.message" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>message</code></dfn> attribute is a developer-friendly textual
           description of the <a data-link-type="idl" href="#dom-geolocationpositionerror-code" class="internalDFN" id="ref-for-dom-geolocationpositionerror-code-3"><code>code</code></a> attribute.
         </p>
         <div class="note" role="note" id="issue-container-generatedID-2"><div role="heading" class="note-title marker" id="h-note-2" aria-level="4"><span>Note</span><span class="issue-label">: Don't show .message to users!</span></div><aside class="">
           <p>
             The purpose of <a data-link-type="idl" href="#dom-geolocationpositionerror" class="internalDFN" id="ref-for-dom-geolocationpositionerror-7"><code>GeolocationPositionError</code></a>'s
             <a data-link-type="idl" href="#dom-geolocationpositionerror-message" class="internalDFN" id="ref-for-dom-geolocationpositionerror-message-2"><code>message</code></a> attribute is to assist
-            developers with debugging. As such, these error messages are not
-            provided by the user agent in a manner that would make sense if
-            presented to an end user. To make matters worse, the text of these
-            error messages is not localized.
-          </p>
-          <p>
-            To create user-friendly localized error messages, please leverage
-            the <a data-link-type="idl" href="#dom-geolocationpositionerror" class="internalDFN" id="ref-for-dom-geolocationpositionerror-8"><code>GeolocationPositionError</code></a>'s
-            <a data-link-type="idl" href="#dom-geolocationpositionerror-code" class="internalDFN" id="ref-for-dom-geolocationpositionerror-code-4"><code>code</code></a> attribute instead.
+            developers with debugging. For legacy reasons, this attribute does
+            not supply language or base direction metadata and is only
+            localized into English. Developers are advised to use
+            <a data-link-type="idl" href="#dom-geolocationpositionerror" class="internalDFN" id="ref-for-dom-geolocationpositionerror-8"><code>GeolocationPositionError</code></a>'s <a data-link-type="idl" href="#dom-geolocationpositionerror-code" class="internalDFN" id="ref-for-dom-geolocationpositionerror-code-4"><code>code</code></a>
+            attribute to create a localized experience.
           </p>
         </aside></div>
       </section>
@@ -2602,119 +2690,119 @@ interface <a class="internalDFN idlID" data-link-type="interface" href="#dom-geo
         [<cite><a class="bibref" data-link-type="biblio" href="#bib-html">HTML</a></cite>] defines the following:
         <ul>
           <li>
-    <span class="index-term" data-href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-iframe-allow" id="index-term-allow-attribute-for-iframe-element" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>allow</code> attribute (for <code>iframe</code> element)</span>
+    <span class="index-term" data-href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-iframe-allow" id="index-term-allow-attribute-for-iframe-element" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>allow</code> attribute (for <code>iframe</code> element)</span>
   </li><li>
-    <span class="index-term" data-href="https://html.spec.whatwg.org/multipage/window-object.html#concept-document-window" id="index-term-associated-document" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">associated Document</span>
+    <span class="index-term" data-href="https://html.spec.whatwg.org/multipage/window-object.html#concept-document-window" id="index-term-associated-document" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">associated Document</span>
   </li><li>
-    <span class="index-term" data-href="https://html.spec.whatwg.org/multipage/webappapis.html#current-settings-object" id="index-term-current-settings-object" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">current settings object</span>
+    <span class="index-term" data-href="https://html.spec.whatwg.org/multipage/webappapis.html#current-settings-object" id="index-term-current-settings-object" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">current settings object</span>
   </li><li>
-    <span class="index-term" data-href="https://html.spec.whatwg.org/multipage/webappapis.html#environment-settings-object" id="index-term-environment-settings-object" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">environment settings object</span>
+    <span class="index-term" data-href="https://html.spec.whatwg.org/multipage/webappapis.html#environment-settings-object" id="index-term-environment-settings-object" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">environment settings object</span>
   </li><li>
-    <span class="index-term" data-href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element" id="index-term-iframe-element" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>iframe</code> element</span>
+    <span class="index-term" data-href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element" id="index-term-iframe-element" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>iframe</code> element</span>
   </li><li>
-    <span class="index-term" data-href="https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel" id="index-term-in-parallel" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">in parallel</span>
+    <span class="index-term" data-href="https://html.spec.whatwg.org/multipage/infrastructure.html#in-parallel" id="index-term-in-parallel" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">in parallel</span>
   </li><li>
-    <span class="index-term" data-href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#list-of-active-timers" id="index-term-list-of-active-timers" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">list of active timers</span>
+    <span class="index-term" data-href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#list-of-active-timers" id="index-term-list-of-active-timers" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">list of active timers</span>
   </li><li>
-    <span class="index-term" data-href="https://html.spec.whatwg.org/multipage/system-state.html#navigator" id="index-term-navigator-interface" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>Navigator</code> interface</span>
+    <span class="index-term" data-href="https://html.spec.whatwg.org/multipage/system-state.html#navigator" id="index-term-navigator-interface" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>Navigator</code> interface</span>
   </li><li>
-    <span class="index-term" data-href="https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-microtask" id="index-term-queue-a-microtask" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">Queue a microtask</span>
+    <span class="index-term" data-href="https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-microtask" id="index-term-queue-a-microtask" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">Queue a microtask</span>
   </li><li>
-    <span class="index-term" data-href="https://html.spec.whatwg.org/multipage/webappapis.html#concept-task" id="index-term-task" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">task</span>
+    <span class="index-term" data-href="https://html.spec.whatwg.org/multipage/webappapis.html#concept-task" id="index-term-task" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">task</span>
   </li><li>
-    <span class="index-term" data-href="https://html.spec.whatwg.org/multipage/window-object.html#window" id="index-term-window-interface" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>Window</code> interface</span>
+    <span class="index-term" data-href="https://html.spec.whatwg.org/multipage/window-object.html#window" id="index-term-window-interface" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>Window</code> interface</span>
   </li>
         </ul>
       </li><li>
         [<cite><a class="bibref" data-link-type="biblio" href="#bib-infra">INFRA</a></cite>] defines the following:
         <ul>
           <li>
-    <span class="index-term" data-href="https://infra.spec.whatwg.org/#set-append" id="index-term-append-for-set" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">Append (for <code>set</code>)</span>
+    <span class="index-term" data-href="https://infra.spec.whatwg.org/#set-append" id="index-term-append-for-set" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">Append (for <code>set</code>)</span>
   </li><li>
-    <span class="index-term" data-href="https://infra.spec.whatwg.org/#list-contain" id="index-term-contain-for-list" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">contain (for <code>list</code>)</span>
+    <span class="index-term" data-href="https://infra.spec.whatwg.org/#list-contain" id="index-term-contain-for-list" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">contain (for <code>list</code>)</span>
   </li><li>
-    <span class="index-term" data-href="https://infra.spec.whatwg.org/#map-exists" id="index-term-exists-for-map" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">exists (for <code>map</code>)</span>
+    <span class="index-term" data-href="https://infra.spec.whatwg.org/#map-exists" id="index-term-exists-for-map" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">exists (for <code>map</code>)</span>
   </li><li>
-    <span class="index-term" data-href="https://infra.spec.whatwg.org/#implementation-defined" id="index-term-implementation-defined" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">implementation-defined</span>
+    <span class="index-term" data-href="https://infra.spec.whatwg.org/#implementation-defined" id="index-term-implementation-defined" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">implementation-defined</span>
   </li><li>
-    <span class="index-term" data-href="https://infra.spec.whatwg.org/#list-item" id="index-term-item-for-list" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">item (for <code>list</code>)</span>
+    <span class="index-term" data-href="https://infra.spec.whatwg.org/#list-item" id="index-term-item-for-list" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">item (for <code>list</code>)</span>
   </li><li>
-    <span class="index-term" data-href="https://infra.spec.whatwg.org/#map-remove" id="index-term-remove-for-map" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">remove (for <code>map</code>)</span>
+    <span class="index-term" data-href="https://infra.spec.whatwg.org/#map-remove" id="index-term-remove-for-map" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">remove (for <code>map</code>)</span>
   </li><li>
-    <span class="index-term" data-href="https://infra.spec.whatwg.org/#list-remove" id="index-term-remove-for-list" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">Remove (for <code>list</code>)</span>
+    <span class="index-term" data-href="https://infra.spec.whatwg.org/#list-remove" id="index-term-remove-for-list" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">Remove (for <code>list</code>)</span>
   </li><li>
-    <span class="index-term" data-href="https://infra.spec.whatwg.org/#ordered-set" id="index-term-set" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">set</span>
+    <span class="index-term" data-href="https://infra.spec.whatwg.org/#ordered-set" id="index-term-set" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">set</span>
   </li>
         </ul>
       </li><li>
         [<cite><a class="bibref" data-link-type="biblio" href="#bib-page-visibility-2">PAGE-VISIBILITY-2</a></cite>] defines the following:
         <ul>
           <li>
-    <span class="index-term" data-href="https://www.w3.org/TR/page-visibility-2/#dfn-hidden" id="index-term-hidden-for-document" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">hidden (for <code>Document</code>)</span>
+    <span class="index-term" data-href="https://www.w3.org/TR/page-visibility-2/#dfn-hidden" id="index-term-hidden-for-document" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">hidden (for <code>Document</code>)</span>
   </li><li>
-    <span class="index-term" data-href="https://www.w3.org/TR/page-visibility-2/#dfn-visible" id="index-term-visible-for-document" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">visible (for <code>Document</code>)</span>
+    <span class="index-term" data-href="https://www.w3.org/TR/page-visibility-2/#dfn-visible" id="index-term-visible-for-document" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">visible (for <code>Document</code>)</span>
   </li>
         </ul>
       </li><li>
         [<cite><a class="bibref" data-link-type="biblio" href="#bib-permissions">PERMISSIONS</a></cite>] defines the following:
         <ul>
           <li>
-    <span class="index-term" data-href="https://www.w3.org/TR/permissions/#dom-permissionstate-denied" id="index-term-denied-for-permissionstate" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>denied</code> (for <code>PermissionState</code>)</span>
+    <span class="index-term" data-href="https://www.w3.org/TR/permissions/#dom-permissionstate-denied" id="index-term-denied-for-permissionstate" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>denied</code> (for <code>PermissionState</code>)</span>
   </li><li>
-    <span class="index-term" data-href="https://www.w3.org/TR/permissions/" id="index-term-permissions" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">Permissions</span>
+    <span class="index-term" data-href="https://www.w3.org/TR/permissions/" id="index-term-permissions" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">Permissions</span>
   </li><li>
-    <span class="index-term" data-href="https://www.w3.org/TR/permissions/#request-permission-to-use" id="index-term-request-permission-to-use" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">request permission to use</span>
+    <span class="index-term" data-href="https://www.w3.org/TR/permissions/#request-permission-to-use" id="index-term-request-permission-to-use" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">request permission to use</span>
   </li>
         </ul>
       </li><li>
         [<cite><a class="bibref" data-link-type="biblio" href="#bib-permissions-policy">PERMISSIONS-POLICY</a></cite>] defines the following:
         <ul>
           <li>
-    <span class="index-term" data-href="https://www.w3.org/TR/permissions-policy-1/#default-allowlist" id="index-term-default-allowlist" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">default allowlist</span>
+    <span class="index-term" data-href="https://www.w3.org/TR/permissions-policy-1/#default-allowlist" id="index-term-default-allowlist" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">default allowlist</span>
   </li><li>
-    <span class="index-term" data-href="https://www.w3.org/TR/permissions-policy-1/" id="index-term-permissions-policy" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">Permissions Policy</span>
+    <span class="index-term" data-href="https://www.w3.org/TR/permissions-policy-1/" id="index-term-permissions-policy" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">Permissions Policy</span>
   </li><li>
-    <span class="index-term" data-href="https://www.w3.org/TR/permissions-policy-1/#policy-controlled-feature" id="index-term-policy-controlled-feature" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">policy-controlled feature</span>
+    <span class="index-term" data-href="https://www.w3.org/TR/permissions-policy-1/#policy-controlled-feature" id="index-term-policy-controlled-feature" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">policy-controlled feature</span>
   </li>
         </ul>
       </li><li>
         [<cite><a class="bibref" data-link-type="biblio" href="#bib-secure-contexts">SECURE-CONTEXTS</a></cite>] defines the following:
         <ul>
           <li>
-    <span class="index-term" data-href="https://www.w3.org/TR/secure-contexts/TR/secure-contexts/#non-secure-context" id="index-term-non-secure-context" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">non-secure context</span>
+    <span class="index-term" data-href="https://www.w3.org/TR/secure-contexts/#non-secure-context" id="index-term-non-secure-context" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">non-secure context</span>
   </li>
         </ul>
       </li><li>
         [<cite><a class="bibref" data-link-type="biblio" href="#bib-webidl">WEBIDL</a></cite>] defines the following:
         <ul>
           <li>
-    <span class="index-term" data-href="https://heycam.github.io/webidl/#idl-boolean" id="index-term-boolean-type" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>boolean</code> type</span>
+    <span class="index-term" data-href="https://heycam.github.io/webidl/#idl-boolean" id="index-term-boolean-type" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>boolean</code> type</span>
   </li><li>
-    <span class="index-term" data-href="https://heycam.github.io/webidl/#Clamp" id="index-term-clamp-extended-attribute" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>[Clamp]</code> extended attribute</span>
+    <span class="index-term" data-href="https://heycam.github.io/webidl/#Clamp" id="index-term-clamp-extended-attribute" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>[Clamp]</code> extended attribute</span>
   </li><li>
-    <span class="index-term" data-href="https://heycam.github.io/webidl/#idl-DOMString" id="index-term-domstring-interface" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>DOMString</code> interface</span>
+    <span class="index-term" data-href="https://heycam.github.io/webidl/#idl-DOMString" id="index-term-domstring-interface" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>DOMString</code> interface</span>
   </li><li>
-    <span class="index-term" data-href="https://heycam.github.io/webidl/#DOMTimeStamp" id="index-term-domtimestamp" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>DOMTimeStamp</code></span>
+    <span class="index-term" data-href="https://heycam.github.io/webidl/#DOMTimeStamp" id="index-term-domtimestamp" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>DOMTimeStamp</code></span>
   </li><li>
-    <span class="index-term" data-href="https://heycam.github.io/webidl/#idl-double" id="index-term-double-type" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>double</code> type</span>
+    <span class="index-term" data-href="https://heycam.github.io/webidl/#idl-double" id="index-term-double-type" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>double</code> type</span>
   </li><li>
-    <span class="index-term" data-href="https://heycam.github.io/webidl/#Exposed" id="index-term-exposed-extended-attribute" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>[Exposed]</code> extended attribute</span>
+    <span class="index-term" data-href="https://heycam.github.io/webidl/#Exposed" id="index-term-exposed-extended-attribute" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>[Exposed]</code> extended attribute</span>
   </li><li>
-    <span class="index-term" data-href="https://heycam.github.io/webidl/#invoke-a-callback-function" id="index-term-invoke" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">invoke</span>
+    <span class="index-term" data-href="https://heycam.github.io/webidl/#invoke-a-callback-function" id="index-term-invoke" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">invoke</span>
   </li><li>
-    <span class="index-term" data-href="https://heycam.github.io/webidl/#idl-long" id="index-term-long-type" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>long</code> type</span>
+    <span class="index-term" data-href="https://heycam.github.io/webidl/#idl-long" id="index-term-long-type" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>long</code> type</span>
   </li><li>
-    <span class="index-term" data-href="https://heycam.github.io/webidl/#SameObject" id="index-term-sameobject-extended-attribute" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>[SameObject]</code> extended attribute</span>
+    <span class="index-term" data-href="https://heycam.github.io/webidl/#SameObject" id="index-term-sameobject-extended-attribute" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>[SameObject]</code> extended attribute</span>
   </li><li>
-    <span class="index-term" data-href="https://heycam.github.io/webidl/#SecureContext" id="index-term-securecontext-extended-attribute" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>[SecureContext]</code> extended attribute</span>
+    <span class="index-term" data-href="https://heycam.github.io/webidl/#SecureContext" id="index-term-securecontext-extended-attribute" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>[SecureContext]</code> extended attribute</span>
   </li><li>
-    <span class="index-term" data-href="https://heycam.github.io/webidl/#this" id="index-term-this" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition">this</span>
+    <span class="index-term" data-href="https://heycam.github.io/webidl/#this" id="index-term-this" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition">this</span>
   </li><li>
-    <span class="index-term" data-href="https://heycam.github.io/webidl/#idl-undefined" id="index-term-undefined-type" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>undefined</code> type</span>
+    <span class="index-term" data-href="https://heycam.github.io/webidl/#idl-undefined" id="index-term-undefined-type" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>undefined</code> type</span>
   </li><li>
-    <span class="index-term" data-href="https://heycam.github.io/webidl/#idl-unsigned-long" id="index-term-unsigned-long-type" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>unsigned long</code> type</span>
+    <span class="index-term" data-href="https://heycam.github.io/webidl/#idl-unsigned-long" id="index-term-unsigned-long-type" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>unsigned long</code> type</span>
   </li><li>
-    <span class="index-term" data-href="https://heycam.github.io/webidl/#idl-unsigned-short" id="index-term-unsigned-short-type" tabindex="0" role="link" aria-haspopup="dialog" title="Show what links to this definition"><code>unsigned short</code> type</span>
+    <span class="index-term" data-href="https://heycam.github.io/webidl/#idl-unsigned-short" id="index-term-unsigned-short-type" tabindex="0" aria-haspopup="dialog" title="Show what links to this definition"><code>unsigned short</code> type</span>
   </li>
         </ul>
       </li>
@@ -2743,7 +2831,7 @@ interface <a class="internalDFN idlID" data-link-type="interface" href="#dom-geo
 
 <section id="references" class="appendix"><h2 id="d-references"><bdi class="secno">D. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="normative-references">
     <h3 id="d-1-normative-references"><bdi class="secno">D.1 </bdi>Normative references<a class="self-link" aria-label="§" href="#normative-references"></a></h3>
-    <dl class="bibliography"><dt id="bib-html">[HTML]</dt><dd><a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></dd><dt id="bib-infra">[infra]</dt><dd><a href="https://infra.spec.whatwg.org/"><cite>Infra Standard</cite></a>. Anne van Kesteren; Domenic Denicola.  WHATWG. Living Standard. URL: <a href="https://infra.spec.whatwg.org/">https://infra.spec.whatwg.org/</a></dd><dt id="bib-page-visibility-2">[page-visibility-2]</dt><dd><a href="https://www.w3.org/TR/page-visibility-2/"><cite>Page Visibility Level 2</cite></a>. Ilya Grigorik; Arvind Jain; Jatinder Mann.  W3C. 17 October 2017. W3C Proposed Recommendation. URL: <a href="https://www.w3.org/TR/page-visibility-2/">https://www.w3.org/TR/page-visibility-2/</a></dd><dt id="bib-permissions">[Permissions]</dt><dd><a href="https://www.w3.org/TR/permissions/" id="ref-for-index-term-permissions-2"><cite>Permissions</cite></a>. Mounir Lamouri; Marcos Caceres; Jeffrey Yasskin.  W3C. 20 July 2020. W3C Working Draft. URL: <a href="https://www.w3.org/TR/permissions/" id="ref-for-index-term-permissions-3">https://www.w3.org/TR/permissions/</a></dd><dt id="bib-permissions-policy">[Permissions-Policy]</dt><dd><a href="https://www.w3.org/TR/permissions-policy-1/" id="ref-for-index-term-permissions-policy-3"><cite>Permissions Policy</cite></a>. Ian Clelland.  W3C. 16 July 2020. W3C Working Draft. URL: <a href="https://www.w3.org/TR/permissions-policy-1/" id="ref-for-index-term-permissions-policy-4">https://www.w3.org/TR/permissions-policy-1/</a></dd><dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://tools.ietf.org/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner.  IETF. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a></dd><dt id="bib-rfc8174">[RFC8174]</dt><dd><a href="https://tools.ietf.org/html/rfc8174"><cite>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</cite></a>. B. Leiba.  IETF. May 2017. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc8174">https://tools.ietf.org/html/rfc8174</a></dd><dt id="bib-secure-contexts">[secure-contexts]</dt><dd><a href="https://www.w3.org/TR/secure-contexts/"><cite>Secure Contexts</cite></a>. Mike West.  W3C. 15 September 2016. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/secure-contexts/">https://www.w3.org/TR/secure-contexts/</a></dd><dt id="bib-webidl">[WebIDL]</dt><dd><a href="https://heycam.github.io/webidl/"><cite>Web IDL</cite></a>. Boris Zbarsky.  W3C. 15 December 2016. W3C Editor's Draft. URL: <a href="https://heycam.github.io/webidl/">https://heycam.github.io/webidl/</a></dd><dt id="bib-wgs84">[WGS84]</dt><dd><cite>National Imagery and Mapping Agency Technical Report 8350.2, Third Edition</cite>.  National Imagery and Mapping Agency. 3 January 2000. </dd></dl>
+    <dl class="bibliography"><dt id="bib-html">[HTML]</dt><dd><a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></dd><dt id="bib-infra">[infra]</dt><dd><a href="https://infra.spec.whatwg.org/"><cite>Infra Standard</cite></a>. Anne van Kesteren; Domenic Denicola.  WHATWG. Living Standard. URL: <a href="https://infra.spec.whatwg.org/">https://infra.spec.whatwg.org/</a></dd><dt id="bib-page-visibility-2">[page-visibility-2]</dt><dd><a href="https://www.w3.org/TR/page-visibility-2/"><cite>Page Visibility Level 2</cite></a>. Ilya Grigorik; Marcos Caceres.  W3C. 18 May 2021. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/page-visibility-2/">https://www.w3.org/TR/page-visibility-2/</a></dd><dt id="bib-permissions">[Permissions]</dt><dd><a href="https://www.w3.org/TR/permissions/" id="ref-for-index-term-permissions-2"><cite>Permissions</cite></a>. Mounir Lamouri; Marcos Caceres; Jeffrey Yasskin.  W3C. 20 July 2020. W3C Working Draft. URL: <a href="https://www.w3.org/TR/permissions/" id="ref-for-index-term-permissions-3">https://www.w3.org/TR/permissions/</a></dd><dt id="bib-permissions-policy">[Permissions-Policy]</dt><dd><a href="https://www.w3.org/TR/permissions-policy-1/" id="ref-for-index-term-permissions-policy-3"><cite>Permissions Policy</cite></a>. Ian Clelland.  W3C. 16 July 2020. W3C Working Draft. URL: <a href="https://www.w3.org/TR/permissions-policy-1/" id="ref-for-index-term-permissions-policy-4">https://www.w3.org/TR/permissions-policy-1/</a></dd><dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://tools.ietf.org/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner.  IETF. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a></dd><dt id="bib-rfc8174">[RFC8174]</dt><dd><a href="https://tools.ietf.org/html/rfc8174"><cite>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</cite></a>. B. Leiba.  IETF. May 2017. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc8174">https://tools.ietf.org/html/rfc8174</a></dd><dt id="bib-secure-contexts">[secure-contexts]</dt><dd><a href="https://www.w3.org/TR/secure-contexts/"><cite>Secure Contexts</cite></a>. Mike West.  W3C. 15 September 2016. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/secure-contexts/">https://www.w3.org/TR/secure-contexts/</a></dd><dt id="bib-webidl">[WebIDL]</dt><dd><a href="https://heycam.github.io/webidl/"><cite>Web IDL</cite></a>. Boris Zbarsky.  W3C. 15 December 2016. W3C Editor's Draft. URL: <a href="https://heycam.github.io/webidl/">https://heycam.github.io/webidl/</a></dd><dt id="bib-wgs84">[WGS84]</dt><dd><cite>National Imagery and Mapping Agency Technical Report 8350.2, Third Edition</cite>.  National Imagery and Mapping Agency. 3 January 2000. </dd></dl>
   </section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
   </p><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dom-navigator-geolocation" aria-label="Links in this document to definition: geolocation">
@@ -3713,7 +3801,7 @@ interface <a class="internalDFN idlID" data-link-type="interface" href="#dom-geo
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-index-term-non-secure-context" aria-label="Links in this document to definition: non-secure context">
       <span class="caret"></span>
       <div>
-        <a class="self-link" href="https://www.w3.org/TR/secure-contexts/TR/secure-contexts/#non-secure-context" aria-label="Permalink for definition: non-secure context. Activate to close this dialog.">Permalink</a>
+        <a class="self-link" href="https://www.w3.org/TR/secure-contexts/#non-secure-context" aria-label="Permalink for definition: non-secure context. Activate to close this dialog.">Permalink</a>
          
       </div>
       <p><b>Referenced in:</b></p>

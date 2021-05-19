@@ -29,12 +29,12 @@
         },
       ],
       group: "das",
-      publishDate: "2021-05-11",
+      publishDate: "2021-05-20",
       previousPublishDate: "2016-11-08",
       previousMaturity: "REC",
       github: "w3c/geolocation-api",
       caniuse: "geolocation",
-      testSuiteURI: "http://wpt.live/geolocation-API/",
+      testSuiteURI: "https://wpt.live/geolocation-API/",
       // implementationReportURI: "https://wpt.fyi/geolocation-API",
       localBiblio: {
         WGS84: {
@@ -1108,15 +1108,11 @@
           <p>
             The purpose of {{GeolocationPositionError}}'s
             {{GeolocationPositionError/message}} attribute is to assist
-            developers with debugging. As such, these error messages are not
-            provided by the user agent in a manner that would make sense if
-            presented to an end user. To make matters worse, the text of these
-            error messages is not localized.
-          </p>
-          <p>
-            To create user-friendly localized error messages, please leverage
-            the {{GeolocationPositionError}}'s
-            {{GeolocationPositionError/code}} attribute instead.
+            developers with debugging. For legacy reasons, this attribute does
+            not supply language or base direction metadata and is only
+            localized into English. Developers are advised to use
+            {{GeolocationPositionError}}'s {{GeolocationPositionError/code}}
+            attribute to create a localized experience.
           </p>
         </aside>
       </section>
