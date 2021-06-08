@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>MiniApp Lifecycle</title>
+
+    <link rel="stylesheet" href="./local.css" />
+
+    <style>
+    .two-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    table {
+      border-collapse:collapse;
+    }
+
+    table,th, td {
+      border: 1px solid #666;
+    }
+
+    td {
+      padding:2px 15px;
+    }
+    </style>
+
+<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer>
+</script>
+
+    <!-- <script defer src="https://w3c.github.io/miniapp/specs/script.js"></script> -->
+
+    <script class="remove">
+        var respecConfig = {
+            specStatus: "FPWD",
+            copyrightStart: "2021",
+            edDraftURI: "https://w3c.github.io/miniapp-lifecycle/",
+
+            shortName: "miniapp-lifecycle",
+            publishDate: "2021-06-10",
+
+            editors: [{
+                name: "Qing An",
+                companyURL: "https://www.alibabagroup.com/en/global/home",
+                company: "Alibaba",
+                w3cid: 76701,
+              }, {
+                name: "Haoyang Xu",
+                companyURL: "https://www.alibabagroup.com/en/global/home",
+                company: "Alibaba"
+              }],
+            
+            formerEditors: [{
+                name: "Xia Xu",
+                companyURL: "https://www.alibabagroup.com/en/global/home",
+                company: "Alibaba"
+              }],
+            
+            group: "wg/miniapps",
+
+            github: {
+              repoURL: "https://github.com/w3c/miniapp-lifecycle",
+              branch: "main",
+            },
+            
+            localBiblio:  {
+              "MINIAPP-PACKAGING": {
+                  title: "MiniApp Packaging",
+                  href: "https://w3c.github.io/miniapp-packaging/"
+              },
+            },
+        };
+    </script>
+</head>
+
+<body data-cite="HTML webidl">
+    <section id='abstract'>
+        <p>
+          This specification defines the MiniApp lifecycle events and the process to manage MiniApp and each page's lifecycle. Implementing this specification enables the user agent to manage the lifecycle events of both global application lifecycle and page lifecycle.
+        </p>
+    </section>
+    <section id='sotd'>
+        <!-- <p its-locale-filter-list="en" lang="en">
+        This is still a work in progress. The proposal is being incubated in the <a href="https://www.w3.org/community/miniapps/">W3C MiniApps Ecosystem Community Group</a>.
+        </p>
+        <p its-locale-filter-list="zh-hans" lang="zh-hans">
+          本文档由 <a href="https://www.w3.org/community/miniapps/">W3C MiniApps生态社区组</a>孵化，目前尚在编辑草稿阶段。</p> -->
+      <!-- <p id="langSwitch">
+        <button onclick="switchLang('zh-hans')" lang="zh-hans">简体中文</button>
+        <button onclick="switchLang('en')" lang="en">English</button>
+        <button onclick="switchLang('all')" lang="en">All</button>
+      </p> -->
+    </section>
+
+    <section>
+      <h2>Background</h2>
+      <p>
+        As described in <a href="https://www.w3.org/TR/mini-app-white-paper/#separate-the-view-layer-from-the-logic-layer">MiniApp Standardization White Paper</a>, in a miniapp, the View layer is separated from the Logic layer. The <dfn data-dfn-for="Document" data-export="">View layer</dfn> is responsible for rendering MiniApp pages, including Web rendering and native rendering, which can be considered as hybrid rendering. The <dfn data-dfn-for="Document" data-export="">Logic layer</dfn> is implemented with JavaScript Worker. The Logic layer is responsible for MiniApp’s event processing, API calling and lifecycle management.
+      </p>
+      <p>
+        MiniApp lifecycle mechanism provides a means to manage MiniApp's View layer and Logic layer through the MiniApp [=Document/global application lifecycle events=] and MiniApp [=Document/page lifecycle events=]. Developing MiniApp with knowledge of the MiniApp [=Document/global application lifecycle states=] and MiniApp [=Document/page lifecycle states=] can lead to improved user experiences. MiniApp lifecycle includes a set of events, with which MiniApp can choose to alter its behavior based on its state.
+      </p>
+    </section>
+
+    <section>
+        <h2>MiniApp Global Application Lifecycle</h2>
+        <section>
+          <h2>MiniApp Global Application Lifecycle Events</h2>
+          <p>This spec defines what the lifecycle of a MiniApp global application is and adds definition to enable MiniApp to respond to four important <dfn data-dfn-for="Document" data-export="">global application lifecycle events</dfn> commonly performed by MiniApp:</p>
+          <ul>
+          <li>
+            <p>MiniApp <dfn data-dfn-for="Document" data-export="" data-dfn-type=
+          "dfn">initialization</dfn></p>
+          </li>
+          <li>
+            <p>MiniApp <dfn data-dfn-for="Document" data-export="" data-dfn-type=
+          "dfn">running in foreground</dfn></p>
+          </li>
+          <li>
+            <p>MiniApp <dfn data-dfn-for="Document" data-export="" data-dfn-type=
+          "dfn">running in background</dfn></p>
+          </li> 
+          <li>
+            <p>MiniApp <dfn data-dfn-for="Document" data-export="" data-dfn-type=
+          "dfn">in error</dfn></p>
+          </li>
+          </ul>
+          
+          <p>For each MiniApp, after [=Document/initialization=], it will be either [=Document/running in foreground=] or [=Document/running in background=].</p>
+          <p>When user chooses to close the MiniApp by clicking the close button on MiniApp, or go to the mobile phone’s home screen, the MiniApp will not be destroyed immediately, but switch to be [=Document/running in background=].</p>
+          <p>When user reopens the same MiniApp, MiniApp will switch from [=Document/running in background=] to [=Document/running in foreground=].</p>
+          <p>Only when MiniApp runs in the background for more than a specific time duration (e.g., 5 minutes), or occupies too much system resources in the background, the MiniApp will be destroyed.</p>
+            
+        </section>
+        
+        <section>
+          <h2>MiniApp Global Application Lifecycle States</h2>
+          <p>This spec formalizes four <dfn data-dfn-for="Document" data-export="">global application lifecycle states</dfn> to support the above [=Document/global application lifecycle events=]:</p>
+
+      <dl>
+        <dt>
+          <dfn data-dfn-for="Document" data-export="" data-dfn-type=
+          "dfn">launched</dfn>
+        </dt>
+        <dd>
+          Lifecycle state for MiniApp [=Document/initialization=]. This means that the MiniApp [=Document/initialization=] is completed, and it is triggered only once. Through this event, developer can obtain the information of the MiniApp, such as URI, source info, etc.
+        </dd>
+        <dt>
+          <dfn data-dfn-for="Document" data-export="" data-dfn-type=
+          "dfn">shown</dfn>
+        </dt>
+        <dd>
+          Lifecycle state for MiniApp [=Document/running in foreground=]. It is triggered once the MiniApp enters the [=Document/launched=] state, or once the MiniApp switches to be [=Document/running in foreground=] from [=Document/running in background=].
+        </dd>
+        <dt>
+          <dfn data-dfn-for="Document" data-export="" data-dfn-type=
+          "dfn">hidden</dfn>
+        </dt>
+        <dd>
+          Lifecycle state for MiniApp [=Document/running in background=]. It is triggered once the MiniApp switches to be [=Document/running in background=] from [=Document/running in foreground=].
+        </dd>
+        <dt>
+          <dfn data-dfn-for="Document" data-export="" data-dfn-type=
+          "dfn">error</dfn>
+        </dt>
+        <dd>
+          Lifecycle state for MiniApp [=Document/in error=]. It is triggered once the MiniApp is confronted with script error.
+        </dd>
+      </dl>
+        </section>
+                
+        <section data-dfn-for="GlobalState">
+          <h2>
+            <code>GlobalState</code> enum
+          </h2>
+          <p>The MiniApp [=Document/global application lifecycle states=] are reflected in the API via the {{GlobalState}} enum.</p>
+            
+          <pre class="idl">
+          enum GlobalState {
+              "launched", "shown", "hidden", "error"
+          };
+          </pre> 
+          
+          <p>
+            The <dfn>GlobalState</dfn> enum is used to represent the
+            [=Document/global application lifecycle states=].
+          </p>
+          <p>
+            The "<dfn>launched</dfn>" enum value represents the [=Document/launched=]
+            [=Document/global application lifecycle states=].
+         </p>
+          <p>
+            The "<dfn>shown</dfn>" enum value represents the [=Document/shown=]
+            [=Document/global application lifecycle states=].
+         </p>
+         <p>
+            The "<dfn>hidden</dfn>" enum value represents the [=Document/hidden=]
+            [=Document/global application lifecycle states=].
+         </p>
+         <p>
+            The "<dfn>error</dfn>" enum value represents the [=Document/error=]
+            [=Document/global application lifecycle states=].
+         </p>
+        </section>
+        
+                  
+        <section data-dfn-for="Global">
+          <h2>MiniApp Global Application Lifecycle interface and callbacks</h2>
+          
+          <pre class="idl">
+           [Exposed=Window]
+           interface Global {
+            undefined getGlobalState (
+                GlobalLaunchedCallback globalLaunchedCallback,
+                GlobalShownCallback globalShownCallback,
+                GlobalHiddenCallback globalHiddenCallback,
+                GlobalErrorCallback globalErrorCallback
+            );
+           };
+
+          callback GlobalLaunchedCallback = undefined (
+            InputObject inputObject
+          );
+          
+          callback GlobalShownCallback = undefined (
+            InputObject inputObject
+          );
+          
+          callback GlobalHiddenCallback = undefined (
+          );
+          
+          callback GlobalErrorCallback = undefined (
+            LifecycleError lifecycleError
+          );
+
+         </pre>
+         
+         <section>
+            <h2>
+                `getGlobalState()` method
+            </h2>
+            <p>
+                When <dfn>getGlobalState()</dfn> is invoked, the user agent MUST:
+            </p>
+            <ol class="algorithm">
+                <li>Request global application lifecycle state, passing globalLaunchedCallback, globalShownCallback, globalHiddenCallback, and globalErrorCallback.
+                </li>
+                <li>Return `undefined`.
+                </li>
+            </ol>
+        </section>
+        
+        <section>
+            <h2>
+                `globalLaunchedCallback`
+            </h2>
+            <p>
+                If MiniApp's first page is ready to load, invoke {{GlobalLaunchedCallback}}.
+            </p>
+        </section>
+        
+        <section>
+            <h2>
+                `globalShownCallback`
+            </h2>
+            <p>
+                If MiniApp enters the [=Document/shown=] [=Document/global application lifecycle states=], or if MiniApp switches to be [=Document/running in foreground=] from [=Document/running in background=], invoke {{GlobalShownCallback}}.
+            </p>
+        </section>
+        
+        <section>
+            <h2>
+                `globalHiddenCallback`
+            </h2>
+            <p>
+                If MiniApp switches to be [=Document/running in background=] from [=Document/running in foreground=], invoke {{GlobalHiddenCallback}}.
+            </p>
+        </section>
+        
+        <section>
+            <h2>
+                `globalErrorCallback`
+            </h2>
+            <p>
+                If MiniApp MiniApp is confronted with script error, invoke {{GlobalErrorCallback}}.
+            </p>
+        </section>
+                   
+        </section>
+        
+        <section data-dfn-for="InputObject">
+            <h2>
+                `InputObject` interface
+            </h2>
+            <pre class="idl">
+                [Exposed=Window]
+                interface InputObject {
+                    readonly attribute DOMString inputQuery;
+                    readonly attribute DOMString pagePath;
+                    readonly attribute DOMString referrerInfo;
+                };
+            </pre>
+            <section>
+                <h3>
+                    `inputQuery` attribute
+                </h3>
+                <p>
+                    The <dfn>inputQuery</dfn> attribute contains inputted query for the MiniApp.
+                </p>
+            </section>
+            
+            <section>
+                <h3>
+                    `pagePath` attribute
+                </h3>
+                <p>
+                    The <dfn>pagePath</dfn> attribute contains the page path for current MiniApp.
+                </p>
+            </section>
+            
+            <section>
+                <h3>
+                    `referrerInfo` attribute
+                </h3>
+                <p>
+                    The <dfn>referrerInfo</dfn> attribute contains the source info for the MiniApp, including MiniApp ID, and optional extra data.
+                </p>
+            </section>
+            
+        </section>
+        
+        <section data-dfn-for="LifecycleError">
+            <h2>
+                `LifecycleError` interface
+            </h2>
+            <pre class="idl">
+                [Exposed=Window]
+                interface LifecycleError {
+                    readonly attribute DOMString errorDescription;
+                };
+            </pre>
+            
+            <section>
+                <h3>
+                    `errorDescription` attribute
+                </h3>
+                <p>
+                    The <dfn>errorDescription</dfn> attribute is a developer-friendly textual description of the [=Document/error=] [=Document/global application lifecycle states=].
+                </p>
+            </section>
+        
+       </section>
+       
+       </section>
+
+        <section>
+          <h2>MiniApp Page Lifecycle</h2>
+         <section>
+          <h2>MiniApp Page Lifecycle Events</h2>
+
+          <p>This spec defines what the lifecycle of a MiniApp page is and adds definition to enable MiniApp to respond to five important <dfn data-dfn-for="Document" data-export="">page lifecycle events</dfn> commonly performed by MiniApp:</p>
+          <ul>
+          <li>
+            <p>MiniApp <dfn data-dfn-for="Document" data-export="" data-dfn-type=
+          "dfn">page loading</dfn></p>
+          </li>
+          <li>
+            <p>MiniApp <dfn data-dfn-for="Document" data-export="" data-dfn-type=
+          "dfn">page first render ready</dfn></p>
+          </li>
+          <li>
+            <p>MiniApp <dfn data-dfn-for="Document" data-export="" data-dfn-type=
+          "dfn">page running in foreground</dfn></p>
+          </li>
+          <li>
+            <p>MiniApp <dfn data-dfn-for="Document" data-export="" data-dfn-type=
+          "dfn">page running in background</dfn></p>
+          </li>
+          <li>
+            <p>MiniApp <dfn data-dfn-for="Document" data-export="" data-dfn-type=
+          "dfn">page unloading</dfn></p>
+          </li>
+          </ul>
+          
+          <aside class="note">
+            <p>
+              When a MiniApp is launched, the process of rendering the first MiniApp page that is displayed to the user is called the <dfn data-dfn-for="Document" data-export="" data-dfn-type=
+          "dfn">first render</dfn>.
+            </p>
+          </aside>
+          
+          <!-- <p>The following figure illustrates the MiniApp global application and page lifecycle.</p>
+          <figure id="lifecycle-img">
+            <span style="text-align:center;"><img src="images/lifecycle.png" alt="MiniApp page lifecycle" width="600"></span>
+            <figcaption>MiniApp global application and page lifecycle illustration</figcaption>
+          </figure> -->
+
+          <ol>
+<li>
+  <p>When user firstly opens a MiniApp, the MiniApp [=Document/initialization=] starts. [=Document/View layer=] and [=Document/Logic layer=] will simultaneously start the initialization.</p>
+</li>
+<li>
+  <p>Once [=Document/Logic layer=] initialization is completed, it creates a MiniApp instance. Simultaneously, once [=Document/View layer=] initialization is completed, it starts the MiniApp [=Document/page loading=], to establish communication channel between [=Document/View layer=] and [=Document/Logic layer=].</p>
+</li>
+<li>
+  <p>After the communication channel is established, [=Document/Logic layer=] sends the initial data to [=Document/View layer=] to start the [=Document/first render=].</p>
+</li>
+<li>
+  <p>If [=Document/View layer=] completes the page UI update based on the inputted initial data from [=Document/Logic layer=], the [=Document/first render=] is considered as completed, and then [=Document/View layer=] notifies [=Document/Logic layer=], to trigger the MiniApp [=Document/page first render ready=].</p>
+</li>
+<li>
+  <p>Afterwards, user can interact with MiniApp. [=Document/View layer=] can be triggered to deliver user event to [=Document/Logic layer=] for further processing, then [=Document/Logic layer=] returns result data to [=Document/View layer=] for re-render.</p>
+</li>
+<li>
+  <p>
+    If user leaves the current MiniApp page (e.g., by navigating to another MiniApp page), MiniApp [=Document/page running in background=] is triggered. If the MiniApp page is reopened, MiniApp [=Document/page running in foreground=] is triggered.
+  </p>
+</li>
+<li>
+  <p>
+    If user closes the current MiniApp page, MiniApp [=Document/page unloading=] is triggered.
+  </p>
+  </li>
+          </ol>
+       </section>
+       
+       <section>
+          <h2>MiniApp Page Lifecycle States</h2>      
+          <p>This spec formalizes five MiniApp <dfn data-dfn-for="Document" data-export="">page lifecycle states</dfn> to support the above [=Document/page lifecycle events=]:</p>
+          
+          <dl>
+            <dt>
+                <dfn data-dfn-for="Document" data-export="" data-dfn-type="dfn">page loaded</dfn>
+            </dt>
+            <dd>
+                Lifecycle state for MiniApp [=Document/page loading=]. This means that MiniApp [=Document/page loading=] is completed. At this moment, [=Document/Logic layer=] has obtained initialization data, and developer can obtain the path of current MiniApp page as well as the path’s query. 
+            </dd>
+            
+            <dt>
+                <dfn data-dfn-for="Document" data-export="" data-dfn-type="dfn">page ready</dfn>
+            </dt>
+            <dd>
+                Lifecycle state for MiniApp [=Document/page first render ready=]. It is triggered once the MiniApp page [=Document/first render=] is completed. At this moment, the page UI can be configured.
+            </dd>
+            
+            <dt>
+                <dfn data-dfn-for="Document" data-export="" data-dfn-type="dfn">page shown</dfn>
+            </dt>
+            <dd>
+                Lifecycle state for MiniApp [=Document/page running in foreground=]. It is triggered once the page switches to be [=Document/page running in foreground=] from [=Document/page running in background=]. At this moment, developer can update data and refresh page.
+            </dd>
+            
+            <dt>
+                <dfn data-dfn-for="Document" data-export="" data-dfn-type="dfn">page hidden</dfn>
+            </dt>
+            <dd>
+                Lifecycle state for MiniApp [=Document/page running in background=]. It is triggered once the MiniApp page switches to be [=Document/page running in foreground=] to [=Document/page running in background=].
+            </dd>
+            
+            <dt>
+                <dfn data-dfn-for="Document" data-export="" data-dfn-type="dfn">page unloaded</dfn>
+            </dt>
+            <dd>
+                Lifecycle state for MiniApp [=Document/page unloading=]. It is triggered once the MiniApp page is closed.
+            </dd>
+            
+          </dl>
+       </section>
+       
+       <section data-dfn-for="PageState">
+          <h2>
+            <code>PageState</code> enum
+          </h2>
+          <p>The MiniApp [=Document/page lifecycle states=] are reflected in the API via the {{PageState}} enum.</p>
+            
+          <pre class="idl">
+          enum PageState {
+              "loaded", "ready", "shown", "hidden", "unloaded"
+          };
+          </pre> 
+          
+          <p>
+            The <dfn>PageState</dfn> enum is used to represent the MiniApp [=Document/page lifecycle states=].
+          </p>
+          <p>
+            The "<dfn>loaded</dfn>" enum value represents the [=Document/page loaded=]
+            [=Document/page lifecycle states=].
+         </p>
+         <p>
+            The "<dfn>ready</dfn>" enum value represents the [=Document/page ready=]
+            [=Document/page lifecycle states=].
+         </p>
+          <p>
+            The "<dfn>shown</dfn>" enum value represents the [=Document/page shown=]
+            [=Document/page lifecycle states=].
+         </p>
+         <p>
+            The "<dfn>hidden</dfn>" enum value represents the [=Document/page hidden=]
+            [=Document/page lifecycle states=].
+         </p>
+         <p>
+            The "<dfn>unloaded</dfn>" enum value represents the [=Document/page unloaded=]
+            [=Document/page lifecycle states=].
+         </p>
+          
+        </section>
+       
+       <section data-dfn-for="Page">
+       
+        <h2>MiniApp Page Lifecycle interface and callbacks</h2>
+          
+          <pre class="idl">
+           [Exposed=Window]
+           interface Page {
+            undefined getPageState (
+                PageLoadedCallback pageLoadedCallback,
+                PageReadyCallback pageReadyCallback,
+                PageShownCallback pageShownCallback,
+                PageHiddenCallback pageHiddenCallback,
+                PageUnloadedCallback pageUnloadedCallback
+            );
+           };
+
+          callback PageLoadedCallback = undefined (
+            PageInputObject pageInputObject
+          );
+          
+          callback PageReadyCallback = undefined (
+          );
+          
+          callback PageShownCallback = undefined (
+          );
+          
+          callback PageHiddenCallback = undefined (
+          );
+          
+          callback PageUnloadedCallback = undefined (
+          );
+
+         </pre>
+         
+         <section>
+            <h2>
+                `getPageState()` method
+            </h2>
+            <p>
+                When <dfn>getPageState()</dfn> is invoked, the user agent MUST:
+            </p>
+            <ol class="algorithm">
+                <li>Request page lifecycle state, passing pageLoadedCallback, pageReadyCallback, pageShownCallback, pageHiddenCallback, and pageUnloadedCallback.
+                </li>
+                <li>Return `undefined`.
+                </li>
+            </ol>
+        </section>
+        
+        <section>
+            <h2>
+                `pageLoadedCallback`
+            </h2>
+            <p>
+                If a communication channel has been established between [=Document/View layer=] and [=Document/Logic layer=], invoke {{PageLoadedCallback}}.
+            </p>
+        </section>
+        
+        <section>
+            <h2>
+                `pageReadyCallback`
+            </h2>
+            <p>
+                If MiniApp page [=Document/first render=] is completed, invoke {{PageReadyCallback}}.
+            </p>
+        </section>
+        
+        <section>
+            <h2>
+                `pageShownCallback`
+            </h2>
+            <p>
+                If MiniApp page switches to be [=Document/page running in foreground=] from [=Document/page running in background=], invoke {{PageShownCallback}}.
+            </p>
+        </section>
+        
+        <section>
+            <h2>
+                `pageHiddenCallback`
+            </h2>
+            <p>
+                If MiniApp page switches to be [=Document/page running in background=] from [=Document/page running in foreground=], invoke {{PageHiddenCallback}}.
+            </p>
+        </section>
+        
+        <section>
+            <h2>
+                `pageUnloadedCallback`
+            </h2>
+            <p>
+                If MiniApp page is closed, invoke {{PageUnloadedCallback}}.
+            </p>
+        </section>
+       
+       </section>
+       
+       <section data-dfn-for="PageInputObject">
+            <h2>
+                `PageInputObject` interface
+            </h2>
+            <pre class="idl">
+                [Exposed=Window]
+                interface PageInputObject {
+                    readonly attribute DOMString pageInputQuery;
+                };
+            </pre>
+            <section>
+                <h3>
+                    `pageInputQuery` attribute
+                </h3>
+                <p>
+                    The <dfn>pageInputQuery</dfn> attribute contains inputted query for the MiniApp page.
+                </p>
+            </section>
+                        
+        </section>
+       
+       
+        </section>
+
+     <section class='informative'>
+      <h2>Privacy and Security</h2>
+      <!-- <h2>
+        <span its-locale-filter-list="en" lang="en">Privacy and Security</span>
+        <span its-locale-filter-list="zh-hans" lang="zh-hans">隐私与安全</span>
+      </h2> -->
+         
+        <!-- <p its-locale-filter-list="en" lang="en"> -->
+        <p>
+          MiniApp [=Document/running in foreground=] and [=Document/running in background=] event enables developer to know when a MiniApp is visible. By use of [=Document/page running in foreground=] event, developer can choose to process and hide the sensitive data, before MiniApp page switches to be [=Document/page running in foreground=]; the [=Document/page unloaded=] event provides a notification that the page is being unloaded.
+        </p>
+        <!-- <p its-locale-filter-list="zh-hans" lang="zh-hans">
+          onShow和onHide事件会通知开发者小程序是否可见，当小程序回到前台时，提供onShow事件，开发者可以对敏感数据进行处理，同时提供onUnload事件将在页面被销毁时提示开发者。
+        </p> -->
+         
+     </section>
+    
+    <!-- <section class="appendix">
+      <h2>
+        <span its-locale-filter-list="en" lang="en">Acknowledgments</span>
+        <span its-locale-filter-list="zh-hans" lang="zh-hans">致谢</span>
+      </h2>
+      <p>
+        暂无
+      </p>
+    </section> -->
+</body>
+
+</html>
