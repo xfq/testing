@@ -1,15 +1,14 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 26.14.0">
+<meta name="generator" content="ReSpec 27.0.5">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
-aside.example,div.example,div.illegal-example{padding:.5em;margin:1em 0;position:relative;clear:both}
+:is(aside,div).example,div.illegal-example{padding:.5em;margin:1em 0;position:relative;clear:both}
 div.illegal-example{color:red}
 div.illegal-example p{color:#000}
-aside.example,div.example{padding:.5em;border-left-width:.5em;border-left-style:solid;border-color:#e0cb52;background:#fcfaee}
+:is(aside,div).example{border-left-width:.5em;border-left-style:solid;border-color:#e0cb52;background:#fcfaee}
 aside.example div.example{border-left-width:.1em;border-color:#999;background:#fff}
-aside.example div.example span.example-title{color:#999}
 .example pre{background-color:rgba(0,0,0,.03)}
 </style>
 <style>
@@ -57,7 +56,7 @@ dfn{cursor:pointer}
 100%{transform:scale(1,1)}
 }
 .hljs{background:0 0!important}
-a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}
+:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
 dfn{font-weight:700}
 a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
 a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
@@ -99,11 +98,11 @@ details.respec-tests-details>li{padding-left:1em}
 a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
 h2,h3,h4,h5,h6{position:relative}
 aside.example .marker>a.self-link{color:inherit}
-h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
-h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}
+:is(h2,h3,h4,h5,h6)>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
+:is(h2,h3,h4,h5,h6)>a.self-link::before{content:"§";display:block}
 @media (max-width:767px){
 dd{margin-left:0}
-h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}
+:is(h2,h3,h4,h5,h6)>a.self-link{left:auto;top:auto}
 }
 @media print{
 .removeOnSave{display:none}
@@ -137,7 +136,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "copyrightStart": "2021",
   "edDraftURI": "https://w3c.github.io/miniapp-packaging/",
   "shortName": "miniapp-packaging",
-  "publishDate": "2021-10-12",
+  "publishDate": "2021-11-09",
   "editors": [
     {
       "name": "Martin Alvarez-Espinar",
@@ -214,27 +213,27 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     }
   },
   "a11y": true,
-  "publishISODate": "2021-10-12T00:00:00.000Z",
-  "generatedSubtitle": "First Public Working Draft 12 October 2021"
+  "publishISODate": "2021-11-09T00:00:00.000Z",
+  "generatedSubtitle": "First Public Working Draft 09 November 2021"
 }</script>
-<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-WD"></head>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-FPWD"></head>
 
-<body data-cite="MINIAPP-MANIFEST INFRA URL HTML" data-new-gr-c-s-check-loaded="14.1032.0" data-gr-ext-installed="" class="h-entry"><div class="head">
-    <a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72">
+<body data-cite="MINIAPP-MANIFEST INFRA URL HTML" class="h-entry" data-new-gr-c-s-check-loaded="14.1037.0" data-gr-ext-installed=""><div class="head">
+    <a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a> <h1 id="title" class="title">MiniApp Packaging</h1>
     
-    <h2><a href="https://www.w3.org/standards/types">W3C First Public Working Draft</a> <time class="dt-published" datetime="2021-10-12">12 October 2021</time></h2>
-    <details open="">
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#FPWD">W3C First Public Working Draft</a> <time class="dt-published" datetime="2021-11-09">09 November 2021</time></p>
+    <details>
       <summary>More details about this document</summary>
       <dl>
         <dt>This version:</dt><dd>
-                <a class="u-url" href="https://www.w3.org/TR/2021/WD-miniapp-packaging-20211012/">https://www.w3.org/TR/2021/WD-miniapp-packaging-20211012/</a>
+                <a class="u-url" href="https://www.w3.org/TR/2021/WD-miniapp-packaging-20211109/">https://www.w3.org/TR/2021/WD-miniapp-packaging-20211109/</a>
               </dd><dt>Latest published version:</dt><dd>
                 <a href="https://www.w3.org/TR/miniapp-packaging/">https://www.w3.org/TR/miniapp-packaging/</a>
               </dd>
         <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/miniapp-packaging/">https://w3c.github.io/miniapp-packaging/</a></dd>
         <dt>History:</dt><dd>
-      <a href="https://www.w3.org/standards/history/miniapp-packaging">Publication history</a>
+      <a href="https://www.w3.org/standards/history/miniapp-packaging">https://www.w3.org/standards/history/miniapp-packaging</a>
     </dd><dd>
         <a href="https://github.com/w3c/miniapp-packaging/commits/main">Commit history</a>
       </dd>
@@ -274,9 +273,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <a href="https://github.com/w3c/miniapp-packaging/issues/">open issues</a>)
       </dd>
         
+        
       </dl>
     </details>
-    
     
     
     <p class="copyright">
@@ -286,10 +285,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
     <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
     <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-    <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
-    W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules
-    apply.
+    <a href="https://ev.buaa.edu.cn/">Beihang</a>). W3C
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
+    <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document" title="W3C Software and Document Notice and License">permissive document license</a> rules apply.
   </p>
     <hr title="Separator for header">
   </div>
@@ -297,33 +296,27 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <p>This specification defines semantics and conformance requirements for a <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-1">MiniApp package</a>, and the structure of the single file container that holds the resources of a MiniApp, including a manifest file, static page templates, stylesheets, JavaScript documents, media files and other resources. Instances of the <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-2">MiniApp package</a> are used for MiniApp distribution and execution on runtime environments (<a data-link-type="dfn" href="#dfn-useragent" class="internalDFN" id="ref-for-dfn-useragent-1">MiniApp user agent</a>).</p>
     </section>
     <section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
-      document at the time of its publication. Other documents may supersede
-      this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision
-      of this technical report can be found in the
-      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+      document at the time of its publication. A list of current <abbr title="World Wide Web Consortium">W3C</abbr>
+      publications and the latest revision of this technical report can be found
+      in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
       https://www.w3.org/TR/.</em></p>
     <p>
-    This document was published by the <a href="https://www.w3.org/2021/miniapps/">MiniApps Working Group</a> as a
-    First Public Working Draft. 
-    This document is intended to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
-  </p><p>
-    <a href="https://github.com/w3c/miniapp-packaging/issues/">GitHub Issues</a> are preferred for
-          discussion of this specification.
-        
+    This document was published by the <a href="https://www.w3.org/groups/wg/miniapps">MiniApps Working Group</a> as
+    a First Public Working Draft using the
+        <a href="https://www.w3.org/2021/Process-20211102/#recs-and-notes">Recommendation track</a>. 
+  </p><p>Publication as a First Public Working Draft does not
+  imply endorsement by <abbr title="World Wide Web Consortium">W3C</abbr> and its Members. </p><p>
+    This is a draft document and may be updated, replaced or obsoleted by other
+    documents at any time. It is inappropriate to cite this document as other
+    than work in progress.
     
   </p><p>
-      Publication as a First Public Working Draft does not imply endorsement
-      by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership. 
-    </p><p>This is a draft document and may be updated, replaced
-  or obsoleted by other documents at any time. It is inappropriate to cite this
-  document as other than work in progress.
-  </p><p></p><p>
     
         This document was produced by a group
         operating under the
         <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
           Policy</a>.
-       
+      
     
                 <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
                 <a rel="disclosure" href="https://www.w3.org/groups/wg/miniapps/ipr">public list of any patent disclosures</a>
@@ -335,10 +328,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           must disclose the information in accordance with
           <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
         
-    
   </p><p>
                   This document is governed by the
-                  <a id="w3c_process_revision" href="https://www.w3.org/2020/Process-20200915/">15 September 2020 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                  <a id="w3c_process_revision" href="https://www.w3.org/2021/Process-20211102/">2 November 2021 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                 </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#sec-introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#overview"><bdi class="secno">1.1 </bdi>Overview</a></li><li class="tocline"><a class="tocxref" href="#sec-terminology"><bdi class="secno">1.2 </bdi>Terminology</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">1.3 </bdi>Conformance</a></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-conformance"><bdi class="secno">2. </bdi>Package Conformance</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-filestructure"><bdi class="secno">2.1 </bdi>Directory and File System Structure</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#root-directory"><bdi class="secno">2.1.1 </bdi>Root Directory</a></li><li class="tocline"><a class="tocxref" href="#sec-pages-directory"><bdi class="secno">2.1.2 </bdi><code>pages</code> Directory</a></li><li class="tocline"><a class="tocxref" href="#common-directory"><bdi class="secno">2.1.3 </bdi><code>common</code> Directory</a></li><li class="tocline"><a class="tocxref" href="#i18n-directory"><bdi class="secno">2.1.4 </bdi><code><abbr title="internationalization">i18n</abbr></code> Directory</a></li><li class="tocline"><a class="tocxref" href="#file-names"><bdi class="secno">2.1.5 </bdi>File Names</a></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-resources"><bdi class="secno">2.2 </bdi>MiniApp Resources</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-miniapp-resources-html"><bdi class="secno">2.2.1 </bdi>HTML Resources</a></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-resources-css"><bdi class="secno">2.2.2 </bdi>CSS Resources</a></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-resources-js"><bdi class="secno">2.2.3 </bdi>Scripting Resources</a></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-resources-i18n"><bdi class="secno">2.2.4 </bdi>Localization Resources</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-zip-container"><bdi class="secno">3. </bdi>MiniApp ZIP Container</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-miniapp-zip-container-intro"><bdi class="secno">3.1 </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-zip-file-requirements"><bdi class="secno">3.2 </bdi>ZIP File Requirements</a></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-digital-signature-requirements"><bdi class="secno">3.3 </bdi>Digital Signature Requirements</a></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-i18n"><bdi class="secno">4. </bdi>Internationalization</a></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-processing"><bdi class="secno">5. </bdi>MiniApp Package Processing</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-miniapp-processing-retrieval"><bdi class="secno">5.1 </bdi>MiniApp ZIP Container Retrieval</a></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-processing-verify"><bdi class="secno">5.2 </bdi>MiniApp ZIP Container Verification</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-miniapp-digital-signatures-processing"><bdi class="secno">5.2.1 </bdi>Digital Signatures Processing</a></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-processing-manifest"><bdi class="secno">5.3 </bdi>MiniApp Manifest Processing</a></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-platform-runtime-preparation"><bdi class="secno">5.4 </bdi>Platform Runtime Preparation</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-miniapp-platform-compatibility-verification"><bdi class="secno">5.4.1 </bdi>Platform Compatibility Verification</a></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-platform-start-page-identification"><bdi class="secno">5.4.2 </bdi>Start Page Identification</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-miniapp-processing-platform-start-page-uri"><bdi class="secno">5.4.2.1 </bdi>Extraction of Start Page From URI</a></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-processing-platform-start-page-manifest"><bdi class="secno">5.4.2.2 </bdi>Extraction of Start Page From Manifest</a></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-processing-locale"><bdi class="secno">5.4.3 </bdi>Extraction of Locale</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-security-privacy"><bdi class="secno">6. </bdi>Security and Privacy Considerations</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#package-integrity-and-trustworthiness"><bdi class="secno">6.1 </bdi>Package Integrity and Trustworthiness</a></li><li class="tocline"><a class="tocxref" href="#content-confidentiality"><bdi class="secno">6.2 </bdi>Content Confidentiality</a></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-acknowledgments"><bdi class="secno">A. </bdi>Acknowledgments</a></li><li class="tocline"><a class="tocxref" href="#sec-signature-schemes"><bdi class="secno">B. </bdi>Signature Schemes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-signature-rpk"><bdi class="secno">B.1 </bdi>RPK Signature Scheme</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-signing-block-signature"><bdi class="secno">B.1.1 </bdi>Signatures</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#developer-signature"><bdi class="secno">B.1.1.1 </bdi>Developer Signature</a></li><li class="tocline"><a class="tocxref" href="#distributor-signature"><bdi class="secno">B.1.1.2 </bdi>Distributor Signature</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-signature-pkcs7"><bdi class="secno">B.2 </bdi>PKCS#7 Signature Scheme</a></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-media-type-registration"><bdi class="secno">C. </bdi>Media Type Registration</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">D. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">D.1 </bdi>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">D.2 </bdi>Informative references</a></li></ol></li></ol></nav>
     <section id="sec-introduction">
         <h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#sec-introduction"></a></h2>
@@ -755,7 +747,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
             <p><a data-link-type="dfn" href="#dfn-useragent" class="internalDFN" id="ref-for-dfn-useragent-13">User agents</a> <em class="rfc2119">MAY</em> obtain <a data-link-type="dfn" href="#dfn-container" class="internalDFN" id="ref-for-dfn-container-14">MiniApp ZIP containers</a> through different channels, retrieving the file over the network (i.e., using HTTPs, WebSocket, FTP, or other specific TCP/UDP based protocols), also from the filesystem or using any other mechanism.</p>
             <p>To <dfn data-lt="retrieving a MiniApp ZIP container|retrieve a MiniApp ZIP container" data-dfn-type="dfn" id="dfn-retrieving-a-miniapp-zip-container" tabindex="0" aria-haspopup="dialog">retrieve a MiniApp ZIP container</dfn>, given <a data-link-type="dfn" data-type="dfn" href="https://url.spec.whatwg.org/#concept-url">URL</a> <var data-type="URL">miniapp_uri</var>, perform the following steps. They return a <a data-link-type="dfn" href="#dfn-container" class="internalDFN" id="ref-for-dfn-container-15">MiniApp ZIP container</a>.</p>
             <ol class="algorithm">
-                <li>Let <var data-type="MiniApp ZIP container">resource</var> be a <a data-link-type="dfn" href="#dfn-container" class="internalDFN" id="ref-for-dfn-container-16">MiniApp ZIP container</a> as a result of <a href="https://www.w3.org/html/wg/spec/fetching-resources.html#fetch">fetching a URL</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-html5" title="HTML5">HTML5</a></cite>], passing <var data-type="URL">miniapp_uri</var>.</li>
+                <li>Let <var data-type="MiniApp ZIP container">resource</var> be a <a data-link-type="dfn" href="#dfn-container" class="internalDFN" id="ref-for-dfn-container-16">MiniApp ZIP container</a> as a result of <a href="https://fetch.spec.whatwg.org/#concept-fetch">fetching a URL</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-fetch" title="Fetch Standard">FETCH</a></cite>], passing <var data-type="URL">miniapp_uri</var>.</li>
                 <li>Let <var data-type="string">supplied_mime_type</var> be the result of applying the <a href="https://mimesniff.spec.whatwg.org/#supplied-mime-type-detection-algorithm">supplied MIME type detection algorithm</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-mimesniff" title="MIME Sniffing Standard">MIMESNIFF</a></cite>] with <var data-type="MiniApp ZIP container">resource</var>.</li>
                 <li>If <var data-type="string">supplied_mime_type</var> is not equal to <code>application/miniapp-pkg+zip</code>, then return failure.</li>
                 <li>Return <var data-type="MiniApp ZIP container">resource</var>.</li>
@@ -1231,7 +1223,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
             <dt>Optional parameters:</dt>
             <dd>"N/A"</dd>
             <dt>Encoding considerations:</dt>
-            <dd>MiniApp packages are binary files encoded in the <a href="https://www.iana.org/assignments/media-types/application/zip">application/zip</a> media type. See <a href="https://tools.ietf.org/html/rfc6839#section-3.6">RFC 6839, section 3.6</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc6839" title="Additional Media Type Structured Syntax Suffixes">RFC6839</a></cite>].</dd>
+            <dd>MiniApp packages are binary files encoded in the <a href="https://www.iana.org/assignments/media-types/application/zip">application/zip</a> media type. See <a href="https://datatracker.ietf.org/doc/html/rfc6839#section-3.6">RFC 6839, section 3.6</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc6839" title="Additional Media Type Structured Syntax Suffixes">RFC6839</a></cite>].</dd>
             <dt>Security considerations:</dt>
             <dd>Security considerations that apply to application/zip also apply to MiniApp package files. User agents that process MiniApp package files should rigorously check the size and validity of data retrieved. When digital signatures are available in a MiniApp package file, the user agent <em class="rfc2119">SHOULD</em> implement necessary mechanisms to check the integrity and trustworthiness of the file according to the digital signatures, so as to to protect the end user and the hosting platform from the damage of package tampering or corruption. See more at <a href="#sec-security-privacy" class="sec-ref">§&nbsp;<bdi class="secno">6. </bdi>Security and Privacy Considerations</a>.</dd>
             <dt>Interoperability considerations:</dt>
@@ -1292,10 +1284,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 <section id="references" class="appendix"><h2 id="d-references"><bdi class="secno">D. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="normative-references">
     <h3 id="d-1-normative-references"><bdi class="secno">D.1 </bdi>Normative references<a class="self-link" aria-label="§" href="#normative-references"></a></h3>
-    <dl class="bibliography"><dt id="bib-bcp47">[BCP47]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc5646"><cite>Tags for Identifying Languages</cite></a>. A. Phillips, Ed.; M. Davis, Ed..  IETF. September 2009. Best Current Practice. URL: <a href="https://www.rfc-editor.org/rfc/rfc5646">https://www.rfc-editor.org/rfc/rfc5646</a></dd><dt id="bib-css-snapshot">[CSS-SNAPSHOT]</dt><dd><a href="https://www.w3.org/TR/CSS/"><cite>CSS Snapshot</cite></a>. URL: <a href="https://www.w3.org/TR/CSS/">https://www.w3.org/TR/CSS/</a></dd><dt id="bib-ecma-262">[ECMA-262]</dt><dd><a href="https://tc39.es/ecma262/multipage/"><cite>ECMAScript Language Specification</cite></a>.  Ecma International. URL: <a href="https://tc39.es/ecma262/multipage/">https://tc39.es/ecma262/multipage/</a></dd><dt id="bib-html">[HTML]</dt><dd><a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></dd><dt id="bib-html5">[HTML5]</dt><dd><a href="https://www.w3.org/TR/html5/"><cite>HTML5</cite></a>. Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Theresa O'Connor; Silvia Pfeiffer.  W3C. 27 March 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a></dd><dt id="bib-infra">[INFRA]</dt><dd><a href="https://infra.spec.whatwg.org/"><cite>Infra Standard</cite></a>. Anne van Kesteren; Domenic Denicola.  WHATWG. Living Standard. URL: <a href="https://infra.spec.whatwg.org/">https://infra.spec.whatwg.org/</a></dd><dt id="bib-json">[JSON]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc8259"><cite>The JavaScript Object Notation (JSON) Data Interchange Format</cite></a>. T. Bray, Ed..  IETF. December 2017. Internet Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc8259">https://www.rfc-editor.org/rfc/rfc8259</a></dd><dt id="bib-mimesniff">[MIMESNIFF]</dt><dd><a href="https://mimesniff.spec.whatwg.org/"><cite>MIME Sniffing Standard</cite></a>. Gordon P. Hemsley.  WHATWG. Living Standard. URL: <a href="https://mimesniff.spec.whatwg.org/">https://mimesniff.spec.whatwg.org/</a></dd><dt id="bib-miniapp-lifecycle">[MINIAPP-LIFECYCLE]</dt><dd><a href="https://www.w3.org/TR/miniapp-lifecycle/"><cite>MiniApp Lifecycle</cite></a>. Qing An; Haoyang Xu.  W3C. 25 September 2021. W3C Working Draft. URL: <a href="https://www.w3.org/TR/miniapp-lifecycle/">https://www.w3.org/TR/miniapp-lifecycle/</a></dd><dt id="bib-miniapp-manifest">[MINIAPP-MANIFEST]</dt><dd><a href="https://www.w3.org/TR/miniapp-manifest/"><cite>MiniApp Manifest</cite></a>. Martin Alvarez-Espinar; Yongjing ZHANG; Shouren Lan; Zhiqiang Yu; Xiaofeng Zhang.  W3C. 3 October 2021. W3C Working Draft. URL: <a href="https://www.w3.org/TR/miniapp-manifest/">https://www.w3.org/TR/miniapp-manifest/</a></dd><dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner.  IETF. March 1997. Best Current Practice. URL: <a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a></dd><dt id="bib-rfc8174">[RFC8174]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc8174"><cite>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</cite></a>. B. Leiba.  IETF. May 2017. Best Current Practice. URL: <a href="https://www.rfc-editor.org/rfc/rfc8174">https://www.rfc-editor.org/rfc/rfc8174</a></dd><dt id="bib-uax15">[UAX15]</dt><dd><a href="https://www.unicode.org/reports/tr15/tr15-51.html"><cite>Unicode Normalization Forms</cite></a>. Ken Whistler.  Unicode Consortium. 27 August 2021. Unicode Standard Annex #15. URL: <a href="https://www.unicode.org/reports/tr15/tr15-51.html">https://www.unicode.org/reports/tr15/tr15-51.html</a></dd><dt id="bib-unicode">[Unicode]</dt><dd><a href="https://www.unicode.org/versions/latest/"><cite>The Unicode Standard</cite></a>.  Unicode Consortium. URL: <a href="https://www.unicode.org/versions/latest/">https://www.unicode.org/versions/latest/</a></dd><dt id="bib-url">[url]</dt><dd><a href="https://url.spec.whatwg.org/"><cite>URL Standard</cite></a>. Anne van Kesteren.  WHATWG. Living Standard. URL: <a href="https://url.spec.whatwg.org/">https://url.spec.whatwg.org/</a></dd><dt id="bib-zip">[ZIP]</dt><dd><a href="https://www.pkware.com/documents/casestudies/APPNOTE.TXT"><cite>.ZIP File Format Specification</cite></a>. 1 September 2012. Final. URL: <a href="https://www.pkware.com/documents/casestudies/APPNOTE.TXT">https://www.pkware.com/documents/casestudies/APPNOTE.TXT</a></dd></dl>
+    <dl class="bibliography"><dt id="bib-bcp47">[BCP47]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc5646"><cite>Tags for Identifying Languages</cite></a>. A. Phillips, Ed.; M. Davis, Ed..  IETF. September 2009. Best Current Practice. URL: <a href="https://www.rfc-editor.org/rfc/rfc5646">https://www.rfc-editor.org/rfc/rfc5646</a></dd><dt id="bib-css-snapshot">[CSS-SNAPSHOT]</dt><dd><a href="https://www.w3.org/TR/CSS/"><cite>CSS Snapshot</cite></a>. URL: <a href="https://www.w3.org/TR/CSS/">https://www.w3.org/TR/CSS/</a></dd><dt id="bib-ecma-262">[ECMA-262]</dt><dd><a href="https://tc39.es/ecma262/multipage/"><cite>ECMAScript Language Specification</cite></a>.  Ecma International. URL: <a href="https://tc39.es/ecma262/multipage/">https://tc39.es/ecma262/multipage/</a></dd><dt id="bib-fetch">[FETCH]</dt><dd><a href="https://fetch.spec.whatwg.org/"><cite>Fetch Standard</cite></a>. Anne van Kesteren.  WHATWG. Living Standard. URL: <a href="https://fetch.spec.whatwg.org/">https://fetch.spec.whatwg.org/</a></dd><dt id="bib-html">[HTML]</dt><dd><a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></dd><dt id="bib-infra">[INFRA]</dt><dd><a href="https://infra.spec.whatwg.org/"><cite>Infra Standard</cite></a>. Anne van Kesteren; Domenic Denicola.  WHATWG. Living Standard. URL: <a href="https://infra.spec.whatwg.org/">https://infra.spec.whatwg.org/</a></dd><dt id="bib-json">[JSON]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc8259"><cite>The JavaScript Object Notation (JSON) Data Interchange Format</cite></a>. T. Bray, Ed..  IETF. December 2017. Internet Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc8259">https://www.rfc-editor.org/rfc/rfc8259</a></dd><dt id="bib-mimesniff">[MIMESNIFF]</dt><dd><a href="https://mimesniff.spec.whatwg.org/"><cite>MIME Sniffing Standard</cite></a>. Gordon P. Hemsley.  WHATWG. Living Standard. URL: <a href="https://mimesniff.spec.whatwg.org/">https://mimesniff.spec.whatwg.org/</a></dd><dt id="bib-miniapp-lifecycle">[MINIAPP-LIFECYCLE]</dt><dd><a href="https://www.w3.org/TR/miniapp-lifecycle/"><cite>MiniApp Lifecycle</cite></a>. Qing An; Haoyang Xu.  W3C. 29 October 2021. W3C Working Draft. URL: <a href="https://www.w3.org/TR/miniapp-lifecycle/">https://www.w3.org/TR/miniapp-lifecycle/</a></dd><dt id="bib-miniapp-manifest">[MINIAPP-MANIFEST]</dt><dd><a href="https://www.w3.org/TR/miniapp-manifest/"><cite>MiniApp Manifest</cite></a>. Martin Alvarez-Espinar; Yongjing ZHANG; Shouren Lan; Zhiqiang Yu; Xiaofeng Zhang.  W3C. 3 October 2021. W3C Working Draft. URL: <a href="https://www.w3.org/TR/miniapp-manifest/">https://www.w3.org/TR/miniapp-manifest/</a></dd><dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner.  IETF. March 1997. Best Current Practice. URL: <a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a></dd><dt id="bib-rfc8174">[RFC8174]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc8174"><cite>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</cite></a>. B. Leiba.  IETF. May 2017. Best Current Practice. URL: <a href="https://www.rfc-editor.org/rfc/rfc8174">https://www.rfc-editor.org/rfc/rfc8174</a></dd><dt id="bib-uax15">[UAX15]</dt><dd><a href="https://www.unicode.org/reports/tr15/tr15-51.html"><cite>Unicode Normalization Forms</cite></a>. Ken Whistler.  Unicode Consortium. 27 August 2021. Unicode Standard Annex #15. URL: <a href="https://www.unicode.org/reports/tr15/tr15-51.html">https://www.unicode.org/reports/tr15/tr15-51.html</a></dd><dt id="bib-unicode">[Unicode]</dt><dd><a href="https://www.unicode.org/versions/latest/"><cite>The Unicode Standard</cite></a>.  Unicode Consortium. URL: <a href="https://www.unicode.org/versions/latest/">https://www.unicode.org/versions/latest/</a></dd><dt id="bib-url">[url]</dt><dd><a href="https://url.spec.whatwg.org/"><cite>URL Standard</cite></a>. Anne van Kesteren.  WHATWG. Living Standard. URL: <a href="https://url.spec.whatwg.org/">https://url.spec.whatwg.org/</a></dd><dt id="bib-zip">[ZIP]</dt><dd><a href="https://www.pkware.com/documents/casestudies/APPNOTE.TXT"><cite>.ZIP File Format Specification</cite></a>. 1 September 2012. Final. URL: <a href="https://www.pkware.com/documents/casestudies/APPNOTE.TXT">https://www.pkware.com/documents/casestudies/APPNOTE.TXT</a></dd></dl>
   </section><section id="informative-references">
     <h3 id="d-2-informative-references"><bdi class="secno">D.2 </bdi>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
-    <dl class="bibliography"><dt id="bib-apk-signature-v2">[APK-SIGNATURE-V2]</dt><dd><a href="https://source.android.com/security/apksigning/v2"><cite>APK Signature Scheme v2</cite></a>. URL: <a href="https://source.android.com/security/apksigning/v2">https://source.android.com/security/apksigning/v2</a></dd><dt id="bib-charmod-norm">[CHARMOD-NORM]</dt><dd><a href="https://www.w3.org/TR/charmod-norm/"><cite>Character Model for the World Wide Web: String Matching</cite></a>. Addison Phillips et al.  W3C. 11 August 2021. W3C Note. URL: <a href="https://www.w3.org/TR/charmod-norm/">https://www.w3.org/TR/charmod-norm/</a></dd><dt id="bib-rfc1321">[rfc1321]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc1321"><cite>The MD5 Message-Digest Algorithm</cite></a>. R. Rivest.  IETF. April 1992. Informational. URL: <a href="https://www.rfc-editor.org/rfc/rfc1321">https://www.rfc-editor.org/rfc/rfc1321</a></dd><dt id="bib-rfc2315">[rfc2315]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc2315"><cite>PKCS #7: Cryptographic Message Syntax Version 1.5</cite></a>. B. Kaliski.  IETF. March 1998. Informational. URL: <a href="https://www.rfc-editor.org/rfc/rfc2315">https://www.rfc-editor.org/rfc/rfc2315</a></dd><dt id="bib-rfc2528">[rfc2528]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc2528"><cite>Internet X.509 Public Key Infrastructure Representation of Key Exchange Algorithm (KEA) Keys in Internet X.509 Public Key Infrastructure Certificates</cite></a>. R. Housley; W. Polk.  IETF. March 1999. Informational. URL: <a href="https://www.rfc-editor.org/rfc/rfc2528">https://www.rfc-editor.org/rfc/rfc2528</a></dd><dt id="bib-rfc4289">[RFC4289]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc4289"><cite>Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures</cite></a>. N. Freed; J. Klensin.  IETF. December 2005. Best Current Practice. URL: <a href="https://www.rfc-editor.org/rfc/rfc4289">https://www.rfc-editor.org/rfc/rfc4289</a></dd><dt id="bib-rfc6839">[RFC6839]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc6839"><cite>Additional Media Type Structured Syntax Suffixes</cite></a>. T. Hansen; A. Melnikov.  IETF. January 2013. Informational. URL: <a href="https://www.rfc-editor.org/rfc/rfc6839">https://www.rfc-editor.org/rfc/rfc6839</a></dd><dt id="bib-x690">[X690]</dt><dd><a href="https://www.itu.int/ITU-T/studygroups/com17/languages/X.690-0207.pdf"><cite>Recommendation X.690 — Information Technology — ASN.1 Encoding Rules — Specification of Basic Encoding Rules (BER), Canonical Encoding Rules (CER), and Distinguished Encoding Rules (DER)</cite></a>.  ITU. URL: <a href="https://www.itu.int/ITU-T/studygroups/com17/languages/X.690-0207.pdf">https://www.itu.int/ITU-T/studygroups/com17/languages/X.690-0207.pdf</a></dd></dl>
+    <dl class="bibliography"><dt id="bib-apk-signature-v2">[APK-SIGNATURE-V2]</dt><dd><a href="https://source.android.com/security/apksigning/v2"><cite>APK Signature Scheme v2</cite></a>. URL: <a href="https://source.android.com/security/apksigning/v2">https://source.android.com/security/apksigning/v2</a></dd><dt id="bib-charmod-norm">[CHARMOD-NORM]</dt><dd><a href="https://www.w3.org/TR/charmod-norm/"><cite>Character Model for the World Wide Web: String Matching</cite></a>. Addison Phillips et al.  W3C. 11 August 2021. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/charmod-norm/">https://www.w3.org/TR/charmod-norm/</a></dd><dt id="bib-rfc1321">[rfc1321]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc1321"><cite>The MD5 Message-Digest Algorithm</cite></a>. R. Rivest.  IETF. April 1992. Informational. URL: <a href="https://www.rfc-editor.org/rfc/rfc1321">https://www.rfc-editor.org/rfc/rfc1321</a></dd><dt id="bib-rfc2315">[rfc2315]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc2315"><cite>PKCS #7: Cryptographic Message Syntax Version 1.5</cite></a>. B. Kaliski.  IETF. March 1998. Informational. URL: <a href="https://www.rfc-editor.org/rfc/rfc2315">https://www.rfc-editor.org/rfc/rfc2315</a></dd><dt id="bib-rfc2528">[rfc2528]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc2528"><cite>Internet X.509 Public Key Infrastructure Representation of Key Exchange Algorithm (KEA) Keys in Internet X.509 Public Key Infrastructure Certificates</cite></a>. R. Housley; W. Polk.  IETF. March 1999. Informational. URL: <a href="https://www.rfc-editor.org/rfc/rfc2528">https://www.rfc-editor.org/rfc/rfc2528</a></dd><dt id="bib-rfc4289">[RFC4289]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc4289"><cite>Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures</cite></a>. N. Freed; J. Klensin.  IETF. December 2005. Best Current Practice. URL: <a href="https://www.rfc-editor.org/rfc/rfc4289">https://www.rfc-editor.org/rfc/rfc4289</a></dd><dt id="bib-rfc6839">[RFC6839]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc6839"><cite>Additional Media Type Structured Syntax Suffixes</cite></a>. T. Hansen; A. Melnikov.  IETF. January 2013. Informational. URL: <a href="https://www.rfc-editor.org/rfc/rfc6839">https://www.rfc-editor.org/rfc/rfc6839</a></dd><dt id="bib-x690">[X690]</dt><dd><a href="https://www.itu.int/ITU-T/studygroups/com17/languages/X.690-0207.pdf"><cite>Recommendation X.690 — Information Technology — ASN.1 Encoding Rules — Specification of Basic Encoding Rules (BER), Canonical Encoding Rules (CER), and Distinguished Encoding Rules (DER)</cite></a>.  ITU. URL: <a href="https://www.itu.int/ITU-T/studygroups/com17/languages/X.690-0207.pdf">https://www.itu.int/ITU-T/studygroups/com17/languages/X.690-0207.pdf</a></dd></dl>
   </section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
   </p><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-signature" aria-label="Links in this document to definition: Digital signature">
@@ -2074,4 +2066,4 @@ function hidePanel(panel) {
   panel.hidden = true;
   panel.classList.remove("docked");
 }
-})()</script><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
+})()</script><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

@@ -11,7 +11,7 @@
             edDraftURI: "https://w3c.github.io/miniapp-packaging/",
 
             shortName: "miniapp-packaging",
-            publishDate: "2021-10-12",
+            publishDate: "2021-11-09",
 
             editors: [
                 {
@@ -495,7 +495,7 @@
             <p>[=User agents=] MAY obtain [=MiniApp ZIP containers=] through different channels, retrieving the file over the network (i.e., using HTTPs, WebSocket, FTP, or other specific TCP/UDP based protocols), also from the filesystem or using any other mechanism.</p>
             <p>To <dfn data-lt="retrieving a MiniApp ZIP container" data-dfn-type="dfn">retrieve a MiniApp ZIP container</dfn>, given [=URL=] |miniapp_uri:URL|, perform the following steps. They return a [=MiniApp ZIP container=].</p>
             <ol class="algorithm">
-                <li>Let |resource:MiniApp ZIP container| be a [=MiniApp ZIP container=] as a result of <a href="https://www.w3.org/html/wg/spec/fetching-resources.html#fetch">fetching a URL</a> [[HTML5]], passing |miniapp_uri|.</li>
+                <li>Let |resource:MiniApp ZIP container| be a [=MiniApp ZIP container=] as a result of <a href="https://fetch.spec.whatwg.org/#concept-fetch">fetching a URL</a> [[FETCH]], passing |miniapp_uri|.</li>
                 <li>Let |supplied_mime_type:string| be the result of applying the <a href="https://mimesniff.spec.whatwg.org/#supplied-mime-type-detection-algorithm">supplied MIME type detection algorithm</a> [[MIMESNIFF]] with |resource|.</li>
                 <li>If |supplied_mime_type| is not equal to <code>application/miniapp-pkg+zip</code>, then return failure.</li>
                 <li>Return |resource|.</li>
@@ -969,7 +969,7 @@
             <dt>Optional parameters:</dt>
             <dd>"N/A"</dd>
             <dt>Encoding considerations:</dt>
-            <dd>MiniApp packages are binary files encoded in the <a href="https://www.iana.org/assignments/media-types/application/zip">application/zip</a> media type. See <a href="https://tools.ietf.org/html/rfc6839#section-3.6">RFC 6839, section 3.6</a> [[RFC6839]].</dd>
+            <dd>MiniApp packages are binary files encoded in the <a href="https://www.iana.org/assignments/media-types/application/zip">application/zip</a> media type. See <a href="https://datatracker.ietf.org/doc/html/rfc6839#section-3.6">RFC 6839, section 3.6</a> [[RFC6839]].</dd>
             <dt>Security considerations:</dt>
             <dd>Security considerations that apply to application/zip also apply to MiniApp package files. User agents that process MiniApp package files should rigorously check the size and validity of data retrieved. When digital signatures are available in a MiniApp package file, the user agent SHOULD implement necessary mechanisms to check the integrity and trustworthiness of the file according to the digital signatures, so as to to protect the end user and the hosting platform from the damage of package tampering or corruption. See more at [[[#sec-security-privacy]]].</dd>
             <dt>Interoperability considerations:</dt>
