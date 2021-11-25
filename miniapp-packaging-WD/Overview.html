@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 28.0.3">
+<meta name="generator" content="ReSpec 28.0.5">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -136,7 +136,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "copyrightStart": "2021",
   "edDraftURI": "https://w3c.github.io/miniapp-packaging/",
   "shortName": "miniapp-packaging",
-  "publishDate": "2021-11-16",
+  "publishDate": "2021-11-30",
   "editors": [
     {
       "name": "Martin Alvarez-Espinar",
@@ -213,21 +213,21 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     }
   },
   "a11y": true,
-  "publishISODate": "2021-11-16T00:00:00.000Z",
-  "generatedSubtitle": "First Public Working Draft 16 November 2021"
+  "publishISODate": "2021-11-30T00:00:00.000Z",
+  "generatedSubtitle": "First Public Working Draft 30 November 2021"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-WD"></head>
 
-<body data-cite="MINIAPP-MANIFEST INFRA URL HTML" data-new-gr-c-s-check-loaded="14.1038.0" data-gr-ext-installed="" class="h-entry"><div class="head">
+<body data-cite="MINIAPP-MANIFEST INFRA URL HTML" class="h-entry" data-new-gr-c-s-check-loaded="14.1040.0" data-gr-ext-installed=""><div class="head">
     <a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a> <h1 id="title" class="title">MiniApp Packaging</h1>
     
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#FPWD">W3C First Public Working Draft</a> <time class="dt-published" datetime="2021-11-16">16 November 2021</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#FPWD">W3C First Public Working Draft</a> <time class="dt-published" datetime="2021-11-30">30 November 2021</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
         <dt>This version:</dt><dd>
-                <a class="u-url" href="https://www.w3.org/TR/2021/WD-miniapp-packaging-20211116/">https://www.w3.org/TR/2021/WD-miniapp-packaging-20211116/</a>
+                <a class="u-url" href="https://www.w3.org/TR/2021/WD-miniapp-packaging-20211130/">https://www.w3.org/TR/2021/WD-miniapp-packaging-20211130/</a>
               </dd><dt>Latest published version:</dt><dd>
                 <a href="https://www.w3.org/TR/miniapp-packaging/">https://www.w3.org/TR/miniapp-packaging/</a>
               </dd>
@@ -292,10 +292,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </p>
     <hr title="Separator for header">
   </div>
-    <section id="abstract" class="introductory"><h2>Abstract</h2>
+    <section id="abstract" class="introductory"><h2 id="abstract-0"><a class="self-link" href="#abstract" aria-label="Permalink for Section"></a>Abstract</h2>
         <p>This specification defines semantics and conformance requirements for a <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-1">MiniApp package</a>, and the structure of the single file container that holds the resources of a MiniApp, including a manifest file, static page templates, stylesheets, JavaScript documents, media files and other resources. Instances of the <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-2">MiniApp package</a> are used for MiniApp distribution and execution on runtime environments (<a data-link-type="dfn" href="#dfn-useragent" class="internalDFN" id="ref-for-dfn-useragent-1">MiniApp user agent</a>).</p>
     </section>
-    <section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
+    <section id="sotd" class="introductory"><h2 id="status-of-this-document"><a class="self-link" href="#sotd" aria-label="Permalink for Section"></a>Status of This Document</h2><p><em>This section describes the status of this
       document at the time of its publication. A list of current <abbr title="World Wide Web Consortium">W3C</abbr>
       publications and the latest revision of this technical report can be found
       in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
@@ -333,9 +333,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                   <a id="w3c_process_revision" href="https://www.w3.org/2021/Process-20211102/">2 November 2021 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                 </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#sec-introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#overview"><bdi class="secno">1.1 </bdi>Overview</a></li><li class="tocline"><a class="tocxref" href="#sec-terminology"><bdi class="secno">1.2 </bdi>Terminology</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">1.3 </bdi>Conformance</a></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-conformance"><bdi class="secno">2. </bdi>Package Conformance</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-filestructure"><bdi class="secno">2.1 </bdi>Directory and File System Structure</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#root-directory"><bdi class="secno">2.1.1 </bdi>Root Directory</a></li><li class="tocline"><a class="tocxref" href="#sec-pages-directory"><bdi class="secno">2.1.2 </bdi><code>pages</code> Directory</a></li><li class="tocline"><a class="tocxref" href="#common-directory"><bdi class="secno">2.1.3 </bdi><code>common</code> Directory</a></li><li class="tocline"><a class="tocxref" href="#i18n-directory"><bdi class="secno">2.1.4 </bdi><code><abbr title="internationalization">i18n</abbr></code> Directory</a></li><li class="tocline"><a class="tocxref" href="#file-names"><bdi class="secno">2.1.5 </bdi>File Names</a></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-resources"><bdi class="secno">2.2 </bdi>MiniApp Resources</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-miniapp-resources-html"><bdi class="secno">2.2.1 </bdi>HTML Resources</a></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-resources-css"><bdi class="secno">2.2.2 </bdi>CSS Resources</a></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-resources-js"><bdi class="secno">2.2.3 </bdi>Scripting Resources</a></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-resources-i18n"><bdi class="secno">2.2.4 </bdi>Localization Resources</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-zip-container"><bdi class="secno">3. </bdi>MiniApp ZIP Container</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-miniapp-zip-container-intro"><bdi class="secno">3.1 </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-zip-file-requirements"><bdi class="secno">3.2 </bdi>ZIP File Requirements</a></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-digital-signature-requirements"><bdi class="secno">3.3 </bdi>Digital Signature Requirements</a></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-i18n"><bdi class="secno">4. </bdi>Internationalization</a></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-processing"><bdi class="secno">5. </bdi>MiniApp Package Processing</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-miniapp-processing-retrieval"><bdi class="secno">5.1 </bdi>MiniApp ZIP Container Retrieval</a></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-processing-verify"><bdi class="secno">5.2 </bdi>MiniApp ZIP Container Verification</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-miniapp-digital-signatures-processing"><bdi class="secno">5.2.1 </bdi>Digital Signatures Processing</a></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-processing-manifest"><bdi class="secno">5.3 </bdi>MiniApp Manifest Processing</a></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-platform-runtime-preparation"><bdi class="secno">5.4 </bdi>Platform Runtime Preparation</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-miniapp-platform-compatibility-verification"><bdi class="secno">5.4.1 </bdi>Platform Compatibility Verification</a></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-platform-start-page-identification"><bdi class="secno">5.4.2 </bdi>Start Page Identification</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-miniapp-processing-platform-start-page-uri"><bdi class="secno">5.4.2.1 </bdi>Extraction of Start Page From URI</a></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-processing-platform-start-page-manifest"><bdi class="secno">5.4.2.2 </bdi>Extraction of Start Page From Manifest</a></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-miniapp-processing-locale"><bdi class="secno">5.4.3 </bdi>Extraction of Locale</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-security-privacy"><bdi class="secno">6. </bdi>Security and Privacy Considerations</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#package-integrity-and-trustworthiness"><bdi class="secno">6.1 </bdi>Package Integrity and Trustworthiness</a></li><li class="tocline"><a class="tocxref" href="#content-confidentiality"><bdi class="secno">6.2 </bdi>Content Confidentiality</a></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-acknowledgments"><bdi class="secno">A. </bdi>Acknowledgments</a></li><li class="tocline"><a class="tocxref" href="#sec-signature-schemes"><bdi class="secno">B. </bdi>Signature Schemes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-signature-rpk"><bdi class="secno">B.1 </bdi>RPK Signature Scheme</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-signing-block-signature"><bdi class="secno">B.1.1 </bdi>Signatures</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#developer-signature"><bdi class="secno">B.1.1.1 </bdi>Developer Signature</a></li><li class="tocline"><a class="tocxref" href="#distributor-signature"><bdi class="secno">B.1.1.2 </bdi>Distributor Signature</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-signature-pkcs7"><bdi class="secno">B.2 </bdi>PKCS#7 Signature Scheme</a></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-media-type-registration"><bdi class="secno">C. </bdi>Media Type Registration</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">D. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">D.1 </bdi>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">D.2 </bdi>Informative references</a></li></ol></li></ol></nav>
     <section id="sec-introduction">
-        <h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#sec-introduction"></a></h2>
+        <h2 id="x1-introduction"><a class="self-link" href="#sec-introduction" aria-label="Permalink for Section 1."></a><bdi class="secno">1. </bdi>Introduction</h2>
         <section id="overview">
-            <h3 id="x1-1-overview"><bdi class="secno">1.1 </bdi>Overview<a class="self-link" aria-label="§" href="#overview"></a></h3>
+            <h3 id="x1-1-overview"><a class="self-link" href="#overview" aria-label="Permalink for Section 1.1"></a><bdi class="secno">1.1 </bdi>Overview</h3>
             <p><a data-link-type="dfn" href="#dfn-miniapp" class="internalDFN" id="ref-for-dfn-miniapp-1">MiniApp</a> is a concept of light software application, that can be distributed through any digital means, and accessed through the Web. MiniApps are defined by a concrete file structure and all their resources are packed within a single file that represents the whole <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-3">MiniApp package</a> that can be processed and executed by <a data-link-type="dfn" href="#dfn-useragent" class="internalDFN" id="ref-for-dfn-useragent-2">MiniApp user agents</a>.</p>
             <p>A <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-4">MiniApp package</a> contains a directory structure that holds the specific resources of the MiniApp that defines the rendering, operation, and interaction with the end-users — including static page templates, stylesheets, JavaScript documents, media files, and other resources — and the manifest. The <a href="https://www.w3.org/TR/miniapp-manifest/#dfn-miniapp-manifest-s" data-link-type="dfn">MiniApp manifest</a>, located in the central directory of the package, describes the MiniApp, including information about page routing, styles, and other operational and rendering details of the MiniApp, as well as descriptive information for humans.</p>
             <p>As defined in <a href="#sec-security-privacy">Security and Privacy Considerations</a>, MiniApps <em class="rfc2119">MAY</em> support <a data-link-type="dfn" href="#dfn-signature" class="internalDFN" id="ref-for-dfn-signature-1">digital signature</a> verification to guarantee the integrity of the package and contents during the delivery of the package.</p>
@@ -343,7 +343,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
             <p>In terms of launch mode, a MiniApp can be launched normally when offline. The <a data-link-type="dfn" href="#dfn-useragent" class="internalDFN" id="ref-for-dfn-useragent-5">MiniApp user agent</a> locates the specified <a data-link-type="dfn" href="#dfn-start-page" class="internalDFN" id="ref-for-dfn-start-page-1">start page</a> from the package cache path and launches the MiniApp according to the description set out in the <a href="https://www.w3.org/TR/miniapp-manifest/#dfn-miniapp-manifest-s" data-link-type="dfn">MiniApp manifest</a> file.</p>
         </section>
         <section id="sec-terminology">
-            <h3 id="x1-2-terminology"><bdi class="secno">1.2 </bdi>Terminology<a class="self-link" aria-label="§" href="#sec-terminology"></a></h3>
+            <h3 id="x1-2-terminology"><a class="self-link" href="#sec-terminology" aria-label="Permalink for Section 1.2"></a><bdi class="secno">1.2 </bdi>Terminology</h3>
             <p>The following terms are specific to MiniApps.</p>
             <dl class="termlist">
                 <dt><dfn id="dfn-signature" data-lt="signatures|signature|digital signature|digital signatures|Digital signature" data-dfn-type="dfn" tabindex="0" aria-haspopup="dialog">Digital signature</dfn></dt>
@@ -368,7 +368,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                 <dd>The entry point of a MiniApp. The resource that is loaded and rendered by the <a data-link-type="dfn" href="#dfn-useragent" class="internalDFN" id="ref-for-dfn-useragent-8">MiniApp user agent</a> at the launch of the application.</dd>  
             </dl>
         </section>
-        <section id="conformance"><h3 id="x1-3-conformance"><bdi class="secno">1.3 </bdi>Conformance<a class="self-link" aria-label="§" href="#conformance"></a></h3><p>As well as sections marked as non-normative, all authoring guidelines, diagrams, examples, and notes in this specification are non-normative. Everything else in this specification is normative.</p><p>
+        <section id="conformance"><h3 id="x1-3-conformance"><a class="self-link" href="#conformance" aria-label="Permalink for Section 1.3"></a><bdi class="secno">1.3 </bdi>Conformance</h3><p>As well as sections marked as non-normative, all authoring guidelines, diagrams, examples, and notes in this specification are non-normative. Everything else in this specification is normative.</p><p>
         The key words <em class="rfc2119">MAY</em>, <em class="rfc2119">MUST</em>, <em class="rfc2119">MUST NOT</em>, and <em class="rfc2119">SHOULD</em> in this document
         are to be interpreted as described in
         <a href="https://datatracker.ietf.org/doc/html/bcp14">BCP 14</a>
@@ -380,7 +380,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </section>
 
     <section id="sec-conformance">
-        <h2 id="x2-package-conformance"><bdi class="secno">2. </bdi>Package Conformance<a class="self-link" aria-label="§" href="#sec-conformance"></a></h2>
+        <h2 id="x2-package-conformance"><a class="self-link" href="#sec-conformance" aria-label="Permalink for Section 2."></a><bdi class="secno">2. </bdi>Package Conformance</h2>
         <p>A conformant <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-11">MiniApp package</a> <em class="rfc2119">MUST</em> meet the following criteria:</p>
         <ul class="conformance-list">
             <li>The file system of a package <em class="rfc2119">MUST</em> have a file structure based on a <a data-link-type="dfn" href="#dfn-root-directory" class="internalDFN" id="ref-for-dfn-root-directory-1">root directory</a> and the <a href="#sec-pages-directory"><code>pages</code> subdirectory</a>.</li>
@@ -393,7 +393,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
             <li>The file system of a package <em class="rfc2119">MAY</em> contain other subdirectories and files of different nature as defined in the <a href="#sec-filestructure">Directory and File System Structure</a> section.</li>
         </ul>
         <section id="sec-filestructure">
-            <h3 id="x2-1-directory-and-file-system-structure"><bdi class="secno">2.1 </bdi>Directory and File System Structure<a class="self-link" aria-label="§" href="#sec-filestructure"></a></h3>
+            <h3 id="x2-1-directory-and-file-system-structure"><a class="self-link" href="#sec-filestructure" aria-label="Permalink for Section 2.1"></a><bdi class="secno">2.1 </bdi>Directory and File System Structure</h3>
             <p>The <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-13">MiniApp package</a> has a file structure with some restrictions and reserved files and subdirectories.</p> 
             <p>The following example shows a typical file system structure:</p>
             <div class="example" id="example-file-sytem-structure">
@@ -417,7 +417,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         |___en-US.json</code></pre>
       </div>
             <section id="root-directory">
-                <h4 id="x2-1-1-root-directory"><bdi class="secno">2.1.1 </bdi>Root Directory<a class="self-link" aria-label="§" href="#root-directory"></a></h4>
+                <h4 id="x2-1-1-root-directory"><a class="self-link" href="#root-directory" aria-label="Permalink for Section 2.1.1"></a><bdi class="secno">2.1.1 </bdi>Root Directory</h4>
                 <p>The <dfn id="dfn-root-directory" data-lt="root directory|root directories|MiniApp root directories|MiniApp root directory" data-dfn-type="dfn" tabindex="0" aria-haspopup="dialog">MiniApp root directory</dfn> is the base directory of the <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-14">MiniApp package</a> file system.</p> 
 
                 <p>The <a data-link-type="dfn" href="#dfn-root-directory" class="internalDFN" id="ref-for-dfn-root-directory-7">root directory</a> of a <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-15">MiniApp package</a> holds several reserved files that include global data and information about the lifecycle management of the MiniApp, including:</p>
@@ -431,7 +431,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                 </dl>
             </section>
             <section id="sec-pages-directory">
-                <h4 id="x2-1-2-pages-directory"><bdi class="secno">2.1.2 </bdi><code>pages</code> Directory<a class="self-link" aria-label="§" href="#sec-pages-directory"></a></h4>
+                <h4 id="x2-1-2-pages-directory"><a class="self-link" href="#sec-pages-directory" aria-label="Permalink for Section 2.1.2"></a><bdi class="secno">2.1.2 </bdi><code>pages</code> Directory</h4>
                 <p>The <code>pages</code> directory contains a set of files for the display and user interaction of the <a data-link-type="dfn" href="#dfn-page" class="internalDFN" id="ref-for-dfn-page-3">MiniApp pages</a>.</p>
                 <p>A <a data-link-type="dfn" href="#dfn-page" class="internalDFN" id="ref-for-dfn-page-4">MiniApp page</a> is defined by a set of <a data-link-type="dfn" href="#dfn-resource" class="internalDFN" id="ref-for-dfn-resource-5">resources</a>, whose files are identified by a unique filename (e.g., <code>intro</code>) and a specific extension that defines the <a data-link-type="dfn" href="#dfn-resource" class="internalDFN" id="ref-for-dfn-resource-6">resource</a> type, such as the business logic of the application (e.g., <code>intro.js</code>), the structure and content (e.g., <code>intro.html</code>), and the scoped stylesheet (e.g., <code>intro.css</code>).</p>
                 <p>Developers <em class="rfc2119">MAY</em> include other types of <a data-link-type="dfn" href="#dfn-resource" class="internalDFN" id="ref-for-dfn-resource-7">resources</a> according to their needs. Also, the files related to a page (identified with the same filename) <em class="rfc2119">MAY</em> be organized either in specific subdirectories for each page or stored under the <code>pages</code> directory directly.</p>
@@ -474,17 +474,17 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                 </ul>
             </section>
             <section id="common-directory">
-                <h4 id="x2-1-3-common-directory"><bdi class="secno">2.1.3 </bdi><code>common</code> Directory<a class="self-link" aria-label="§" href="#common-directory"></a></h4>
+                <h4 id="x2-1-3-common-directory"><a class="self-link" href="#common-directory" aria-label="Permalink for Section 2.1.3"></a><bdi class="secno">2.1.3 </bdi><code>common</code> Directory</h4>
                 <p>The optional <code>common</code> directory contains <a data-link-type="dfn" href="#dfn-resource" class="internalDFN" id="ref-for-dfn-resource-8">resources</a>, such as components, multimedia resources, documents and libraries that are accessible from the <a data-link-type="dfn" href="#dfn-page" class="internalDFN" id="ref-for-dfn-page-9">pages</a> in a MiniApp. The internal structure of this directory is flexible, so these common resources <em class="rfc2119">MAY</em> be organized in customized subdirectories and using different name conventions, as needed.</p>
             </section>
             <section id="i18n-directory">
-                <h4 id="x2-1-4-i18n-directory"><bdi class="secno">2.1.4 </bdi><code><abbr title="internationalization">i18n</abbr></code> Directory<a class="self-link" aria-label="§" href="#i18n-directory"></a></h4>
+                <h4 id="x2-1-4-i18n-directory"><a class="self-link" href="#i18n-directory" aria-label="Permalink for Section 2.1.4"></a><bdi class="secno">2.1.4 </bdi><code><abbr title="internationalization">i18n</abbr></code> Directory</h4>
                 <p>The optional <dfn id="dfn-i18n-directory" data-dfn-type="dfn" tabindex="0" aria-haspopup="dialog"><abbr title="internationalization">i18n</abbr> directory</dfn> is a subdirectory in the <a data-link-type="dfn" href="#dfn-root-directory" class="internalDFN" id="ref-for-dfn-root-directory-8">root directory</a> that includes the <a data-link-type="dfn" href="#dfn-localization-resources" class="internalDFN" id="ref-for-dfn-localization-resources-2">localization resources</a> of a <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-16">MiniApp package</a>.</p>
                 <p>The <a data-link-type="dfn" href="#dfn-i18n-directory" class="internalDFN" id="ref-for-dfn-i18n-directory-1">i18n Directory</a> contains multi-language <a data-link-type="dfn" href="#dfn-localization-resources" class="internalDFN" id="ref-for-dfn-localization-resources-3">localization resources</a> to support the internationalization of the MiniApp contents. The filename of each <code>.json</code> document in this directory follows the <code>Language-Tag</code> notation as defined in [<cite><a class="bibref" data-link-type="biblio" href="#bib-bcp47" title="Tags for Identifying Languages">BCP47</a></cite>] and represents the specific configuration for that particular language.</p>
                 <p>The <a data-link-type="dfn" href="#dfn-i18n-directory" class="internalDFN" id="ref-for-dfn-i18n-directory-2">i18n Directory</a> <em class="rfc2119">MAY</em> contain as many <a data-link-type="dfn" href="#dfn-localization-resources" class="internalDFN" id="ref-for-dfn-localization-resources-4">localization resources</a> as languages or locales a MiniApp supports. The format of these files is defined in the <a href="#sec-miniapp-resources-i18n">localization resources</a> section.</p> 
             </section>
             <section id="file-names">
-                <h4 id="x2-1-5-file-names"><bdi class="secno">2.1.5 </bdi>File Names<a class="self-link" aria-label="§" href="#file-names"></a></h4>
+                <h4 id="x2-1-5-file-names"><a class="self-link" href="#file-names" aria-label="Permalink for Section 2.1.5"></a><bdi class="secno">2.1.5 </bdi>File Names</h4>
                 <p>Any <a data-link-type="dfn" href="#dfn-filename" class="internalDFN" id="ref-for-dfn-filename-1">file name</a> within a <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-17">MiniApp package</a> <em class="rfc2119">MUST</em> comply with the following restrictions to accommodate the potential limitations of the operating systems and facilitate compatibility with the majority of the platforms:</p>
 
                 <ul class="conformance-list">
@@ -561,7 +561,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
             </section>
         </section>
         <section id="sec-miniapp-resources">
-            <h3 id="x2-2-miniapp-resources"><bdi class="secno">2.2 </bdi>MiniApp Resources<a class="self-link" aria-label="§" href="#sec-miniapp-resources"></a></h3>
+            <h3 id="x2-2-miniapp-resources"><a class="self-link" href="#sec-miniapp-resources" aria-label="Permalink for Section 2.2"></a><bdi class="secno">2.2 </bdi>MiniApp Resources</h3>
             <p>A <a data-link-type="dfn" href="#dfn-page" class="internalDFN" id="ref-for-dfn-page-10">MiniApp page</a> is composed of, at least, an <a data-link-type="dfn" href="#dfn-html-resource" class="internalDFN" id="ref-for-dfn-html-resource-1">HTML resource</a> and, optionally, a <a data-link-type="dfn" href="#dfn-css-resource" class="internalDFN" id="ref-for-dfn-css-resource-1">CSS resource</a> and/or a <a data-link-type="dfn" href="#dfn-js-resource" class="internalDFN" id="ref-for-dfn-js-resource-1">scripting resource</a>. These related resources <em class="rfc2119">MUST</em> have the same path and filename (only changing the file extension) to identify the <a data-link-type="dfn" href="#dfn-page" class="internalDFN" id="ref-for-dfn-page-11">MiniApp page</a> through a unique <a href="https://www.w3.org/TR/miniapp-manifest/#dfn-page-route" data-link-type="dfn">page route</a> that needs to be specified in the <a href="https://www.w3.org/TR/miniapp-manifest/#pages-member" data-link-type="dfn"><code>pages</code> member</a> of the <a href="https://www.w3.org/TR/miniapp-manifest/#dfn-miniapp-manifest-s" data-link-type="dfn">MiniApp manifest</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-miniapp-manifest" title="MiniApp Manifest">MINIAPP-MANIFEST</a></cite>]. </p>
             <div class="example" id="example-organization-of-page-resources-corresponding-to-the-page-route-pages-product-product">
         <div class="marker">
@@ -574,7 +574,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                 |___product.js</code></pre>
       </div>
             <section id="sec-miniapp-resources-html">
-                <h4 id="x2-2-1-html-resources"><bdi class="secno">2.2.1 </bdi>HTML Resources<a class="self-link" aria-label="§" href="#sec-miniapp-resources-html"></a></h4>
+                <h4 id="x2-2-1-html-resources"><a class="self-link" href="#sec-miniapp-resources-html" aria-label="Permalink for Section 2.2.1"></a><bdi class="secno">2.2.1 </bdi>HTML Resources</h4>
                 <p><dfn id="dfn-html-resource" data-lt="MiniApp HTML resource|MiniApp HTML resources|HTML resource|HTML resources" data-dfn-type="dfn" data-plurals="html resource" tabindex="0" aria-haspopup="dialog">HTML resources</dfn> are documents that contain markup and information to define <a data-link-type="dfn" href="#dfn-page" class="internalDFN" id="ref-for-dfn-page-12">MiniApp pages</a>, and their user interfaces, including the structure, visual components, and interaction elements.</p>
                 <p><a data-link-type="dfn" href="#dfn-html-resource" class="internalDFN" id="ref-for-dfn-html-resource-2">HTML resources</a> <em class="rfc2119">MUST</em> meet all the following criteria:</p>
                 <dl class="conformance-list">
@@ -590,7 +590,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                 </div></div> 
             </section>
             <section id="sec-miniapp-resources-css">
-                <h4 id="x2-2-2-css-resources"><bdi class="secno">2.2.2 </bdi>CSS Resources<a class="self-link" aria-label="§" href="#sec-miniapp-resources-css"></a></h4>
+                <h4 id="x2-2-2-css-resources"><a class="self-link" href="#sec-miniapp-resources-css" aria-label="Permalink for Section 2.2.2"></a><bdi class="secno">2.2.2 </bdi>CSS Resources</h4>
                 <p><dfn id="dfn-css-resource" data-lt="MiniApp CSS resource|MiniApp CSS resources|CSS resources" data-dfn-type="dfn" data-plurals="css resource" tabindex="0" aria-haspopup="dialog">CSS resources</dfn> are stylesheets that describe the rendering and appearance of <a data-link-type="dfn" href="#dfn-page" class="internalDFN" id="ref-for-dfn-page-14">MiniApp pages</a>. CSS resources can be global, affecting all the pages in a MiniApp (i.e., <code>app.css</code> in the <a data-link-type="dfn" href="#dfn-root-directory" class="internalDFN" id="ref-for-dfn-root-directory-9">root directory</a>), or with local scope, just affecting a specific <a data-link-type="dfn" href="#dfn-page" class="internalDFN" id="ref-for-dfn-page-15">page</a> in the MiniApp.</p>
                 <p>This specification supports the CSS modules as defined in the [<cite><a class="bibref" data-link-type="biblio" href="#bib-css-snapshot" title="CSS Snapshot">CSS-SNAPSHOT</a></cite>].</p>
                 <p>CSS resources <em class="rfc2119">MUST</em> meet all the following criteria:</p>
@@ -605,7 +605,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                 </dl>
             </section>
             <section id="sec-miniapp-resources-js">
-                <h4 id="x2-2-3-scripting-resources"><bdi class="secno">2.2.3 </bdi>Scripting Resources<a class="self-link" aria-label="§" href="#sec-miniapp-resources-js"></a></h4>
+                <h4 id="x2-2-3-scripting-resources"><a class="self-link" href="#sec-miniapp-resources-js" aria-label="Permalink for Section 2.2.3"></a><bdi class="secno">2.2.3 </bdi>Scripting Resources</h4>
                 <p><dfn id="dfn-js-resource" data-lt="MiniApp scripting resource|Scripting resources" data-dfn-type="dfn" data-plurals="scripting resource" tabindex="0" aria-haspopup="dialog">Scripting resources</dfn> are documents that contain script elements and data to control the business logic and functionality of the application, adding interactivity and managing the lifecycle of the MiniApp. There is a global <a data-link-type="dfn" href="#dfn-js-resource" class="internalDFN" id="ref-for-dfn-js-resource-4">scripting resource</a> (i.e., <code>app.js</code> in the <a data-link-type="dfn" href="#dfn-root-directory" class="internalDFN" id="ref-for-dfn-root-directory-11">root directory</a>) that includes data and functions available for all the <a data-link-type="dfn" href="#dfn-page" class="internalDFN" id="ref-for-dfn-page-19">pages</a> of the MiniApp, and with specific logic to control the application's lifecycle. Each <a data-link-type="dfn" href="#dfn-page" class="internalDFN" id="ref-for-dfn-page-20">MiniApp page</a> <em class="rfc2119">MAY</em> have associated specific <a data-link-type="dfn" href="#dfn-js-resource" class="internalDFN" id="ref-for-dfn-js-resource-5">scripting resources</a>, with the scope limited to the concrete <a data-link-type="dfn" href="#dfn-page" class="internalDFN" id="ref-for-dfn-page-21">page</a>.</p>
                 <p>Scripting resources <em class="rfc2119">MUST</em> meet all the following criteria:</p>
                 <dl class="conformance-list">
@@ -618,7 +618,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                 </dl>
             </section>
             <section id="sec-miniapp-resources-i18n">
-                <h4 id="x2-2-4-localization-resources"><bdi class="secno">2.2.4 </bdi>Localization Resources<a class="self-link" aria-label="§" href="#sec-miniapp-resources-i18n"></a></h4>
+                <h4 id="x2-2-4-localization-resources"><a class="self-link" href="#sec-miniapp-resources-i18n" aria-label="Permalink for Section 2.2.4"></a><bdi class="secno">2.2.4 </bdi>Localization Resources</h4>
                 <p>A <dfn id="dfn-localization-resources" data-lt="MiniApp localization resources|Localization resources|localization resources|MiniApp localization resource" data-dfn-type="dfn" data-plurals="localization resource" tabindex="0" aria-haspopup="dialog">MiniApp localization resource</dfn> is a document of a <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-19">MiniApp package</a> that included localized content as part of the <a data-link-type="dfn" href="#dfn-i18n" class="internalDFN" id="ref-for-dfn-i18n-1">internationalization</a> mechanism of MiniApps.</p>
                 <p>A multilingual MiniApp <em class="rfc2119">MAY</em> has several <a data-link-type="dfn" href="#dfn-localization-resources" class="internalDFN" id="ref-for-dfn-localization-resources-5">localization resources</a> that will be used during the <a data-link-type="dfn" href="#dfn-localization" class="internalDFN" id="ref-for-dfn-localization-1">localization</a> process by the <a data-link-type="dfn" href="#dfn-useragent" class="internalDFN" id="ref-for-dfn-useragent-9">user agents</a> to render content according to the system locale or the user's language preferences. These resources contain JSON objects with key-value pairs that contain the unique identifier (the key) of a localizable term or expression and the representation in the concrete language (the value).</p>
                 <div class="example" id="example-localization-resource">
@@ -646,9 +646,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </section> 
     </section>
   <section id="sec-miniapp-zip-container">
-      <h2 id="x3-miniapp-zip-container"><bdi class="secno">3. </bdi>MiniApp ZIP Container<a class="self-link" aria-label="§" href="#sec-miniapp-zip-container"></a></h2>
+      <h2 id="x3-miniapp-zip-container"><a class="self-link" href="#sec-miniapp-zip-container" aria-label="Permalink for Section 3."></a><bdi class="secno">3. </bdi>MiniApp ZIP Container</h2>
         <section id="sec-miniapp-zip-container-intro" class="informative">
-            <h3 id="x3-1-introduction"><bdi class="secno">3.1 </bdi>Introduction<a class="self-link" aria-label="§" href="#sec-miniapp-zip-container-intro"></a></h3><p><em>This section is non-normative.</em></p>
+            <h3 id="x3-1-introduction"><a class="self-link" href="#sec-miniapp-zip-container-intro" aria-label="Permalink for Section 3.1"></a><bdi class="secno">3.1 </bdi>Introduction</h3><p><em>This section is non-normative.</em></p>
             <p>A <a data-link-type="dfn" href="#dfn-container" class="internalDFN" id="ref-for-dfn-container-5">MiniApp ZIP container</a> is a physical single-file representation of a MiniApp that can be used to distribute it in different scenarios, including:</p>
             <ul>
                 <li>An organization that stores and lists catalogs of MiniApps (i.e., marketplace);</li>
@@ -658,7 +658,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
             <p>A <a data-link-type="dfn" href="#dfn-container" class="internalDFN" id="ref-for-dfn-container-6">MiniApp ZIP container</a> contains all the resources that conforms a MiniApp, according to the <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-20">MiniApp package</a> structure in a single file. This format supports the use of compression mechanisms.</p>
         </section>
         <section id="sec-miniapp-zip-file-requirements">
-            <h3 id="x3-2-zip-file-requirements"><bdi class="secno">3.2 </bdi>ZIP File Requirements<a class="self-link" aria-label="§" href="#sec-miniapp-zip-file-requirements"></a></h3>
+            <h3 id="x3-2-zip-file-requirements"><a class="self-link" href="#sec-miniapp-zip-file-requirements" aria-label="Permalink for Section 3.2"></a><bdi class="secno">3.2 </bdi>ZIP File Requirements</h3>
             <p>A <a data-link-type="dfn" href="#dfn-container" class="internalDFN" id="ref-for-dfn-container-7">MiniApp ZIP container</a> uses the ZIP format as defined in [<cite><a class="bibref" data-link-type="biblio" href="#bib-zip" title=".ZIP File Format Specification">ZIP</a></cite>], including some particularities:</p>
         	<ul class="conformance-list">
                 <li>The contents of the <a data-link-type="dfn" href="#dfn-container" class="internalDFN" id="ref-for-dfn-container-8">MiniApp ZIP container</a> <em class="rfc2119">MUST</em> be a conforming <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-21">MiniApp package</a>.</li>
@@ -696,7 +696,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
             </p></div>    
         </section>
         <section id="sec-miniapp-digital-signature-requirements">
-            <h3 id="x3-3-digital-signature-requirements"><bdi class="secno">3.3 </bdi>Digital Signature Requirements<a class="self-link" aria-label="§" href="#sec-miniapp-digital-signature-requirements"></a></h3>  
+            <h3 id="x3-3-digital-signature-requirements"><a class="self-link" href="#sec-miniapp-digital-signature-requirements" aria-label="Permalink for Section 3.3"></a><bdi class="secno">3.3 </bdi>Digital Signature Requirements</h3>  
             <p>A <a data-link-type="dfn" href="#dfn-container" class="internalDFN" id="ref-for-dfn-container-11">MiniApp ZIP container</a> <em class="rfc2119">MAY</em> include none, one, or more <a data-link-type="dfn" href="#dfn-signature" class="internalDFN" id="ref-for-dfn-signature-2">signatures</a> to help to detect any changes to the protected parts of the software, guaranteeing the integrity of the MiniApp.</p>
             <p>A <dfn id="dfn-signing_block" data-lt="signing block|MiniApp signing blocks|signing blocks|MiniApp signing block" data-dfn-type="dfn" tabindex="0" aria-haspopup="dialog">MiniApp signing block</dfn> is a collection of bytes that contains specific information and metadata about the digital signature that affects a MiniApp, partially or as a whole. The <a data-link-type="dfn" href="#dfn-signing_block" class="internalDFN" id="ref-for-dfn-signing_block-3">signing block</a> of a <a data-link-type="dfn" href="#dfn-container" class="internalDFN" id="ref-for-dfn-container-12">MiniApp ZIP container</a> <em class="rfc2119">MUST</em> be located immediately before the central directory of the ZIP container, in a way that makes it easier to locate the block if exists.</p>
             <p>The <dfn id="dfn-magic-numbers" data-lt="magic numbers|signing block magic numbers" data-dfn-type="dfn" tabindex="0" aria-haspopup="dialog">signing block magic numbers</dfn> block is A 16-byte sequence with a unique fingerprint that identifies a digital signature mechanism for a <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-22">MiniApp package</a>, stored in the signing block of <a data-link-type="dfn" href="#dfn-container" class="internalDFN" id="ref-for-dfn-container-13">MiniApp ZIP container</a>.</p>
@@ -708,7 +708,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </section>
     </section>
     <section id="sec-miniapp-i18n">
-        <h2 id="x4-internationalization"><bdi class="secno">4. </bdi>Internationalization<a class="self-link" aria-label="§" href="#sec-miniapp-i18n"></a></h2>
+        <h2 id="x4-internationalization"><a class="self-link" href="#sec-miniapp-i18n" aria-label="Permalink for Section 4."></a><bdi class="secno">4. </bdi>Internationalization</h2>
         <p><dfn id="dfn-i18n" data-lt="internationalization|i18n|Internationalization" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Internationalization</dfn>, abbreviated to <abbr title="internationalization">i18n</abbr>, is the process of designing and developing a product in a way that ensures it can be easily adapted for users from any culture, region, or language.</p>
         <p><dfn id="dfn-localization" data-lt="localization|Localization" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Localization</dfn> is the process of content adaptation to meet a target language or cultural requirements.</p>
         <p>MiniApps enable localization of contents using a mechanism based on localized documents placed in the reserved <a data-link-type="dfn" href="#dfn-i18n-directory" class="internalDFN" id="ref-for-dfn-i18n-directory-3">i18n Directory</a>. This mechanism allows authors to place <a data-link-type="dfn" href="#dfn-localization-resources" class="internalDFN" id="ref-for-dfn-localization-resources-10">localization resources</a>, named according to a <code>language-range</code> [<cite><a class="bibref" data-link-type="biblio" href="#bib-bcp47" title="Tags for Identifying Languages">BCP47</a></cite>] and the <code>.json</code> extension. This is, documents with the localization resources will be identified with language tags [<cite><a class="bibref" data-link-type="biblio" href="#bib-bcp47" title="Tags for Identifying Languages">BCP47</a></cite>] that represent the locale of the content. <a data-link-type="dfn" href="#dfn-useragent" class="internalDFN" id="ref-for-dfn-useragent-11">MiniApp user agents</a> match the language ranges held by their locales to the appropriate locale filename.</p>
@@ -726,7 +726,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       </div> 
     </section>
     <section id="sec-miniapp-processing" data-cite="infra">
-      <h2 id="x5-miniapp-package-processing"><bdi class="secno">5. </bdi>MiniApp Package Processing<a class="self-link" aria-label="§" href="#sec-miniapp-processing"></a></h2>
+      <h2 id="x5-miniapp-package-processing"><a class="self-link" href="#sec-miniapp-processing" aria-label="Permalink for Section 5."></a><bdi class="secno">5. </bdi>MiniApp Package Processing</h2>
         <p>
             <a data-link-type="dfn" href="#dfn-useragent" class="internalDFN" id="ref-for-dfn-useragent-12">User agents</a> <em class="rfc2119">MUST</em> follow the following algorithm to dereference, parse and execute a <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-23">MiniApp package</a>. 
         </p>
@@ -743,7 +743,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </ol>
 
         <section id="sec-miniapp-processing-retrieval">
-            <h3 id="x5-1-miniapp-zip-container-retrieval"><bdi class="secno">5.1 </bdi>MiniApp ZIP Container Retrieval<a class="self-link" aria-label="§" href="#sec-miniapp-processing-retrieval"></a></h3>
+            <h3 id="x5-1-miniapp-zip-container-retrieval"><a class="self-link" href="#sec-miniapp-processing-retrieval" aria-label="Permalink for Section 5.1"></a><bdi class="secno">5.1 </bdi>MiniApp ZIP Container Retrieval</h3>
             <p><a data-link-type="dfn" href="#dfn-useragent" class="internalDFN" id="ref-for-dfn-useragent-13">User agents</a> <em class="rfc2119">MAY</em> obtain <a data-link-type="dfn" href="#dfn-container" class="internalDFN" id="ref-for-dfn-container-14">MiniApp ZIP containers</a> through different channels, retrieving the file over the network (i.e., using HTTPs, WebSocket, FTP, or other specific TCP/UDP based protocols), also from the filesystem or using any other mechanism.</p>
             <p>To <dfn data-lt="retrieving a MiniApp ZIP container|retrieve a MiniApp ZIP container" data-dfn-type="dfn" id="dfn-retrieving-a-miniapp-zip-container" tabindex="0" aria-haspopup="dialog">retrieve a MiniApp ZIP container</dfn>, given <a data-link-type="dfn" data-type="dfn" href="https://url.spec.whatwg.org/#concept-url">URL</a> <var data-type="URL">miniapp_uri</var>, perform the following steps. They return a <a data-link-type="dfn" href="#dfn-container" class="internalDFN" id="ref-for-dfn-container-15">MiniApp ZIP container</a>.</p>
             <ol class="algorithm">
@@ -755,7 +755,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </section>
 
         <section id="sec-miniapp-processing-verify">
-            <h3 id="x5-2-miniapp-zip-container-verification"><bdi class="secno">5.2 </bdi>MiniApp ZIP Container Verification<a class="self-link" aria-label="§" href="#sec-miniapp-processing-verify"></a></h3>
+            <h3 id="x5-2-miniapp-zip-container-verification"><a class="self-link" href="#sec-miniapp-processing-verify" aria-label="Permalink for Section 5.2"></a><bdi class="secno">5.2 </bdi>MiniApp ZIP Container Verification</h3>
             <p><a data-link-type="dfn" href="#dfn-useragent" class="internalDFN" id="ref-for-dfn-useragent-14">User agents</a> <em class="rfc2119">MAY</em> guarantee the legitimacy and integrity of the <a data-link-type="dfn" href="#dfn-container" class="internalDFN" id="ref-for-dfn-container-17">MiniApp ZIP container</a> and its content by verifying digital signatures and applying cryptographic mechanisms.</p>  
             <p>To <dfn data-lt="verifying a MiniApp ZIP container|Verify a MiniApp ZIP container|verify a MiniApp ZIP container" id="dfn-verifying-a-miniapp-zip-container" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">verify a MiniApp ZIP container</dfn>, given <a data-link-type="dfn" href="#dfn-container" class="internalDFN" id="ref-for-dfn-container-18">MiniApp ZIP container</a> <var data-type="MiniApp ZIP container">miniapp_zip_file</var>, perform the following steps:</p>
             <ol class="algorithm">
@@ -764,7 +764,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                 </li>
             </ol>
             <section id="sec-miniapp-digital-signatures-processing">
-                <h4 id="x5-2-1-digital-signatures-processing"><bdi class="secno">5.2.1 </bdi>Digital Signatures Processing<a class="self-link" aria-label="§" href="#sec-miniapp-digital-signatures-processing"></a></h4>
+                <h4 id="x5-2-1-digital-signatures-processing"><a class="self-link" href="#sec-miniapp-digital-signatures-processing" aria-label="Permalink for Section 5.2.1"></a><bdi class="secno">5.2.1 </bdi>Digital Signatures Processing</h4>
                 <p>The <a data-link-type="dfn" href="#dfn-container" class="internalDFN" id="ref-for-dfn-container-19">MiniApp ZIP container</a> <em class="rfc2119">MAY</em> contain a <a data-link-type="dfn" href="#dfn-signing_block" class="internalDFN" id="ref-for-dfn-signing_block-6">signing block</a> that includes one or more signatures. The signing schemes and cryptographic mechanisms depend on the concrete implementation by <a data-link-type="dfn" href="#dfn-useragent" class="internalDFN" id="ref-for-dfn-useragent-16">user agents</a>.</p> 
                 <p>Signing schemes are identified by the <a data-link-type="dfn" href="#dfn-magic-numbers" class="internalDFN" id="ref-for-dfn-magic-numbers-3">magic numbers</a> section included in the <a data-link-type="dfn" href="#dfn-container" class="internalDFN" id="ref-for-dfn-container-20">MiniApp ZIP container</a>, a 16-byte sequence located immediately before the Central Directory of the ZIP package.</p>
                 <p>To <dfn data-lt="processing the digital signatures|Process the digital signatures|process the digital signatures" id="dfn-processing-the-digital-signatures" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">process the digital signatures</dfn>, given <a data-link-type="dfn" href="#dfn-container" class="internalDFN" id="ref-for-dfn-container-21">MiniApp ZIP container</a> <var data-type="MiniApp ZIP container">miniapp_zip_file</var>, perform the following steps:</p>
@@ -793,7 +793,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </section>
 
         <section id="sec-miniapp-processing-manifest">
-            <h3 id="x5-3-miniapp-manifest-processing"><bdi class="secno">5.3 </bdi>MiniApp Manifest Processing<a class="self-link" aria-label="§" href="#sec-miniapp-processing-manifest"></a></h3>
+            <h3 id="x5-3-miniapp-manifest-processing"><a class="self-link" href="#sec-miniapp-processing-manifest" aria-label="Permalink for Section 5.3"></a><bdi class="secno">5.3 </bdi>MiniApp Manifest Processing</h3>
             <p><a data-link-type="dfn" href="#dfn-useragent" class="internalDFN" id="ref-for-dfn-useragent-19">User agents</a> <em class="rfc2119">MUST</em> parse the <a href="https://www.w3.org/TR/miniapp-manifest/#dfn-miniapp-manifest-s" data-link-type="dfn">MiniApp manifest</a>, located in the <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-24">MiniApp package</a>, that contains global metadata about the MiniApp.</p>  
             <p>To <dfn data-lt="processing the MiniApp manifest|process the MiniApp manifest" id="dfn-processing-the-miniapp-manifest" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">process the MiniApp manifest</dfn>, given <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-25">MiniApp Package</a> <var data-type="MiniApp Package">miniapp_package</var>, perform the following steps. They return <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#ordered-map">ordered map</a>.</p>
             <ol class="algorithm">
@@ -807,7 +807,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </section>
 
         <section id="sec-miniapp-platform-runtime-preparation">
-            <h3 id="x5-4-platform-runtime-preparation"><bdi class="secno">5.4 </bdi>Platform Runtime Preparation<a class="self-link" aria-label="§" href="#sec-miniapp-platform-runtime-preparation"></a></h3>
+            <h3 id="x5-4-platform-runtime-preparation"><a class="self-link" href="#sec-miniapp-platform-runtime-preparation" aria-label="Permalink for Section 5.4"></a><bdi class="secno">5.4 </bdi>Platform Runtime Preparation</h3>
             <p><a data-link-type="dfn" href="#dfn-useragent" class="internalDFN" id="ref-for-dfn-useragent-20">User agents</a> <em class="rfc2119">SHOULD</em> prepare the runtime environment that contains both the logic and the view layers. The logic layer is responsible for logic and control of the application (i.e., <code>app.js</code>, and <code>page.js</code> files). The view layer is responsible for the visual environment and rendering, including the page resource files, such as component templates and stylesheets. In preparation for running a MiniApp, <a data-link-type="dfn" href="#dfn-useragent" class="internalDFN" id="ref-for-dfn-useragent-21">user agents</a> <em class="rfc2119">MUST</em> set up the environment with the configuration specified by the <a href="https://www.w3.org/TR/miniapp-manifest/#dfn-miniapp-manifest-s" data-link-type="dfn">MiniApp manifest</a> metadata.</p>
             <p><a data-link-type="dfn" href="#dfn-useragent" class="internalDFN" id="ref-for-dfn-useragent-22">User agents</a> <em class="rfc2119">MUST</em> identify and load the <a data-link-type="dfn" href="#dfn-start-page" class="internalDFN" id="ref-for-dfn-start-page-2">start page</a> as the MiniApp entry point, according to the following algorithm.</p>
             <p>To <dfn data-lt="preparing the platform runtime|prepare the platform runtime" id="dfn-preparing-the-platform-runtime" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">prepare the platform runtime</dfn>, given <a data-link-type="dfn" data-type="dfn" href="https://url.spec.whatwg.org/#concept-url">URL</a> <var data-type="URL">miniapp_uri</var> and <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#ordered-map">ordered map</a> <var data-type="ordered map">manifest</var>, perform the following steps. They return a <a data-link-type="dfn" href="#dfn-start-page" class="internalDFN" id="ref-for-dfn-start-page-3">MiniApp start page</a>.</p>
@@ -819,7 +819,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                 <li>Return <var data-type="URL">miniapp_uri</var>.</li>
             </ol>
             <section id="sec-miniapp-platform-compatibility-verification">
-                <h4 id="x5-4-1-platform-compatibility-verification"><bdi class="secno">5.4.1 </bdi>Platform Compatibility Verification<a class="self-link" aria-label="§" href="#sec-miniapp-platform-compatibility-verification"></a></h4>
+                <h4 id="x5-4-1-platform-compatibility-verification"><a class="self-link" href="#sec-miniapp-platform-compatibility-verification" aria-label="Permalink for Section 5.4.1"></a><bdi class="secno">5.4.1 </bdi>Platform Compatibility Verification</h4>
                 <p><a data-link-type="dfn" href="#dfn-useragent" class="internalDFN" id="ref-for-dfn-useragent-23">User agents</a> <em class="rfc2119">MUST</em> verify that a <a data-link-type="dfn" href="#dfn-miniapp" class="internalDFN" id="ref-for-dfn-miniapp-2">MiniApp</a> is compatible with them and can run properly in their platform. This verification is performed using the metadata specified in the <a href="https://www.w3.org/TR/miniapp-manifest/#dfn-miniapp-manifest-s" data-link-type="dfn">MiniApp manifest</a>, including the supported version of the platform and checking the pages and resources needed in the execution.</p>
                 <p>To <dfn data-lt="Verify platform compatibility|verify platform compatibility" id="dfn-verify-platform-compatibility" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">verify platform compatibility</dfn>, given <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-26">MiniApp Package</a> <var data-type="MiniApp Package">miniapp_package</var> and <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#ordered-map">ordered map</a> <var data-type="ordered map">manifest</var>, perform the following steps:</p>
                 <ol class="algorithm">
@@ -839,8 +839,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                 </ol>                
             </section>
             <section id="sec-miniapp-platform-start-page-identification">
-                <h4 id="x5-4-2-start-page-identification"><bdi class="secno">5.4.2 </bdi>Start Page Identification<a class="self-link" aria-label="§" href="#sec-miniapp-platform-start-page-identification"></a></h4>
-                <p>By default, <a data-link-type="dfn" href="#dfn-useragent" class="internalDFN" id="ref-for-dfn-useragent-25">user agents</a> <em class="rfc2119">MUST</em> load the <a data-link-type="dfn" href="#dfn-start-page" class="internalDFN" id="ref-for-dfn-start-page-4">start page</a> indicated in the <a href="https://www.w3.org/TR/miniapp-manifest/#dfn-miniapp-manifest-s" data-link-type="dfn">MiniApp manifest</a> as the entry point when the MiniApp <a href="sec-miniapp-processing-execute">is launched</a>. This <a data-link-type="dfn" href="#dfn-start-page" class="internalDFN" id="ref-for-dfn-start-page-5">start page</a> by default <em class="rfc2119">MUST</em> be overridden if a valid <a data-link-type="dfn" href="#dfn-page" class="internalDFN" id="ref-for-dfn-page-24">page</a> is specified in the MiniApp URI, as specified in the following algorithm.</p>
+                <h4 id="x5-4-2-start-page-identification"><a class="self-link" href="#sec-miniapp-platform-start-page-identification" aria-label="Permalink for Section 5.4.2"></a><bdi class="secno">5.4.2 </bdi>Start Page Identification</h4>
+                <p>By default, <a data-link-type="dfn" href="#dfn-useragent" class="internalDFN" id="ref-for-dfn-useragent-25">user agents</a> <em class="rfc2119">MUST</em> load the <a data-link-type="dfn" href="#dfn-start-page" class="internalDFN" id="ref-for-dfn-start-page-4">start page</a> indicated in the <a href="https://www.w3.org/TR/miniapp-manifest/#dfn-miniapp-manifest-s" data-link-type="dfn">MiniApp manifest</a> as the entry point when the MiniApp is launched. This <a data-link-type="dfn" href="#dfn-start-page" class="internalDFN" id="ref-for-dfn-start-page-5">start page</a> by default <em class="rfc2119">MUST</em> be overridden if a valid <a data-link-type="dfn" href="#dfn-page" class="internalDFN" id="ref-for-dfn-page-24">page</a> is specified in the MiniApp URI, as specified in the following algorithm.</p>
                 <p>To <dfn data-lt="determining the start page|determine the start page" id="dfn-determining-the-start-page" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">determine the start page</dfn>, given <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-27">MiniApp Package</a> <var data-type="MiniApp Package">miniapp_package</var>, <a data-link-type="dfn" data-type="dfn" href="https://url.spec.whatwg.org/#concept-url">URL</a> <var data-type="URL">miniapp_uri</var>, and <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#ordered-map">ordered map</a> <var data-type="ordered map">manifest</var>, perform the following steps. They return a <a data-link-type="dfn" data-type="dfn" href="https://url.spec.whatwg.org/#concept-url">URL</a>.</p>
                 <ol class="algorithm">
                     <li>Let <var data-type="URL">start_page</var> be the result of <a data-link-type="dfn" href="#dfn-extracting-the-start-page-from-uri" class="internalDFN" id="ref-for-dfn-extracting-the-start-page-from-uri-1">extracting the start page from URI</a>, passing <var data-type="URL">miniapp_uri</var>.</li>
@@ -850,7 +850,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                     <li>Return <var data-type="URL">start_page</var></li>
                 </ol>  
                 <section id="sec-miniapp-processing-platform-start-page-uri">
-                    <h5 id="x5-4-2-1-extraction-of-start-page-from-uri"><bdi class="secno">5.4.2.1 </bdi>Extraction of Start Page From URI<a class="self-link" aria-label="§" href="#sec-miniapp-processing-platform-start-page-uri"></a></h5>
+                    <h5 id="x5-4-2-1-extraction-of-start-page-from-uri"><a class="self-link" href="#sec-miniapp-processing-platform-start-page-uri" aria-label="Permalink for Section 5.4.2.1"></a><bdi class="secno">5.4.2.1 </bdi>Extraction of Start Page From URI</h5>
                     <p>MiniApp URIs <em class="rfc2119">MAY</em> contain information about the <a data-link-type="dfn" href="#dfn-start-page" class="internalDFN" id="ref-for-dfn-start-page-6">start page</a>, specified as the <a data-link-type="dfn" data-type="dfn" href="https://url.spec.whatwg.org/#url-path-segment-string">URL-path-segment string</a> of the URI.</p>
                     <p>To <dfn data-lt="extracting the start page from URI|extract the start page from URI" id="dfn-extracting-the-start-page-from-uri" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">extract the start page from URI</dfn>, given <a data-link-type="dfn" data-type="dfn" href="https://url.spec.whatwg.org/#concept-url">URL</a> <var data-type="URL">miniapp_uri</var>, perform the following steps. They return a <a data-link-type="dfn" data-type="dfn" href="https://url.spec.whatwg.org/#concept-url">URL</a>.</p>
                     <ol class="algorithm">
@@ -860,7 +860,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                     </ol>                     
                 </section>
                 <section id="sec-miniapp-processing-platform-start-page-manifest">
-                    <h5 id="x5-4-2-2-extraction-of-start-page-from-manifest"><bdi class="secno">5.4.2.2 </bdi>Extraction of Start Page From Manifest<a class="self-link" aria-label="§" href="#sec-miniapp-processing-platform-start-page-manifest"></a></h5>
+                    <h5 id="x5-4-2-2-extraction-of-start-page-from-manifest"><a class="self-link" href="#sec-miniapp-processing-platform-start-page-manifest" aria-label="Permalink for Section 5.4.2.2"></a><bdi class="secno">5.4.2.2 </bdi>Extraction of Start Page From Manifest</h5>
                     <p>As described in the <a href="https://www.w3.org/TR/miniapp-manifest/#pages-member">MiniApp Manifest's <code>pages</code> member</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-miniapp-manifest" title="MiniApp Manifest">MINIAPP-MANIFEST</a></cite>], the <a data-link-type="dfn" href="#dfn-start-page" class="internalDFN" id="ref-for-dfn-start-page-7">start page</a> of a MiniApp is specified in the first item of the <code>pages</code> <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#list">list</a>.</p>
                     <p>To <dfn data-lt="extracting the start page from manifest|extract the start page from manifest" id="dfn-extracting-the-start-page-from-manifest" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">extract the start page from manifest</dfn>, given <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#ordered-map">ordered map</a> <var data-type="ordered map">manifest</var>, perform the following steps. They return a <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#string">string</a>.</p>
                     <ol class="algorithm">
@@ -871,7 +871,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                 </section>
             </section>
             <section id="sec-miniapp-processing-locale">
-                <h4 id="x5-4-3-extraction-of-locale"><bdi class="secno">5.4.3 </bdi>Extraction of Locale<a class="self-link" aria-label="§" href="#sec-miniapp-processing-locale"></a></h4>
+                <h4 id="x5-4-3-extraction-of-locale"><a class="self-link" href="#sec-miniapp-processing-locale" aria-label="Permalink for Section 5.4.3"></a><bdi class="secno">5.4.3 </bdi>Extraction of Locale</h4>
                 <p>To <dfn data-lt="extracting the locale|extract the locale" id="dfn-extracting-the-locale" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">extract the locale</dfn>, given <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#ordered-map">ordered map</a> <var data-type="ordered map">manifest</var>, perform the following steps. They return a <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#string">string</a>.</p>
                 <ol class="algorithm">
                     <li>Let <a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#string">string</a> <var data-type="string">locale</var> be the <a data-link-type="dfn" href="#dfn-useragent" class="internalDFN" id="ref-for-dfn-useragent-26">user agent</a>'s default locale.</li>
@@ -883,9 +883,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </section>
     </section>         
     <section id="sec-security-privacy">
-        <h2 id="x6-security-and-privacy-considerations"><bdi class="secno">6. </bdi>Security and Privacy Considerations<a class="self-link" aria-label="§" href="#sec-security-privacy"></a></h2>
+        <h2 id="x6-security-and-privacy-considerations"><a class="self-link" href="#sec-security-privacy" aria-label="Permalink for Section 6."></a><bdi class="secno">6. </bdi>Security and Privacy Considerations</h2>
         <section id="package-integrity-and-trustworthiness">
-            <h3 id="x6-1-package-integrity-and-trustworthiness"><bdi class="secno">6.1 </bdi>Package Integrity and Trustworthiness<a class="self-link" aria-label="§" href="#package-integrity-and-trustworthiness"></a></h3>
+            <h3 id="x6-1-package-integrity-and-trustworthiness"><a class="self-link" href="#package-integrity-and-trustworthiness" aria-label="Permalink for Section 6.1"></a><bdi class="secno">6.1 </bdi>Package Integrity and Trustworthiness</h3>
             <p>To ensure the integrity and trustworthiness within the distribution stage of MiniApps, a <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-28">MiniApp package</a> <em class="rfc2119">SHOULD</em> be protected by one or more <a data-link-type="dfn" href="#dfn-signature" class="internalDFN" id="ref-for-dfn-signature-3">digital signatures</a>. These signatures, along with certificates issued by trusted authorities, could help third parties to validate the authorship of the MiniApp (e.g. the MiniApp developer), and other entities involved in the development or distribution of the software (e.g., an application store as MiniApp distributor).</p>
             <p>The usual scenarios where digital signatures are included in MiniApps are, but not limited to:</p> 
             <ul>  
@@ -898,17 +898,17 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
         </section>
         <section id="content-confidentiality">
-            <h3 id="x6-2-content-confidentiality"><bdi class="secno">6.2 </bdi>Content Confidentiality<a class="self-link" aria-label="§" href="#content-confidentiality"></a></h3>
+            <h3 id="x6-2-content-confidentiality"><a class="self-link" href="#content-confidentiality" aria-label="Permalink for Section 6.2"></a><bdi class="secno">6.2 </bdi>Content Confidentiality</h3>
             <p>This specification does not recommend any encryption mechanism for the <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-30">MiniApp package</a> to protect its confidentiality. However, it doesn't preclude an implementation from deploying some encryption mechanism for special purposes.</p>
         </section>
     </section>    
 
     <section class="appendix informative" id="sec-acknowledgments">
-        <h2 id="a-acknowledgments"><bdi class="secno">A. </bdi>Acknowledgments<a class="self-link" aria-label="§" href="#sec-acknowledgments"></a></h2><p><em>This section is non-normative.</em></p>
+        <h2 id="a-acknowledgments"><a class="self-link" href="#sec-acknowledgments" aria-label="Permalink for Appendix A."></a><bdi class="secno">A. </bdi>Acknowledgments</h2><p><em>This section is non-normative.</em></p>
 		<div class="note" id="issue-container-generatedID-3"><div role="heading" class="ednote-title marker" id="h-ednote-1" aria-level="3"><span>Editor's note</span></div><div class="">List all the contributors and <abbr title="World Wide Web Consortium">W3C</abbr> Team contacts</div></div>
     </section>
     <section class="appendix informative" id="sec-signature-schemes">
-        <h2 id="b-signature-schemes"><bdi class="secno">B. </bdi>Signature Schemes<a class="self-link" aria-label="§" href="#sec-signature-schemes"></a></h2><p><em>This section is non-normative.</em></p>
+        <h2 id="b-signature-schemes"><a class="self-link" href="#sec-signature-schemes" aria-label="Permalink for Appendix B."></a><bdi class="secno">B. </bdi>Signature Schemes</h2><p><em>This section is non-normative.</em></p>
 
         <p>Every <a data-link-type="dfn" href="#dfn-useragent" class="internalDFN" id="ref-for-dfn-useragent-28">user agent</a> <em class="rfc2119">MAY</em> support its own digital signature schemes depending on their needs. This section includes some examples of digital signature implementations as illustrated in <a href="#figure-miniapp-signatures-example" class="fig-ref" title="Example of different signature methods included in the MiniApp package">Figure <bdi class="figno">4</bdi></a>. They can be used in specific scenarios, such as developer verification and integrity of a MiniApp during its distribution.</p>   
 
@@ -919,7 +919,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
             </figure>
 
         <section id="sec-signature-rpk">
-            <h3 id="b-1-rpk-signature-scheme"><bdi class="secno">B.1 </bdi>RPK Signature Scheme<a class="self-link" aria-label="§" href="#sec-signature-rpk"></a></h3>
+            <h3 id="b-1-rpk-signature-scheme"><a class="self-link" href="#sec-signature-rpk" aria-label="Permalink for Appendix B.1"></a><bdi class="secno">B.1 </bdi>RPK Signature Scheme</h3>
             <p>As one implementation of MiniApp, <a href="https://www.quickapp.cn/" hreflang="zh">Quick Apps</a> use a so-called RPK (Runnable Package) Signature Scheme, which is similar to the APK Signature Scheme v2 [<cite><a class="bibref" data-link-type="biblio" href="#bib-apk-signature-v2" title="APK Signature Scheme v2">APK-SIGNATURE-V2</a></cite>], to verify the authorship of the <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-31">MiniApp package</a>. This signature scheme takes every byte in a MiniApp package into the signature generation. The resulting <a data-link-type="dfn" href="#dfn-signing_block" class="internalDFN" id="ref-for-dfn-signing_block-9">signing block</a> is created and inserted into the package file, according to the <a href="#sec-miniapp-digital-signature-requirements">Digital Signature Requirements</a>.</p>
             <p>The <a data-link-type="dfn" href="#dfn-signing_block" class="internalDFN" id="ref-for-dfn-signing_block-10">signing block</a> contains ID-value pairs with information about the signature and the signer identity.</p> 
           
@@ -933,7 +933,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                 <dd>32-bit (4-byte) unsigned integer in little-endian format</dd>
             </dl>
 
-            <h4 id="signing-block-format">Signing Block Format<a class="self-link" aria-label="§" href="#sec-signature-rpk"></a></h4>
+            <h4 id="signing-block-format"><a class="self-link" href="#sec-signature-rpk" aria-label="Permalink for Appendix"></a>Signing Block Format</h4>
             <p>The format of the RPK signing block is as follows:</p>
             <ul>
                 <li><strong>block size</strong> in bytes, excluding this field (uint64)</li>
@@ -952,12 +952,12 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
             <p>The "block size" value enables locating the start of the signing block in the whole ZIP file.</p>
                 
             <section id="sec-signing-block-signature">
-                <h4 id="b-1-1-signatures"><bdi class="secno">B.1.1 </bdi>Signatures<a class="self-link" aria-label="§" href="#sec-signing-block-signature"></a></h4>
+                <h4 id="b-1-1-signatures"><a class="self-link" href="#sec-signing-block-signature" aria-label="Permalink for Appendix B.1.1"></a><bdi class="secno">B.1.1 </bdi>Signatures</h4>
                 <p>The signatures are stored as <strong>ID-value pairs</strong> with specific identifiers that represent the types of the signature. The supported signatures, and associated IDs, for RPK packages are described in the following sub-clauses.</p>
                 
                 <div class="note" id="issue-container-generatedID-5"><div role="heading" class="ednote-title marker" id="h-ednote-2" aria-level="5"><span>Editor's note</span><span class="issue-label">: package-splitting</span></div><p class=""> There are cases where a MiniApp package is split into multiple sub-packages (by a distribution platform e.g. an app-store) for the user agent to download and execute it in a progressive fashion to improve the user experience. In such a case, additional signature types (thus IDs) would be needed to ensure the integrity of each sub-package as well as the whole. Details are for further study.</p></div>
                 <section id="developer-signature">
-                    <h5 id="b-1-1-1-developer-signature"><bdi class="secno">B.1.1.1 </bdi>Developer Signature<a class="self-link" aria-label="§" href="#developer-signature"></a></h5>
+                    <h5 id="b-1-1-1-developer-signature"><a class="self-link" href="#developer-signature" aria-label="Permalink for Appendix B.1.1.1"></a><bdi class="secno">B.1.1.1 </bdi>Developer Signature</h5>
                     <p>The ID-value pair in the signing block under ID <code>0x01000101</code> represents the data of the signature of the whole-file <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-32">MiniApp package</a>.</p>
                     <p>The value of the ID-pair contains all the signature blocks and it has a variable length and its structure is as follows:</p>
                     <ul>
@@ -1006,7 +1006,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                     </ul>
                 </section>
                 <section id="distributor-signature">
-                    <h5 id="b-1-1-2-distributor-signature"><bdi class="secno">B.1.1.2 </bdi>Distributor Signature<a class="self-link" aria-label="§" href="#distributor-signature"></a></h5>
+                    <h5 id="b-1-1-2-distributor-signature"><a class="self-link" href="#distributor-signature" aria-label="Permalink for Appendix B.1.1.2"></a><bdi class="secno">B.1.1.2 </bdi>Distributor Signature</h5>
                     <p>The signature of the distributor preserves the integrity of the application during the distribution process, guaranteeing that the package is verified by the trusted distributor and the permission control policy (in the form of a <dfn id="dfn-provisioning-profile" data-dfn-type="dfn" tabindex="0" aria-haspopup="dialog">provisioning profile</dfn>) from the distributor is enforced upon the package.</p>
 
                     <p>During the process of distributor signing, either the distributor or the developer adds a <a data-link-type="dfn" href="#dfn-provisioning-profile" class="internalDFN" id="ref-for-dfn-provisioning-profile-1">Provisioning Profile</a> and uses the private key of the distributor to sign the signature.</p>
@@ -1036,7 +1036,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                             </ul>
                         </li>
                     </ul>
-                    <h6 id="sec-signature-algorithm-id">Signature Algorithm IDs<a class="self-link" aria-label="§" href="#sec-signature-algorithm-id"></a></h6>
+                    <h6 id="sec-signature-algorithm-id"><a class="self-link" href="#sec-signature-algorithm-id" aria-label="Permalink for Appendix"></a>Signature Algorithm IDs</h6>
                     <ul>
                         <li><code>0x0101</code> RSASSA-PSS with SHA2-256 digest, SHA2-256 MGF1, 32 bytes of salt, trailer: 0xbc</li>
                         <li><code>0x0102</code> RSASSA-PSS with SHA2-512 digest, SHA2-512 MGF1, 64 bytes of salt, trailer: 0xbc</li>
@@ -1046,13 +1046,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                         <li><code>0x0202</code> ECDSA with SHA2-512 digest</li>
                         <li><code>0x0301</code> DSA with SHA2-256 digest</li>
                     </ul>
-                    <h6 id="sec-signature-key-sizes">Supported keys sizes and <abbr title="elliptic-curve">EC</abbr> cryptography:<a class="self-link" aria-label="§" href="#sec-signature-key-sizes"></a></h6>
+                    <h6 id="sec-signature-key-sizes"><a class="self-link" href="#sec-signature-key-sizes" aria-label="Permalink for Appendix"></a>Supported keys sizes and <abbr title="elliptic-curve">EC</abbr> cryptography:</h6>
                     <ul>
                         <li><strong>RSA</strong>: 1024, 2048, 4096, 8192, 16384</li>
                         <li><strong><abbr title="elliptic-curve">EC</abbr></strong>: NIST P-256, P-384, P-521</li>
                         <li><strong>DSA</strong>: 1024, 2048, 3072</li>
                     </ul>
-                    <h6 id="sec-provisioning-profile-id">Provisioning Profile IDs<a class="self-link" aria-label="§" href="#sec-provisioning-profile-id"></a></h6>
+                    <h6 id="sec-provisioning-profile-id"><a class="self-link" href="#sec-provisioning-profile-id" aria-label="Permalink for Appendix"></a>Provisioning Profile IDs</h6>
                     <ul>
                         <li><code>0x01</code> Certificate Digest
                             <ul>
@@ -1097,7 +1097,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
             </section>
         </section>
         <section id="sec-signature-pkcs7">
-            <h3 id="b-2-pkcs-7-signature-scheme"><bdi class="secno">B.2 </bdi>PKCS#7 Signature Scheme<a class="self-link" aria-label="§" href="#sec-signature-pkcs7"></a></h3>
+            <h3 id="b-2-pkcs-7-signature-scheme"><a class="self-link" href="#sec-signature-pkcs7" aria-label="Permalink for Appendix B.2"></a><bdi class="secno">B.2 </bdi>PKCS#7 Signature Scheme</h3>
             <p>This signature scheme is based on the PKCS #7 Cryptographic Message Syntax [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2315" title="PKCS #7: Cryptographic Message Syntax Version 1.5">rfc2315</a></cite>]. It <em class="rfc2119">MAY</em> cover different stages of packaging signature described in <a href="#sec-signature-rpk">RPK Signature Scheme</a>, including the developer signature and distributor signature.</p>
             <p>This signature scheme includes the <a data-link-type="dfn" href="#dfn-provisioning-profile" class="internalDFN" id="ref-for-dfn-provisioning-profile-4">Provisioning Profile</a> of the MiniApp and the developer's signature at the first stage (developer signing stage). At the second stage (distributor signing stage), a distributor <em class="rfc2119">MAY</em> replace the developer's signature with the its own signature. Like the <a href="#sec-signature-rpk">RPK Signature Scheme</a>, this approach generates a signing block to be included into the package file, according to the <a href="#sec-miniapp-digital-signature-requirements">Digital Signature Requirements</a>.</p>
 
@@ -1114,7 +1114,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                 <dd>16-bit (2-byte) unsigned integer</dd>
             </dl>
 
-            <h4 id="signing-block-format-0">Signing Block Format<a class="self-link" aria-label="§" href="#sec-signature-pkcs7"></a></h4>
+            <h4 id="signing-block-format-0"><a class="self-link" href="#sec-signature-pkcs7" aria-label="Permalink for Appendix"></a>Signing Block Format</h4>
             <p>The format of the PKCS#7 signing block is as follows:</p>
             <ul>
                 <li id="pkcs7-profile-block-head"><strong>Signing block head</strong>
@@ -1175,7 +1175,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                 </li>
             </ul>
 
-            <h5 id="types-signing-blocks">Types of Signing Blocks<a class="self-link" aria-label="§" href="#types-signing-blocks"></a></h5>
+            <h5 id="types-signing-blocks"><a class="self-link" href="#types-signing-blocks" aria-label="Permalink for Appendix"></a>Types of Signing Blocks</h5>
             <p>The type of the <a href="#pkcs7-profile-block-head">Block Head</a> is identified by its attribute <code>type</code>. This attribute <em class="rfc2119">MUST</em> take two different values:</p>
             <ul>
                 <li><code>0</code> for File Signature blocks</li>
@@ -1208,7 +1208,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </section>
 
 <section class="appendix informative" id="sec-media-type-registration">
-        <h2 id="c-media-type-registration"><bdi class="secno">C. </bdi>Media Type Registration<a class="self-link" aria-label="§" href="#sec-media-type-registration"></a></h2><p><em>This section is non-normative.</em></p>
+        <h2 id="c-media-type-registration"><a class="self-link" href="#sec-media-type-registration" aria-label="Permalink for Appendix C."></a><bdi class="secno">C. </bdi>Media Type Registration</h2><p><em>This section is non-normative.</em></p>
         <p>This appendix registers the <code>application/miniapp-pkg+zip</code> media type for MiniApp packages, in conformance with BCP 13 [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc4289" title="Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures">RFC4289</a></cite>] and <a href="https://www.w3.org/2020/01/registering-mediatypes.html">Register an Internet Media Type for a <abbr title="World Wide Web Consortium">W3C</abbr> Spec</a>.</p>
 
         <p>A <a data-link-type="dfn" href="#dfn-package" class="internalDFN" id="ref-for-dfn-package-33">MiniApp package</a> file is a container technology based on the [<cite><a class="bibref" data-link-type="biblio" href="#bib-zip" title=".ZIP File Format Specification">ZIP</a></cite>] archive format, including some modifications.</p> 
@@ -1282,11 +1282,11 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 
 
-<section id="references" class="appendix"><h2 id="d-references"><bdi class="secno">D. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="normative-references">
-    <h3 id="d-1-normative-references"><bdi class="secno">D.1 </bdi>Normative references<a class="self-link" aria-label="§" href="#normative-references"></a></h3>
+<section id="references" class="appendix"><h2 id="d-references"><a class="self-link" href="#references" aria-label="Permalink for Appendix D."></a><bdi class="secno">D. </bdi>References</h2><section id="normative-references">
+    <h3 id="d-1-normative-references"><a class="self-link" href="#normative-references" aria-label="Permalink for Appendix D.1"></a><bdi class="secno">D.1 </bdi>Normative references</h3>
     <dl class="bibliography"><dt id="bib-bcp47">[BCP47]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc5646"><cite>Tags for Identifying Languages</cite></a>. A. Phillips, Ed.; M. Davis, Ed..  IETF. September 2009. Best Current Practice. URL: <a href="https://www.rfc-editor.org/rfc/rfc5646">https://www.rfc-editor.org/rfc/rfc5646</a></dd><dt id="bib-css-snapshot">[CSS-SNAPSHOT]</dt><dd><a href="https://www.w3.org/TR/CSS/"><cite>CSS Snapshot</cite></a>. URL: <a href="https://www.w3.org/TR/CSS/">https://www.w3.org/TR/CSS/</a></dd><dt id="bib-ecma-262">[ECMA-262]</dt><dd><a href="https://tc39.es/ecma262/multipage/"><cite>ECMAScript Language Specification</cite></a>.  Ecma International. URL: <a href="https://tc39.es/ecma262/multipage/">https://tc39.es/ecma262/multipage/</a></dd><dt id="bib-fetch">[FETCH]</dt><dd><a href="https://fetch.spec.whatwg.org/"><cite>Fetch Standard</cite></a>. Anne van Kesteren.  WHATWG. Living Standard. URL: <a href="https://fetch.spec.whatwg.org/">https://fetch.spec.whatwg.org/</a></dd><dt id="bib-html">[HTML]</dt><dd><a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></dd><dt id="bib-infra">[INFRA]</dt><dd><a href="https://infra.spec.whatwg.org/"><cite>Infra Standard</cite></a>. Anne van Kesteren; Domenic Denicola.  WHATWG. Living Standard. URL: <a href="https://infra.spec.whatwg.org/">https://infra.spec.whatwg.org/</a></dd><dt id="bib-json">[JSON]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc8259"><cite>The JavaScript Object Notation (JSON) Data Interchange Format</cite></a>. T. Bray, Ed..  IETF. December 2017. Internet Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc8259">https://www.rfc-editor.org/rfc/rfc8259</a></dd><dt id="bib-mimesniff">[MIMESNIFF]</dt><dd><a href="https://mimesniff.spec.whatwg.org/"><cite>MIME Sniffing Standard</cite></a>. Gordon P. Hemsley.  WHATWG. Living Standard. URL: <a href="https://mimesniff.spec.whatwg.org/">https://mimesniff.spec.whatwg.org/</a></dd><dt id="bib-miniapp-lifecycle">[MINIAPP-LIFECYCLE]</dt><dd><a href="https://www.w3.org/TR/miniapp-lifecycle/"><cite>MiniApp Lifecycle</cite></a>. Qing An; Haoyang Xu.  W3C. 29 October 2021. W3C Working Draft. URL: <a href="https://www.w3.org/TR/miniapp-lifecycle/">https://www.w3.org/TR/miniapp-lifecycle/</a></dd><dt id="bib-miniapp-manifest">[MINIAPP-MANIFEST]</dt><dd><a href="https://www.w3.org/TR/miniapp-manifest/"><cite>MiniApp Manifest</cite></a>. Martin Alvarez-Espinar; Yongjing ZHANG; Shouren Lan; Zhiqiang Yu; Xiaofeng Zhang.  W3C. 3 October 2021. W3C Working Draft. URL: <a href="https://www.w3.org/TR/miniapp-manifest/">https://www.w3.org/TR/miniapp-manifest/</a></dd><dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner.  IETF. March 1997. Best Current Practice. URL: <a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a></dd><dt id="bib-rfc8174">[RFC8174]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc8174"><cite>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</cite></a>. B. Leiba.  IETF. May 2017. Best Current Practice. URL: <a href="https://www.rfc-editor.org/rfc/rfc8174">https://www.rfc-editor.org/rfc/rfc8174</a></dd><dt id="bib-uax15">[UAX15]</dt><dd><a href="https://www.unicode.org/reports/tr15/tr15-51.html"><cite>Unicode Normalization Forms</cite></a>. Ken Whistler.  Unicode Consortium. 27 August 2021. Unicode Standard Annex #15. URL: <a href="https://www.unicode.org/reports/tr15/tr15-51.html">https://www.unicode.org/reports/tr15/tr15-51.html</a></dd><dt id="bib-unicode">[Unicode]</dt><dd><a href="https://www.unicode.org/versions/latest/"><cite>The Unicode Standard</cite></a>.  Unicode Consortium. URL: <a href="https://www.unicode.org/versions/latest/">https://www.unicode.org/versions/latest/</a></dd><dt id="bib-url">[url]</dt><dd><a href="https://url.spec.whatwg.org/"><cite>URL Standard</cite></a>. Anne van Kesteren.  WHATWG. Living Standard. URL: <a href="https://url.spec.whatwg.org/">https://url.spec.whatwg.org/</a></dd><dt id="bib-zip">[ZIP]</dt><dd><a href="https://www.pkware.com/documents/casestudies/APPNOTE.TXT"><cite>.ZIP File Format Specification</cite></a>. 1 September 2012. Final. URL: <a href="https://www.pkware.com/documents/casestudies/APPNOTE.TXT">https://www.pkware.com/documents/casestudies/APPNOTE.TXT</a></dd></dl>
   </section><section id="informative-references">
-    <h3 id="d-2-informative-references"><bdi class="secno">D.2 </bdi>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
+    <h3 id="d-2-informative-references"><a class="self-link" href="#informative-references" aria-label="Permalink for Appendix D.2"></a><bdi class="secno">D.2 </bdi>Informative references</h3>
     <dl class="bibliography"><dt id="bib-apk-signature-v2">[APK-SIGNATURE-V2]</dt><dd><a href="https://source.android.com/security/apksigning/v2"><cite>APK Signature Scheme v2</cite></a>. URL: <a href="https://source.android.com/security/apksigning/v2">https://source.android.com/security/apksigning/v2</a></dd><dt id="bib-charmod-norm">[CHARMOD-NORM]</dt><dd><a href="https://www.w3.org/TR/charmod-norm/"><cite>Character Model for the World Wide Web: String Matching</cite></a>. Addison Phillips et al.  W3C. 11 August 2021. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/charmod-norm/">https://www.w3.org/TR/charmod-norm/</a></dd><dt id="bib-rfc1321">[rfc1321]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc1321"><cite>The MD5 Message-Digest Algorithm</cite></a>. R. Rivest.  IETF. April 1992. Informational. URL: <a href="https://www.rfc-editor.org/rfc/rfc1321">https://www.rfc-editor.org/rfc/rfc1321</a></dd><dt id="bib-rfc2315">[rfc2315]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc2315"><cite>PKCS #7: Cryptographic Message Syntax Version 1.5</cite></a>. B. Kaliski.  IETF. March 1998. Informational. URL: <a href="https://www.rfc-editor.org/rfc/rfc2315">https://www.rfc-editor.org/rfc/rfc2315</a></dd><dt id="bib-rfc2528">[rfc2528]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc2528"><cite>Internet X.509 Public Key Infrastructure Representation of Key Exchange Algorithm (KEA) Keys in Internet X.509 Public Key Infrastructure Certificates</cite></a>. R. Housley; W. Polk.  IETF. March 1999. Informational. URL: <a href="https://www.rfc-editor.org/rfc/rfc2528">https://www.rfc-editor.org/rfc/rfc2528</a></dd><dt id="bib-rfc4289">[RFC4289]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc4289"><cite>Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures</cite></a>. N. Freed; J. Klensin.  IETF. December 2005. Best Current Practice. URL: <a href="https://www.rfc-editor.org/rfc/rfc4289">https://www.rfc-editor.org/rfc/rfc4289</a></dd><dt id="bib-rfc6839">[RFC6839]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc6839"><cite>Additional Media Type Structured Syntax Suffixes</cite></a>. T. Hansen; A. Melnikov.  IETF. January 2013. Informational. URL: <a href="https://www.rfc-editor.org/rfc/rfc6839">https://www.rfc-editor.org/rfc/rfc6839</a></dd><dt id="bib-x690">[X690]</dt><dd><a href="https://www.itu.int/ITU-T/studygroups/com17/languages/X.690-0207.pdf"><cite>Recommendation X.690 — Information Technology — ASN.1 Encoding Rules — Specification of Basic Encoding Rules (BER), Canonical Encoding Rules (CER), and Distinguished Encoding Rules (DER)</cite></a>.  ITU. URL: <a href="https://www.itu.int/ITU-T/studygroups/com17/languages/X.690-0207.pdf">https://www.itu.int/ITU-T/studygroups/com17/languages/X.690-0207.pdf</a></dd></dl>
   </section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
