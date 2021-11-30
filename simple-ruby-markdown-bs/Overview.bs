@@ -1,43 +1,43 @@
 <pre class='metadata'>
-    Title: Rules for Simple Placement of Japanese Ruby
-    Group: i18n
-    Shortname: simple-ruby
-    Level: 4
-    Status: NOTE-ED
-    ED: https://w3c.github.io/simple-ruby/
-    TR: https://www.w3.org/TR/simple-ruby/
-    Previous Version: https://www.w3.org/TR/2020/WD-simple-ruby-20200609/
-    Editor: Florian Rivoal, Invited Expert, https://florian.rivoal.net, w3cid 43241
-    Editor: Atsushi Shimono, W3C, w3cid 110639
-    Editor: Richard Ishida, W3C, w3cid 3439
-    Abstract: A simple set of rules for placement of Ruby text in Japanese typography.
-    Inline Github Issues: no
-    </pre>
-    
-    ## Purpose of this document
-    
-    ## Purpose of this document {#document_purpose}
-    
-    Ruby is the name given to the small annotations in Japanese content that are rendered alongside base text, usually to provide a pronunciation guide, but sometimes to provide other information. (See the article [“What is ruby”](https://www.w3.org/International/questions/qa-ruby.en) by the internationalization Working Group for more information.)
-    
-    As a guide for implementers of rendering engines, this document describes a simple method of ruby composition that can be used for Japanese layout realized with technologies like CSS, SVG, and XML-FO. Unlike [JLReq](https://www.w3.org/TR/jlreq/) [[JLREQ]], in this document only one layout method is presented for each alternative, taking into consideration best practices and important points related to Japanese layout. The points taken into consideration are described in [[[#matters-considered-by-the-simple-placement-rules]]]. In addition, this document provides recommendations for double-sided ruby, where two distinct runs of ruby text are attached to the same ruby base (this is not described in [[JLREQ]].
-    
-    [[JLREQ]] is largely a record of Japanese layout as established for the printing industry. It explains multiple ways to achieve one thing, and sometimes these approaches can be very complex. Ruby is one such case. There are so many factors to consider, and often contradictory requirements (see [some examples](#n20200529002)), leading to a complexity that makes it challenging to automate ruby fully, per JLReq.
-    
-    It would therefore be beneficial to outline a method that is adequate for automatic processing of ruby in general, but which is paired down to be simple and robust. In such cases, rather than ideal positioning, we must at least make sure that the positioning causes no misunderstanding.
-    
-    The following is a proposal for just such a simple processing system. The target audience is implementers and specification writers. It is expected that a full system may be more complex that what is described here, both due to the interaction with other features or other writing systems, and because those designing such system may wish to provide alternative options. Note that the terminology is based on that defined in [[JLREQ]].
-    
-    <aside class="note" title="Ruby and interlinear notes" id="n20200529001">
-    Interlinear notes are sometimes placed between lines in the same position as ruby annotations (see also JLReq [Figure 241: An example of a note in inter lines](https://www.w3.org/TR/jlreq/#fig3_2_8) for examples). These inter-linear notes are not covered in this document. Line breaks are not allowed inside mono-ruby annotations, and, for group-ruby, line-breaks are not allowed in the ruby base. In contrast, interlinear notes may involve a large number of characters, and it must be possible to break lines within both the base text and the note itself, and use different rules for placement.
-    </aside>
-    
-    ## Considerations for the placement rules {#matters-considered-by-the-simple-placement-rules}
-    
-    ### The difficulties of ruby processing
-    
-    When performing ruby layout in Japanese, the following factors need to be considered in order to decide on the placement:
-    
+Title: Rules for Simple Placement of Japanese Ruby
+Group: i18n
+Shortname: simple-ruby
+Level: 4
+Status: NOTE-ED
+ED: https://w3c.github.io/simple-ruby/
+TR: https://www.w3.org/TR/simple-ruby/
+Previous Version: https://www.w3.org/TR/2020/WD-simple-ruby-20200609/
+Editor: Florian Rivoal, Invited Expert, https://florian.rivoal.net, w3cid 43241
+Editor: Atsushi Shimono, W3C, w3cid 110639
+Editor: Richard Ishida, W3C, w3cid 3439
+Abstract: A simple set of rules for placement of Ruby text in Japanese typography.
+Inline Github Issues: no
+</pre>
+
+## Purpose of this document
+
+## Purpose of this document {#document_purpose}
+
+Ruby is the name given to the small annotations in Japanese content that are rendered alongside base text, usually to provide a pronunciation guide, but sometimes to provide other information. (See the article [“What is ruby”](https://www.w3.org/International/questions/qa-ruby.en) by the internationalization Working Group for more information.)
+
+As a guide for implementers of rendering engines, this document describes a simple method of ruby composition that can be used for Japanese layout realized with technologies like CSS, SVG, and XML-FO. Unlike [JLReq](https://www.w3.org/TR/jlreq/) [[JLREQ]], in this document only one layout method is presented for each alternative, taking into consideration best practices and important points related to Japanese layout. The points taken into consideration are described in [[[#matters-considered-by-the-simple-placement-rules]]]. In addition, this document provides recommendations for double-sided ruby, where two distinct runs of ruby text are attached to the same ruby base (this is not described in [[JLREQ]].
+
+[[JLREQ]] is largely a record of Japanese layout as established for the printing industry. It explains multiple ways to achieve one thing, and sometimes these approaches can be very complex. Ruby is one such case. There are so many factors to consider, and often contradictory requirements (see [some examples](#n20200529002)), leading to a complexity that makes it challenging to automate ruby fully, per JLReq.
+
+It would therefore be beneficial to outline a method that is adequate for automatic processing of ruby in general, but which is paired down to be simple and robust. In such cases, rather than ideal positioning, we must at least make sure that the positioning causes no misunderstanding.
+
+The following is a proposal for just such a simple processing system. The target audience is implementers and specification writers. It is expected that a full system may be more complex that what is described here, both due to the interaction with other features or other writing systems, and because those designing such system may wish to provide alternative options. Note that the terminology is based on that defined in [[JLREQ]].
+
+<aside class="note" title="Ruby and interlinear notes" id="n20200529001">
+Interlinear notes are sometimes placed between lines in the same position as ruby annotations (see also JLReq [Figure 241: An example of a note in inter lines](https://www.w3.org/TR/jlreq/#fig3_2_8) for examples). These inter-linear notes are not covered in this document. Line breaks are not allowed inside mono-ruby annotations, and, for group-ruby, line-breaks are not allowed in the ruby base. In contrast, interlinear notes may involve a large number of characters, and it must be possible to break lines within both the base text and the note itself, and use different rules for placement.
+</aside>
+
+## Considerations for the placement rules {#matters-considered-by-the-simple-placement-rules}
+
+### The difficulties of ruby processing
+
+When performing ruby layout in Japanese, the following factors need to be considered in order to decide on the placement:
+
     <ol>
     <li id="l20200529001">How to handle the correspondence between the base text and the ruby annotation.</li>
     <li id="l20200529002">What to do when the  base text is wider than its ruby annotation.</li>
@@ -46,30 +46,30 @@
     <p>When the ruby annotation is wider than its base text,
         whether it can be allowed to overhang the characters preceding or following,
         and whether this affects the position of the base text.</p>
-    
+
     <aside class="note" title="Ruby annotations that are wider than the base text" id="n20200529002">
-    <p>Since Japanese composition seeks to avoid spacing between characters as much as possible (see also JLReq <a href="https://www.w3.org/TR/jlreq/#principles_of_arrangement_of_kanji_and_kana_characters">section "Principles of Arrangement of Kanji and Kana Characters"</a>), ruby annotations wider than their base characters are not allowed to overhang neighboring kanji, but often <em>are</em> allowed to overhang neighboring kana. 
-          This method works well when characters preceding and following 
+    <p>Since Japanese composition seeks to avoid spacing between characters as much as possible (see also JLReq <a href="https://www.w3.org/TR/jlreq/#principles_of_arrangement_of_kanji_and_kana_characters">section "Principles of Arrangement of Kanji and Kana Characters"</a>), ruby annotations wider than their base characters are not allowed to overhang neighboring kanji, but often <em>are</em> allowed to overhang neighboring kana.
+          This method works well when characters preceding and following
           the ruby base are both kana
-          or both kanji. 
+          or both kanji.
           However, depending on the number of ruby characters, it can lead to an unbalanced look when kana is on one side and kanji is on the other.
           ([[[#ruby-overhang-mono]]] shows examples of mono-ruby, one where the ruby annotation overhangs, and another where it doesn't overhang  the kanji.)</p>
-          
+
     <figure id="ruby-overhang-mono"> <img src="img/fig01.svg" style="width:20%; min-width: 10em;"/>
     <figcaption>Mono-ruby preceded by a kana character and followed by a kanji character, where the ruby annotation extends beyond its base text.</figcaption>
     </figure>
-    
+
     <p>The same applies for group-ruby (see [[[#ruby-overhang-group]]]).</p>
-    
+
     <figure id="ruby-overhang-group"> <img src="img/fig02.svg" alt="" style="width:25%; min-width: 15em;"/>
     <figcaption>Group-ruby  preceded by a kana character and followed by a kanji character, where the ruby annotation extends beyond its base text.</figcaption>
     </figure>
-    
-    <p>In letterpress printing,   ruby annotation layouts were adjusted on an individual basis. Some publishers had an additional 
-          rule disallowing overhang of adjacent kana text by katakana annotations, since katakana words can be considered a separate unit. 
-          For such cases, depending on the length of the ruby annotation, it would produce better balance to disallow overhanging of kana characters 
+
+    <p>In letterpress printing,   ruby annotation layouts were adjusted on an individual basis. Some publishers had an additional
+          rule disallowing overhang of adjacent kana text by katakana annotations, since katakana words can be considered a separate unit.
+          For such cases, depending on the length of the ruby annotation, it would produce better balance to disallow overhanging of kana characters
           (see [[[#ruby-overhang-group-kana]]], where the second example applies this method).</p>
-          
+
     <figure id="ruby-overhang-group-kana"> <img src="img/fig03.svg"  alt="" style="width:25%; min-width: 15em;" />
     <figcaption>Group-ruby preceded and followed by kana characters, where the ruby annotation extends beyond its base text.</figcaption>
     </figure>
@@ -84,4 +84,3 @@
         whether there can be a line wrap opportunity between them.</p>
     </li>
     </ol>
-    
