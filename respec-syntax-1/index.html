@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Requirements for Chinese Text Layout - 中文排版需求</title>
+
+<script async class="remove" src="https://www.w3.org/Tools/respec/respec-w3c"></script>
+
+<script class="remove">
+var respecConfig = {
+  specStatus: "ED",
+  previousPublishDate: "2020-11-01",
+  previousMaturity: "WD",
+
+  shortName: "clreq",
+  noRecTrack: true,
+  copyrightStart: "2015",
+  edDraftURI: "https://w3c.github.io/clreq/",
+
+  maxTocLevel: 3,
+
+  editors: [
+    {
+      name: "test"
+    },
+  ],
+
+  group: "i18n",
+  wgPublicList: "public-i18n-chinese",
+
+  github: "w3c/clreq",
+};
+</script>
+</head>
+
+<body>
+<h1 class="title p-name" id="title">Requirements for Chinese Text Layout<br/><span lang="zh">中文排版需求</span></h1>
+<div id="abstract">
+  <p lang="en">This document summarizes text composition requirements in the Chinese writing system. One of the goals of the task force is to describe issues for Chinese layout, another is to describe correspondences with existing standards (such as Unicode), as well as to encourage vendors to implement relevant features correctly.</p>
+  <p lang="zh-hans">本文整理了中文（汉字）书写系统于排版上的需求。一方面说明需求事项以明确描述中文排版之需求与问题；另一方面也提出与既有标准（如Unicode）的对应，冀求本文能更有效地促进实现。</p>
+  <p lang="zh-hant">本文整理了中文（漢字）書寫系統於排版上的需求。一方面說明需求事項以明確描述中文排版之需求與問題；另一方面也提出與既有標準（如Unicode）的對應，冀求本文能更有效地促進實作。</p>
+</div>
+<div id="sotd">
+  <p lang="en">This document was created by the <a href="https://github.com/w3c/clreq">Chinese Layout Task Force</a> within the W3C Internationalization Interest Group, and in collaboration with the <a href="https://www.w3.org/html/ig/zh/">W3C HTML5 Chinese Interest Group</a>. The <a href="https://www.w3.org/International/core/">Internationalization Working Group</a> has been a great help during the writing of this document.  The Chinese Layout Task Force will work with the Internationalization Working Group to publish Group Draft Notes of this document, and to widen the exposure and review of the document. </p>
+  <p lang="zh-hans">本文档由W3C国际化兴趣组下的<a href="https://github.com/w3c/clreq">中文布局任务团</a>编写而成，<a href="https://www.w3.org/html/ig/zh/">W3C HTML5中文兴趣组</a>为本文档提供了审阅支持，<a href="https://www.w3.org/International/core/">W3C国际化工作组</a>为文档的编写提供了诸多帮助。中文排版布局任务小组将与<a href="https://www.w3.org/International/core/">W3C国际化工作组</a>联合发布该文档的草案，并邀请业界进行审阅。</p>
+  <p lang="zh-hant">本文檔由W3C國際化興趣組下的<a href="https://github.com/w3c/clreq">中文布局任務團</a>編寫而成，<a href="https://www.w3.org/html/ig/zh/">W3C HTML5中文興趣組</a>為本文檔提供了審閱支持，<a href="https://www.w3.org/International/core/">W3C國際化工作組</a>為文檔的編寫提供了諸多幫助。中文排版布局任務小組將與<a href="https://www.w3.org/International/core/">W3C國際化工作組</a>聯合發布該文檔的草案，並邀請業界進行審閱。</p>
+
+  <p lang="zh-hans">本章节描述了本文档的发布状态。其他更新版本可能会覆盖本文档。W3C的文档列表和最新版本可通过<a href="https://www.w3.org/TR/">W3C技术报告</a>索引访问。</p>
+  <p lang="zh-hans">以编辑草稿方式发布的文档还没有通过<abbr title="World Wide Web Consortium">W3C</abbr>会员流程的认可。这是一份文档草稿并且会不断更新。请暂时不要正式引用本文档。</p>
+  <p lang="zh-hans">本文档遵循<abbr title="World Wide Web Consortium">W3C</abbr><a id="sotd_patent_zh_hans" href="http://www.w3.org/Consortium/Patent-Policy/">专利政策</a>。<abbr title="World Wide Web Consortium">W3C</abbr>为工作组的产出成果维护着一份<a href="https://www.w3.org/groups/wg/i18n-core/ipr" rel="disclosure">公开专利披露列表</a>，此页面也同时涵盖了专利披露说明。若个人发现其有包含<a href="http://www.w3.org/Consortium/Patent-Policy/#def-essential">必须声明</a>的专利信息，必须按照<a href="http://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure"><abbr title="World Wide Web Consortium">W3C</abbr>专利政策第六章节</a>披露此信息。</p>
+  <p lang="zh-hans">本文档遵循<a id="w3c_process_revision_zh_hans" href="https://www.w3.org/2021/Process-20211102/"><abbr title="World Wide Web Consortium">W3C</abbr>流程文档</a>（2021年11月2日版）。</p>
+
+  <p lang="zh-hant">本章節描述了本文檔的發布狀態。其他更新版本可能會覆蓋本文檔。W3C的文檔列表和最新版本可通過<a href="https://www.w3.org/TR/">W3C技術報告</a>索引訪問。</p>
+  <p lang="zh-hant">以編輯草稿方式發布的文檔還沒有通過<abbr title="World Wide Web Consortium">W3C</abbr>會員流程的認可。這是一份文檔草稿並且會不斷更新。請暫時不要正式引用本文檔。</p>
+  <p lang="zh-hant">本文檔遵循<abbr title="World Wide Web Consortium">W3C</abbr><a id="sotd_patent_zh-hant" href="http://www.w3.org/Consortium/Patent-Policy/">專利政策</a>。<abbr title="World Wide Web Consortium">W3C</abbr>為工作組的產出成果維護著一份<a href="https://www.w3.org/groups/wg/i18n-core/ipr" rel="disclosure">公開專利披露列表</a>，此頁面也同時涵蓋了專利披露說明。若個人發現其有包含<a href="http://www.w3.org/Consortium/Patent-Policy/#def-essential">必須聲明</a>的專利信息，必須按照<a href="http://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure"><abbr title="World Wide Web Consortium">W3C</abbr>專利政策第六章節</a>披露此信息。</p>
+  <p lang="zh-hant">本文檔遵循<a id="w3c_process_revision_zh-hant" href="https://www.w3.org/2021/Process-20211102/"><abbr title="World Wide Web Consortium">W3C</abbr>流程文檔</a>（2021年11月2日版）。</p>
+</div>
+
+<section id="basics_of_chinese_composition">
+  <h2>
+    <span lang="en">Basics of Chinese Composition</span>
+    <span lang="zh-hans">中文排版基础</span>
+    <span lang="zh-hant">中文排版基礎</span>
+  </h2>
+
+      <section id="increased_inter_character_spacing">
+        <h2>
+          <span lang="en">Increased inter-character spacing</span>
+          <span lang="zh-hans">增加字距</span>
+          <span lang="zh-hant">增加字距</span>
+        </h2>
+
+        <figure id="fig-loose-setting">
+          <span style="text-align:center;"><img src="images/en/increased-inter-character-spacing.svg" alt="Examples of loose setting in horizontal writing mode." width="600"></span>
+          <figcaption>
+            <span lang="en">Examples of loose setting in horizontal writing mode.</span>
+            <span lang="zh-hans">疏排</span>
+            <span lang="zh-hant">疏排</span>
+          </figcaption>
+        </figure>
+
+        <p lang="en"> It is common in books to increase the space between each character frame (i.e. <dfn id="endef_looseSetting">loose setting</dfn>) for the following cases:</p>
+        <p lang="zh-hans">在各字之间加入固定量的空白来排列文字，称作疏排。书籍排版上，遇到以下状况时，会采用这种排列方式。</p>
+        <p lang="zh-hant">在各字之間加入固定量的空白來排列文字，稱作疏排。書籍排版上，遇到以下狀況時，會採用這種排列方式。</p>
+        <ol>
+          <li id="id14">
+            <p lang="en">To achieve a balance between running heads with different numbers of characters, increased inter-character spacing is used for running heads with few characters. [[[#fig-loose-setting]]]</p>
+            <p lang="zh-hans">为使字数不同的标题间能取得平衡，而加大字距。</p>
+            <p lang="zh-hant">為使字數不同的標題間能取得平衡，而加大字距。</p>
+          </li>
+          <li id="id15">
+            <p lang="en">For captions of illustrations and tables, which only have a few characters, increased inter-character spacing is used to achieve balance with the size of the illustration or table. [[[!#fig-loose-setting]]]</p>
+            <p lang="zh-hans">图片与表格之说明文字字数较少时，为取得平衡，而加大字距。</p>
+            <p lang="zh-hant">圖片與表格之說明文字字數較少時，為取得平衡，而加大字距。</p>
+          </li>
+          <li id="id16">
+            <p lang="en">In some cases, increased inter-character spacing is used for poetry with lines of only a few characters, so as to maintain the balance of the layout.</p>
+            <p lang="zh-hans">应用于字数少的诗词时，为与版面取得平衡，而加大字距。</p>
+            <p lang="zh-hant">應用於字數少的詩詞時，為與版面取得平衡，而加大字距。</p>
+          </li>
+          <li id="id17">
+            <p lang="en">For publications whose main audience is children, inter-character spacing is increased to make it easier for them to read.</p>
+            <p lang="zh-hans">针对儿童书籍等，为提升易读性，而加大字距。</p>
+            <p lang="zh-hant">針對兒童書籍等，為提升易讀性，而加大字距。</p>
+          </li>
+        </ol>
+      </section>
+</section>
+</body>
+</html>
