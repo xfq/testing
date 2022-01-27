@@ -27,13 +27,5 @@ The original Japanese version is [available in PDF format](ruby-rules-ja.pdf).
 
 Ruby is the name given to the small annotations in Japanese content that are rendered alongside base text, usually to provide a pronunciation guide, but sometimes to provide other information. (See the article [“What is ruby”](https://www.w3.org/International/questions/qa-ruby.en) by the internationalization Working Group for more information.)
 
-As a guide for implementers of rendering engines, this document describes a simple method of ruby composition that can be used for Japanese layout realized with technologies like CSS, SVG, and XML-FO. Unlike [JLReq](https://www.w3.org/TR/jlreq/) [[JLREQ]], in this document only one layout method is presented for each alternative, taking into consideration best practices and important points related to Japanese layout. The points taken into consideration are described in [[[#matters-considered-by-the-simple-placement-rules]]]. In addition, this document provides recommendations for double-sided ruby, where two distinct runs of ruby text are attached to the same ruby base (this is not described in [[JLREQ]].
-
-[[JLREQ]] is largely a record of Japanese layout as established for the printing industry. It explains multiple ways to achieve one thing, and sometimes these approaches can be very complex. Ruby is one such case. There are so many factors to consider, and often contradictory requirements (see [some examples](#n20200529002)), leading to a complexity that makes it challenging to automate ruby fully, per JLReq.
-
-It would therefore be beneficial to outline a method that is adequate for automatic processing of ruby in general, but which is paired down to be simple and robust. In such cases, rather than ideal positioning, we must at least make sure that the positioning causes no misunderstanding.
-
-The following is a proposal for just such a simple processing system. The target audience is implementers and specification writers. It is expected that a full system may be more complex that what is described here, both due to the interaction with other features or other writing systems, and because those designing such system may wish to provide alternative options. Note that the terminology is based on that defined in [[JLREQ]].
-
 </body>
 </html>
