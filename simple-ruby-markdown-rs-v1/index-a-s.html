@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Rules for Simple Placement of Japanese Ruby</title>
+<script src="respec-config.js" class="remove"></script>
+<script src="biblio.js" class="remove"></script>
+<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script> 
+<link href="local.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+## Abstract {#abstract}
+
+A simple set of rules for placement of Ruby text in Japanese typography.
+
+## Status of This Document {#sotd}
+
+This document was initially written in Japanese and translated to English by the [Japanese Writing Technology](https://www.aplab.jp/jwt) Working Group of the [Advanced Publishing Laboratory](https://www.kri.sfc.keio.ac.jp/en/lab/aplab/) of Keio University.
+
+It represents the subjective view of its authors and contributors as to one possible approach to address the problem, and does not claim to be the only possible solution. It is submitted to present a non-Japanese speaking audience with this particular approach, and to encourage discussion of this topic.
+
+The original Japanese version is [available in PDF format](ruby-rules-ja.pdf).
+
+## Purpose of this document {#document_purpose}
+
+Ruby is the name given to the small annotations in Japanese content that are rendered alongside base text, usually to provide a pronunciation guide, but sometimes to provide other information. (See the article [“What is ruby”](https://www.w3.org/International/questions/qa-ruby.en) by the internationalization Working Group for more information.)
+
+As a guide for implementers of rendering engines, this document describes a simple method of ruby composition that can be used for Japanese layout realized with technologies like CSS, SVG, and XML-FO. Unlike [JLReq](https://www.w3.org/TR/jlreq/) [[JLREQ]], in this document only one layout method is presented for each alternative, taking into consideration best practices and important points related to Japanese layout. The points taken into consideration are described in [[[#matters-considered-by-the-simple-placement-rules]]]. In addition, this document provides recommendations for double-sided ruby, where two distinct runs of ruby text are attached to the same ruby base (this is not described in [[JLREQ]].
+
+[[JLREQ]] is largely a record of Japanese layout as established for the printing industry. It explains multiple ways to achieve one thing, and sometimes these approaches can be very complex. Ruby is one such case. There are so many factors to consider, and often contradictory requirements (see [some examples](#n20200529002)), leading to a complexity that makes it challenging to automate ruby fully, per JLReq.
+
+It would therefore be beneficial to outline a method that is adequate for automatic processing of ruby in general, but which is paired down to be simple and robust. In such cases, rather than ideal positioning, we must at least make sure that the positioning causes no misunderstanding.
+
+The following is a proposal for just such a simple processing system. The target audience is implementers and specification writers. It is expected that a full system may be more complex that what is described here, both due to the interaction with other features or other writing systems, and because those designing such system may wish to provide alternative options. Note that the terminology is based on that defined in [[JLREQ]].
+
+</body>
+</html>
