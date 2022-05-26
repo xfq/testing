@@ -1,0 +1,21 @@
+/* html {
+    color: white;
+    background-color: #005a9c;
+} */
+
+.script-hebrew {
+    font-family: "SBL Hebrew","SBL BibLit","Taamey Ashkenaz","Ezra SIL","Ezra SIL SR","Frank Ruehl CLM","Taamey Frank CLM","Keter Aram Tsova","Taamey David CLM","Keter YG","Shofar","David CLM","Hadasim CLM","Simple CLM","Nachlieli",Cardo,Alef,"Noto Serif Hebrew","Noto Sans Hebrew","David Libre",David,"Times New Roman",Gisha,Arial,FreeSerif,FreeSans;
+}
+
+.font-mong {
+    font-family: "Menk Hawang Tig","Menk Qagan Tig","Menk Garqag Tig","Menk Har_a Tig","Menk Scnin Tig","Oyun Gurban Ulus Tig","Oyun Qagan Tig","Oyun Garqag Tig","Oyun Har_a Tig","Oyun Scnin Tig","Oyun Agula Tig","Mongolian Baiti","Mongolian Universal White","Noto Sans Mongolian","Mongol Usug","Mongolian White","MongolianScript","Code2000","Menksoft Qagan";
+}
+
+.uchen {
+    font-family: "Qomolangma-Dunhuang","Qomolangma-Uchen Sarchen","Qomolangma-Uchen Sarchung","Qomolangma-Uchen Suring","Qomolangma-Uchen Sutung","Qomolangma-Title","Qomolangma-Subtitle","Qomolangma-Woodblock","BabelStone Tibetan Slim",Jomolhari,"Yagpo Tibetan Uni","DDC Uchen","DDC Rinzin",Kailash,"TCRC Youtso Unicode","Tibetan Machine Uni",Wangdi29,"Noto Serif Tibetan","Noto Sans Tibetan","Microsoft Himalaya";
+}
+
+.font-uig {
+    font-family: "UKIJ Tuz","UKIJ Nasq","UKIJ Basma","UKIJ_Mac Basma","UKIJ Zilwa","UKIJ Esliye","UKIJ Tuz Basma","UKIJ Tuz Kitab","UKIJ Tuz Gezit","UKIJ Tuz Qara","UKIJ Tuz Qara","UKIJ Tuz Tor","UKIJ Kesme","UKIJ Kesme Tuz","UKIJ Qara","UKIJ Basma Aq","UKIJ Basma Qara","UKIJ Basma Tuz","UKIJ Putuk","UKIJ Tuz Xet","UKIJ Tom Xet","UKIJ Tuz Jurnal","UKIJ Arabic","UKIJ CJK","UKIJ Ekran","UKIJ_Mac Ekran","UKIJ Teng","UKIJ Tor","UKIJ Tuz Tom","UKIJ Mono Keng","UKIJ Mono Tar","UKIJ Nokia","UKIJ SimSun","UKIJ Yanfon","UKIJ Qolyazma","UKIJ Saet","UKIJ Nasq Zilwa","UKIJ Sulus","UKIJ Sulus Tom","UKIJ 3D","UKIJ Diwani","UKIJ Diwani Yantu","UKIJ Diwani Tom","UKIJ Esliye Tom","UKIJ Esliye Qara","UKIJ Jelliy","UKIJ Kufi","UKIJ Kufi Tar","UKIJ Kufi Uz","UKIJ Kufi Yay","UKIJ Merdane","UKIJ Ruqi","UKIJ Mejnuntal","UKIJ Junun","UKIJ Moy Qelem","UKIJ Chiwer Kesme","UKIJ Orxun-Yensey","UKIJ Elipbe","UKIJ Qolyazma Tez","UKIJ Qolyazma Tuz","UKIJ Qolyazma Yantu","UKIJ Ruqi Tuz",FZWWBBOT_Unicode,FZWWHQHTOT_Unicode,"Scheherazade New",Scheherazade,Lateef,LateefGR,"Microsoft Uighur","Noto Naskh Arabic","Noto Sans Arabic","Microsoft Sans Serif";
+    font-feature-settings: "cv50"1;
+}
