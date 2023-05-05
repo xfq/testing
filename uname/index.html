@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+	<meta charset="utf-8"/>
+    <title>Character naming template</title>
+
+    <!-- local styles for this document -->
+    <link rel="stylesheet" href="local.css" />
+
+    <script async src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
+    <script class="remove">
+      var respecConfig = {
+          specStatus:           "unofficial",
+        //   specStatus:           "ED",
+
+
+          noRecTrack:           true,
+          shortName:            "char-ref-template",
+          copyrightStart: 		"2023",
+          edDraftURI:   		"https://xfq.github.io/testing/uname/",
+
+          // editors, add as many as you like
+          // only "name" is required
+          editors:  [
+              { name: "Fuqiao Xue", w3cid: 95475 },
+          ],
+
+
+        //   group:        "i18n",
+        //   github: 		"xfq/testing",
+      };
+
+    </script>
+  </head>
+
+  <body>
+  <div id="abstract">
+      <p>This document provides the character template used in Internationalization specifications.</p>
+  </div>
+
+  <div id="sotd">
+  <p>This document provides the character template used in Internationalization specifications.</p>
+</div>
+
+  <section id="i18n-20230503">
+    <h2>May 3 2023 version by i18n WG</h2>
+
+<pre>
+&lt;span class="codepoint" translate="no">
+   &lt;bdi lang="fr">&#x00E9;&lt;/bdi>&lt;span class="uname">U+00E9 LATIN SMALL LETTER E WITH ACUTE&lt;/span>
+&lt;/span>
+</pre>
+
+<pre>
+	.codepoint bdi {
+		line-height: 1em;
+		font-size: 130%;
+		margin-inline: 0.25em;
+	}
+	
+	.uname {
+		font-family: Arial, monospace;
+		font-size: 85%;
+		letter-spacing: 0.03em;
+		color: brown;
+	}
+</pre>
+
+<p>Produces output in the page like this: <span class="codepoint1" translate="no"><bdi lang="fr">é</bdi><span class="uname1">U+00E9 LATIN SMALL LETTER E WITH ACUTE</span></span>.</p>
+
+<p>
+	See <a href="https://github.com/w3c/bp-i18n-specdev/pull/97">https://github.com/w3c/bp-i18n-specdev/pull/97</a>
+</p>
+
+</section>
+
+<section id="fantasai-20230505">
+    <h2>fantasai's proposal on May 5</h2>
+
+<pre>
+&lt;span class="codepoint" translate="no">
+   &lt;bdi lang="fr">&#x00E9;&lt;/bdi> &lt;span class="uname">U+00E9 LATIN SMALL LETTER E WITH ACUTE&lt;/span>
+&lt;/span>
+</pre>
+
+<pre>
+	.codepoint>bdi {
+		font-weight: bold;
+	}
+	
+	.codepoint>bdi:hover {
+		transform-origin: center;
+		scale: 130%;
+	}
+	
+	.uname {
+		font-family: Arial, monospace;
+		font-size: 85%;
+		letter-spacing: 0.03em;
+		color: brown;
+	}
+</pre>
+
+<p>Produces output in the page like this: <span class="codepoint2" translate="no"><bdi lang="fr">é</bdi> <span class="uname2">U+00E9 LATIN SMALL LETTER E WITH ACUTE</span></span>.</p>
+
+<p>
+	See <a href="https://github.com/w3c/tr-design/pull/323#issuecomment-1535360576">https://github.com/w3c/tr-design/pull/323#issuecomment-1535360576</a>
+</p>
+
+</section>
+
+</body>
+</html>
