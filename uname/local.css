@@ -16,6 +16,7 @@
 /* 2 */
 
 .codepoint2>bdi {
+	display: inline-block;
 	font-weight: bold;
 }
 
