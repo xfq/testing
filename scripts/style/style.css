@@ -23,3 +23,9 @@
 :lang(my) {
     font-family: Padauk, Padauk Book, Parabaik, Myanmar3, Myanmar2, Myanmar1, MyMyanmar, 'Noto Sans Myanmar', 'Myanmar Text';
 }
+
+.nastaliq {
+    font-family: 'Noto Nastaliq Urdu', 'Urdu Typesetting', 'Roz Urdu Punjabi Nastaleeq', 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu Draft', 'Hussaini Nastaleeq', 'AlQalam Taj Nastaleeq', IranNastaliq, 'Awami Nastaliq', 'Nafees Nastaleeq', 'Nafees Nastaleeq v1.01', 'Pak Nastaleeq', 'PDMS_Jauhar', 'Alvi Lahori Nastaleeq', 'Urdu Emad Nastaleeq', 'Urdu Emad Nastaleeq';
+    font-size: 110%;
+    font-style: normal;
+}
