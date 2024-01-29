@@ -1,0 +1,16 @@
+body {
+    max-width: 50em;
+    margin: 0 auto;
+}
+
+.content {
+    margin-top: 16px;
+}
+
+.IPA {
+    text-decoration-color: initial !important;
+}
+.IPA {
+    font-family: "Charis SIL","Doulos SIL","Linux Libertine","Segoe UI","Lucida Sans Unicode","Code2000","Gentium","Gentium Alternative","TITUS Cyberbit Basic","Arial Unicode MS","IPAPANNEW","Chrysanthi Unicode","GentiumAlt","Bitstream Vera","Bitstream Cyberbit","Hiragino Kaku Gothic Pro","Lucida Grande",sans-serif;
+    text-decoration: none!important;
+}
