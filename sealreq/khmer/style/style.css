@@ -1,3 +1,9 @@
+/* use Charis SIL - Regular in .woff2 format */
+@font-face {
+    font-family: CharisSILW;
+    src: url(../../../fonts/CharisSIL-Regular.woff2);
+}
+
 body {
     max-width: 50em;
     margin: 0 auto;
@@ -11,6 +17,6 @@ body {
     text-decoration-color: initial !important;
 }
 .IPA {
-    font-family: "Charis SIL","Doulos SIL","Linux Libertine","Segoe UI","Lucida Sans Unicode","Code2000","Gentium","Gentium Alternative","TITUS Cyberbit Basic","Arial Unicode MS","IPAPANNEW","Chrysanthi Unicode","GentiumAlt","Bitstream Vera","Bitstream Cyberbit","Hiragino Kaku Gothic Pro","Lucida Grande",sans-serif;
+    font-family: CharisSILW, "Charis SIL","Doulos SIL","Linux Libertine","Segoe UI","Lucida Sans Unicode","Code2000","Gentium","Gentium Alternative","TITUS Cyberbit Basic","Arial Unicode MS","IPAPANNEW","Chrysanthi Unicode","GentiumAlt","Bitstream Vera","Bitstream Cyberbit","Hiragino Kaku Gothic Pro","Lucida Grande",sans-serif;
     text-decoration: none!important;
 }
