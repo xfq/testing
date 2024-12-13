@@ -1,0 +1,491 @@
+@font-face {
+  font-family: My Lato;
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url(../../2019/09/TPAC-template/fonts/Lato-HairlineItalic.woff2)
+    format("woff2"),
+    url(../../2019/09/TPAC-template/fonts/Lato-HairlineItalic.woff)
+    format("woff")}
+
+@font-face {
+  font-family: My Lato;
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(../../2019/09/TPAC-template/fonts/Lato-Hairline.woff2)
+    format("woff2"),
+    url(../../2019/09/TPAC-template/fonts/Lato-Hairline.woff)
+    format("woff")}
+
+@font-face {
+  font-family: My Lato;
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url(../../2019/09/TPAC-template/fonts/Lato-ThinItalic.woff2)
+    format("woff2"),
+    url(../../2019/09/TPAC-template/fonts/Lato-ThinItalic.woff)
+    format("woff")}
+
+@font-face {
+  font-family: My Lato;
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(../../2019/09/TPAC-template/fonts/Lato-Thin.woff2) format("woff2"),
+    url(../../2019/09/TPAC-template/fonts/Lato-Thin.woff) format("woff")}
+
+@font-face {
+  font-family: My Lato;
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(../../2019/09/TPAC-template/fonts/Lato-LightItalic.woff2)
+    format("woff2"),
+    url(../../2019/09/TPAC-template/fonts/Lato-LightItalic.woff)
+    format("woff")}
+
+@font-face {
+  font-family: My Lato;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(../../2019/09/TPAC-template/fonts/Lato-Light.woff2) format("woff2"),
+    url(../../2019/09/TPAC-template/fonts/Lato-Light.woff) format("woff")}
+
+@font-face {
+  font-family: My Lato;
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../../2019/09/TPAC-template/fonts/Lato-Italic.woff2) format("woff2"),
+    url(../../2019/09/TPAC-template/fonts/Lato-Italic.woff) format("woff")}
+
+@font-face {
+  font-family: My Lato;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../../2019/09/TPAC-template/fonts/Lato-Regular.woff2)
+    format("woff2"),
+    url(../../2019/09/TPAC-template/fonts/Lato-Regular.woff)
+    format("woff")}
+
+@font-face {
+  font-family: My Lato;
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../../2019/09/TPAC-template/fonts/Lato-MediumItalic.woff2)
+    format("woff2"),
+    url(../../2019/09/TPAC-template/fonts/Lato-MediumItalic.woff)
+    format("woff")}
+
+@font-face {
+  font-family: My Lato;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../../2019/09/TPAC-template/fonts/Lato-Medium.woff2) format("woff2"),
+    url(../../2019/09/TPAC-template/fonts/Lato-Medium.woff) format("woff")}
+
+@font-face {
+  font-family: My Lato;
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../../2019/09/TPAC-template/fonts/Lato-SemiboldItalic.woff2)
+    format("woff2"),
+    url(../../2019/09/TPAC-template/fonts/Lato-SemiboldItalic.woff)
+    format("woff")}
+
+@font-face {
+  font-family: My Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../../2019/09/TPAC-template/fonts/Lato-Semibold.woff2)
+    format("woff2"),
+    url(../../2019/09/TPAC-template/fonts/Lato-Semibold.woff)
+    format("woff")}
+
+@font-face {
+  font-family: My Lato;
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../../2019/09/TPAC-template/fonts/Lato-BoldItalic.woff2)
+    format("woff2"),
+    url(../../2019/09/TPAC-template/fonts/Lato-BoldItalic.woff)
+    format("woff")}
+
+@font-face {
+  font-family: My Lato;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../../2019/09/TPAC-template/fonts/Lato-Bold.woff2) format("woff2"),
+    url(../../2019/09/TPAC-template/fonts/Lato-Bold.woff) format("woff")}
+
+@font-face {
+  font-family: My Lato;
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url(../../2019/09/TPAC-template/fonts/Lato-HeavyItalic.woff2)
+    format("woff2"),
+    url(../../2019/09/TPAC-template/fonts/Lato-HeavyItalic.woff)
+    format("woff")}
+
+@font-face {
+  font-family: My Lato;
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(../../2019/09/TPAC-template/fonts/Lato-Heavy.woff2) format("woff2"),
+    url(../../2019/09/TPAC-template/fonts/Lato-Heavy.woff) format("woff")}
+
+@font-face {
+  font-family: My Lato;
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url(../../2019/09/TPAC-template/fonts/Lato-BlackItalic.woff2)
+    format("woff2"),
+    url(../../2019/09/TPAC-template/fonts/Lato-BlackItalic.woff)
+    format("woff")}
+
+@font-face {
+  font-family: My Lato;
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(../../2019/09/TPAC-template/fonts/Lato-Black.woff2) format("woff2"),
+    url(../../2019/09/TPAC-template/fonts/Lato-Black.woff) format("woff")}
+
+/* Fonts and colors */
+body {font: 300 1em/1.4 My Lato, Lato, Helvetica Neue, Helvetica, Arial,
+  sans-serif;
+  font-size-adjust: 0.52; background: white; color: black;
+  margin: 2em 2em 5em 2em; hyphens: auto; position: relative}
+body:lang(ar) {font: 300 1.1em/1.4 Traditional Arabic, Arabic Typesetting,
+  Amiri, Arial Unicode MS, My Lato, Lato, Helvetica Neue, Helvetica, Arial,
+  sans-serif;
+  font-size-adjust: none}
+
+html[dir=rtl] [lang|=en] {unicode-bidi: embed}
+
+[rel=home] {float: left; margin: 0 1em 0 0}
+html[dir=rtl] [rel=home] {float: right; margin: 0 0 0 1em}
+[rel=home] object, [rel=home] img {height: 3.6em}
+
+h1 {color: #4c5c9c; font-size: 150%; font-weight: 400; line-height: 1.2;
+  display: inline-block; hyphens: manual; margin: 0 0 2em 0}
+h1 > span {display: table; margin: auto; border-bottom: 0.15em solid #eeb058;
+  padding-bottom: 0.05em}
+#header p {margin: 0}
+
+#translations {margin-bottom: 2em; text-align: right}
+html[dir=rtl] #translations {text-align: left}
+#translations a {padding: 0.2em 0.3em; border-radius: 0.5em;
+  border: 1px solid silver; text-decoration: none}
+#translations p + p {font-size: smaller; font-style: italic}
+#translations p + p:lang(ar) {font-style: normal} /* No italics for Arabic */
+
+section, body > figure {margin: 0 0 2em 0; margin: 0 0 2rem 0; display: block}
+section > :last-child, section > :last-child > :last-child,
+section > :last-child > :last-child > :last-child {margin-bottom: 0}
+
+#intro, #program {font-size: 115%}
+#program table {font-size: 83%}
+h2 {margin: 0 -0.1em 0.7rem -0.1em; background: #eeb058; color: black;
+   padding: 0.3em 0.5em; border-radius: 0.5em;
+   font-weight: 500; font-size: 120%; line-height: 1.2; hyphens: manual}
+#program h2 {background: none; color: #005A9C; padding: 0;
+  margin: 0 0 1.4rem 0; font-size: 140%}
+p, ul, ol, dl, li, table {margin: 0 0 0.7em 0}
+
+/* We're using a light weight for the body, but still want bold for strong */
+strong {font-weight: 700}
+
+:link, :visited {text-decoration: underline}
+[rel=home] {text-decoration: none}
+:link {color: inherit}
+:visited {color: gray}
+@supports (text-decoration-style: dashed) {
+  :visited {text-decoration-style: dashed; color: inherit}
+}
+
+/* Less indent for lists */
+ul {padding-left: 1em}
+html[dir=rtl] ul {padding-left: 0; padding-right: 1em}
+
+/* Tables with rounded, orange or blue cells */
+table {border-spacing: 0.2em}
+th {background: #005a9c; color: white}
+th, td {border-radius: 0.6em; padding: 0.2em 0.5em; vertical-align: baseline}
+td {background: #eeb058; font-weight: 400}
+th:empty {background: none}
+
+/* Decorate each sponsor level with a circle colored according to its meaning */
+.bronze::after, .silver::after, .gold::after, .platinum::after {content: " ";
+  line-height: 1; display: inline-block;
+  width: 1em; font-weight: 700; padding: 0.25em 0.2em 0.15em 0.2em;
+  border-radius: 50%; text-align: center;
+  vertical-align: 0.4em; margin: 0 0 0 0.3em;
+  /* background: radial-gradient(at 25% 25%, hsla(0,0%,100%,1),
+    hsla(0,0%,100%,0.1), hsla(0,0%,100%,0.0));
+  box-shadow: 1px 2px 3px #555 */}
+.platinum::after {background-color: #E5E4E2; content: "P"}
+.platinum:lang(ar)::after {content: "ب"; width: 1.3em}
+.gold::after {background-color: gold; content: "G"}
+.gold:lang(ar)::after {content: "ذ"; width: 1.3em}
+.silver::after {background-color: silver; content: "S"}
+.silver:lang(ar)::after {content: "ف"; width: 1.3em}
+.bronze::after {background-color: #CD7F32; content: "B"; color: white}
+.bronze:lang(ar)::after {content: "ن"; width: 1.3em}
+/**/
+
+#contact {color: white; background: #453733; font-weight: 400; padding: 1em}
+#contact code {font-weight: bold}
+#contact strong {color: #ffbc5e}
+
+#credits :link, #credits :visited {text-decoration: none}
+#credits {font-size: smaller}
+
+/* Sponsors: */
+#credits section {margin: 0.7em 0}
+#credits ul {padding-left: 0; display: inline}
+#credits h3, #credits li {display: inline-table; margin: 0 1em 0.7em 0;
+  text-align: center; vertical-align: middle; line-height: 7em; width: 7em}
+#credits h3 {font-size: 1em; font-style: italic; font-weight: normal;
+  line-height: calc(7em - 2px); box-sizing: border-box;
+  border: 1px solid silver; border-radius: 0.5em}
+#credits h3:lang(ar) {font-style: normal} /* No italics for Arabic */
+/* Sponsor logos: */
+#credits img {max-height: 7em; max-width: 7em; vertical-align: bottom}
+@supports (object-fit: contain) {
+  #credits img {object-fit: contain; width: 7em; height: 7em}
+}
+#credits p ~ p {float: left}	/* Date, photo credits*/
+html[dir=rtl] #credits p ~ p {float: right} /* Use opposite side in rtl */
+#credits p ~ p + p::before {content: " \2014  "}
+#credits p ~ p + p::before {content: "\A0\2014\A0"}
+
+/* Hide things only intended for print */
+.print {display: none}
+
+/* Manual overrides to not hyphenate */
+.nobreak {hyphens: manual}
+
+
+/* Layout in one column on narrow windows */
+body {display: flex; flex-direction: column}
+#program, #program ~ * {order: 2} /* Move #figure3 before #program */
+#program ~ #figure3 {order: 1}
+
+/* Some adjustments for very narrow windows */
+@media (max-width: 31em) {
+  body {margin: 1em 1em 3em 1em}
+  [rel=home] object, [rel=home] img {height: 2.88em}
+  h1 {font-size: 120%}
+  table {margin-left: -0.5em; margin-right: -0.5em; border-spacing: 0.1em}
+  th, td {padding: 0.1em 0.3em}
+}
+
+
+/* Layout in two columns (2/3 + 1/3) if window is wide enough */
+@media screen and (min-width: 55em), print and (min-width: 40em) {
+
+  /* If grid is not supported, approximate with floats & positioning.
+   Unlike the grid version below, this currently doesn't flip for rtl
+   languages (except for the #language, #developer and #author boxes).
+   */
+  body {display: block; margin-right: 0}
+  #translations, #header {margin-bottom: 2em}
+  #translations, #intro, #program, #language, #developer, #author,
+  #translations, #header, #figure1, #figure2,
+  #figure3, #deco, #contact, #credits {box-sizing: border-box;
+    border-right: 2em solid white; border-right: 2rem solid white}
+  #header, #intro, #program, #contact {width: 66.66%}
+  #translations, #language, #developer, #author, #figure1, #figure2, #figure3 {
+    width: 33.33%}
+  #figure1 {clear: both; float: right}
+  #translations, #figure2, #figure3 {clear: right; float: right}
+  #header, #intro, #program, #contact {clear: left; float: left}
+  #language, #deco, #credits {clear: both}
+  #language, #developer, #author {float: left}
+  html[dir=rtl] #language, html[dir=rtl] #developer, html[dir=rtl] #author {
+    float: right}
+
+  /* Approximate heights of the columns in different window sizes */
+  #figure1 {height: 60em}
+  #figure2, #figure3 {height: 71em}
+
+  /* figure3 should not go below a certain aspect ratio */
+  #figure3 {max-height: 35em; max-height: 70vw}
+}
+@media screen and (min-width: 57em) {
+  #figure1 {height: 58em} #figure2, #figure3 {height: 67em}}
+@media screen and (min-width: 60em) {
+  #figure1 {height: 54em} #figure2, #figure3 {height: 46em}}
+@media screen and (min-width: 70em) {
+  #figure1 {height: 48em} #figure2, #figure3 {height: 45em}}
+
+
+/* Use grid if supported, it allows to make the columns equal height */
+@media screen and (min-width: 55em), print and (min-width: 40em) {
+  @supports (display: grid) {
+    /* Undo some settings of the fallback above */
+    body {margin-right: 2em}
+    #translations, #header {margin-bottom: 0}
+    #translations, #header, #intro, #program, #figure1, #figure2,
+    #figure3, #deco, #contact, #credits {border-right: none}
+    #translations, #header, #intro, #program, #aspects, #figure1, #figure2,
+    #figure3, #contact, #credits {width: auto; height: auto}
+    #intro, #program, #aspects, #figure1, #figure2, #figure3, #deco, #contact,
+    #credits, #language, #developer, #author {margin-bottom: 0}
+    body {display: grid;
+      grid: 
+	"top    top    top    .      trans "
+	".      .      .      .      .     "  2em
+	"intro  intro  intro  .      img-1 "
+	".      .      .      .      .     "  2em
+	"main   main   main   .      img-2 "
+	"main   main   main   .      img-2 "
+	"main   main   main   .      img-2 "
+	"main   main   main   .      img-2 "
+	"main   main   main   .      .     "  2em
+	"main   main   main   .      img-3 "
+	".      .      .      .      img-3 "  2em
+	"more   more   more   .      img-3 "
+	".      .      .      .      .     "  2em
+	"side   side   side   side   side  "
+	".      .      .      .      .     "  2em
+	"deco   deco   deco   deco   deco  "
+	".      .      .      .      .     "  2em
+	"footer footer footer footer footer"
+	/ 1fr   2em    1fr    2em    1fr;
+    }
+    #translations {grid-area: trans}
+    #header {grid-area: top}
+    #intro {grid-area: intro}
+    #figure1 {grid-area: img-1}
+    #aspects {grid-area: side; margin-right: -2em}
+    #deco {grid-area: deco}
+    #figure2 {grid-area: img-2}
+    #program {grid-area: main}
+    #figure3 {grid-area: img-3}
+    #contact {grid-area: more}
+    #credits {grid-area: footer}
+  }
+}
+
+/* Layout in three columns (1/2 + 1/4 + 1/4) if window is wide enough */
+@media screen and (min-width: 75em), print and (min-width: 40em) {
+
+  /* If grid is not supported, approximate with floats & positioning */
+  #header, #intro, #program, #contact, #translations {width: 50%}
+  #language, #developer, #author {width: auto}
+  #aspects, #figure1, #figure2, #figure3 {width: 25%}
+  #figure1, #figure2, #figure3 {margin-right: 25%}
+  #deco, #credits {width: 75%}
+  #aspects {position: absolute; right: 0; top: 9.3em}
+
+  /* Approximate heights of the columns in different window sizes */
+  #figure1 {height: 62em}
+  #figure2, #figure3 {height: 69em}
+
+  /* figure3 should not go below a certain aspect ratio */
+  #figure3 {max-height: 53vw}
+}
+@media screen and (min-width: 80em) {
+  #figure1 {height: 58em} #figure2, #figure3 {height: 55em}}
+@media screen and (min-width: 90em) {
+  #figure1 {height: 52em} #figure2, #figure3 {height: 45em}}
+@media screen and (min-width: 100em) {
+  #figure1 {height: 47em} #figure2, #figure3 {height: 43em}}
+@media screen and (min-width: 110em) {
+  #figure1 {height: 44em} #figure2, #figure3 {height: 40em}}
+@media screen and (min-width: 130em) {
+  #figure1 {height: 39em} #figure2, #figure3 {height: 37em}}
+@media screen and (min-width: 150em) {
+  #figure1 {height: 36em} #figure2, #figure3 {height: 34em}}
+@media screen and (min-width: 180em) {
+  #figure1 {height: 29em} #figure2, #figure3 {height: 33em}}
+@media screen and (min-width: 210em) {
+  #figure1 {height: 25em} #figure2, #figure3 {height: 28em}}
+
+/* Use grid if supported, it allows to make the columns equal height */
+@media screen and (min-width: 75em), print and (min-width: 40em) {
+  @supports (display: grid) {
+    /* Undo some settings of the fallback above */
+    #translations, #header, #intro, #program, #contact, #aspects, #figure1,
+    #figure2, #figure3, #credits {width: auto; height: auto}
+    #deco {width: auto}
+    #figure1, #figure2, #figure3 {margin-right: 0}
+    #language, #developer, #author {border-right: none}
+    #language, #developer {margin-bottom: 2em}
+    #aspects {position: static}
+    body {display: grid;
+      grid: 
+	"top    top    top    .      trans  trans  trans "
+	".      .      .      .      .      .      .     "  2em
+	"intro  intro  intro  .      img-1  .      side  "
+	".      .      .      .      .      .      side  "  2em
+	"main   main   main   .      img-2  .      side  "
+	"main   main   main   .      img-2  .      side  "  2em
+	"main   main   main   .      img-2  .      side  "
+	"main   main   main   .      .      .      side  "  2em
+	"main   main   main   .      img-3  .      side  "
+	".      .      .      .      img-3  .      side  "  2em
+	"more   more   more   .      img-3  .      side  "
+	".      .      .      .      .      .      .     "  2em
+	"deco   deco   deco   deco   deco   deco   deco  "
+	".      .      .      .      .      .      .     "  2em
+	"footer footer footer footer footer footer footer"
+	/ 1fr   2em    1fr    2em    1fr    2em    1fr;
+    }
+    #translations {grid-area: trans}
+    #header {grid-area: top}
+    #intro {grid-area: intro}
+    #figure1 {grid-area: img-1}
+    #aspects {grid-area: side; margin-right: 0}
+    #deco {grid-area: deco}
+    #figure2 {grid-area: img-2}
+    #program {grid-area: main}
+    #figure3 {grid-area: img-3}
+    #contact {grid-area: more}
+    #credits {grid-area: footer}
+  }
+}
+
+#deco {height: 18em}
+
+/* Nice gradient for the small image in the intro */
+figure {margin: 0 0 0.7em 0; text-align: center;
+  background: linear-gradient(90deg, #f0f0f0, #fff, #fff, #f0f0f0)}
+
+/* Hack if can't use object-fit: put the (hardcoded!) image in the background */
+#figure1 img, #figure2 img, #figure3 img, #deco img {display: none}
+#figure1, #figure2, #figure3, #deco {background: 50% 50% / auto 100%
+    url(heping-271656-blurred.jpg) content-box no-repeat;
+  display: block}
+#figure1, #figure2, #figure3 {min-height: 15em}
+#figure2 {background-image: url(dmitri-popov-441562-blurred.jpg)}
+#figure3 {background-image: url(i18n_closeup-blurred.jpg)}
+#deco {background-image: url(deco.png); background-color: black}
+
+@supports (object-fit: cover) {
+  #figure1 img, #figure2 img, #figure3 img, #deco object, #deco img {
+    display: block; object-fit: cover; width: 100%; height: 100%}
+  #figure1, #figure2, #figure3, #deco {background: none}
+}
+
+.redirect-box {
+  background-color: #eeb058;
+  border: 8px solid #eeb058;
+  padding: 1em;
+  width: 95%;
+}

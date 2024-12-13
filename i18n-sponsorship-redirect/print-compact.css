@@ -1,0 +1,126 @@
+/* Meant for paper sizes close to A4 or Letter. Best in landscape. */
+
+/* 23.5% + 2% */
+
+@page {margin: 1cm; size: a4 landscape} /* Hardcode the A4 for convenience */
+
+html, body {height: 100%}
+/* 'height: 100%' seems not to work in Prince 14.2, use padding instead: */
+body {height: 0; padding: 0 0 99.9vh 0}
+
+body {font: 300 9pt/1.4 Gill Sans, Helvetica Neue, Helvetica, Arial,
+  Arial Unicode MS, sans-serif; font-size-adjust: 0.46;
+  position: relative; color: black; margin: 0; hyphens: auto}
+body:lang(ar) {font: 300 9.4pt/1.4 Traditional Arabic, Arabic Typesetting,
+  Amiri, Arial Unicode MS, Gill Sans, Helvetica Neue, Helvetica, Arial,
+  Arial Unicode MS, sans-serif; font-size-adjust: none}
+p, ul, ol, dl, li, table, figure, h2 {margin: 0 0 0.7rem 0}
+section > *:last-child {margin-bottom: 0}
+ul {padding-left: 1em}
+html[dir=rtl] ul {padding-left: 0; padding-right: 1em}
+ul li::marker {width: 1em; padding: 0; text-align: left}
+html[dir=rtl] ul li::marker {text-align: right}
+:link, :visited {text-decoration: none; color: inherit}
+
+html[dir=rtl] [lang|=en] {unicode-bidi: embed}
+
+header, h1, #figure1, #intro > div, #program, #figure2, #language,
+#developer, #author, #figure3, #contact, #credits > p {position: absolute;
+  box-sizing: border-box; margin: 0}
+
+header {top: 0; left: 0; width: 100%}
+header object, header img {float: left; height: 4em; margin: 0 0.5em 0 0}
+[rel=up] {display: none}
+
+h1 {top: 3.53em; left: 2%; width: 27.5%; z-index: 1;
+  color: white; font-size: 170%; font-weight: 400;
+  line-height: 1.2; text-align: center; hyphens: manual;
+  background: #005a9c; border-radius: 1em /*4em*/; padding: 0.44em}
+h1 > span {display: table; margin: auto; border-bottom: 2pt solid #eeb058;
+  padding-bottom: 0.1em}
+
+#intro > div:first-child {top: 11.5em; left: 0; width: 23.5%; font-size: 122%}
+#intro figure {display: none}
+
+#intro > div:first-child + div {top: 0; left: 51%; width: 49%}
+#intro div > :last-child, #intro div > :last-child > :last-child {
+  margin-bottom: 0}
+#contact li strong {color: #ffbc5e}
+
+#figure1 {top: 0; left: 25.5%; width: 23.5%; bottom: 0;
+  background: #8f2836; overflow: hidden; border-radius: 0 1.6em 1.6em 0}
+#figure1 img {width: 100%; height: 100%; object-fit: cover}
+
+#program {bottom: 0; left: 51%; width: 49%; page-break-after: always}
+#program h2 {color: #005a9c; font-size: 140%; font-weight: 500}
+
+#levels {margin-top: -0.7em}	/* There happens to be a short line above...*/
+
+/* Tables with rounded, orange or blue cells */
+table {border-spacing: 0.2em}
+th {background: #005a9c; color: white}
+th, td {border-radius: 0.6em; padding: 0.2em 0.5em; vertical-align: baseline}
+td {background: #eeb058; font-weight: 400}
+th:empty {background: none}
+
+/* Decorate each sponsor level with a circle colored according to its meaning */
+.bronze::after, .silver::after, .gold::after, .platinum::after {content: " ";
+  line-height: 1; display: inline-block; color: black;
+  width: 1em; font-weight: 700; padding: 0.25em 0.2em 0.15em 0.2em;
+  border-radius: 50%; text-align: center;
+  vertical-align: 0.4em; margin: 0 0 0 0.3em}
+.platinum::after {background-color: #E5E4E2; content: "P"}
+.platinum:lang(ar)::after {content: "ب"; width: 1.3em}
+.gold::after {background-color: gold; content: "G"}
+.gold:lang(ar)::after {content: "ذ"; width: 1.3em}
+.silver::after {background-color: silver; content: "S"}
+.silver:lang(ar)::after {content: "ف"; width: 1.3em}
+.bronze::after {background-color: #CD7F32; content: "B"; color: white}
+.bronze:lang(ar)::after {content: "ن"; width: 1.3em}
+/**/
+
+#deco {display: none}
+
+#figure2 {top: 0; left: 0; width: 74.5%; height: 100%;
+  background: 50% 50% / auto 100% url(dmitri-popov-441562.jpg) no-repeat;
+  border-radius: 1.6em}
+#figure2 img {display: none}
+
+#language, #developer, #author {background: white; border-radius: 1.4em;
+  padding: 1em}
+#language h2, #developer h2, #author h2 {margin: 0 -0.1em 0.7rem -0.1em;
+  background: #dd8408; color: white; padding: 0.3em 0.5em;
+  border-radius: 0.5em; font-weight: 500; font-size: 120%; line-height: 1.2;
+  hyphens: manual}
+
+#language, #developer, #author {top: 2%; width: 23.5%}
+#language {left: 1%}
+#developer {left: 25.5%}
+#author {left: 50%}
+
+#figure3 {left: 76.5%; top: 0; width: 23.5%; height: 50%;
+  background: 50% 50% / auto 100% url(i18n_closeup.jpg) no-repeat;
+  border-radius: 1.6em 1.6em 0 0}
+#figure3 img {display: none}
+
+#contact {top: 50%; left: 76.5%; width: 23.5%; height: 50%;
+  color: white; background: #453733; border-radius: 0 0 1.6em 1.6em;
+  font-weight: 400; padding: 1em}
+#contact code {font-weight: bold}
+
+#credits {font-size: 80%}
+#credits p {top: 100%; right: 0;
+  transform-origin: top right; transform: translate(1.4em, 0) rotate(90deg)}
+#credits p + p {left: 0; right: auto; transform-origin: top left;
+  transform: translate(-1.4em, 0) rotate(-90deg)}
+#credits a::after {content: " (" attr(href) ")"}
+
+/* Hide things not useful when printed */
+#translations {display: none}
+.noprint {display: none}
+
+/* Manual overrides to not hyphenate */
+.nobreak {hyphens: manual}
+
+/* Hide any remains of easter eggs */
+input, label {display: none}
