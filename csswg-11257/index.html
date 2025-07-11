@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>Testing text emphasis</title>
+	<style>
+		/* Self-hosted Noto fonts */
+		@font-face {
+			font-family: 'Noto Serif JP';
+			src: url('fonts/NotoSerifJP-Regular.ttf') format('truetype');
+			font-weight: 400;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Noto Sans JP';
+			src: url('fonts/NotoSansJP-Regular.ttf') format('truetype');
+			font-weight: 400;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Noto Serif SC';
+			src: url('fonts/NotoSerifSC-Regular.ttf') format('truetype');
+			font-weight: 400;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Noto Serif TC';
+			src: url('fonts/NotoSerifTC-Regular.ttf') format('truetype');
+			font-weight: 400;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Hiragino Mincho ProN';
+			src: url('fonts/Hiragino Mincho ProN W3.otf') format('opentype');
+			font-weight: 400;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'YuMin-Regular';
+			src: url('fonts/yu-mincho-regular.ttf') format('truetype');
+			font-weight: 400;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Songti SC';
+			src: url('fonts/songti-sc-regular.ttf') format('truetype');
+			font-weight: 400;
+			font-style: normal;
+			font-display: swap;
+		}
+
+
+		p {	
+			line-height: 1.7;
+		}
+		em {
+            text-emphasis: dot;
+			font-style: normal;
+		}
+		.hiraginomincho {font-family: "Hiragino Mincho ProN";}
+		p:lang(zh-Hans-CN) {-webkit-text-emphasis-position: under;}
+		.sesame {text-emphasis: sesame;}
+		.circle {text-emphasis: circle;}
+		.source {font-family: "NotoSerifCJKjp-Regular";}
+		.hiraginosans {font-family: "HiraginoSans-W4";}
+		.yumincho {font-family: "YuMin-Regular";}
+
+		.vert {
+			writing-mode: vertical-rl;
+		}
+		.songtitc {font-family: "Songti TC";}
+		.songtisc {font-family: "Songti SC";}
+
+		.notoserifjp {font-family: "Noto Serif JP";}
+		.notosansjp {font-family: "Noto Sans JP";}
+		.notoserifsc {font-family: "Noto Serif SC";}
+		.notoseriftc {font-family: "Noto Serif TC";}
+	</style>
+</head>
+<body>
+	<p lang="ja" class="hiraginomincho">それは<em>傍点</em>という記号。（hiragino mincho）</p> 
+	<p lang="ja" class="hiraginosans">それは<em>傍点</em>という記号。（Hiragino Kaku Gothic / hiragino sans）</p> 
+	<p lang="ja" class="yumincho">それは<em>傍点</em>という記号。（yu mincho）</p> 
+	<p lang="ja" class="source">それは<em>傍点</em>という記号。（source serif jp）</p> 
+	<p lang="ja" class="notoserifjp">それは<em>傍点</em>という記号。（noto serif jp）</p> 
+	<p lang="ja" class="notosansjp">それは<em>傍点</em>という記号。（noto sans jp）</p> 
+	<p lang="zh-Hans-CN" class="notoserifsc">这是<em>着重号</em>。（noto serif sc）</p> 
+	<p lang="zh-Hant-TW" class="notoseriftc">這是<em>著重號</em>。（noto serif tc）</p> 
+	<p lang="zh-Hant-TW" class="songtitc">這是<em>著重號</em>。（Songti TC）</p> 
+	<p lang="zh-Hans-CN" class="songtisc">这是<em>着重号</em>。（Songti SC）</p> 
+	<p lang="ja" class="hiraginomincho">それは<em class="circle">傍点</em>という記号。（hiragino mincho）</p> 
+	<p lang="ja" class="hiraginosans">それは<em class="circle">傍点</em>という記号。（Hiragino Kaku Gothic / hiragino sans）</p> 
+	<p lang="ja" class="yumincho">それは<em class="circle">傍点</em>という記号。（yu mincho）</p> 
+	<p lang="ja" class="source">それは<em class="circle">傍点</em>という記号。（source serif jp）</p> 
+	<p lang="zh-Hant-TW" class="songtitc">這是<em class="circle">著重號</em>。（songti tc）</p> 
+	<p lang="zh-Hans-CN" class="songtisc">这是<em class="circle">着重号</em>。（songti sc）</p> 
+	<p lang="ja" class="hiraginomincho">それは<em class="sesame">傍点</em>という記号。（hiragino mincho）</p> 
+	<p lang="ja" class="hiraginosans">それは<em class="sesame">傍点</em>という記号。（Hiragino Kaku Gothic / hiragino sans）</p> 
+	<p lang="ja" class="yumincho">それは<em class="sesame">傍点</em>という記号。（yu mincho）</p> 
+	<p lang="ja" class="source">それは<em class="sesame">傍点</em>という記号。（source serif jp）</p> 
+	<p lang="zh-Hant-TW" class="songtitc">這是<em class="sesame">著重號</em>。（songti tc）</p> 
+	<p lang="zh-Hans-CN" class="songtisc">这是<em class="sesame">着重号</em>。（songti sc）</p> 
+
+<div class="vert">
+<p lang="ja" class="hiraginomincho">それは<em>傍点</em>という記号。（hiragino mincho）</p> 
+<p lang="ja" class="hiraginosans">それは<em>傍点</em>という記号。（Hiragino Kaku Gothic / hiragino sans）</p> 
+<p lang="ja" class="yumincho">それは<em>傍点</em>という記号。（yu mincho）</p> 
+<p lang="ja" class="source">それは<em>傍点</em>という記号。（source serif jp）</p> 
+<p lang="zh-Hant-TW" class="songtitc">這是<em>著重號</em>。（songti tc）</p> 
+<p lang="zh-Hans-CN" class="songtisc">这是<em>着重号</em>。（songti sc）</p> 
+<p lang="ja" class="hiraginomincho">それは<em class="circle">傍点</em>という記号。（hiragino mincho）</p> 
+<p lang="ja" class="hiraginosans">それは<em class="circle">傍点</em>という記号。（Hiragino Kaku Gothic / hiragino sans）</p> 
+<p lang="ja" class="yumincho">それは<em class="circle">傍点</em>という記号。（yu mincho）</p> 
+<p lang="ja" class="source">それは<em class="circle">傍点</em>という記号。（source serif jp）</p> 
+<p lang="zh-Hant-TW" class="songtitc">這是<em class="circle">著重號</em>。（songti tc）</p> 
+<p lang="zh-Hans-CN" class="songtisc">这是<em class="circle">着重号</em>。（songti sc）</p> 
+<p lang="ja" class="hiraginomincho">それは<em class="sesame">傍点</em>という記号。（hiragino mincho）</p> 
+<p lang="ja" class="hiraginosans">それは<em class="sesame">傍点</em>という記号。（Hiragino Kaku Gothic / hiragino sans）</p> 
+<p lang="ja" class="yumincho">それは<em class="sesame">傍点</em>という記号。（yu mincho）</p> 
+<p lang="ja" class="source">それは<em class="sesame">傍点</em>という記号。（source serif jp）</p> 
+<p lang="zh-Hant-TW" class="songtitc">這是<em class="sesame">著重號</em>。（songti tc）</p> 
+<p lang="zh-Hans-CN" class="songtisc">这是<em class="sesame">着重号</em>。（songti sc）</p> 
+</div>
+</body>
+</html>
